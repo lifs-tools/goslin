@@ -28,7 +28,7 @@
  * J.K. Pauling et al. 2017, PLoS One, 12(11):e0188394.
  */
 
-grammar LipidNames;
+grammar Goslin;
 
 /* first rule is always start rule */
 lipid : lipid_pure | lipid_pure adduct_info;
