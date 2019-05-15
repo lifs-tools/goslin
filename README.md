@@ -1,3 +1,3 @@
 # goslin
 
-Goslin is the Grammar on succinct lipid nomenclature.
+Goslin is the **G**rammar **o**n **s**uccinct **li**pid **n**omenclature.
