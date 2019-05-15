@@ -91,7 +91,7 @@ lsl : hg_lslc headgroup_separator lcb;
 dsl : hg_dslc headgroup_separator lcb sorted_fa_separator fa;
 
 hg_lslc : hg_lsl | hg_lsl heavy;
-hg_lsl : 'lcb' | 'lcbP' | 'LHexCer' | 'LSM';
+hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM';
 hg_dslc : hg_dsl | hg_dsl heavy;
 hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM';
 
