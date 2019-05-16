@@ -50,9 +50,12 @@ charge_sign : '-' | '+';
 /* glycerolipid rules */
 gl : mgl | dgl | sgl | tgl;
 mgl : hg_mgl headgroup_separator fa;
-dgl : hg_dgl headgroup_separator fa unsorted_fa_separator fa | hg_dgl headgroup_separator fa sorted_fa_separator fa;
-sgl : hg_sgl headgroup_separator fa unsorted_fa_separator fa | hg_sgl headgroup_separator fa sorted_fa_separator fa;
-tgl : hg_tgl headgroup_separator fa unsorted_fa_separator fa unsorted_fa_separator fa | hg_tgl headgroup_separator fa sorted_fa_separator fa sorted_fa_separator fa;
+dgl : hg_dgl headgroup_separator gl_species | hg_dgl headgroup_separator dgl_subspecies;
+sgl : hg_sgl headgroup_separator gl_species | hg_sgl headgroup_separator dgl_subspecies;
+tgl : hg_tgl headgroup_separator gl_species | hg_tgl headgroup_separator tgl_subspecies;
+gl_species : fa;
+dgl_subspecies : fa unsorted_fa_separator fa | fa sorted_fa_separator fa;
+tgl_subspecies : fa unsorted_fa_separator fa unsorted_fa_separator fa | fa sorted_fa_separator fa sorted_fa_separator fa;
 
 hg_mgl : 'MAG';
 hg_dgl : 'DAG';
@@ -66,10 +69,15 @@ pl : lpl | dpl | pl_o | cl | mlcl;
 pl_o : lpl_o | dpl_o;
 lpl : hg_lplc headgroup_separator fa;
 lpl_o : hg_lpl_oc headgroup_separator fa;
-dpl : hg_plc headgroup_separator fa unsorted_fa_separator fa | hg_plc headgroup_separator fa sorted_fa_separator fa;
-dpl_o : hg_pl_oc headgroup_separator fa unsorted_fa_separator fa | hg_pl_oc headgroup_separator fa sorted_fa_separator fa;
-cl : hg_clc headgroup_separator fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_separator fa | hg_clc headgroup_separator fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa;
-mlcl : hg_mlclc headgroup_separator fa unsorted_fa_separator fa unsorted_fa_separator fa | hg_mlclc headgroup_separator fa sorted_fa_separator fa sorted_fa_separator fa;
+dpl : hg_plc headgroup_separator pl_species | hg_plc headgroup_separator pl_subspecies;
+dpl_o : hg_pl_oc headgroup_separator pl_species | hg_pl_oc headgroup_separator pl_subspecies;
+mlcl : hg_mlclc headgroup_separator pl_species | hg_mlclc headgroup_separator mlcl_subspecies;
+cl : hg_clc headgroup_separator pl_species | hg_clc headgroup_separator cl_subspecies;
+
+pl_species : fa;
+pl_subspecies : fa unsorted_fa_separator fa | fa sorted_fa_separator fa;
+mlcl_subspecies : fa unsorted_fa_separator fa unsorted_fa_separator fa | fa sorted_fa_separator fa sorted_fa_separator fa;
+cl_subspecies : fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_separator fa | fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa;
 
 hg_clc : hg_cl | hg_cl heavy;
 hg_cl : 'CL';
@@ -89,7 +97,10 @@ hg_pl_o : 'PC O' | 'PE O';
 /* sphingolipid rules */
 sl : lsl | dsl;
 lsl : hg_lslc headgroup_separator lcb;
-dsl : hg_dslc headgroup_separator lcb sorted_fa_separator fa;
+dsl : hg_dslc headgroup_separator sl_species | hg_dslc headgroup_separator sl_subspecies;
+
+sl_species : lcb;
+sl_subspecies : lcb sorted_fa_separator fa;
 
 hg_lslc : hg_lsl | hg_lsl heavy;
 hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM';
