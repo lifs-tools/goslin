@@ -142,7 +142,7 @@ Number:  "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9" | Number Numb
 
 
 /* separators */
-FA_separator: "_" | "/" | "\" | "-";
+FA_separator: "_" | "/" | "\\" | "-";
 headgroup_separator: " ";
 Carbon_DB_separator: ":";
 DB_hydroxyl_separator: ";";
