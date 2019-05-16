@@ -128,29 +128,40 @@ fa_mod: round_open_bracket modification round_close_bracket;
 modification: modification ',' modification | number mod_text | mod_text;
 mod_text: mod_text mod_text | square_open_bracket mod_text square_close_bracket | 'OH' | 'Ke' | 'S' | 'OOH' | 'My' | 'Me' | 'R' | 'Br' | 'CHO' | 'COOH' | 'Cp' | '(R)';
 ether: 'P-' | 'O-';
-fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db DB_hydroxyl_separator hydroxyl;
+fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
 lcb: hydroxyl_lcb carbon carbon_db_separator db;
 carbon: number;
 db: db_count | db_count round_open_bracket db_position round_close_bracket;
 db_count: number;
-db_position: number | number cistrans | db_position DB_position_separator db_position;
+db_position: number | number cistrans | db_position db_position_separator db_position;
 cistrans: 'E' | 'Z';
 hydroxyl: number;
 hydroxyl_lcb: 'm' | 'd' | 't';
 number:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | number number;
 
-
-
 /* separators */
-fa_separator: '_' | '/' | '\\' | '-';
-headgroup_separator: ' ';
-carbon_db_separator: ':';
-DB_hydroxyl_separator: ';';
-DB_position_separator: ',';
-mediator_separator: ',';
-mediator_name_separator: '-';
-round_open_bracket: '(';
-round_close_bracket: ')';
-square_open_bracket: '[';
-square_close_bracket: ']';
+SPACE : ' ';
+COLON : ':';
+SEMICOLON : ';';
+DASH : '-';
+UNDERSCORE : '_';
+SLASH : '/';
+BACKSLASH : '\\';
+COMMA: ',';
+ROB: '(';
+RCB: ')';
+SOB: '[';
+SCB: ']';
+
+fa_separator: UNDERSCORE | SLASH | BACKSLASH | DASH;
+headgroup_separator: SPACE;
+carbon_db_separator: COLON;
+db_hydroxyl_separator: SEMICOLON;
+db_position_separator: COMMA;
+mediator_separator: COMMA;
+mediator_name_separator: DASH;
+round_open_bracket: ROB;
+round_close_bracket: RCB;
+square_open_bracket: SOB;
+square_close_bracket: SCB;
 
