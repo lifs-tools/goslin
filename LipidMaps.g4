@@ -66,7 +66,7 @@ fourpl: hg_fourplc round_open_bracket fa fa_separator fa fa_separator fa fa_sepa
 hg_pl: hg_clc | hg_dplc pip_position | hg_dplc | hg_lplc;
 
 hg_clc: hg_cl | hg_cl headgroup_separator;
-hg_cl: 'cl';
+hg_cl: 'CL';
 hg_dplc: hg_dpl | hg_dpl headgroup_separator;
 hg_dpl: 'LBPA' | 'CDP-DG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS' | 'PIM1' | 'PIM2' | 'PIM3' | 'PIM4' | 'PIM5' | 'PIM6' | 'Glc-DG' | 'PGP' | 'PE-NMe2' | 'AC2SGL' | 'DAT' | 'PE-NMe' | 'PT' | 'Glc-GP' | 'NAPE';
 hg_lplc: hg_lpl | hg_lpl headgroup_separator;
@@ -101,7 +101,7 @@ hg_lsl: 'SPH' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P';
 /* cholesterol lipids */
 cholesterol: chc | chec;
 chc: ch | ch headgroup_separator;
-ch: 'cholesterol';
+ch: 'Cholesterol';
 chec: che | che headgroup_separator;
 che: fa headgroup_separator hg_che;
 hg_che: 'Cholesteryl ester';
