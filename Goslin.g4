@@ -31,8 +31,8 @@
 grammar Goslin;
 
 /* first rule is always start rule */
-lipid : lipid_rule EOF;
-lipid_rule : lipid_pure | lipid_pure adduct_info;
+lipid : lipid_eof EOF;
+lipid_eof : lipid_pure | lipid_pure adduct_info;
 lipid_pure : gl | pl | sl | cholesterol | mediatorc;
 
 

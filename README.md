@@ -19,10 +19,24 @@ For pulling and pushing, you have to go first in the root directory of the host 
 
 ### Pulling
 ~~~~
-git substree pull --prefix=<PREFIX> https://gitlab.isas.de/lifs/goslin.git master
+git subtree pull --prefix=<PREFIX> https://gitlab.isas.de/lifs/goslin.git master
 ~~~~
 
 ### Pushing
 ~~~~
-git substree push --prefix=<PREFIX> https://gitlab.isas.de/lifs/goslin.git master
+git subtree push --prefix=<PREFIX> https://gitlab.isas.de/lifs/goslin.git master
 ~~~~
+
+Alternatively, you can create shortcuts/aliases in your repository's `.git/config` file:
+
+~~~~
+[alias]
+    # the acronym stands for "subtree pull"
+    goslin-pull = "!f() { git subtree pull --prefix <PREFIX> https://gitlab.isas.de/lifs/goslin.git master; }; f"
+    # the acronym stands for "subtree push"
+    goslin-push = "!f() { git subtree push --prefix <PREFIX> https://gitlab.isas.de/lifs/goslin.git master; }; f"
+~~~~
+
+Make sure to replace `<PREFIX>` with the proper path from your repository root directory to the directory where you placed your subtree in!
+
+This allows you to run `git goslin-pull` to pull the latest master version, or `git goslin-push` to push your latest local commits on the goslin subtree to the upstream repository.
