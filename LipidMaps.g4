@@ -35,7 +35,7 @@ lipid_rule: lipid_mono | lipid_mono isotope;
 lipid_mono: lipid_pure | lipid_pure isoform;
 lipid_pure: pure_fa | gl | pl | sl | cholesterol | mediator;
 isoform: square_open_bracket 'rac' square_close_bracket | square_open_bracket 'iso' number square_close_bracket;
-isotope: ' ' round_open_bracket element number round_close_bracket | '-' round_open_bracket element number round_close_bracket | '-' element number;
+isotope: SPACE round_open_bracket element number round_close_bracket | DASH round_open_bracket element number round_close_bracket | DASH element number;
 element: 'd';
 
 
@@ -48,9 +48,9 @@ gl: sgl | tgl;
 sgl: hg_sglc round_open_bracket fa fa_separator fa round_close_bracket | hg_sglc fa fa_separator fa;
 tgl: hg_glc round_open_bracket fa fa_separator fa fa_separator fa round_close_bracket | hg_glc fa fa_separator fa fa_separator fa;
 
-hg_sglc: hg_sgl | hg_sgl ' ';
+hg_sglc: hg_sgl | hg_sgl SPACE;
 hg_sgl: 'MGDG' | 'DGDG' | 'SQDG' | 'SQMG' | 'DG';
-hg_glc: hg_gl | hg_gl ' ';
+hg_glc: hg_gl | hg_gl SPACE;
 hg_gl: 'MG' | 'DG' | 'TG';
 
 
@@ -59,7 +59,9 @@ hg_gl: 'MG' | 'DG' | 'TG';
 /* phospholipid rules */
 pl: lpl | dpl | cl | fourpl;
 lpl: hg_lplc round_open_bracket fa round_close_bracket | hg_lplc fa;
-dpl: hg_pl round_open_bracket fa fa_separator fa round_close_bracket | hg_pl fa fa_separator fa;
+dpl: hg_pl dpl_species | hg_pl dpl_subspecies;
+dpl_species: round_open_bracket fa round_close_bracket | fa;
+dpl_subspecies: round_open_bracket fa fa_separator fa round_close_bracket | fa fa_separator fa;
 cl: hg_clc round_open_bracket '1\'-' square_open_bracket fa fa_separator fa square_close_bracket ',3\'-' square_open_bracket fa fa_separator fa square_close_bracket round_close_bracket | hg_clc '1\'-' square_open_bracket fa fa_separator fa square_close_bracket ',3\'-' square_open_bracket fa fa_separator fa square_close_bracket;
 fourpl: hg_fourplc round_open_bracket fa fa_separator fa fa_separator fa fa_separator fa round_close_bracket | hg_fourplc fa fa_separator fa fa_separator fa fa_separator fa;
 
@@ -70,18 +72,20 @@ hg_cl: 'CL';
 hg_dplc: hg_dpl | hg_dpl headgroup_separator;
 hg_dpl: 'LBPA' | 'CDP-DG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS' | 'PIM1' | 'PIM2' | 'PIM3' | 'PIM4' | 'PIM5' | 'PIM6' | 'Glc-DG' | 'PGP' | 'PE-NMe2' | 'AC2SGL' | 'DAT' | 'PE-NMe' | 'PT' | 'Glc-GP' | 'NAPE';
 hg_lplc: hg_lpl | hg_lpl headgroup_separator;
-hg_lpl: 'LysoPC' | 'LysoPE' | 'LPIM1' | 'LPIM2' | 'LPIM3' | 'LPIM4' | 'LPIM5' | 'LPIM6' | 'CPA' | 'LPA';
+hg_lpl: 'LysoPC' | 'LPC' | 'LysoPE' | 'LPE' | 'LPIM1' | 'LPIM2' | 'LPIM3' | 'LPIM4' | 'LPIM5' | 'LPIM6' | 'CPA' | 'LPA';
 hg_fourplc: hg_fourpl | hg_fourpl headgroup_separator;
 hg_fourpl: 'PAT16' | 'PAT18';
 pip_position: square_open_bracket pip_pos square_close_bracket;
-pip_pos: pip_pos ',' pip_pos | number '\'';
+pip_pos: pip_pos COMMA pip_pos | number '\'';
 
 
 
 /* sphingolipid rules */
 sl: lsl | dsl | sphingoxine;
 lsl: hg_lslc round_open_bracket lcb round_close_bracket | hg_lslc lcb;
-dsl: hg_dslc round_open_bracket lcb fa_separator fa round_close_bracket | hg_dslc lcb fa_separator fa;
+dsl: hg_dslc dsl_species | hg_dslc dsl_subspecies;
+dsl_species: round_open_bracket lcb round_close_bracket | lcb;
+dsl_subspecies: round_open_bracket lcb fa_separator fa round_close_bracket | lcb fa_separator fa;
 
 sphingoxine: sphingoxine_pure | sphingoxine_var;
 sphingoxine_pure: sphingosine_name | sphinganine_name;
@@ -102,9 +106,10 @@ hg_lsl: 'SPH' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P';
 cholesterol: chc | chec;
 chc: ch | ch headgroup_separator;
 ch: 'Cholesterol';
-chec: che | che headgroup_separator;
+chec: che | che headgroup_separator | che_fa;
 che: fa headgroup_separator hg_che;
-hg_che: 'Cholesteryl ester';
+che_fa: hg_che round_open_bracket fa round_close_bracket;
+hg_che: 'Cholesteryl ester' | 'Cholesterol ester' | 'CE';
 
 
 /* mediator lipids */
