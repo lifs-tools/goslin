@@ -51,6 +51,7 @@ fa3_sorted: fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa;
 fa4 : fa4_unsorted | fa4_sorted;
 fa4_unsorted: fa DASH fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa UNDERSCORE fa;
 fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLASH fa;
+lcb_fa_sorted: lcb SLASH fa | lcb BACKSLASH fa;
 
 /* glycerolipid rules */
 gl: sgl | tgl;
@@ -100,7 +101,7 @@ sl: lsl | dsl | sphingoxine;
 lsl: hg_lslc round_open_bracket lcb round_close_bracket | hg_lslc lcb;
 dsl: hg_dslc dsl_species | hg_dslc dsl_subspecies;
 dsl_species: round_open_bracket lcb round_close_bracket | lcb;
-dsl_subspecies: round_open_bracket lcb fa round_close_bracket | lcb fa;
+dsl_subspecies: round_open_bracket lcb_fa_sorted round_close_bracket | lcb_fa_sorted;
 
 sphingoxine: sphingoxine_pure | sphingoxine_var;
 sphingoxine_pure: sphingosine_name | sphinganine_name;
