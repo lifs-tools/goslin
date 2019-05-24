@@ -42,11 +42,24 @@ element: 'd';
 /* pure fatty acid */
 pure_fa: fa;
 
+fa2 : fa2_unsorted | fa2_sorted;
+fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
+fa2_sorted: fa SLASH fa | fa BACKSLASH fa;
+fa3 : fa3_unsorted | fa3_sorted;
+fa3_unsorted: fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa;
+fa3_sorted: fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa;
+fa4 : fa4_unsorted | fa4_sorted;
+fa4_unsorted: fa DASH fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa UNDERSCORE fa;
+fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLASH fa;
 
 /* glycerolipid rules */
 gl: sgl | tgl;
-sgl: hg_sglc round_open_bracket fa fa_separator fa round_close_bracket | hg_sglc fa fa_separator fa;
-tgl: hg_glc round_open_bracket fa fa_separator fa fa_separator fa round_close_bracket | hg_glc fa fa_separator fa fa_separator fa;
+sgl: hg_sglc sgl_species | hg_sglc sgl_subspecies;
+sgl_species: round_open_bracket fa round_close_bracket | fa;
+sgl_subspecies: round_open_bracket fa2 round_close_bracket | fa2;
+tgl: hg_glc tgl_species | hg_glc tgl_subspecies;
+tgl_species: round_open_bracket fa round_close_bracket | fa;
+tgl_subspecies: round_open_bracket fa3 round_close_bracket | fa3;
 
 hg_sglc: hg_sgl | hg_sgl SPACE;
 hg_sgl: 'MGDG' | 'DGDG' | 'SQDG' | 'SQMG' | 'DG';
@@ -61,9 +74,11 @@ pl: lpl | dpl | cl | fourpl;
 lpl: hg_lplc round_open_bracket fa round_close_bracket | hg_lplc fa;
 dpl: hg_pl dpl_species | hg_pl dpl_subspecies;
 dpl_species: round_open_bracket fa round_close_bracket | fa;
-dpl_subspecies: round_open_bracket fa fa_separator fa round_close_bracket | fa fa_separator fa;
-cl: hg_clc round_open_bracket '1\'-' square_open_bracket fa fa_separator fa square_close_bracket ',3\'-' square_open_bracket fa fa_separator fa square_close_bracket round_close_bracket | hg_clc '1\'-' square_open_bracket fa fa_separator fa square_close_bracket ',3\'-' square_open_bracket fa fa_separator fa square_close_bracket;
-fourpl: hg_fourplc round_open_bracket fa fa_separator fa fa_separator fa fa_separator fa round_close_bracket | hg_fourplc fa fa_separator fa fa_separator fa fa_separator fa;
+dpl_subspecies: round_open_bracket fa2 round_close_bracket | fa2;
+cl: hg_clc cl_species | hg_clc cl_subspecies;
+cl_species: round_open_bracket fa round_close_bracket | fa;
+cl_subspecies: round_open_bracket '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket round_close_bracket | hg_clc '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket;
+fourpl: hg_fourplc round_open_bracket fa4 round_close_bracket | hg_fourplc fa4;
 
 hg_pl: hg_clc | hg_dplc pip_position | hg_dplc | hg_lplc;
 
@@ -85,7 +100,7 @@ sl: lsl | dsl | sphingoxine;
 lsl: hg_lslc round_open_bracket lcb round_close_bracket | hg_lslc lcb;
 dsl: hg_dslc dsl_species | hg_dslc dsl_subspecies;
 dsl_species: round_open_bracket lcb round_close_bracket | lcb;
-dsl_subspecies: round_open_bracket lcb fa_separator fa round_close_bracket | lcb fa_separator fa;
+dsl_subspecies: round_open_bracket lcb fa round_close_bracket | lcb fa;
 
 sphingoxine: sphingoxine_pure | sphingoxine_var;
 sphingoxine_pure: sphingosine_name | sphinganine_name;
