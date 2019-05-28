@@ -62,9 +62,9 @@ tgl: hg_glc tgl_species | hg_glc tgl_subspecies;
 tgl_species: round_open_bracket fa round_close_bracket | fa;
 tgl_subspecies: round_open_bracket fa3 round_close_bracket | fa3;
 
-hg_sglc: hg_sgl | hg_sgl SPACE;
+hg_sglc: hg_sgl | hg_sgl headgroup_separator;
 hg_sgl: 'MGDG' | 'DGDG' | 'SQDG' | 'SQMG' | 'DG';
-hg_glc: hg_gl | hg_gl SPACE;
+hg_glc: hg_gl | hg_gl headgroup_separator;
 hg_gl: 'MG' | 'DG' | 'TG';
 
 
