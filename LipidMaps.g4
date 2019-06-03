@@ -111,7 +111,7 @@ sphinganine_name: 'Sphinganine' | 'Sa' | 'Sphinganine-1-phosphate';
 ctype: 'C' number;
 
 hg_dslc: hg_dsl | hg_dsl headgroup_separator;
-hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | '(3\'-sulfo)Galbeta-Cer';
+hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | '(3\'-sulfo)Galbeta-Cer';
 
 hg_lslc: hg_lsl | hg_lsl headgroup_separator;
 hg_lsl: 'SPH' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P';
