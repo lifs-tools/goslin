@@ -121,7 +121,7 @@ hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3C
 /* cholesterol lipids */
 cholesterol : chc | che;
 chc : ch | ch heavy;
-ch : 'Ch';
+ch : 'Ch' | 'Cholesterol';
 che : hg_chec headgroup_separator fa;
 hg_chec : hg_che | hg_che heavy;
 hg_che : 'ChE' | 'CE';
