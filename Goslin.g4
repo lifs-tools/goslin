@@ -114,7 +114,7 @@ sl_subspecies : lcb sorted_fa_separator fa;
 hg_lslc : hg_lsl | hg_lsl heavy;
 hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM';
 hg_dslc : hg_dsl | hg_dsl heavy;
-hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM';
+hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM';
 
 
 
