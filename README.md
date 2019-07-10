@@ -15,7 +15,7 @@ For more information on git subtree, see [Git Subtree](https://github.com/git/gi
 
 
 ## Pulling and pushing of a Git subtree
-For pulling and pushing, you have to go first in the root directory of the host repository and execute the following commands:
+For pulling and pushing, you have to change into the root directory of the host repository and execute the following commands:
 
 ### Pulling
 ~~~~
