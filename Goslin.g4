@@ -46,7 +46,15 @@ character : 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l
 charge : '1' | '2' | '3' | '4';
 charge_sign : '-' | '+';
 
-
+fa2 : fa2_unsorted | fa2_sorted;
+fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
+fa2_sorted: fa SLASH fa | fa BACKSLASH fa;
+fa3 : fa3_unsorted | fa3_sorted;
+fa3_unsorted: fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa;
+fa3_sorted: fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa;
+fa4 : fa4_unsorted | fa4_sorted;
+fa4_unsorted: fa DASH fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa UNDERSCORE fa;
+fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLASH fa;
 
 /* glycerolipid rules */
 gl : mgl | dgl | sgl | tgl;
@@ -55,8 +63,8 @@ dgl : hg_dgl headgroup_separator gl_species | hg_dgl headgroup_separator dgl_sub
 sgl : hg_sgl headgroup_separator gl_species | hg_sgl headgroup_separator dgl_subspecies;
 tgl : hg_tgl headgroup_separator gl_species | hg_tgl headgroup_separator tgl_subspecies;
 gl_species : fa;
-dgl_subspecies : fa unsorted_fa_separator fa | fa sorted_fa_separator fa;
-tgl_subspecies : fa unsorted_fa_separator fa unsorted_fa_separator fa | fa sorted_fa_separator fa sorted_fa_separator fa;
+dgl_subspecies : fa2;
+tgl_subspecies : fa3;
 
 hg_mgl : 'MAG';
 hg_dgl : 'DAG';
@@ -76,9 +84,9 @@ mlcl : hg_mlclc headgroup_separator pl_species | hg_mlclc headgroup_separator ml
 cl : hg_clc headgroup_separator pl_species | hg_clc headgroup_separator cl_subspecies;
 
 pl_species : fa;
-pl_subspecies : fa unsorted_fa_separator fa | fa sorted_fa_separator fa;
-mlcl_subspecies : fa unsorted_fa_separator fa unsorted_fa_separator fa | fa sorted_fa_separator fa sorted_fa_separator fa;
-cl_subspecies : fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_separator fa | fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa;
+pl_subspecies : fa2;
+mlcl_subspecies : fa3;
+cl_subspecies : fa4;
 
 hg_clc : hg_cl | hg_cl heavy;
 hg_cl : 'CL';
@@ -113,7 +121,7 @@ hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3C
 /* cholesterol lipids */
 cholesterol : chc | che;
 chc : ch | ch heavy;
-ch : 'Ch';
+ch : 'Ch' | 'Cholesterol';
 che : hg_chec headgroup_separator fa;
 hg_chec : hg_che | hg_che heavy;
 hg_che : 'ChE' | 'CE';

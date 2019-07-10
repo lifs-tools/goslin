@@ -42,15 +42,29 @@ element: 'd';
 /* pure fatty acid */
 pure_fa: fa;
 
+fa2 : fa2_unsorted | fa2_sorted;
+fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
+fa2_sorted: fa SLASH fa | fa BACKSLASH fa;
+fa3 : fa3_unsorted | fa3_sorted;
+fa3_unsorted: fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa;
+fa3_sorted: fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa;
+fa4 : fa4_unsorted | fa4_sorted;
+fa4_unsorted: fa DASH fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa UNDERSCORE fa;
+fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLASH fa;
+lcb_fa_sorted: lcb SLASH fa | lcb BACKSLASH fa;
 
 /* glycerolipid rules */
 gl: sgl | tgl;
-sgl: hg_sglc round_open_bracket fa fa_separator fa round_close_bracket | hg_sglc fa fa_separator fa;
-tgl: hg_glc round_open_bracket fa fa_separator fa fa_separator fa round_close_bracket | hg_glc fa fa_separator fa fa_separator fa;
+sgl: hg_sglc sgl_species | hg_sglc sgl_subspecies;
+sgl_species: round_open_bracket fa round_close_bracket | fa;
+sgl_subspecies: round_open_bracket fa2 round_close_bracket | fa2;
+tgl: hg_glc tgl_species | hg_glc tgl_subspecies;
+tgl_species: round_open_bracket fa round_close_bracket | fa;
+tgl_subspecies: round_open_bracket fa3 round_close_bracket | fa3;
 
-hg_sglc: hg_sgl | hg_sgl SPACE;
+hg_sglc: hg_sgl | hg_sgl headgroup_separator;
 hg_sgl: 'MGDG' | 'DGDG' | 'SQDG' | 'SQMG' | 'DG';
-hg_glc: hg_gl | hg_gl SPACE;
+hg_glc: hg_gl | hg_gl headgroup_separator;
 hg_gl: 'MG' | 'DG' | 'TG';
 
 
@@ -58,14 +72,17 @@ hg_gl: 'MG' | 'DG' | 'TG';
 
 /* phospholipid rules */
 pl: lpl | dpl | cl | fourpl;
-lpl: hg_lplc round_open_bracket fa round_close_bracket | hg_lplc fa;
-dpl: hg_pl dpl_species | hg_pl dpl_subspecies;
+lpl: hg_lplc round_open_bracket fa_lpl round_close_bracket | hg_lplc fa_lpl;
+fa_lpl: fa | fa2;
+dpl: hg_ddpl dpl_species | hg_ddpl dpl_subspecies;
 dpl_species: round_open_bracket fa round_close_bracket | fa;
-dpl_subspecies: round_open_bracket fa fa_separator fa round_close_bracket | fa fa_separator fa;
-cl: hg_clc round_open_bracket '1\'-' square_open_bracket fa fa_separator fa square_close_bracket ',3\'-' square_open_bracket fa fa_separator fa square_close_bracket round_close_bracket | hg_clc '1\'-' square_open_bracket fa fa_separator fa square_close_bracket ',3\'-' square_open_bracket fa fa_separator fa square_close_bracket;
-fourpl: hg_fourplc round_open_bracket fa fa_separator fa fa_separator fa fa_separator fa round_close_bracket | hg_fourplc fa fa_separator fa fa_separator fa fa_separator fa;
+dpl_subspecies: round_open_bracket fa2 round_close_bracket | fa2;
+cl: hg_clc cl_species | hg_clc cl_subspecies;
+cl_species: round_open_bracket fa round_close_bracket | fa;
+cl_subspecies: round_open_bracket '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket round_close_bracket | hg_clc '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket;
+fourpl: hg_fourplc round_open_bracket fa4 round_close_bracket | hg_fourplc fa4;
 
-hg_pl: hg_clc | hg_dplc pip_position | hg_dplc | hg_lplc;
+hg_ddpl: hg_dplc pip_position | hg_dplc;
 
 hg_clc: hg_cl | hg_cl headgroup_separator;
 hg_cl: 'CL';
@@ -85,7 +102,7 @@ sl: lsl | dsl | sphingoxine;
 lsl: hg_lslc round_open_bracket lcb round_close_bracket | hg_lslc lcb;
 dsl: hg_dslc dsl_species | hg_dslc dsl_subspecies;
 dsl_species: round_open_bracket lcb round_close_bracket | lcb;
-dsl_subspecies: round_open_bracket lcb fa_separator fa round_close_bracket | lcb fa_separator fa;
+dsl_subspecies: round_open_bracket lcb_fa_sorted round_close_bracket | lcb_fa_sorted;
 
 sphingoxine: sphingoxine_pure | sphingoxine_var;
 sphingoxine_pure: sphingosine_name | sphinganine_name;
@@ -95,7 +112,7 @@ sphinganine_name: 'Sphinganine' | 'Sa' | 'Sphinganine-1-phosphate';
 ctype: 'C' number;
 
 hg_dslc: hg_dsl | hg_dsl headgroup_separator;
-hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | '(3\'-sulfo)Galbeta-Cer';
+hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | '(3\'-sulfo)Galbeta-Cer';
 
 hg_lslc: hg_lsl | hg_lsl headgroup_separator;
 hg_lsl: 'SPH' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P';
@@ -134,7 +151,8 @@ modification: modification ',' modification | number mod_text | mod_text;
 mod_text: mod_text mod_text | square_open_bracket mod_text square_close_bracket | 'OH' | 'Ke' | 'S' | 'OOH' | 'My' | 'Me' | 'R' | 'Br' | 'CHO' | 'COOH' | 'Cp' | '(R)';
 ether: 'P-' | 'O-';
 fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
-lcb: hydroxyl_lcb carbon carbon_db_separator db;
+lcb_fa: carbon carbon_db_separator db;
+lcb: hydroxyl_lcb lcb_fa | lcb_fa;
 carbon: number;
 db: db_count | db_count round_open_bracket db_position round_close_bracket;
 db_count: number;
