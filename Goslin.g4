@@ -88,17 +88,19 @@ pl_subspecies : fa2;
 mlcl_subspecies : fa3;
 cl_subspecies : fa4;
 
-hg_clc : hg_cl | hg_cl heavy;
+heavy_hg : heavy;
+
+hg_clc : hg_cl | hg_cl heavy_hg;
 hg_cl : 'CL';
-hg_mlclc : hg_mlcl | hg_mlcl heavy;
+hg_mlclc : hg_mlcl | hg_mlcl heavy_hg;
 hg_mlcl : 'MLCL';
-hg_plc : hg_pl | hg_pl heavy;
+hg_plc : hg_pl | hg_pl heavy_hg;
 hg_pl : 'BMP' | 'CDPDAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS';
-hg_lplc : hg_lpl | hg_lpl heavy;
+hg_lplc : hg_lpl | hg_lpl heavy_hg;
 hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS';
-hg_lpl_oc : hg_lpl_o | hg_lpl_o heavy;
+hg_lpl_oc : hg_lpl_o | hg_lpl_o heavy_hg;
 hg_lpl_o : 'LPC O' | 'LPE O';
-hg_pl_oc : hg_pl_o | hg_pl_o heavy;
+hg_pl_oc : hg_pl_o | hg_pl_o heavy_hg;
 hg_pl_o : 'PC O' | 'PE O';
 
 
@@ -111,31 +113,32 @@ dsl : hg_dslc headgroup_separator sl_species | hg_dslc headgroup_separator sl_su
 sl_species : lcb;
 sl_subspecies : lcb sorted_fa_separator fa;
 
-hg_lslc : hg_lsl | hg_lsl heavy;
+hg_lslc : hg_lsl | hg_lsl heavy_hg;
 hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM';
-hg_dslc : hg_dsl | hg_dsl heavy;
+hg_dslc : hg_dsl | hg_dsl heavy_hg;
 hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM';
 
 
 
 /* cholesterol lipids */
 cholesterol : chc | che;
-chc : ch | ch heavy;
+chc : ch | ch heavy_hg;
 ch : 'Ch' | 'Cholesterol';
 che : hg_chec headgroup_separator fa;
-hg_chec : hg_che | hg_che heavy;
+hg_chec : hg_che | hg_che heavy_hg;
 hg_che : 'ChE' | 'CE';
 
 
 /* mediator lipids */
-mediatorc : mediator | mediator heavy;
+mediatorc : mediator | mediator heavy_hg;
 mediator : '10-HDoHE' | '11-HDoHE' | '11-HETE' | '11,12-DHET' | '11(12)-EET'| '12-HEPE' | '12-HETE' | '12-HHTrE' | '12-OxoETE' | '12(13)-EpOME' | '13-HODE' | '13-HOTrE' | '14,15-DHET' | '14(15)-EET' | '14(15)-EpETE' | '15-HEPE' | '15-HETE' | '15d-PGJ2' | '16-HDoHE' | '16-HETE' | '18-HEPE' | '5-HEPE' | '5-HETE' | '5-HpETE' | '5-OxoETE' | '5,12-DiHETE' | '5,6-DiHETE' | '5,6,15-LXA4' | '5(6)-EET' | '8-HDoHE' | '8-HETE' | '8,9-DHET' | '8(9)-EET' | '9-HEPE' | '9-HETE' | '9-HODE' | '9-HOTrE' | '9(10)-EpOME' | 'AA' | 'alpha-LA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'LTB4' | 'LTC4' | 'LTD4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha' | 'PGI2' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'tetranor-12-HETE' | 'TXB1' | 'TXB2' | 'TXB3';
 
 
 
 /* generic rules */
-fa : fa_pure | fa_pure ether;
-fa_pure : carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | carbon carbon_db_separator db heavy | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl heavy;
+fa : fa_pure | fa_pure heavy_fa | fa_pure ether | fa_pure heavy_fa;
+heavy_fa : heavy;
+fa_pure : carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
 ether : 'a' | 'p';
 lcb : carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | old_hydroxyl carbon carbon_db_separator db;
 carbon : number;
@@ -145,11 +148,19 @@ db_position : number cistrans | number cistrans | db_position db_position_separa
 cistrans : 'E' | 'Z';
 hydroxyl : number;
 old_hydroxyl : 'd' | 't';
-number :  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | number number;
+number :  digit;
+digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
+
+
+
 
 
 heavy : '(+' isotopes  ')';
-isotopes : isotopes isotopes | '[' number ']' element number;
+isotopes : isotopes isotopes | isotope;
+isotope : '[' isotope_number ']' isotope_element isotope_count | '[' isotope_number ']' isotope_element;
+isotope_number : number;
+isotope_element : element;
+isotope_count : number;
 element : 'C' | 'H' | 'O' | 'N' | 'P' | 'S';
 
 /* separators */
