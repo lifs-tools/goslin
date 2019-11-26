@@ -32,13 +32,11 @@ grammar Goslin;
 
 /* first rule is always start rule */
 lipid : lipid_eof EOF;
-lipid_eof : just_lipid | just_lipid FRAGMENT_SEPARATOR fragments_part;
+lipid_eof : just_lipid | just_lipid FRAGMENT_SEPARATOR fragment_name;
 just_lipid : lipid_pure | lipid_pure adduct_info;
 lipid_pure : gl | pl | sl | cholesterol | mediatorc;
 
 /* rules for fragments */
-fragments_part : fragment_name | fragment_name heavy_fragment;
-heavy_fragment : heavy;
 fragment_name : frag_char;
 frag_char : frag_char frag_char | character | sign;
 
@@ -139,11 +137,13 @@ mediator : '10-HDoHE' | '11-HDoHE' | '11-HETE' | '11,12-DHET' | '11(12)-EET'| '1
 
 
 /* generic rules */
-fa : fa_pure | fa_pure heavy_fa | fa_pure ether | fa_pure heavy_fa;
+fa : fa_pure | fa_pure heavy_fa | fa_pure ether | fa_pure ether heavy_fa;
 heavy_fa : heavy;
 fa_pure : carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
 ether : 'a' | 'p';
-lcb : carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | old_hydroxyl carbon carbon_db_separator db;
+lcb : lcb_pure | lcb_pure heavy_lcb;
+heavy_lcb : heavy;
+lcb_pure : carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | old_hydroxyl carbon carbon_db_separator db;
 carbon : number;
 db : db_count | db_count round_open_bracket db_position round_close_bracket;
 db_count : number;
