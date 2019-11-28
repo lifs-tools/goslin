@@ -59,13 +59,18 @@ fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLA
 
 /* glycerolipid rules */
 gl : mgl | dgl | sgl | tgl;
-mgl : hg_mgl headgroup_separator fa;
-dgl : hg_dgl headgroup_separator gl_species | hg_dgl headgroup_separator dgl_subspecies;
-sgl : hg_sgl headgroup_separator gl_species | hg_sgl headgroup_separator dgl_subspecies;
-tgl : hg_tgl headgroup_separator gl_species | hg_tgl headgroup_separator tgl_subspecies;
+mgl : hg_mgl_full headgroup_separator fa;
+dgl : hg_dgl_full headgroup_separator gl_species | hg_dgl_full headgroup_separator dgl_subspecies;
+sgl : hg_sgl_full headgroup_separator gl_species | hg_sgl_full headgroup_separator dgl_subspecies;
+tgl : hg_tgl_full headgroup_separator gl_species | hg_tgl_full headgroup_separator tgl_subspecies;
 gl_species : fa;
 dgl_subspecies : fa2;
 tgl_subspecies : fa3;
+
+hg_mgl_full : hg_mgl | hg_mgl heavy_hg;
+hg_dgl_full : hg_dgl | hg_dgl heavy_hg;
+hg_sgl_full : hg_sgl | hg_sgl heavy_hg;
+hg_tgl_full : hg_tgl | hg_tgl heavy_hg;
 
 hg_mgl : 'MAG';
 hg_dgl : 'DAG';
