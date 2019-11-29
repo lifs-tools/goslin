@@ -28,7 +28,7 @@
  * J.K. Pauling et al. 2017, PLoS One, 12(11):e0188394.
  */
 
-grammar Goslin;
+grammar GoslinFragments;
 
 /* first rule is always start rule */
 lipid : lipid_eof EOF;
