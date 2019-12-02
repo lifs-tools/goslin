@@ -100,10 +100,10 @@ hg_plc : hg_pl | hg_pl heavy_hg;
 hg_pl : 'BMP' | 'CDPDAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS';
 hg_lplc : hg_lpl | hg_lpl heavy_hg;
 hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS';
-hg_lpl_oc : hg_lpl_o | hg_lpl_o heavy_hg;
-hg_lpl_o : 'LPC O' | 'LPE O';
-hg_pl_oc : hg_pl_o | hg_pl_o heavy_hg;
-hg_pl_o : 'PC O' | 'PE O';
+hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
+hg_lpl_o : 'LPC' | 'LPE';
+hg_pl_oc : hg_pl_o ' O' | hg_pl_o heavy_hg ' O';
+hg_pl_o : 'PC' | 'PE';
 
 
 
