@@ -72,8 +72,9 @@ hg_gl: 'MG' | 'DG' | 'TG';
 
 /* phospholipid rules */
 pl: lpl | dpl | cl | fourpl;
-lpl: hg_lplc round_open_bracket fa round_close_bracket | hg_lplc fa;
-dpl: hg_pl dpl_species | hg_pl dpl_subspecies;
+lpl: hg_lplc round_open_bracket fa_lpl round_close_bracket | hg_lplc fa_lpl;
+fa_lpl: fa | fa2;
+dpl: hg_ddpl dpl_species | hg_ddpl dpl_subspecies;
 dpl_species: round_open_bracket fa round_close_bracket | fa;
 dpl_subspecies: round_open_bracket fa2 round_close_bracket | fa2;
 cl: hg_clc cl_species | hg_clc cl_subspecies;
@@ -81,7 +82,7 @@ cl_species: round_open_bracket fa round_close_bracket | fa;
 cl_subspecies: round_open_bracket '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket round_close_bracket | hg_clc '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket;
 fourpl: hg_fourplc round_open_bracket fa4 round_close_bracket | hg_fourplc fa4;
 
-hg_pl: hg_clc | hg_dplc pip_position | hg_dplc | hg_lplc;
+hg_ddpl: hg_dplc pip_position | hg_dplc;
 
 hg_clc: hg_cl | hg_cl headgroup_separator;
 hg_cl: 'CL';
