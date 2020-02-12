@@ -80,7 +80,7 @@ hg_tgl : 'TAG';
 
 
 /* phospholipid rules */
-pl : lpl | dpl | tpl | pl_o | cl | mlcl;
+pl : lpl | dpl | tpl | pl_o | cl | mlcl | dlcl;
 pl_o : lpl_o | dpl_o;
 lpl : hg_lplc headgroup_separator fa;
 lpl_o : hg_lpl_oc plasmalogen_separator fa;
@@ -135,7 +135,7 @@ sl_subspecies : lcb sorted_fa_separator fa;
 hg_lslc : hg_lsl | hg_lsl heavy_hg;
 hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM';
 hg_dslc : hg_dsl | hg_dsl heavy_hg;
-hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' | 'GM4';
+hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' ;
 
 
 
@@ -162,7 +162,7 @@ hg_sac_di_c : hg_sac_di | hg_sac_di heavy_hg;
 hg_sac_di : 'DAT';
 sac_f : hg_sac_f_c headgroup_separator sac_species | hg_sac_f_c headgroup_separator sac_f_subspecies;
 hg_sac_f_c : hg_sac_f | hg_sac_f heavy_hg;
-hg_sac_f : 'PAT16';
+hg_sac_f : 'PAT16' | 'PAT18';
 
 sac_species : fa;
 sac_di_subspecies : fa2;
