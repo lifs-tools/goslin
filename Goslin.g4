@@ -158,10 +158,10 @@ mediator : '10-HDoHE' | '11-HDoHE' | '11-HETE' | '11,12-DHET' | '11(12)-EET'| '1
 saccharolipid : sac_di | sac_f;
 sac_di : hg_sac_di_c headgroup_separator sac_species | hg_sac_di_c headgroup_separator sac_di_subspecies;
 hg_sac_di_c : hg_sac_di | hg_sac_di heavy_hg;
-hg_sac_di : "DAT";
+hg_sac_di : 'DAT';
 sac_f : hg_sac_f_c headgroup_separator sac_species | hg_sac_f_c headgroup_separator sac_f_subspecies;
 hg_sac_f_c : hg_sac_f | hg_sac_f heavy_hg;
-hg_sac_f : "PAT16";
+hg_sac_f : 'PAT16';
 
 sac_species : fa;
 sac_di_subspecies : fa2;
