@@ -142,6 +142,7 @@ hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'H
 
 
 
+
 /* cholesterol lipids */
 cholesterol : chc | che;
 chc : ch | ch heavy_hg;
