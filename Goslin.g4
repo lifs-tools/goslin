@@ -108,15 +108,18 @@ hg_mlcl : 'MLCL';
 hg_dlclc : hg_dlcl | hg_dlcl heavy_hg;
 hg_dlcl : 'DLCL';
 hg_plc : hg_pl | hg_pl heavy_hg;
-hg_pl : 'BMP' | 'CDPDAG' | 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | 'PIM1' | 'PIM2' | 'PIM3' | 'PIM4' | 'PIM5' | 'PIM6' | 'PnC' | 'PnE' | 'PT';
-hg_pip : hg_pip_m | hg_pip_d | hg_pip_t;
-hg_pip_m : 'PIP' | 'PIP[3\']' | 'PIP[4\']' | 'PIP[5\']';
-hg_pip_d : 'PIP2' | 'PIP2[3\',4\']' | 'PIP2[4\',5\']' | 'PIP2[3\',5\']';
-hg_pip_t : 'PIP3' | 'PIP3[3\',4\',5\']';
+hg_pl : 'BMP' | 'CDPDAG' | 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | hg_pim | 'PnC' | 'PnE' | 'PT';
+hg_pim : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
+hg_pip_pure : 'PIP';
+hg_pip_m : '[3\']' | '[4\']' | '[5\']';
+hg_pip_d : '2' | '2[3\',4\']' | '2[4\',5\']' | '2[3\',5\']';
+hg_pip_t : '3' | '3[3\',4\',5\']';
 hg_tplc : hg_tpl | hg_tpl heavy_hg;
 hg_tpl : 'SLBPA';
 hg_lplc : hg_lpl | hg_lpl heavy_hg;
-hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | 'LPIM1' | 'LPIM2' | 'LPIM3' | 'LPIM4' | 'LPIM5' | 'LPIM6' | 'CPA';
+hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA';
+hg_lpim : 'PIM' hg_lpim_number;
+hg_lpim_number : number;
 hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
 hg_lpl_o : 'LPC' | 'LPE';
 hg_pl_oc : hg_pl_o ' O' | hg_pl_o heavy_hg ' O';
@@ -135,7 +138,7 @@ sl_subspecies : lcb sorted_fa_separator fa;
 hg_lslc : hg_lsl | hg_lsl heavy_hg;
 hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM';
 hg_dslc : hg_dsl | hg_dsl heavy_hg;
-hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' ;
+hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' ;
 
 
 
