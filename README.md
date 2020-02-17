@@ -40,3 +40,9 @@ Alternatively, you can create shortcuts/aliases in your repository's `.git/confi
 Make sure to replace `<PREFIX>` with the proper path from your repository root directory to the directory where you placed your subtree in!
 
 This allows you to run `git goslin-pull` to pull the latest master version, or `git goslin-push` to push your latest local commits on the goslin subtree to the upstream repository.
+
+
+## Test data
+
+. lipidmaps-names-Feb-10-2020.tsv - generated from LipidMAPS LMSDB export on Feb. 10th, 2020. Filtered all entries without an abbreviation.
+. swisslipids-names-Feb-10-2020.tsv - generated from Swiss Lipids (lipids table) export on Feb. 10th ,2020.
