@@ -112,7 +112,7 @@ hg_mlcl : 'MLCL';
 hg_dlclc : hg_dlcl | hg_dlcl heavy_hg;
 hg_dlcl : 'DLCL';
 hg_plc : hg_pl | hg_pl heavy_hg;
-hg_pl : 'BMP' | 'CDPDAG' | 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | hg_pim | 'PnC' | 'PnE' | 'PT', 'PE-NMe2' | 'PE-NMe';
+hg_pl : 'BMP' | 'CDPDAG' | 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | hg_pim | 'PnC' | 'PnE' | 'PT' | 'PE-NMe2' | 'PE-NMe';
 hg_pim : 'PIM' hg_pim_number;
 hg_pim_number : number;
 hg_pip : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
@@ -129,7 +129,7 @@ hg_lpim_number : number;
 hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
 hg_lpl_o : 'LPC' | 'LPE';
 hg_pl_oc : hg_pl_o ' O' | hg_pl_o heavy_hg ' O';
-hg_pl_o : 'PC' | 'PE';
+hg_pl_o : 'PA' | 'PC' | 'PE' | 'PG' | 'PI' | 'PS';
 
 
 
