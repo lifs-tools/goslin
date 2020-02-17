@@ -105,6 +105,7 @@ cl_subspecies : fa4;
 heavy_hg : heavy;
 
 
+
 hg_clc : hg_cl | hg_cl heavy_hg;
 hg_cl : 'CL';
 hg_mlclc : hg_mlcl | hg_mlcl heavy_hg;
@@ -113,7 +114,9 @@ hg_dlclc : hg_dlcl | hg_dlcl heavy_hg;
 hg_dlcl : 'DLCL';
 hg_plc : hg_pl | hg_pl heavy_hg;
 hg_pl : 'BMP' | 'CDPDAG' | 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | hg_pim | 'PnC' | 'PnE' | 'PT';
-hg_pim : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
+hg_pim : 'PIM' hg_pim_number;
+hg_pim_number : number;
+hg_pip : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
 hg_pip_pure : 'PIP';
 hg_pip_m : '[3\']' | '[4\']' | '[5\']';
 hg_pip_d : '2' | '2[3\',4\']' | '2[4\',5\']' | '2[3\',5\']';
@@ -122,7 +125,7 @@ hg_tplc : hg_tpl | hg_tpl heavy_hg;
 hg_tpl : 'SLBPA';
 hg_lplc : hg_lpl | hg_lpl heavy_hg;
 hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA';
-hg_lpim : 'PIM' hg_lpim_number;
+hg_lpim : 'LPIM' hg_lpim_number;
 hg_lpim_number : number;
 hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
 hg_lpl_o : 'LPC' | 'LPE';
