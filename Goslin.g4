@@ -54,7 +54,7 @@ fa4 : fa4_unsorted | fa4_sorted;
 fa4_unsorted: fa DASH fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa UNDERSCORE fa;
 fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLASH fa;
 
-/* glycerolipid rules */
+/* glycerolipid rules (7 classes) */
 gl : sqml | mgl | dgl | sgl | tgl;
 sqml : hg_sqml_full headgroup_separator fa;
 mgl : hg_mgl_full headgroup_separator fa;
@@ -79,7 +79,7 @@ hg_tgl : 'TAG';
 
 
 
-/* phospholipid rules */
+/* phospholipid rules (56 classes) */
 pl : lpl | dpl | tpl | pl_o | cl | mlcl | dlcl;
 pl_o : lpl_o | dpl_o;
 lpl : hg_lplc headgroup_separator fa;
@@ -109,7 +109,9 @@ hg_dlclc : hg_dlcl | hg_dlcl heavy_hg;
 hg_dlcl : 'DLCL';
 hg_plc : hg_pl | hg_pl heavy_hg;
 hg_pl : 'BMP' | 'CDPDAG' | 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | hg_pim | 'PnC' | 'PnE' | 'PT';
-hg_pim : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
+hg_pim : 'PIM' hg_pim_number;
+hg_pim_number : number;
+hg_pip : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
 hg_pip_pure : 'PIP';
 hg_pip_m : '[3\']' | '[4\']' | '[5\']';
 hg_pip_d : '2' | '2[3\',4\']' | '2[4\',5\']' | '2[3\',5\']';
@@ -118,7 +120,7 @@ hg_tplc : hg_tpl | hg_tpl heavy_hg;
 hg_tpl : 'SLBPA';
 hg_lplc : hg_lpl | hg_lpl heavy_hg;
 hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA';
-hg_lpim : 'PIM' hg_lpim_number;
+hg_lpim : 'LPIM' hg_lpim_number;
 hg_lpim_number : number;
 hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
 hg_lpl_o : 'LPC' | 'LPE';
@@ -127,7 +129,7 @@ hg_pl_o : 'PC' | 'PE';
 
 
 
-/* sphingolipid rules */
+/* sphingolipid rules (21) */
 sl : lsl | dsl;
 lsl : hg_lslc headgroup_separator lcb;
 dsl : hg_dslc headgroup_separator sl_species | hg_dslc headgroup_separator sl_subspecies;
@@ -143,7 +145,7 @@ hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'H
 
 
 
-/* cholesterol lipids */
+/* cholesterol lipids (2 classes) */
 cholesterol : chc | che;
 chc : ch | ch heavy_hg;
 ch : 'Ch' | 'Cholesterol';
@@ -152,14 +154,14 @@ hg_chec : hg_che | hg_che heavy_hg;
 hg_che : 'ChE' | 'CE';
 
 
-/* mediator lipids */
+/* mediator lipids (1 class) */
 mediatorc : mediator | mediator heavy_hg;
 mediator : '10-HDoHE' | '11-HDoHE' | '11-HETE' | '11,12-DHET' | '11(12)-EET'| '12-HEPE' | '12-HETE' | '12-HHTrE' | '12-OxoETE' | '12(13)-EpOME' | '13-HODE' | '13-HOTrE' | '14,15-DHET' | '14(15)-EET' | '14(15)-EpETE' | '15-HEPE' | '15-HETE' | '15d-PGJ2' | '16-HDoHE' | '16-HETE' | '18-HEPE' | '5-HEPE' | '5-HETE' | '5-HpETE' | '5-OxoETE' | '5,12-DiHETE' | '5,6-DiHETE' | '5,6,15-LXA4' | '5(6)-EET' | '8-HDoHE' | '8-HETE' | '8,9-DHET' | '8(9)-EET' | '9-HEPE' | '9-HETE' | '9-HODE' | '9-HOTrE' | '9(10)-EpOME' | 'AA' | 'alpha-LA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'LTB4' | 'LTC4' | 'LTD4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha' | 'PGI2' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'tetranor-12-HETE' | 'TXB1' | 'TXB2' | 'TXB3';
 
 
 
 
-/* saccharolipids rules */
+/* saccharolipids rules (3 classes) */
 saccharolipid : sac_di | sac_f;
 sac_di : hg_sac_di_c headgroup_separator sac_species | hg_sac_di_c headgroup_separator sac_di_subspecies;
 hg_sac_di_c : hg_sac_di | hg_sac_di heavy_hg;
