@@ -105,7 +105,6 @@ cl_subspecies : fa4;
 heavy_hg : heavy;
 
 
-
 hg_clc : hg_cl | hg_cl heavy_hg;
 hg_cl : 'CL';
 hg_mlclc : hg_mlcl | hg_mlcl heavy_hg;
