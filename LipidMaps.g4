@@ -40,7 +40,9 @@ element: 'd';
 
 
 /* pure fatty acid */
-pure_fa: fa;
+pure_fa: hg_fa pure_fa_species | fa;
+pure_fa_species: round_open_bracket fa round_close_bracket;
+hg_fa: 'FA' | 'WE';
 
 fa2 : fa2_unsorted | fa2_sorted;
 fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
