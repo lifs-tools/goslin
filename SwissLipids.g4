@@ -1,7 +1,7 @@
 /*
  * MIT License
  * 
- * Copyright (c) 2017 Dominik Kopczynski   -   dominik.kopczynski {at} isas.de
+ * Copyright (c) 2020 Dominik Kopczynski   -   dominik.kopczynski {at} isas.de
  *                    Bing Peng   -   bing.peng {at} isas.de
  *                    Nils Hoffmann  -  nils.hoffmann {at} isas.de
  *
@@ -31,7 +31,7 @@ grammar SwissLipids;
 
 /* first rule is always start rule */
 lipid : lipid_pure EOF;
-lipid_pure : fatty_acid | gl | pl | sl;
+lipid_pure : fatty_acid | gl | pl | sl | st;
 
 
 
@@ -43,6 +43,8 @@ carbon : number;
 db : number;
 ether : 'O-' | 'P-';
 hydroxyl : 'm' | 'd' | 't';
+
+
 fa2 : fa sorted_fa_separator fa;
 fa3 : fa sorted_fa_separator fa sorted_fa_separator fa;
 fa4 : fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa;
@@ -50,15 +52,11 @@ fa_species : fa;
 
 
 
-
-
 /* fatty acid rules */
 fatty_acid : fa_hg fa_fa;
-fa_hg : 'FA' | 'fatty acid' headgroup_separator | 'fatty alcohol' headgroup_separator;
+fa_hg : fa_hg_pure | fa_hg_pure headgroup_separator;
+fa_hg_pure : 'FA' | 'fatty acid'  | 'fatty alcohol';
 fa_fa : ROB fa RCB;
-
-
-
 
 
 
@@ -91,12 +89,18 @@ pl_four_hg_pure : 'BMP' | 'LBPA' | 'Lysobisphosphatidate';
 
 
 
-
-
-
 /* sphingolipid rules */
-sl : sl_hg sl_fa;
-sl_hg : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'SulfoHexCer' | 'SulfoHex2Cer' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1' | 'SE';
+sl : sl_hg sl_lcb;
+sl_hg : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'SulfoHexCer' | 'SulfoHex2Cer' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1';
+sl_lcb : ROB lcb RCB;
+
+
+
+
+/* sterol rules */
+st : st_hg st_fa;
+st_hg : 'SE';
+st_fa : ROB fa RCB;
 
 
 
