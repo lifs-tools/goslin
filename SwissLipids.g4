@@ -46,16 +46,16 @@ hydroxyl : 'm' | 'd' | 't';
 fa2 : fa sorted_fa_separator fa;
 fa3 : fa sorted_fa_separator fa sorted_fa_separator fa;
 fa4 : fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa;
-
+fa_species : fa;
 
 
 
 
 
 /* fatty acid rules */
-fatty_acid : hg_fa fa_species;
-hg_fa : 'FA' | 'fatty acid' headgroup_separator | 'fatty alcohol' headgroup_separator;
-fa_species : ROB fa RCB;
+fatty_acid : fa_hg fa_fa;
+fa_hg : 'FA' | 'fatty acid' headgroup_separator | 'fatty alcohol' headgroup_separator;
+fa_fa : ROB fa RCB;
 
 
 
@@ -71,8 +71,8 @@ gl_hg : 'MG' | 'DG' | 'TG';
 
 gl_mono : gl_mono_hg gl_mono_fa;
 gl_mono_fa : ROB fa_species RCB | ROB fa2 RCB;
-gl_hg : 'MHDG' | 'MHDG' headgroup_separator | 'DHDG' | 'DHDG' headgroup_separator;
-
+gl_mono_hg : gl_mono_hg_pure | gl_mono_hg_pure headgroup_separator;
+gl_mono_hg_pure : 'MHDG' | 'DHDG';
 
 
 
@@ -86,7 +86,8 @@ pl_hg : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | 'PA' | 'PC' | 'PE' | 'PG
 
 pl_four : pl_four_hg pl_four_fa;
 pl_four_fa : ROB fa_species RCB | ROB fa2 RCB | ROB fa4 RCB;
-pl_four_hg : 'BMP' | 'LBPA' | 'Lysobisphosphatidate' headgroup_separator;
+pl_four_hg : pl_four_hg_pure | pl_four_hg_pure headgroup_separator;
+pl_four_hg_pure : 'BMP' | 'LBPA' | 'Lysobisphosphatidate';
 
 
 
@@ -111,17 +112,9 @@ BACKSLASH : '\\';
 COMMA: ',';
 ROB: '(';
 RCB: ')';
-FRAGMENT_SEPARATOR : ' - ';
 
-sorted_fa_separator : SLASH | BACKSLASH;
-adduct_separator : SPACE;
-unsorted_fa_separator : DASH | UNDERSCORE;
-plasmalogen_separator : headgroup_separator | DASH;
+sorted_fa_separator : SLASH;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;
-db_hydroxyl_separator : SEMICOLON;
-db_position_separator : COMMA;
-round_open_bracket : ROB;
-round_close_bracket : RCB;
 number :  digit;
 digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
