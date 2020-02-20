@@ -76,11 +76,16 @@ fa_fa : ROB fa RCB;
 
 
 /* glycerolipid rules */
-gl : gl_regular | gl_mono;
+gl : gl_regular | gl_mono | gl_molecular;
 
 gl_regular : gl_hg gl_fa | gl_hg headgroup_separator gl_fa;
 gl_fa : ROB fa_species RCB | ROB fa3 RCB;
 gl_hg : 'MG' | 'DG' | 'TG' |  'MAG' | 'DAG' | 'TAG';
+
+gl_molecular : gl_molecular_hg gl_molecular_fa | gl_molecular_hg headgroup_separator gl_molecular_fa;
+gl_molecular_fa : ROB fa2 RCB;
+gl_molecular_hg : 'DG' | 'DAG';
+
 
 gl_mono : gl_mono_hg gl_mono_fa | gl_mono_hg headgroup_separator gl_mono_fa;
 gl_mono_fa : ROB fa_species RCB | ROB fa2 RCB;
@@ -90,21 +95,28 @@ gl_mono_hg : 'MHDG' | 'DHDG';
 
 
 /* phospholipid rules */
-pl : pl_regular | pl_four;
+pl : pl_regular | pl_three | pl_four;
 
 pl_regular : pl_hg pl_fa | pl_hg headgroup_separator pl_fa;
 pl_fa : ROB fa_species RCB | ROB fa2 RCB;
-pl_hg : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | 'PA' | 'PC' | 'PE' | 'PG' | 'PI' | 'PS' | 'PGP' | 'PIP2' | 'PIP' | 'PIP3';
+pl_hg : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | 'PA' | 'PC' | 'PE' | 'PG' | 'PI' | 'PS' | 'PGP' | 'PIP' | 'PIP[3]' | 'PIP[4]' | 'PIP[5]' | 'PIP2' | 'PIP2[3,4]' | 'PIP2[3,5]' | 'PIP2[4,5]' | 'PIP3' | 'PIP3[3,4,5]' | 'CDP-DAG';
+
+pl_three : pl_three_hg pl_three_fa | pl_three_hg headgroup_separator pl_three_fa;
+pl_three_fa : ROB fa_species RCB | ROB fa3 RCB;
+pl_three_hg : 'NAPE';
 
 pl_four : pl_four_hg pl_four_fa | pl_four_hg headgroup_separator pl_four_fa;
 pl_four_fa : ROB fa_species RCB | ROB fa2 RCB | ROB fa4 RCB;
-pl_four_hg : 'BMP' | 'LBPA' | 'Lysobisphosphatidate';
+pl_four_hg : 'BMP' | 'LBPA' | 'Lysobisphosphatidate' | 'CL' | 'MLCL' | 'DLCL';
 
 
 
 /* sphingolipid rules */
 sl : sl_hg sl_lcb | sl_hg headgroup_separator sl_lcb;
-sl_hg : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'SulfoHexCer' | 'SulfoHex2Cer' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1';
+sl_hg : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'SulfoHexCer' | 'SulfoHex2Cer' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1' | 'GlcCer' | '(3\'-sulfo)GalCer' | 'GD1a alpha' | 'Fuc(Gal)-GM1' | 'SulfoGalCer' | 'GD1a' | 'GM1b' | 'GalCer' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GT1a alpha' | 'GQ1b alpha' | 'LacCer' | '(3'-sulfo)LacCer' | 'GP1c alpha' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c';
+
+
+
 sl_lcb : sl_lcb_species | sl_lcb_subspecies;
 sl_lcb_species : ROB lcb RCB;
 sl_lcb_subspecies : ROB lcb sorted_fa_separator fa RCB;
@@ -113,11 +125,19 @@ sl_lcb_subspecies : ROB lcb sorted_fa_separator fa RCB;
 
 
 /* sterol rules */
-st : st_hg st_fa | st_hg headgroup_separator st_fa;
-st_hg : 'SE' | 'CE';
-st_fa : ROB fa RCB;
+st : st_species | st_sub1 | st_sub2;
 
+st_species : st_species_hg st_species_fa | st_species_hg headgroup_separator st_species_fa;
+st_species_hg : 'SE';
+st_species_fa : ROB fa_species RCB;
 
+st_sub1 : st_sub1_hg st_sub1_fa | st_sub1_hg headgroup_separator st_sub1_fa;
+st_sub1_hg : 'CE';
+st_sub1_fa : ROB fa RCB;
+
+st_sub2 : st_sub2_hg st_sub2_fa | st_sub2_hg headgroup_separator st_sub2_fa;
+st_sub2_hg : 'SE';
+st_sub2_fa : ROB fa2 RCB;
 
 
 
@@ -139,8 +159,8 @@ sorted_fa_separator : SLASH;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;
 db_position_separator : COMMA;
-fa_lcb_suffix_separator : COLON;
-fa_lcb_prefix_separator : COLON;
+fa_lcb_suffix_separator : DASH;
+fa_lcb_prefix_separator : DASH;
 
 number :  digit;
 digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
