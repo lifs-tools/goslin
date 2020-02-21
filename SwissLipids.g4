@@ -60,18 +60,49 @@ fa_lcb_suffix_number : number;
 fa_lcb_prefix : fa_lcb_prefix_type | fa_lcb_prefix_type fa_lcb_prefix_separator;
 fa_lcb_prefix_type : 'iso';
 
-
-fa2 : fa sorted_fa_separator fa | fa unsorted_fa_separator fa;
-fa3 : fa sorted_fa_separator fa sorted_fa_separator fa | fa unsorted_fa_separator fa unsorted_fa_separator fa;
-fa4 : fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa | fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_separator fa;
+/* different fatty acyl types */
 fa_species : fa;
+
+fa2 : fa2_sorted | fa2_unsorted;
+fa2_sorted : fa sorted_fa_separator fa;
+fa2_unsorted : fa unsorted_fa_separator fa;
+
+fa3 : fa3_sorted | fa3_unsorted;
+fa3_sorted : fa sorted_fa_separator fa sorted_fa_separator fa;
+fa3_unsorted : fa unsorted_fa_separator fa unsorted_fa_separator fa;
+
+fa4 : fa4_sorted | fa4_unsorted;
+fa4_sorted : fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa;
+fa4_unsorted : fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_separator fa;
+
+
 
 
 
 /* fatty acid rules */
-fatty_acid : fa_hg fa_fa | fa_hg headgroup_separator fa_fa;
+fatty_acid : fa_hg fa_fa | fa_hg headgroup_separator fa_fa | mediator;
 fa_hg : 'FA' | 'fatty acid' | 'fatty alcohol' | 'NAE' | 'GP-NAE';
 fa_fa : ROB fa RCB;
+
+
+
+
+
+
+
+/* mediator rules */
+mediator : mediator_single | mediator_single headgroup_separator med_positions;
+mediator_single : mediator_single mediator_single | mediator_single '-' mediator_single | db_positions | med_positions | 'KETE' | 'keto' | 'oxo' | 'Hp' | 'EPE' | 'ETE' | 'ODE' | 'EPT' | 'H' | 'LXA4' | 'hydroxy' | 'Di' | 'RvE1' | 'glyceryl' | 'EpETrE' | 'DHE' | 'ETrE' | 'DHA' | 'DoHA' | 'LTB4' | 'PGE2' | ' PGE2' | 'PGF2alpha' | 'trihydroxy' | 'TriH' | 'OTrE' | 'dihydroxy' | 'Ep' | 'LXB4' | 'Tri' | 'PAHSA' | 'MUFA' | 'GPGP' | 'GPIP' | 'PGE1' | 'PGG2' | 'SFA' | 'PUFA' | 'PGI2' | 'TXA2' | 'CoA' | 'FAOH' | 'EA' | 'beta' | 'PGH2' | 'LTD4' | 'kete' | 'DPE' | ' PGD2' | 'PGD2' | 'PGF2' | 'LTC4' | 'LTA4' | 'PGD1' | 'PGA1' | 'LTDE4' | 'epoxyoleate' | 'epoxystearate' | 'carboxy' | 'PGH1' | 'EtrE' | 'HXA3' | 'HxA3' | 'HXA3-C';
+
+
+
+med_positions : med_position | ROB med_position RCB;
+med_position : med_position med_position_separator med_position | number med_suffix | number;
+med_suffix : 'S' | 'R';
+
+
+
+
 
 
 
@@ -94,6 +125,9 @@ gl_mono_hg : 'MHDG' | 'DHDG' | 'MGDG' | 'DGDG';
 
 
 
+
+
+
 /* phospholipid rules */
 pl : pl_regular | pl_three | pl_four;
 
@@ -111,11 +145,17 @@ pl_four_hg : 'BMP' | 'LBPA' | 'Lysobisphosphatidate' | 'CL' | 'MLCL' | 'DLCL';
 
 
 
+
+
+
+
 /* sphingolipid rules */
 sl : sl_hg sl_lcb | sl_hg headgroup_separator sl_lcb;
-sl_hg : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'SulfoHexCer' | 'SulfoHex2Cer' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1' | 'GlcCer' | '(3\'-sulfo)GalCer' | 'GD1a alpha' | 'Fuc(Gal)-GM1' | 'SulfoGalCer' | 'GD1a' | 'GM1b' | 'GalCer' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GT1a alpha' | 'GQ1b alpha' | 'LacCer' | '(3'-sulfo)LacCer' | 'GP1c alpha' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c' | 'IPC' | 'MIPC' | 'M(IP)2C' | 'Gb3Cer' | 'Gb4Cer' | 'Forssman' | 'GalGb4Cer' | 'MSGG' | 'DSGG' | 'NeuAc(alpha2-6)-MSGG' | 'NeuAc(alpha2-8)-MSGG' | 'NOR1' | 'NORint' | 'NOR2' | 'Globo-H' | 'Globo-A';
+sl_hg : sl_hg_names | sl_hg_prefix sl_hg_names | sl_hg_names sl_hg_suffix | sl_hg_prefix sl_hg_names sl_hg_suffix;
+sl_hg_names : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1' | 'GD1a' | 'GM1b' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c' | 'IPC' | 'MIPC' | 'M(IP)2C' | 'Gb3Cer' | 'Gb4Cer' | 'Forssman'  | 'MSGG' | 'DSGG' | 'NOR1' | 'NORint' | 'NOR2' | 'Globo-H' | 'Globo-A' | 'SB1a' | 'SM1b' | 'SM1a' | 'Branched-Forssman' | 'Globo-B' | 'Para-Forssman' | 'Globo-Lex-9';
 
-
+sl_hg_prefix : sl_hg_prefix '-' | sl_hg_prefix sl_hg_prefix | ROB sl_hg_prefix RCB | 'Glc' | 'NAc' | 'Gal' | 'Fuc' | 'SO3' | 'NeuGc' | 'i' | 'NeuAc' | 'Lac' | 'Lex' | '(3\'-sulfo)' | 'Ac-O-9' | '(alpha2-8)' | '(alpha2-6)' | 'NeuAc' | 'Sulfo';
+sl_hg_suffix : sl_hg_suffix sl_hg_suffix | sl_hg_suffix '/' | ROB sl_hg_suffix RCB | 'NeuAc' | 'NeuGc' | ' alpha';
 
 sl_lcb : sl_lcb_species | sl_lcb_subspecies;
 sl_lcb_species : ROB lcb RCB;
@@ -161,6 +201,7 @@ sorted_fa_separator : SLASH;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;
 db_position_separator : COMMA;
+med_position_separator : COMMA;
 fa_lcb_suffix_separator : DASH;
 fa_lcb_prefix_separator : DASH;
 
