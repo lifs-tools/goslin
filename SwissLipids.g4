@@ -53,8 +53,8 @@ db_position_number : number;
 cistrans : 'E' | 'Z';
 ether : 'O-' | 'P-';
 hydroxyl : 'm' | 'd' | 't';
-fa_lcb_suffix : fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
-fa_lcb_suffix_core : fa_lcb_suffix_number fa_lcb_suffix_type;
+fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
+fa_lcb_suffix_core : fa_lcb_suffix_number fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_separator fa_lcb_suffix_type;
 fa_lcb_suffix_type : 'OH' | 'me';
 fa_lcb_suffix_number : number;
 fa_lcb_prefix : fa_lcb_prefix_type | fa_lcb_prefix_type fa_lcb_prefix_separator;
@@ -70,7 +70,7 @@ fa_species : fa;
 
 /* fatty acid rules */
 fatty_acid : fa_hg fa_fa | fa_hg headgroup_separator fa_fa;
-fa_hg : 'FA' | 'fatty acid' | 'fatty alcohol' | 'NAE';
+fa_hg : 'FA' | 'fatty acid' | 'fatty alcohol' | 'NAE' | 'GP-NAE';
 fa_fa : ROB fa RCB;
 
 
@@ -89,7 +89,7 @@ gl_molecular_hg : 'DG' | 'DAG';
 
 gl_mono : gl_mono_hg gl_mono_fa | gl_mono_hg headgroup_separator gl_mono_fa;
 gl_mono_fa : ROB fa_species RCB | ROB fa2 RCB;
-gl_mono_hg : 'MHDG' | 'DHDG';
+gl_mono_hg : 'MHDG' | 'DHDG' | 'MGDG' | 'DGDG';
 
 
 
@@ -113,7 +113,7 @@ pl_four_hg : 'BMP' | 'LBPA' | 'Lysobisphosphatidate' | 'CL' | 'MLCL' | 'DLCL';
 
 /* sphingolipid rules */
 sl : sl_hg sl_lcb | sl_hg headgroup_separator sl_lcb;
-sl_hg : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'SulfoHexCer' | 'SulfoHex2Cer' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1' | 'GlcCer' | '(3\'-sulfo)GalCer' | 'GD1a alpha' | 'Fuc(Gal)-GM1' | 'SulfoGalCer' | 'GD1a' | 'GM1b' | 'GalCer' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GT1a alpha' | 'GQ1b alpha' | 'LacCer' | '(3'-sulfo)LacCer' | 'GP1c alpha' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c';
+sl_hg : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'SulfoHexCer' | 'SulfoHex2Cer' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1' | 'GlcCer' | '(3\'-sulfo)GalCer' | 'GD1a alpha' | 'Fuc(Gal)-GM1' | 'SulfoGalCer' | 'GD1a' | 'GM1b' | 'GalCer' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GT1a alpha' | 'GQ1b alpha' | 'LacCer' | '(3'-sulfo)LacCer' | 'GP1c alpha' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c' | 'IPC' | 'MIPC' | 'M(IP)2C' | 'Gb3Cer' | 'Gb4Cer' | 'Forssman' | 'GalGb4Cer' | 'MSGG' | 'DSGG' | 'NeuAc(alpha2-6)-MSGG' | 'NeuAc(alpha2-8)-MSGG' | 'NOR1' | 'NORint' | 'NOR2' | 'Globo-H' | 'Globo-A';
 
 
 
