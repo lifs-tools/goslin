@@ -146,13 +146,10 @@ pl_four_hg : 'BMP' | 'LBPA' | 'Lysobisphosphatidate' | 'CL' | 'MLCL' | 'DLCL';
 
 
 
-
-
-
 /* sphingolipid rules */
 sl : sl_hg sl_lcb | sl_hg headgroup_separator sl_lcb;
 sl_hg : sl_hg_names | sl_hg_prefix sl_hg_names | sl_hg_names sl_hg_suffix | sl_hg_prefix sl_hg_names sl_hg_suffix;
-sl_hg_names : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1' | 'GD1a' | 'GM1b' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c' | 'IPC' | 'MIPC' | 'M(IP)2C' | 'Gb3Cer' | 'Gb4Cer' | 'Forssman'  | 'MSGG' | 'DSGG' | 'NOR1' | 'NORint' | 'NOR2' | 'Globo-H' | 'Globo-A' | 'SB1a' | 'SM1b' | 'SM1a' | 'Branched-Forssman' | 'Globo-B' | 'Para-Forssman' | 'Globo-Lex-9';
+sl_hg_names : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'Gb3' | 'GA2' | 'GA1' | 'GM3' | 'GM2' | 'GM1' | 'GD3' | 'GT3' | 'GD1' | 'GT1' | 'GQ1' | 'GM4' | 'GD2' | 'GT2' | 'GP1' | 'GD1a' | 'GM1b' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c' | 'IPC' | 'MIPC' | 'M(IP)2C' | 'Gb3Cer' | 'Gb4Cer' | 'Forssman'  | 'MSGG' | 'DSGG' | 'NOR1' | 'NORint' | 'NOR2' | 'Globo-H' | 'Globo-A' | 'SB1a' | 'SM1b' | 'SM1a' | 'Branched-Forssman' | 'Globo-B' | 'Para-Forssman' | 'Globo-Lex-9', 'Galβ-Cer';
 
 sl_hg_prefix : sl_hg_prefix '-' | sl_hg_prefix sl_hg_prefix | ROB sl_hg_prefix RCB | 'Glc' | 'NAc' | 'Gal' | 'Fuc' | 'SO3' | 'NeuGc' | 'i' | 'NeuAc' | 'Lac' | 'Lex' | '(3\'-sulfo)' | 'Ac-O-9' | '(alpha2-8)' | '(alpha2-6)' | 'NeuAc' | 'Sulfo';
 sl_hg_suffix : sl_hg_suffix sl_hg_suffix | sl_hg_suffix '/' | ROB sl_hg_suffix RCB | 'NeuAc' | 'NeuGc' | ' alpha';
