@@ -186,10 +186,14 @@ lcb : lcb_pure | lcb_pure heavy_lcb;
 heavy_lcb : heavy;
 lcb_pure : carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | old_hydroxyl carbon carbon_db_separator db;
 carbon : number;
-db : db_count | db_count round_open_bracket db_position round_close_bracket;
+db : db_count | db_count db_positions;
 db_count : number;
-db_position : number cistrans | number cistrans | db_position db_position_separator db_position;
+db_positions : ROB db_position RCB;
+db_position : db_single_position | db_position db_position_separator db_position;
+db_single_position : db_position_number cistrans;
+db_position_number : number;
 cistrans : 'E' | 'Z';
+
 hydroxyl : number;
 old_hydroxyl : 'd' | 't';
 number :  digit;

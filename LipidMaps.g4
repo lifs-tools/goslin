@@ -157,10 +157,13 @@ fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydrox
 lcb_fa: carbon carbon_db_separator db;
 lcb: hydroxyl_lcb lcb_fa | lcb_fa;
 carbon: number;
-db: db_count | db_count round_open_bracket db_position round_close_bracket;
-db_count: number;
-db_position: number | number cistrans | db_position db_position_separator db_position;
-cistrans: 'E' | 'Z';
+db : db_count | db_count db_positions;
+db_count : number;
+db_positions : ROB db_position RCB;
+db_position : db_single_position | db_position db_position_separator db_position;
+db_single_position : db_position_number cistrans;
+db_position_number : number;
+cistrans : 'E' | 'Z';
 hydroxyl: number;
 hydroxyl_lcb: 'm' | 'd' | 't';
 number:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | number number;
