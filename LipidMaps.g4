@@ -115,7 +115,7 @@ sphinganine_name: 'Sphinganine' | 'Sa' | 'Sphinganine-1-phosphate';
 ctype: 'C' number;
 
 hg_dslc: hg_dsl | hg_dsl headgroup_separator;
-hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | '(3\'-sulfo)Galbeta-Cer';
+hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | '(3\'-sulfo)Galbeta-Cer';
 
 hg_lslc: hg_lsl | hg_lsl headgroup_separator;
 hg_lsl: 'SPH' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P';
@@ -154,7 +154,9 @@ modification: modification ',' modification | number mod_text | mod_text;
 mod_text: mod_text mod_text | square_open_bracket mod_text square_close_bracket | 'OH' | 'Ke' | 'S' | 'OOH' | 'My' | 'Me' | 'R' | 'Br' | 'CHO' | 'COOH' | 'Cp' | '(R)';
 ether: 'P-' | 'O-';
 fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
-lcb_fa: carbon carbon_db_separator db;
+lcb_fa: lcb_fa_unmod | lcb_fa_unmod lcb_fa_mod;
+lcb_fa_unmod: carbon carbon_db_separator db;
+lcb_fa_mod: round_open_bracket modification round_close_bracket;
 lcb: hydroxyl_lcb lcb_fa | lcb_fa;
 carbon: number;
 db: db_count | db_count round_open_bracket db_position round_close_bracket;
