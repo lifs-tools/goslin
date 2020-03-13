@@ -190,7 +190,7 @@ db : db_count | db_count db_positions;
 db_count : number;
 db_positions : ROB db_position RCB;
 db_position : db_single_position | db_position db_position_separator db_position;
-db_single_position : db_position_number cistrans;
+db_single_position : db_position_number | db_position_number cistrans;
 db_position_number : number;
 cistrans : 'E' | 'Z';
 
