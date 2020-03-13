@@ -43,7 +43,7 @@ element: 'd';
 pure_fa: hg_fa pure_fa_species | fa_no_hg;
 fa_no_hg: fa;
 pure_fa_species: round_open_bracket fa round_close_bracket;
-hg_fa: 'FA' | 'WE';
+hg_fa: 'FA' | 'WE' | 'CoA';
 
 fa2 : fa2_unsorted | fa2_sorted;
 fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
@@ -151,7 +151,7 @@ fa: fa_unmod | fa_unmod fa_mod;
 fa_unmod: ether fa_pure | fa_pure;
 fa_mod: round_open_bracket modification round_close_bracket;
 modification: modification ',' modification | number mod_text | mod_text;
-mod_text: mod_text mod_text | square_open_bracket mod_text square_close_bracket | 'OH' | 'Ke' | 'S' | 'OOH' | 'My' | 'Me' | 'R' | 'Br' | 'CHO' | 'COOH' | 'Cp' | '(R)';
+mod_text: mod_text mod_text | square_open_bracket mod_text square_close_bracket | 'OH' | 'Ke' | 'S' | 'OOH' | 'My' | 'Me' | 'R' | 'Br' | 'CHO' | 'COOH' | 'Cp' | '(R)' | 'Ep' | 'OH2' | 'OH3' | 'OH4' | 'OH6' | 'cyclo' | 'KE2' | 'NH2';
 ether: 'P-' | 'O-';
 fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
 lcb_fa: lcb_fa_unmod | lcb_fa_unmod lcb_fa_mod;
