@@ -33,7 +33,7 @@ grammar LipidMaps;
 lipid: lipid_rule EOF;
 lipid_rule: lipid_mono | lipid_mono isotope;
 lipid_mono: lipid_pure | lipid_pure isoform;
-lipid_pure: pure_fa | gl | pl | sl | pk | cholesterol | mediator;
+lipid_pure: pure_fa | gl | pl | sl | pk | sterol | mediator;
 isoform: square_open_bracket isoform_inner square_close_bracket;
 isoform_inner : 'rac' | 'iso' | 'iso' number | 'R';
 isotope: SPACE round_open_bracket element number round_close_bracket | DASH round_open_bracket element number round_close_bracket | DASH element number;
@@ -135,8 +135,8 @@ pk_fa : round_open_bracket fa round_close_bracket;
 
 
 
-/* cholesterol lipids */
-cholesterol: chc | chec;
+/* sterol lipids */
+sterol: chc | chec;
 chc: ch | ch headgroup_separator;
 ch: 'Cholesterol';
 chec: che | che headgroup_separator | che_fa;
