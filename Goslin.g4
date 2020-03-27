@@ -147,12 +147,15 @@ hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB4' | 'GD3' | 'GB3' | 'GM3' | 'GM4' | 'Hex3C
 
 
 /* sterol lipids (2 classes) */
-sterol : stc | ste;
+sterol : stc | ste | stes;
 stc : st | st heavy_hg;
 st : 'Ch' | 'Cholesterol' | 'ST 27:1;1' | 'ST 27:2;1' | 'ST 28:3;1' | 'ST 30:2;1' | 'ST 29:2;1' | 'ST 28:2;1';
 ste : hg_stc sorted_fa_separator fa;
+stes : hg_stcs headgroup_separator fa;
 hg_stc : hg_ste | hg_ste heavy_hg;
-hg_ste : 'ChE' | 'CE' | 'SE 27:1;1' | 'SE 27:2;1' | 'SE 28:3;1' | 'SE 30:2;1' | 'SE 29:2;1' | 'SE 28:2;1';
+hg_ste : 'SE 27:1;1' | 'SE 27:2;1' | 'SE 28:3;1' | 'SE 30:2;1' | 'SE 29:2;1' | 'SE 28:2;1';
+hg_stcs : hg_stes | hg_stes heavy_hg;
+hg_stes : 'ChE' | 'CE';
 
 
 /* mediator lipids (1 class) */
