@@ -26,7 +26,7 @@
 
 
 
-grammar SwissLipids;
+grammar HMDB;
 
 
 /* first rule is always start rule */
