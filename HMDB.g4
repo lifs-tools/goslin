@@ -39,7 +39,7 @@ lipid_suffix : '[rac]';
 
 
 /* fatty acyl rules */
-fa : fa_core | furan_fa | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix | carbon 'D' db;
+fa : fa_core | furan_fa | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix;
 fa_core : carbon carbon_db_separator db | ether carbon carbon_db_separator db;
 
 furan_fa : furan_fa_mono | furan_fa_di;
