@@ -26,7 +26,7 @@
 
 
 
-grammar SwissLipids;
+grammar HMDB;
 
 
 /* first rule is always start rule */
@@ -34,14 +34,17 @@ lipid : lipid_pure EOF;
 lipid_pure : lipid_class | lipid_class lipid_suffix;
 lipid_class : fatty_acid | gl | pl | sl | st;
 
-
 lipid_suffix : '[rac]';
 
 
 
 /* fatty acyl rules */
-fa : fa_core | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix | carbon 'D' db;
+fa : fa_core | furan_fa | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix | carbon 'D' db;
 fa_core : carbon carbon_db_separator db | ether carbon carbon_db_separator db;
+
+furan_fa : furan_fa_mono | furan_fa_di;
+furan_fa_mono : number 'M' number | 'MonoMe(' number ',' number ')';
+furan_fa_di : number 'D' number | 'DiMe(' number ',' number ')';
 
 lcb : lcb_core | fa_lcb_prefix lcb_core | lcb_core fa_lcb_suffix | fa_lcb_prefix lcb_core fa_lcb_suffix;
 lcb_core : hydroxyl carbon carbon_db_separator db;
@@ -56,7 +59,9 @@ db_position : db_single_position | db_position db_position_separator db_position
 db_single_position : db_position_number | db_position_number cistrans;
 db_position_number : number;
 cistrans : 'E' | 'Z';
-ether : 'o-' | 'O-' | 'P-' | 'i-' | 'a-';
+ether : ether_type | ether_link_pos ether_type;
+ether_link_pos : number '-';
+ether_type : 'o-' | 'O-' | 'P-' | 'i-' | 'a-';
 hydroxyl : 'm' | 'd' | 't';
 fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
 fa_lcb_suffix_core : fa_lcb_suffix_number fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_separator fa_lcb_suffix_type;
@@ -85,11 +90,10 @@ fa4_unsorted : fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_
 
 
 /* fatty acid rules */
-fatty_acid : fa_hg fa_fa | fa_hg headgroup_separator fa_fa | mediator;
+fatty_acid : fa_hg fa_fa | fa_hg interlink_fa | fa_hg headgroup_separator fa_fa | mediator;
 fa_hg : 'FA' | 'fatty acid' | 'fatty alcohol' | 'NAE' | 'GP-NAE' | 'FAHFA';
 fa_fa : ROB fa RCB;
-
-
+interlink_fa : ROB fa sorted_fa_separator fa RCB;
 
 
 
