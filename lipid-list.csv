@@ -79,7 +79,7 @@
 "6-Ac-Glc-GP","GP","Glycosylglycerophospholipids [GP14]","2","2","","","","","","",""
 "BMP","GP","Monoacylglycerophosphomonoradylglycerols [GP0410]","4","2|4","LBPA","","","","","",""
 "CDPDAG","GP","CDP-diacylglycerols [GP1301]","2","2","CDPDG","CDP-DG","CDP-DAG","","","",""
-"CL","GP","Monoacylglycerophosphoglycerophosphomonoradylglycerols [GP1207]","4","4","","","","","","",""
+"CL","GP","Glycerophosphoglycerophosphoglycerols [GP12]","4","4","","","","","","",""
 "CPA","GP","Glycerophosphoinositolglycans [GP15]","1","1","","","","","","",""
 "DLCL","GP","Glycerophosphoglycerophosphoglycerols [GP12]","4","2","","","","","","",""
 "DMPE","GP","Dimethylphosphatidylethanolamine","2","2","","","","","","",""
