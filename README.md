@@ -2,6 +2,15 @@
 
 Goslin is the **G**rammar **o**n **s**uccinct **li**pid **n**omenclature.
 
+## Related Projects
+
+- [This project](http://github.com/lifs-tools/goslin)
+- [C++ implementation](https://github.com/lifs-tools/cppgoslin)
+- [Java implementation](https://github.com/lifs-tools/jgoslin)
+- [Python implementation](https://github.com/lifs-tools/pygoslin)
+- [R implementation](https://github.com/lifs-tools/rgoslin)
+- [Webapplication and REST API](https://github.com/lifs-tools/goslin-webapp)
+
 ## Adding goslin as a Git subtree
 
 In the root of your git project, run the git subtree command, with `<PREFIX>` replaced by the subdirectory path where you want the subtree to live:
