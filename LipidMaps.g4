@@ -128,7 +128,7 @@ special_cer_prefix_1_O : 'myristoyl' | 'palmitoyl' | 'stearoyl' | 'eicosanoyl' |
 
 
 hg_lslc: hg_lsl | hg_lsl headgroup_separator;
-hg_lsl: 'SPH' | 'Sph' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P' | 'LysoSM' | 'C1P' | 'SIP';
+hg_lsl: 'SPH' | 'Sph' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P' | 'LysoSM' | 'SIP';
 
 
 
