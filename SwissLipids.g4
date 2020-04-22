@@ -172,9 +172,8 @@ st_sub1 : st_sub1_hg st_sub1_fa | st_sub1_hg headgroup_separator st_sub1_fa;
 st_sub1_hg : 'CE';
 st_sub1_fa : ROB fa RCB;
 
-st_sub2 : st_sub2_hg st_sub2_fa | st_sub2_hg headgroup_separator st_sub2_fa;
-st_sub2_hg : 'SE';
-st_sub2_fa : ROB fa2 RCB;
+st_sub2 : st_sub2_hg sorted_fa_separator fa RCB;
+st_sub2_hg : 'SE' ROB number COLON number;
 
 
 
