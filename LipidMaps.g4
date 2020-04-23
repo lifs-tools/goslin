@@ -43,7 +43,7 @@ element: 'd';
 /* pure fatty acid */
 pure_fa: hg_fa pure_fa_species | fa_no_hg;
 fa_no_hg: fa;
-pure_fa_species: round_open_bracket fa round_close_bracket | fa;
+pure_fa_species: round_open_bracket fa round_close_bracket | fa | round_open_bracket fa2 round_close_bracket;
 hg_fa: 'FA' | 'WE' | 'CoA' | 'CAR' | 'FAHFA' | 'CoA';
 
 
@@ -57,6 +57,7 @@ fa4 : fa4_unsorted | fa4_sorted;
 fa4_unsorted: fa DASH fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa UNDERSCORE fa;
 fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLASH fa;
 lcb_fa_sorted: lcb SLASH fa | lcb BACKSLASH fa;
+species_fa : fa;
 
 /* glycerolipid rules */
 gl: sgl | tgl;
@@ -68,7 +69,7 @@ tgl_species: round_open_bracket fa round_close_bracket | fa;
 tgl_subspecies: round_open_bracket fa3 round_close_bracket | fa3;
 
 hg_sglc: hg_sgl | hg_sgl headgroup_separator;
-hg_sgl: 'MGDG' | 'DGDG' | 'SQDG' | 'SQMG' | 'DG' | 'DGCC';
+hg_sgl: 'MGDG' | 'DGDG' | 'SQDG' | 'SQMG' | 'DG' | 'DGCC' | 'PE-GlcDG';
 hg_glc: hg_gl | hg_gl headgroup_separator;
 hg_gl: 'MG' | 'DG' | 'TG';
 
@@ -76,7 +77,7 @@ hg_gl: 'MG' | 'DG' | 'TG';
 
 
 /* phospholipid rules */
-pl: lpl | dpl | cl | fourpl;
+pl: lpl | dpl | cl | fourpl | threepl;
 lpl: hg_lplc round_open_bracket fa_lpl round_close_bracket | hg_lplc fa_lpl;
 fa_lpl: fa | fa2;
 dpl: hg_ddpl dpl_species | hg_ddpl dpl_subspecies;
@@ -86,19 +87,22 @@ cl: hg_clc cl_species | hg_clc cl_subspecies;
 cl_species: round_open_bracket fa round_close_bracket | fa;
 cl_subspecies: round_open_bracket '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket round_close_bracket | hg_clc '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket;
 fourpl: hg_fourplc round_open_bracket fa4 round_close_bracket | hg_fourplc fa4;
+threepl: hg_threeplc round_open_bracket fa3 round_close_bracket | hg_threeplc fa3 | hg_threeplc round_open_bracket species_fa round_close_bracket | hg_threeplc species_fa;
 
 hg_ddpl: hg_dplc pip_position | hg_dplc;
 
 hg_clc: hg_cl | hg_cl headgroup_separator;
 hg_cl: 'CL';
 hg_dplc: hg_dpl | hg_dpl headgroup_separator;
-hg_dpl: 'LBPA' | 'CDP-DG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS' | 'PIM1' | 'PIM2' | 'PIM3' | 'PIM4' | 'PIM5' | 'PIM6' | 'Glc-DG' | 'PGP' | 'PE-NMe2' | 'AC2SGL' | 'DAT' | 'PE-NMe' | 'PT' | 'Glc-GP' | 'NAPE' | 'PS-NAc' | 'SLBPA' | 'PPA';
+hg_dpl: 'LBPA' | 'CDP-DG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS' | 'PIM1' | 'PIM2' | 'PIM3' | 'PIM4' | 'PIM5' | 'PIM6' | 'Glc-DG' | 'PGP' | 'PE-NMe2' | 'AC2SGL' | 'DAT' | 'PE-NMe' | 'PT' | 'Glc-GP' | 'PPA' | 'PnC' | 'PnE' | '6-Ac-Glc-GP';
 hg_lplc: hg_lpl | hg_lpl headgroup_separator;
 hg_lpl: 'LysoPC' | 'LPC' | 'LysoPE' | 'LPE' | 'LPI' | 'LPG' | 'LPS' | 'LPIM1' | 'LPIM2' | 'LPIM3' | 'LPIM4' | 'LPIM5' | 'LPIM6' | 'CPA' | 'LPA';
 hg_fourplc: hg_fourpl | hg_fourpl headgroup_separator;
 hg_fourpl: 'PAT16' | 'PAT18';
 pip_position: square_open_bracket pip_pos square_close_bracket;
 pip_pos: pip_pos COMMA pip_pos | number '\'';
+hg_threeplc: hg_threepl | hg_threepl headgroup_separator;
+hg_threepl: 'SLBPA' | 'PS-NAc' | 'NAPE';
 
 
 
@@ -117,14 +121,14 @@ sphinganine_name: 'Sphinganine' | 'Sa' | 'Sphinganine-1-phosphate';
 ctype: 'C' number;
 
 hg_dslc: hg_dsl | hg_dsl headgroup_separator;
-hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | special_cer;
+hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | 'C1P' | special_cer;
 special_cer : special_cer_prefix '-Cer';
 special_cer_prefix : '1-O-' special_cer_prefix_1_O | '(3\'-sulfo)Galbeta';
 special_cer_prefix_1_O : 'myristoyl' | 'palmitoyl' | 'stearoyl' | 'eicosanoyl' | 'behenoyl' | 'lignoceroyl' | 'cerotoyl' | 'carboceroyl' | 'tricosanoyl';
 
 
 hg_lslc: hg_lsl | hg_lsl headgroup_separator;
-hg_lsl: 'SPH' | 'Sph' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P' | 'LysoSM' | 'C1P' | 'SIP';
+hg_lsl: 'SPH' | 'Sph' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P' | 'LysoSM' | 'SIP';
 
 
 
