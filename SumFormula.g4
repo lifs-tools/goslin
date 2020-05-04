@@ -27,14 +27,15 @@
 //// This is a BNF grammer for lipid subspecies identifiers followed by
 //// J.K. Pauling et al. 2017, PLoS One, 12(11):e0188394. 
 
-grammar MoleculeFormula;
+grammar SumFormula;
 
 /* first rule is always start rule */
-Molecule: Molecule_Rule EOF;
-Molecule_Rule: Molecule_Group;
-Molecule_Group: Element_Group | Single_Element | Molecule_Group Molecule_Group;
-Element_Group: Element Count;
-Single_Element: Element;
-Element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S';
-Count: Number;
-Number:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | Number Number;
+molecule: molecule_rule EOF;
+molecule_rule: molecule_group;
+molecule_group: element_group | single_element | molecule_group molecule_group;
+element_group: element count;
+single_element: element;
+element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S';
+count: digit;
+digit:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
+
