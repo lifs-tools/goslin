@@ -2,7 +2,6 @@
 // MIT License
 // 
 // Copyright (c) 2017 Dominik Kopczynski   -   dominik.kopczynski {at} isas.de
-//                    Bing Peng   -   bing.peng {at} isas.de
 //                    Nils Hoffmann  -  nils.hoffmann {at} isas.de
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,17 +23,11 @@
 // SOFTWARE.
 ////////////////////////////////////////////////////////////////////////////////
 
-//// This is a BNF grammer for lipid subspecies identifiers followed by
-//// J.K. Pauling et al. 2017, PLoS One, 12(11):e0188394. 
 
-grammar MoleculeFormula;
+grammar FattyAcids;
 
 /* first rule is always start rule */
-Molecule: Molecule_Rule EOF;
-Molecule_Rule: Molecule_Group;
-Molecule_Group: Element_Group | Single_Element | Molecule_Group Molecule_Group;
-Element_Group: Element Count;
-Single_Element: Element;
-Element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S';
-Count: Number;
-Number:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | Number Number;
+fatt_acid: fatty_rule EOF;
+count: digit;
+digit:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
+
