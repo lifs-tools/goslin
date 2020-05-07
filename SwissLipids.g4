@@ -44,9 +44,9 @@ lcb : lcb_core | fa_lcb_prefix lcb_core | lcb_core fa_lcb_suffix | fa_lcb_prefix
 lcb_core : hydroxyl carbon carbon_db_separator db;
 
 carbon : number;
-db : db_count | db_count db_positions;
+db : db_count | db_count ROB db_position RCB;
 db_count : number;
-db_positions : ROB db_position RCB;
+
 db_position : db_single_position | db_position db_position_separator db_position;
 db_single_position : db_position_number | db_position_number cistrans;
 db_position_number : number;
@@ -91,17 +91,18 @@ fa_fa : ROB fa RCB;
 
 
 /* mediator rules */
-mediator : mediator_single | mediator_single headgroup_separator med_positions;
-mediator_single : mediator_single mediator_single | mediator_single '-' mediator_single | db_positions | med_positions | 'KETE' | 'keto' | 'oxo' | 'Hp' | 'EPE' | 'ETE' | 'ODE' | 'EPT' | 'H' | 'LXA4' | 'hydroxy' | 'Di' | 'RvE1' | 'glyceryl' | 'EpETrE' | 'DHE' | 'ETrE' | 'DHA' | 'DoHA' | 'LTB4' | 'PGE2' | ' PGE2' | 'PGF2alpha' | 'trihydroxy' | 'TriH' | 'OTrE' | 'dihydroxy' | 'Ep' | 'LXB4' | 'Tri' | 'PAHSA' | 'MUFA' | 'GPGP' | 'GPIP' | 'PGE1' | 'PGG2' | 'SFA' | 'PUFA' | 'PGI2' | 'TXA2' | 'CoA' | 'FAOH' | 'EA' | 'beta' | 'PGH2' | 'LTD4' | 'kete' | 'DPE' | ' PGD2' | 'PGD2' | 'PGF2' | 'LTC4' | 'LTA4' | 'PGD1' | 'PGA1' | 'LTDE4' | 'epoxyoleate' | 'epoxystearate' | 'carboxy' | 'PGH1' | 'EtrE' | 'HXA3' | 'HxA3' | 'HXA3-C';
+mediator : mediator_base | mediator_single mediator_base | mediator_single '-' mediator_base;
+mediator_base : med_db_positions mediator_hg | med_db_positions '-' mediator_hg | mediator_hg;
+med_db_positions : db_position | ROB db_position RCB;
 
+mediator_hg : 'EPE' | 'ETE' | 'ODE' | 'EPT' | 'LXA4' | 'RvE1' | 'DHE' | 'ETrE' | 'DHA' | 'DoHA' | 'LTB4' | 'PGE2' | ' PGE2' | 'PGF2alpha' | 'OTrE' | 'LXB4' | 'PAHSA' | 'MUFA' | 'GPGP' | 'GPIP' | 'PGE1' | 'PGG2' | 'SFA' | 'PUFA' | 'PGI2' | 'TXA2' | 'CoA' | 'FAOH' | 'EA' | 'PGH2' | 'LTD4' | 'DPE' | ' PGD2' | 'PGD2' | 'PGF2' | 'LTC4' | 'LTA4' | 'PGD1' | 'PGA1' | 'LTDE4' | 'epoxyoleate' | 'epoxystearate' | 'PGH1' | 'EtrE' | 'HXA3' | 'HxA3' | 'HXA3-C';
 
+mediator_single : mediator_single mediator_single | mediator_single '-' mediator_single | med_positions med_derivative | med_positions '-' med_derivative;
+med_derivative : 'KETE' | 'keto' | 'oxo' | 'Hp' | 'H' | 'hydroxy' | 'Di' | 'RvE1' | 'glyceryl' | 'trihydroxy' | 'TriH' | 'OTrE' | 'dihydroxy' | 'Ep' | 'Tri' |  'CoA' | 'EA' | 'beta'  | 'kete' | 'carboxy';
 
 med_positions : med_position | ROB med_position RCB;
 med_position : med_position med_position_separator med_position | number med_suffix | number;
 med_suffix : 'S' | 'R';
-
-
-
 
 
 
@@ -201,5 +202,4 @@ med_position_separator : COMMA;
 fa_lcb_suffix_separator : DASH;
 fa_lcb_prefix_separator : DASH;
 
-number :  digit;
-digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
+number :  number number | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';

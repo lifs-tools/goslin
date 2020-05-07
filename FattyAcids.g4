@@ -29,36 +29,35 @@ grammar FattyAcids;
 /* first rule is always start rule */
 fatt_acid: fatty_rule EOF;
 fatty_rule: pure_fa | fatty_base | fatty_prefix fatty_base | fatty_prefix fatty_separator fatty_base;
-fatty_prefix: fatty_prefix fatty_prefix | fatty_prefix fatty_separator fatty_prefix | epoxy_prefix | generic_prefix | polarity_suffix | pentafluor_prefix;
+fatty_prefix: fatty_prefix fatty_prefix | fatty_prefix fatty_separator fatty_prefix | generic_prefix | polarity_suffix | penta_prefix | di_prefix | tri_prefix | tetra_prefix;
 
 polarity_suffix: '(+/-)' | '(-)' | '(+)';
-
-epoxy_prefix: epoxy_suffix | epoxy_numbers epoxy_suffix | epoxy_numbers fatty_separator epoxy_suffix;
-epoxy_suffix: 'Ep' | 'epoxy';
-epoxy_numbers: epoxy_number ',' epoxy_number | '(' epoxy_number ',' epoxy_number ')';
-epoxy_number: number | number RS;
-
 
 generic_prefix: generic_numbers generic_suffix | generic_numbers fatty_separator generic_suffix;
 generic_numbers: generic_inner_numbers | '(' generic_inner_numbers ')';
 generic_inner_numbers: generic_number | generic_inner_numbers fatty_separator generic_inner_numbers;
 generic_number: number | number RS;
-generic_suffix: 'Hp' | 'hydroperoxy' | 'H' | 'hydroxy' | 'oxo' | 'keto' | 'K' | 'phenyl' | 'glyceryl' | 'methyl' | 'fluoro' | 'amino' | 'bromo' | 'Methyl';
+generic_suffix: 'Hp' | 'hydroperoxy' | 'H' | 'hydroxy' | 'COOH' | 'oxo' | 'keto' | 'K' | 'phenyl' | 'glyceryl' | 'methyl' | 'fluoro' | 'amino' | 'bromo' | 'Methyl' | 'trifluoro' | 'trans' | 'dimethylarsinoyl' | 'hexyl' | 'ethyl';
 
 
 
-pentafluor_prefix: pentafluor_number pentafluor_suffix | pentafluor_number fatty_separator pentafluor_suffix;
-pentafluor_number: generic_number ',' generic_number ',' generic_number ',' generic_number ',' generic_number | '(' generic_number ',' generic_number ',' generic_number ',' generic_number ',' generic_number ')';
-pentafluor_suffix: 'Pentafluoro';
 
-hydro_di_prefix: hydro_di_number hydro_di_suffix | hydro_di_number fatty_separator hydro_di_suffix;
-hydro_di_number: generic_number ',' generic_number | '(' generic_number ',' generic_number ')';
-hydro_di_suffix: 'DiH' | 'dihydroxy';
 
-hydro_tri_prefix: hydro_tri_number hydro_tri_suffix | hydro_tri_number fatty_separator hydro_tri_suffix;
-hydro_tri_number: generic_number ',' generic_number ',' generic_number | '(' generic_number ',' generic_number ',' generic_number ')';
-hydro_tri_suffix: 'TriH' | 'trihydroxy';
+di_prefix: di_number di_suffix | di_number fatty_separator di_suffix;
+di_number: generic_number ',' generic_number | '(' generic_number ',' generic_number ')';
+di_suffix: 'DiH' | 'dihydroxy' | 'dihydro' | 'dehydro' | 'Ep' | 'epoxy' | 'dimethyl';
 
+tri_prefix: tri_number tri_suffix | tri_number fatty_separator tri_suffix;
+tri_number: generic_number ',' generic_number ',' generic_number | '(' generic_number ',' generic_number ',' generic_number ')';
+tri_suffix: 'TriH' | 'trihydroxy' | 'trihydro' | 'trimethyl';
+
+tetra_prefix: tetra_number tetra_suffix | tetra_number fatty_separator tetra_suffix;
+tetra_number: generic_number ',' generic_number ',' generic_number ',' generic_number | '(' generic_number ',' generic_number ',' generic_number ',' generic_number ')';
+tetra_suffix: 'tetrahydro' | 'tetramethyl';
+
+penta_prefix: penta_number penta_suffix | penta_number fatty_separator penta_suffix;
+penta_number: generic_number ',' generic_number ',' generic_number ',' generic_number ',' generic_number | '(' generic_number ',' generic_number ',' generic_number ',' generic_number ',' generic_number ')';
+penta_suffix: 'Pentafluoro';
 
 
 fatty_base: fatty_base_short | fatty_base_long | db_positions fatty_separator fatty_base_short | db_positions fatty_separator fatty_base_long;
@@ -66,15 +65,33 @@ db_positions: db_inner_positions | '(' db_inner_positions ')';
 db_inner_positions: db_position | db_inner_positions ',' db_inner_positions;
 db_position: number | number EZ;
 
-fatty_base_short: 'EPE' | 'ETE' | 'ETrE' | 'ODE' | 'HTrE' | 'DoHE';
-fatty_base_long: 'eicosapentaenoate' | 'eicosatetraenoate' | 'eicosatrienoate' | 'octadecadienoate' | 'heptadecatrienoic acid' | 'docosahexaenoic acid' | 'eicosatetraenoic acid' | 'Pentadecenyl acetate' | 'eicosatrienoic acid' | 'pentadecenoic acid' | 'eicosapentaenoic acid' | 'dodecanoic acid' | 'lauric acid' | 'capric acid' | 'dodecenoic acid' | 'Lauroleic acid' | 'Dodecen-1-ol' | 'dodecenyl acetate' | 'decanoic acid' | 'dodecyl acetate' | 'undecanoic acid' | 'Dodecenyl acetate' | 'Dodecadien-3-one' | 'dodecatrienoic acid';
+fatty_base_short: 'EPE' | 'ETE' | 'ETrE' | 'ODE' | 'HTrE' | 'DoHE' | 'LTA4' | 'LTB4' | 'LTE4' | 'LTC4' | 'LTD4' | 'LTF4' | 'LTB5' | 'DPE' | 'DHA';
+
+
+
+fatty_base_long: 'eicosapentaenoate' | 'eicosatetraenoate' | 'eicosatrienoate' | 'octadecadienoate' | 'docosahexaenoic acid' | 'eicosatetraenoic acid' | 'Pentadecenyl acetate' | 'eicosatrienoic acid' | 'eicosapentaenoic acid' | 'lauric acid' | 'capric acid' | 'Lauroleic acid' | 'Dodecen-1-ol' | 'Dodecadien-3-one' | decimal_base;
+
+decimal_base: second_decimal_base | first_decimal_base second_decimal_base;
+second_decimal_base: acid_based ' acid' | acetate_based ' acetate' | 'decenal' | 'decadienal';
+acid_based: 'decanoic' | 'cosanoic' | 'decatrienoic' | 'decenoic' | 'decynoic' | 'cosapentaynoic' | 'cosatetraynoic' | 'cosatriynoic' | noic | 'valeric' | 'decadienoic';
+acetate_based: 'decadienyl' | 'decatrienyl' | 'decenyl' | 'decyl';
+
+noic: first_decimal_base noic_second | noic_second;
+noic_second: noic_decimal noic_post_decimal | noic_post_decimal;
+noic_post_decimal: noic_separator 'noic' | 'noic' | first_decimal_base noic_separator 'noic' | first_decimal_base 'noic';
+noic_decimal: 'eicosa' | 'cose' | 'deca';
+noic_separator: 'a' | 'e';
+
+
+
+first_decimal_base: 'un' | 'Un' | 'do' | 'Do' | 'tri' | 'Tri' | 'tetra' | 'Tetra' | 'penta' | 'Penta' | 'hexa' | 'Hexa' | 'hepta' | 'Hepta' | 'octa' | 'Octa' | 'nona' | 'Nona' | 'di' | 'Di' | 'Pent' | 'pent';
+
 fatty_separator: '-' | ' ';
 
 pure_fa: carbon ':' db | carbon ':' db db_positions;
 carbon: number;
 db: number;
 
-numberRS: number RS;
 
 RS: 'R' | 'S';
 EZ: 'E' | 'Z';

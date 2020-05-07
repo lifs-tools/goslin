@@ -183,21 +183,21 @@ sac_f_subspecies : fa4;
 /* generic rules */
 fa : fa_pure | fa_pure heavy_fa | fa_pure ether | fa_pure ether heavy_fa;
 heavy_fa : heavy;
-fa_pure : carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
+fa_pure : number carbon_db_separator db | number carbon_db_separator db hydroxyl;
 ether : 'a' | 'p';
 lcb : lcb_pure | lcb_pure heavy_lcb;
 heavy_lcb : heavy;
-lcb_pure : carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | old_hydroxyl carbon carbon_db_separator db;
-carbon : number;
-db : db_count | db_count db_positions;
-db_count : number;
+lcb_pure : number carbon_db_separator db hydroxyl | old_hydroxyl number carbon_db_separator db;
+/* carbon : number; */
+db : number | number db_positions;
+/* db_count : number; */
 db_positions : ROB db_position RCB;
 db_position : db_single_position | db_position db_position_separator db_position;
-db_single_position : db_position_number | db_position_number cistrans;
-db_position_number : number;
+db_single_position : number | number cistrans;
+/* db_position_number : number; */
 cistrans : 'E' | 'Z';
 
-hydroxyl : number;
+hydroxyl : db_hydroxyl_separator number;
 old_hydroxyl : 'd' | 't';
 number :  digit;
 digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
@@ -208,10 +208,9 @@ digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
 
 heavy : '(+' isotopes  ')';
 isotopes : isotopes isotopes | isotope;
-isotope : '[' isotope_number ']' isotope_element isotope_count | '[' isotope_number ']' isotope_element;
-isotope_number : number;
+isotope : isotope_number isotope_element number | isotope_number isotope_element;
+isotope_number : '[' number ']';
 isotope_element : element;
-isotope_count : number;
 element : 'C' | 'H' | 'O' | 'N' | 'P' | 'S';
 
 /* separators */
