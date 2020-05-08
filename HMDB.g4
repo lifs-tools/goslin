@@ -40,33 +40,32 @@ lipid_suffix : '[rac]';
 
 /* fatty acyl rules */
 fa : fa_core | furan_fa | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix;
-fa_core : carbon carbon_db_separator db | ether carbon carbon_db_separator db;
+fa_core : number carbon_db_separator db | ether number carbon_db_separator db;
 
 furan_fa : furan_fa_mono | furan_fa_di;
 furan_fa_mono : number 'M' number | 'MonoMe(' number ',' number ')';
 furan_fa_di : number 'D' number | 'DiMe(' number ',' number ')';
 
 lcb : lcb_core | fa_lcb_prefix lcb_core | lcb_core fa_lcb_suffix | fa_lcb_prefix lcb_core fa_lcb_suffix;
-lcb_core : hydroxyl carbon carbon_db_separator db;
+lcb_core : hydroxyl number carbon_db_separator db;
 
-carbon : number;
-db : db_count | db_count db_positions | db_count db_suffix | db_count db_positions db_suffix;
-db_count : number;
-db_suffix : 'e' | 'n' db_suffix_number;
-db_suffix_number : number;
+/* carbon : number; */
+db : number | number db_positions | number db_suffix | number db_positions db_suffix;
+/* db_count : number; */
+db_suffix : 'e' | 'n' number;
+/* db_suffix_number : number; */
 db_positions : ROB db_position RCB;
 db_position : db_single_position | db_position db_position_separator db_position;
-db_single_position : db_position_number | db_position_number cistrans;
-db_position_number : number;
+db_single_position : number | number cistrans;
+/* db_position_number : number; */
 cistrans : 'E' | 'Z';
 ether : ether_type | ether_link_pos ether_type;
 ether_link_pos : number '-';
 ether_type : 'o-' | 'O-' | 'P-' | 'i-' | 'a-';
 hydroxyl : 'm' | 'd' | 't';
 fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
-fa_lcb_suffix_core : fa_lcb_suffix_number fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_separator fa_lcb_suffix_type;
+fa_lcb_suffix_core : number fa_lcb_suffix_type | number fa_lcb_suffix_separator fa_lcb_suffix_type;
 fa_lcb_suffix_type : 'OH' | 'me';
-fa_lcb_suffix_number : number;
 fa_lcb_prefix : fa_lcb_prefix_type | fa_lcb_prefix_type fa_lcb_prefix_separator;
 fa_lcb_prefix_type : 'iso';
 

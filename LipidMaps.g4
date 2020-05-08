@@ -170,20 +170,20 @@ fa_mod: round_open_bracket modification round_close_bracket;
 modification: modification ',' modification | number mod_text | mod_text;
 mod_text: mod_text mod_text | square_open_bracket mod_text square_close_bracket | 'OH' | 'Ke' | 'S' | 'OOH' | 'My' | 'Me' | 'R' | 'Br' | 'CHO' | 'COOH' | 'Cp' | '(R)' | 'Ep' | 'OH2' | 'OH3' | 'OH4' | 'OH6' | 'cyclo' | 'cyclo2' | 'KE2' | 'Ke2' | 'NH2' | 'Me6' | 'Me2' | 'Me3'  | 'Y';
 ether: 'P-' | 'O-';
-fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
+fa_pure: number carbon_db_separator db | number carbon_db_separator db hydroxyl;
 lcb_fa: lcb_fa_unmod | lcb_fa_unmod lcb_fa_mod;
-lcb_fa_unmod: carbon carbon_db_separator db;
+lcb_fa_unmod: number carbon_db_separator db;
 lcb_fa_mod: round_open_bracket modification round_close_bracket;
 lcb: hydroxyl_lcb lcb_fa | lcb_fa;
-carbon: number;
-db : db_count | db_count db_positions;
-db_count : number;
+/* carbon: number; */
+db : number | number db_positions;
+/* db_count : number; */
 db_positions : ROB db_position RCB;
 db_position : db_single_position | db_position db_position_separator db_position;
-db_single_position : db_position_number | db_position_number cistrans;
-db_position_number : number;
+db_single_position : number | number cistrans;
+/* db_position_number : number; */
 cistrans : 'E' | 'Z';
-hydroxyl: number;
+hydroxyl: db_hydroxyl_separator number;
 hydroxyl_lcb: 'm' | 'd' | 't';
 number:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | number number;
 
