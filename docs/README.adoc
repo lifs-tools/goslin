@@ -13,10 +13,10 @@ Interactive Usage
 The interactive goslin web application is available
 at https://apps.lifs.isas.de/goslin. It provides two forms to i) upload
 a file containing one lipid name per line (see Supplementary
-Figure #fig:goslin-webapp-rest-01[[fig:goslin-webapp-rest-01]]), or ii)
+Figure <<fig:goslin-webapp-form-01>>), or ii)
 upload a list of lipid names, defined by the user in an interactive form
 (see Supplementary
-Figure #fig:goslin-webapp-rest-02[[fig:goslin-webapp-rest-02]]). The
+Figure <<fig:goslin-webapp-form-02>>). The
 latter form also allows pasting lists of lipid names directly from the
 clipboard with `CTRL+V`. Both forms provide feedback for issues
 concerning every processed lipid, such as invalid names or typos (see
@@ -24,37 +24,36 @@ Supplementary
 Figure #fig:goslin-webapp-rest-02a[[fig:goslin-webapp-rest-02a]]), to
 allow the user to cross-check their data before proceeding.
 
-image:goslin-webapp-form-01.png[goslin web application submission
-form for text files with one lipid name per row.]
+[#fig:goslin-webapp-form-01]
+.Goslin web application submission form for text files with one lipid name per row.
+image:goslin-webapp-form-01.png[SubmissionForm1]
 
-image:goslin-webapp-form-02.png[goslin web application submission
-form for user-defined lipid names.]
+[#fig:goslin-webapp-form-02]
+.Goslin web application submission form for user-defined lipid names.
+image:goslin-webapp-form-02.png[SubmissionForm2]
 
-image:goslin-webapp-form-02a.png[goslin web application submission
-form for user-defined lipid names provides feedback for unknown or
-unsupported names and parts thereof.]
+[#fig:goslin-webapp-form-02a]
+.Goslin web application submission form for user-defined lipid names provides feedback for unknown or unsupported names and parts thereof.
+image:goslin-webapp-form-02a.png[SubmissionForm3]
 
-image:goslin-webapp-result-03.png[Parsing results are displayed as
-’cards’ for every lipid name. Clicking on a card opens it and shows
-details of the according lipid.]
+[#fig:goslin-webapp-form-03]
+.Parsing results are displayed as ’cards’ for every lipid name. Clicking on a card opens it and shows details of the according lipid.
+image:goslin-webapp-result-03.png[ResultForm]
 
 After successful validation, the validated lipids are returned in
 overview cards (see Supplementary
-Figure #fig:goslin-webapp-rest-03[[fig:goslin-webapp-rest-03]]),
+Figure <<fig:goslin-webapp-result-03>>),
 detailing their LipidMAPS classification, cross-links to SwissLipids
 and/or LipidMAPS or HMDB. Additionally, the cards show summary
 information about the number of carbon atoms, double bonds,
 hydroxylations and detailed information, such as double bond position,
 long-chain-base status, and the bond type of the fatty acyl to the head
 group for each fatty acyl, if available (see Supplementary
-Figure #fig:goslin-webapp-rest-04[[fig:goslin-webapp-rest-04]]) .
+Figure <<fig:goslin-webapp-rest-04>>) .
 
-image:goslin-webapp-result-detail-04.png[Each result card displays
-summary and detail information about a lipid. Depending on the lipid
-level, this can include information about each individual fatty acyl.
-Cross-links to SwissLipids and LipidMAPS are shown where a normalized
-lipid name could be matched unambiguously against the normalized names
-of SwissLipids and / or LipidMAPS lipids.]
+[#fig:goslin-webapp-rest-04]
+.Each result card displays summary and detail information about a lipid. Depending on the lipid level, this can include information about each individual fatty acyl. Cross-links to SwissLipids and LipidMAPS are shown where a normalized lipid name could be matched unambiguously against the normalized names of SwissLipids and / or LipidMAPS lipids.
+image:goslin-webapp-result-detail-04.png[ResultDetail]
 
 The source code for the web application and instructions to build it as
 a Docker container are available at
@@ -67,13 +66,13 @@ Programmatic access via the REST API
 An interactive documentation for the rest api of the goslin web
 application is available at
 https://apps.lifs.isas.de/goslin/swagger-ui.html (see Supplementary
-Figure #fig:goslin-webapp-rest-05.png[[fig:goslin-webapp-rest-05]]). To
+Figure <<fig:goslin-webapp-rest-05>>). To
 illustrate its usage, we will briefly show a small example how a user
 can access the rest api with a standard http client.
 
-image:goslin-webapp-rest-05.png[The goslin web application provides
-an interactive documentation for its rest api to simplify programmatic
-access.]
+[#fig:goslin-webapp-rest-05]
+.The goslin web application provides an interactive documentation for its rest api to simplify programmatic access.
+image:goslin-webapp-rest-05.png[RESTForm]
 
 The Structure for the request consists of a json object \{} enclosing
 two lists, with the names `lipidNames` and `grammars`. Acceptable values
@@ -215,7 +214,7 @@ This is the documentation for the goslin reference implementation for
 C++. Please be aware, that the documentation is dedicated to developers
 of tools for computational lipidomics who want to use cppgoslin within
 their project. If you are interested to run goslin as a user, please
-read Supplementary Section #sec:webServiceUsers[1]. The cppgoslin
+read  <<sec:webServiceUsers>>. The cppgoslin
 implementation has been developed with the following objectives:
 
 1.  To ease the handling with lipid names for developers working on mass
@@ -223,9 +222,9 @@ spectro-metry-based lipidomics tools.
 2.  To offer a tool that unifies all existing dialects of lipid names.
 
 It is an open-source package under the MIT License available via
-githubfootnote:[https://github.com/lifs-tools/cppgoslin]. For a detailed
+github footnote:[https://github.com/lifs-tools/cppgoslin]. For a detailed
 structure of the implementation, read Supplementary
-Section #sec:goslinObjectModel[6].
+Section <<sec:goslinObjectModel>>.
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -263,7 +262,7 @@ $ make runtests
 ....
 
 If a test should fail, please contact the
-developersfootnote:[goslin@lipidomics.at].
+developers.
 
 Using cppgoslin
 ~~~~~~~~~~~~~~~
@@ -357,7 +356,7 @@ This is the documentation for the goslin reference implementation for
 Python 3. Please be aware, that the documentation is dedicated to
 developers of tools for computational lipidomics who want to insert
 pygoslin into their project. If you are interested to run goslin as a
-user, please read Section #sec:webServiceUsers[1]. The pygoslin
+user, please read Section <<sec:webServiceUsers>>. The pygoslin
 implementation has been developed with the following objectives:
 
 1.  To ease the handling with lipid names for developers working on mass
@@ -365,9 +364,9 @@ spectrometrybased lipidomics tools.
 2.  To offer a tool that unifies all existing dialects of lipid names.
 
 It is an open-source package under the MIT License available via
-githubfootnote:[https://github.com/lifs-tools/pygoslin]. For a detailed
+github footnote:[https://github.com/lifs-tools/pygoslin]. For a detailed
 structure of the implementation, read Supplementary
-Section #sec:goslinObjectModel[6].
+Section <<sec:goslinObjectModel>>.
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -562,8 +561,7 @@ R Implementation
 
 This project is a parser, validator and normalizer implementation for
 shorthand lipid nomenclatures, using the Grammar of Succinct Lipid
-Nomenclatures project for the R language
-footnote:[https://www.r-project.org/].
+Nomenclatures project for the R language ([https://www.r-project.org/]).
 
 Goslin defines multiple grammars compatible with ANTLRv4 for different
 sources of shorthand lipid nomenclature. This allows to generate parsers
@@ -580,17 +578,17 @@ parsing.
 3.  Use the structural representation to generate normalized names.
 
 rgoslin is an open-source package available via
-githubfootnote:[https://github.com/lifs-tools/rgoslin].
+github footnote:[https://github.com/lifs-tools/rgoslin].
 
 Prerequisites
 ~~~~~~~~~~~~~
 
 This project uses the R programming language. To be able to use it,
-please install Rfootnote:[https://cloud.r-project.org/] following the
+please install R: [https://cloud.r-project.org/] following the
 instructions for your particular operating system. rgoslin is based on
 native C++ code (via cppgoslin). It therefore requires additional tools
 on your system to compile and install it. Please see the Rcpp
-FAQfootnote:[https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-FAQ.pdf],
+FAQ: [https://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-FAQ.pdf],
 question 1.3 for installation details for your specific operating
 system.
 
@@ -725,7 +723,7 @@ Java Implementation
 
 This project is a parser, validator and normalizer implementation for
 shorthand lipid nomenclatures, based on goslin for the Java programming
-languagefootnote:[https://go.java/].
+language: [https://go.java/].
 
 goslin defines multiple grammars compatible with ANTLRv4 for different
 sources of shorthand lipid nomenclature. This allows to generate parsers
@@ -742,7 +740,7 @@ parsing.
 3.  Use the structural representation to generate normalized names.
 
 Furthermore, jgoslin is an open-source package available via
-githubfootnote:[https://github.com/lifs-tools/jgoslin].
+github footnote:[https://github.com/lifs-tools/jgoslin].
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -750,7 +748,7 @@ Prerequisites
 This project is based on Java 11. To use it, you need a jre installed on
 your system. If you want to use the library in your own Java projects,
 you need a jdk installed on your system. Please consult
-https://adoptopenjdk.net/installation.html for installation options and
+[https://adoptopenjdk.net/installation.html] for installation options and
 instructions for your operating system.
 
 Installation instructions
@@ -913,22 +911,24 @@ lipids on lipid class, category or arbitrary levels. Requesting a lipid
 name on a lower level than the provided will raise an exception.
 
 For an overview of the domain model used by jgoslin, please see
-Supplementary Section #sec:goslinObjectModel[6].
+ <<sec:goslinObjectModel>>.
 
 [[sec:goslinObjectModel]]
 Goslin Object Model
 -------------------
 
-image:uml-class-diagram.png[goslin object model.]
+[#fig:goslinObjectModel]
+.The object model shared by the different implementations.
+image:uml-class-diagram.png[Goslin object model.]
 
 All goslin implementations are implementing the goslin object model as
 illustrated in Supplementary
-Figure #fig:goslin-object-model[[fig:goslin-object-model]]. The classes
+Figure <<fig:goslin-object-model>>. The classes
 `LipidCategory`, `LipidLevel`, `LipidClass`, and `LipidFaBondType` are
 predefined enumerations. Here, `LipidClass` is being generated
 automatically from a list containing lipid information (name,
 description, category, abbreviation, synonyms) for all implementations,
-see Supplementary Table #tab:lipidlist[[tab:lipidlist]] for details.
+see Supplementary Table <<tab:lipidlist>> for details.
 This especially eases the maintenance and ensures that the goslin
 implementations have the same data base. The main class unifying all
 classes and being provided by the parsers is `LipidAdduct`. It contains
@@ -944,8 +944,8 @@ bonds, etc, the class `LipidSpeciesInfo` is utilized.
 List of Supported Lipids
 ------------------------
 
-{empty}[[tab:lipidlist]][tab:lipidlist]
-
+[[tab:lipidlist, List of Supported Lipids]]
+.List of lipids currently supported by the Goslin grammars.
 [cols="<,<,<",options="header",]
 |==============================================================
 |Category |Description |Abbreviation
