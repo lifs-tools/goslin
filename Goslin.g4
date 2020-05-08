@@ -109,8 +109,7 @@ hg_dlclc : hg_dlcl | hg_dlcl heavy_hg;
 hg_dlcl : 'DLCL';
 hg_plc : hg_pl | hg_pl heavy_hg;
 hg_pl : 'BMP' | 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | hg_pim | 'PnC' | 'PnE' | 'PT' | 'PE-NMe2' | 'PE-NMe' | 'PIMIP' | 'CDPDAG';
-hg_pim : 'PIM' hg_pim_number;
-hg_pim_number : number;
+hg_pim : 'PIM' number;
 hg_pip : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
 hg_pip_pure : 'PIP';
 hg_pip_m : '[3\']' | '[4\']' | '[5\']';
@@ -120,8 +119,7 @@ hg_tplc : hg_tpl | hg_tpl heavy_hg;
 hg_tpl : 'SLBPA' | 'NAPE';
 hg_lplc : hg_lpl | hg_lpl heavy_hg;
 hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA' | 'LCDPDAG' | 'LDMPE' | 'LMMPE' | 'LPIMIP' | 'LPIN';
-hg_lpim : 'LPIM' hg_lpim_number;
-hg_lpim_number : number;
+hg_lpim : 'LPIM' number;
 hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
 hg_lpl_o : 'LPC' | 'LPE';
 hg_pl_oc : hg_pl_o ' O' | hg_pl_o heavy_hg ' O';
@@ -183,21 +181,21 @@ sac_f_subspecies : fa4;
 /* generic rules */
 fa : fa_pure | fa_pure heavy_fa | fa_pure ether | fa_pure ether heavy_fa;
 heavy_fa : heavy;
-fa_pure : carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
+fa_pure : number carbon_db_separator db | number carbon_db_separator db hydroxyl;
 ether : 'a' | 'p';
 lcb : lcb_pure | lcb_pure heavy_lcb;
 heavy_lcb : heavy;
-lcb_pure : carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | old_hydroxyl carbon carbon_db_separator db;
-carbon : number;
-db : db_count | db_count db_positions;
-db_count : number;
+lcb_pure : number carbon_db_separator db hydroxyl | old_hydroxyl number carbon_db_separator db;
+/* carbon : number; */
+db : number | number db_positions;
+/* db_count : number; */
 db_positions : ROB db_position RCB;
 db_position : db_single_position | db_position db_position_separator db_position;
-db_single_position : db_position_number | db_position_number cistrans;
-db_position_number : number;
+db_single_position : number | number cistrans;
+/* db_position_number : number; */
 cistrans : 'E' | 'Z';
 
-hydroxyl : number;
+hydroxyl : db_hydroxyl_separator number;
 old_hydroxyl : 'd' | 't';
 number :  digit;
 digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
@@ -207,12 +205,9 @@ digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
 
 
 heavy : '(+' isotopes  ')';
-isotopes : isotopes isotopes | isotope;
-isotope : '[' isotope_number ']' isotope_element isotope_count | '[' isotope_number ']' isotope_element;
-isotope_number : number;
-isotope_element : element;
-isotope_count : number;
-element : 'C' | 'H' | 'O' | 'N' | 'P' | 'S';
+isotopes : isotopes isotopes | isotope_number isotope_element number | isotope_number isotope_element;
+isotope_number : '[' number ']';
+isotope_element : 'C' | 'H' | 'O' | 'N' | 'P' | 'S';
 
 /* separators */
 SPACE : ' ';
