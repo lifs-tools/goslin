@@ -3,9 +3,12 @@ Dominik Kopczynski; Nils Hoffmann; Bing Peng; Robert Ahrends
 
 :toc:
 
+[[sec:introduction]]
+== Introduction
+This document gives an overview for users and developers who want to use the Goslin Webapplication, REST API, or any of the implementations in C++, R, Python or Java.
+
 [[sec:webServiceUsers]]
-Web Application and REST API
-----------------------------
+== Web Application and REST API
 
 Interactive Usage
 ~~~~~~~~~~~~~~~~~
