@@ -28,4 +28,4 @@ Short samples of lipid names used for testing of the implementations are availab
 
 ## License
 
-The Goslin grammars are licensed under the terms of the MIT license (see [LICENSE](LICENSE).
+The Goslin grammars are licensed under the terms of the MIT license (see [LICENSE](LICENSE)).
