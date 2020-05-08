@@ -1,5 +1,6 @@
 # goslin
-
+![Goslin Logo](./logo.svg)
+<img src="./goslin.svg">
 
 Goslin is the **G**rammar **o**n **s**uccinct **li**pid **n**omenclature.
 
