@@ -38,25 +38,25 @@ lipid_pure : fatty_acid | gl | pl | sl | st;
 
 /* fatty acyl rules */
 fa : fa_core | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix;
-fa_core : carbon carbon_db_separator db | ether carbon carbon_db_separator db;
+fa_core : number carbon_db_separator db | ether number carbon_db_separator db;
 
 lcb : lcb_core | fa_lcb_prefix lcb_core | lcb_core fa_lcb_suffix | fa_lcb_prefix lcb_core fa_lcb_suffix;
-lcb_core : hydroxyl carbon carbon_db_separator db;
+lcb_core : hydroxyl number carbon_db_separator db;
 
-carbon : number;
-db : db_count | db_count db_positions;
-db_count : number;
+/* carbon : number; */
+db : number | number db_positions;
+/* db_count : number; */
 db_positions : ROB db_position RCB;
 db_position : db_single_position | db_position db_position_separator db_position;
-db_single_position : db_position_number | db_position_number cistrans;
-db_position_number : number;
+db_single_position : number | number cistrans;
+/* db_position_number : number; */
 cistrans : 'E' | 'Z';
 ether : 'O-' | 'P-';
 hydroxyl : 'm' | 'd' | 't';
 fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
-fa_lcb_suffix_core : fa_lcb_suffix_number fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_separator fa_lcb_suffix_type;
+fa_lcb_suffix_core : number fa_lcb_suffix_type | number fa_lcb_suffix_separator fa_lcb_suffix_type;
 fa_lcb_suffix_type : 'OH' | 'me';
-fa_lcb_suffix_number : number;
+/* fa_lcb_suffix_number : number; */
 fa_lcb_prefix : fa_lcb_prefix_type | fa_lcb_prefix_type fa_lcb_prefix_separator;
 fa_lcb_prefix_type : 'iso';
 
