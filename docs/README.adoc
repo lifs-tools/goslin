@@ -42,7 +42,7 @@ image:goslin-webapp-result-03.png[ResultForm]
 
 After successful validation, the validated lipids are returned in
 overview cards (see Supplementary
-Figure <<fig:goslin-webapp-result-03>>),
+Figure <<fig:goslin-webapp-form-03>>),
 detailing their LipidMAPS classification, cross-links to SwissLipids
 and/or LipidMAPS or HMDB. Additionally, the cards show summary
 information about the number of carbon atoms, double bonds,
