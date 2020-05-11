@@ -1,6 +1,5 @@
 # goslin
-![Goslin Logo](./logo.svg)
-<img src="./goslin.svg">
+<img src="./goslin.svg" align="right">
 
 Goslin is the **G**rammar **o**n **s**uccinct **li**pid **n**omenclature.
 
@@ -29,4 +28,4 @@ Short samples of lipid names used for testing of the implementations are availab
 
 ## License
 
-The Goslin grammars are licensed under the terms of the MIT license (see [LICENSE](LICENSE).
+The Goslin grammars are licensed under the terms of the MIT license (see [LICENSE](LICENSE)).
