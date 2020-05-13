@@ -2,6 +2,9 @@
 Dominik Kopczynski; Nils Hoffmann; Bing Peng; Robert Ahrends
 
 :toc:
+:toc-placement!:
+
+toc::[]
 
 [[sec:introduction]]
 == Introduction
@@ -23,7 +26,7 @@ The structural classification of lipids follows the shorthand notation as propos
 
 .Structural hierarchy representation of PE(16:1(6Z)/16:0). LM: LIPID MAPS, SL: SwissLipids, HG: Head Group, FA: Fatty Acyl
 |===
-| Level | Name | Description 
+| **Level** | **Name** | **Description** 
 | Category (LM) | Glycerophospholipids | Lipid category
 | Class (LM) | Glycerophosphoethanolamine | Lipid class
 | Species (SL, LM Subclass) | Phosphatidylethanolamine (32:1), PE(32:1) | HG, FA summary
