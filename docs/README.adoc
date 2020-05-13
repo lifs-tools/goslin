@@ -20,7 +20,7 @@ endif::[]
 
 Dominik Kopczynski; Nils Hoffmann; Bing Peng; Robert Ahrends
 
-[[sec:introduction]]
+[[introduction]]
 == Introduction
 This document gives an overview for users and developers who want to use the Goslin Webapplication, REST API, or any of the implementations in C++, R, Python or Java.
 
@@ -49,9 +49,9 @@ The structural classification of lipids follows the shorthand notation as propos
 | Isomeric Subspecies (SL, LM) | PE(16:1(6Z)/16:0) | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2, double bond position and stereo configuration (6Z) on FA1
 |===
 
-Please see <<sec:goslinObjectModel>> for an overview of the Goslin domain model which is used to represent the structural hierarchy by the different implementations.
+Please see <<goslinObjectModel>> for an overview of the Goslin domain model which is used to represent the structural hierarchy by the different implementations.
 
-[[sec:webServiceUsers]]
+[[webServiceUsers]]
 == Web Application and REST API
 
 Interactive Usage
@@ -261,7 +261,7 @@ This is the documentation for the goslin reference implementation for
 C++. Please be aware, that the documentation is dedicated to developers
 of tools for computational lipidomics who want to use cppgoslin within
 their project. If you are interested to run goslin as a user, please
-read  <<sec:webServiceUsers>>. The cppgoslin
+read  <<webServiceUsers>>. The cppgoslin
 implementation has been developed with the following objectives:
 
 1.  To ease the handling with lipid names for developers working on mass
@@ -271,7 +271,7 @@ spectro-metry-based lipidomics tools.
 It is an open-source package under the MIT License available via
 github footnote:[https://github.com/lifs-tools/cppgoslin]. For a detailed
 structure of the implementation, read Supplementary
-Section <<sec:goslinObjectModel>>.
+Section <<goslinObjectModel>>.
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -403,7 +403,7 @@ This is the documentation for the goslin reference implementation for
 Python 3. Please be aware, that the documentation is dedicated to
 developers of tools for computational lipidomics who want to insert
 pygoslin into their project. If you are interested to run goslin as a
-user, please read Section <<sec:webServiceUsers>>. The pygoslin
+user, please read Section <<webServiceUsers>>. The pygoslin
 implementation has been developed with the following objectives:
 
 1.  To ease the handling with lipid names for developers working on mass
@@ -413,7 +413,7 @@ spectrometrybased lipidomics tools.
 It is an open-source package under the MIT License available via
 github footnote:[https://github.com/lifs-tools/pygoslin]. For a detailed
 structure of the implementation, read Supplementary
-Section <<sec:goslinObjectModel>>.
+Section <<goslinObjectModel>>.
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -958,9 +958,9 @@ lipids on lipid class, category or arbitrary levels. Requesting a lipid
 name on a lower level than the provided will raise an exception.
 
 For an overview of the domain model used by jgoslin, please see
- <<sec:goslinObjectModel>>.
+ <<goslinObjectModel>>.
 
-[[sec:goslinObjectModel]]
+[[goslinObjectModel]]
 Goslin Object Model
 -------------------
 
@@ -975,7 +975,7 @@ Figure <<fig:goslin-object-model>>. The classes
 predefined enumerations. Here, `LipidClass` is being generated
 automatically from a list containing lipid information (name,
 description, category, abbreviation, synonyms) for all implementations,
-see Supplementary Table <<tab:lipidlist>> for details.
+see Supplementary Table <<tab-lipidlist>> for details.
 This especially eases the maintenance and ensures that the goslin
 implementations have the same data base. The main class unifying all
 classes and being provided by the parsers is `LipidAdduct`. It contains
@@ -987,11 +987,11 @@ which are defined within the class `FattyAcid`. For storing the
 cummulated information on species level for the carbon length, double
 bonds, etc, the class `LipidSpeciesInfo` is utilized.
 
-[[sec:lipidlist]]
+[[lipidlist]]
 List of Supported Lipids
 ------------------------
 
-[[tab:lipidlist, List of Supported Lipids]]
+[[tab-lipidlist, List of Supported Lipids]]
 .List of lipids currently supported by the Goslin grammars.
 [cols="<,<,<",options="header",]
 |==============================================================
