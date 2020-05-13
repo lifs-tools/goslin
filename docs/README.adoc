@@ -7,6 +7,33 @@ Dominik Kopczynski; Nils Hoffmann; Bing Peng; Robert Ahrends
 == Introduction
 This document gives an overview for users and developers who want to use the Goslin Webapplication, REST API, or any of the implementations in C++, R, Python or Java.
 
+== Lipid Shorthand Nomenclature Grammars
+Goslin uses ANTLRv4 compatible context-free EBNF grammars. ANTLRv4 is then used for jgoslin to generate the LL(*) parsers compatible with those grammars. The other implementations use a 
+generic recursive decent parser (see https://en.wikipedia.org/wiki/Context-free_language, https://en.wikipedia.org/wiki/LL_parser, https://www.antlr.org/about.html).
+
+These grammars (*.g4 files) are available from our Goslin GitHub repository at https://github.com/lifs-tools/goslin. 
+
+== Hierarchical Representation of Lipids
+
+The grammars model lipids as hierarchically structured bits of information. 
+We do not model the lipid category or main class explicitly, but rather keep them in a global lookup table data structure, derived from the `lipid-list.csv` file in the Goslin GitHub repository. 
+This allows us to keep the grammars clutter-free and makes them easier to read. 
+
+The structural classification of lipids follows the shorthand notation as proposed by Liebisch et al. and is compatible to that of SwissLipids. The following example shows the hierarchical representation of PE(16:1(6Z)/16:0):
+
+.Structural hierarchy representation of PE(16:1(6Z)/16:0). LM: LIPID MAPS, SL: SwissLipids, HG: Head Group, FA: Fatty Acyl
+|===
+Level | Name | Description 
+Category (LM) | Glycerophospholipids | Lipid category
+Class (LM) | Glycerophosphoethanolamine | Lipid class
+Species (SL, LM Subclass) | Phosphatidylethanolamine (32:1), PE(32:1) | HG, FA summary
+Molecular Subspecies (SL) | PE(16:0_16:1) | HG, two FAs 
+Structural Subspecies (SL) | PE(16:1/16:0) | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2
+Isomeric Subspecies (SL, LM) | PE(16:1(6Z)/16:0) | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2, double bond position and stereo configuration (6Z) on FA1
+|===
+
+Please see <<sec:goslinObjectModel>> for an overview of the Goslin domain model which is used to represent the structural hierarchy by the different implementations.
+
 [[sec:webServiceUsers]]
 == Web Application and REST API
 
