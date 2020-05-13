@@ -86,7 +86,7 @@ dpl_subspecies: round_open_bracket fa2 round_close_bracket | fa2;
 cl: hg_clc cl_species | hg_clc cl_subspecies;
 cl_species: round_open_bracket fa round_close_bracket | fa;
 cl_subspecies: round_open_bracket '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket round_close_bracket | hg_clc '1\'-' square_open_bracket fa2 square_close_bracket ',3\'-' square_open_bracket fa2 square_close_bracket;
-fourpl: hg_fourplc round_open_bracket fa4 round_close_bracket | hg_fourplc fa4;
+fourpl: hg_fourplc round_open_bracket fa4 round_close_bracket | hg_fourplc fa4 | hg_fourplc round_open_bracket species_fa round_close_bracket | hg_fourplc species_fa;
 threepl: hg_threeplc round_open_bracket fa3 round_close_bracket | hg_threeplc fa3 | hg_threeplc round_open_bracket species_fa round_close_bracket | hg_threeplc species_fa;
 
 hg_ddpl: hg_dplc pip_position | hg_dplc;
