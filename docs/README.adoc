@@ -59,16 +59,12 @@ Interactive Usage
 
 The interactive goslin web application is available
 at https://apps.lifs.isas.de/goslin. It provides two forms to i) upload
-a file containing one lipid name per line (see Supplementary
-Figure <<fig:goslin-webapp-form-01>>), or ii)
+a file containing one lipid name per line (see Figure <<fig:goslin-webapp-form-01>>), or ii)
 upload a list of lipid names, defined by the user in an interactive form
-(see Supplementary
-Figure <<fig:goslin-webapp-form-02>>). The
+(see Figure <<fig:goslin-webapp-form-02>>). The
 latter form also allows pasting lists of lipid names directly from the
 clipboard with `CTRL+V`. Both forms provide feedback for issues
-concerning every processed lipid, such as invalid names or typos (see
-Supplementary
-Figure #fig:goslin-webapp-rest-02a[[fig:goslin-webapp-rest-02a]]), to
+concerning every processed lipid, such as invalid names or typos (see Figure #fig:goslin-webapp-rest-02a[[fig:goslin-webapp-rest-02a]]), to
 allow the user to cross-check their data before proceeding.
 
 [#fig:goslin-webapp-form-01]
@@ -88,15 +84,13 @@ image:goslin-webapp-form-02a.png[SubmissionForm3]
 image:goslin-webapp-result-03.png[ResultForm]
 
 After successful validation, the validated lipids are returned in
-overview cards (see Supplementary
-Figure <<fig:goslin-webapp-form-03>>),
+overview cards (see Figure <<fig:goslin-webapp-form-03>>),
 detailing their LipidMAPS classification, cross-links to SwissLipids
 and/or LipidMAPS or HMDB. Additionally, the cards show summary
 information about the number of carbon atoms, double bonds,
 hydroxylations and detailed information, such as double bond position,
 long-chain-base status, and the bond type of the fatty acyl to the head
-group for each fatty acyl, if available (see Supplementary
-Figure <<fig:goslin-webapp-rest-04>>) .
+group for each fatty acyl, if available (see Figure <<fig:goslin-webapp-rest-04>>) .
 
 [#fig:goslin-webapp-rest-04]
 .Each result card displays summary and detail information about a lipid. Depending on the lipid level, this can include information about each individual fatty acyl. Cross-links to SwissLipids and LipidMAPS are shown where a normalized lipid name could be matched unambiguously against the normalized names of SwissLipids and / or LipidMAPS lipids.
@@ -112,8 +106,7 @@ Programmatic access via the REST API
 
 An interactive documentation for the rest api of the goslin web
 application is available at
-https://apps.lifs.isas.de/goslin/swagger-ui.html (see Supplementary
-Figure <<fig:goslin-webapp-rest-05>>). To
+https://apps.lifs.isas.de/goslin/swagger-ui.html (see Figure <<fig:goslin-webapp-rest-05>>). To
 illustrate its usage, we will briefly show a small example how a user
 can access the rest api with a standard http client.
 
@@ -270,8 +263,7 @@ spectro-metry-based lipidomics tools.
 
 It is an open-source package under the MIT License available via
 github footnote:[https://github.com/lifs-tools/cppgoslin]. For a detailed
-structure of the implementation, read Supplementary
-Section <<goslinObjectModel>>.
+structure of the implementation, read <<goslinObjectModel>>.
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -412,8 +404,7 @@ spectrometrybased lipidomics tools.
 
 It is an open-source package under the MIT License available via
 github footnote:[https://github.com/lifs-tools/pygoslin]. For a detailed
-structure of the implementation, read Supplementary
-Section <<goslinObjectModel>>.
+structure of the implementation, read <<goslinObjectModel>>.
 
 Prerequisites
 ~~~~~~~~~~~~~
@@ -969,13 +960,12 @@ Goslin Object Model
 image:uml-class-diagram.png[Goslin object model.]
 
 All goslin implementations are implementing the goslin object model as
-illustrated in Supplementary
-Figure <<fig:goslin-object-model>>. The classes
+illustrated in Figure <<fig:goslin-object-model>>. The classes
 `LipidCategory`, `LipidLevel`, `LipidClass`, and `LipidFaBondType` are
 predefined enumerations. Here, `LipidClass` is being generated
 automatically from a list containing lipid information (name,
 description, category, abbreviation, synonyms) for all implementations,
-see Supplementary Table <<tab-lipidlist>> for details.
+see <<tab-lipidlist>> for details.
 This especially eases the maintenance and ensures that the goslin
 implementations have the same data base. The main class unifying all
 classes and being provided by the parsers is `LipidAdduct`. It contains
