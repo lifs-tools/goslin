@@ -23,13 +23,13 @@ The structural classification of lipids follows the shorthand notation as propos
 
 .Structural hierarchy representation of PE(16:1(6Z)/16:0). LM: LIPID MAPS, SL: SwissLipids, HG: Head Group, FA: Fatty Acyl
 |===
-Level | Name | Description 
-Category (LM) | Glycerophospholipids | Lipid category
-Class (LM) | Glycerophosphoethanolamine | Lipid class
-Species (SL, LM Subclass) | Phosphatidylethanolamine (32:1), PE(32:1) | HG, FA summary
-Molecular Subspecies (SL) | PE(16:0_16:1) | HG, two FAs 
-Structural Subspecies (SL) | PE(16:1/16:0) | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2
-Isomeric Subspecies (SL, LM) | PE(16:1(6Z)/16:0) | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2, double bond position and stereo configuration (6Z) on FA1
+| Level | Name | Description 
+| Category (LM) | Glycerophospholipids | Lipid category
+| Class (LM) | Glycerophosphoethanolamine | Lipid class
+| Species (SL, LM Subclass) | Phosphatidylethanolamine (32:1), PE(32:1) | HG, FA summary
+| Molecular Subspecies (SL) | PE(16:0_16:1) | HG, two FAs 
+| Structural Subspecies (SL) | PE(16:1/16:0) | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2
+| Isomeric Subspecies (SL, LM) | PE(16:1(6Z)/16:0) | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2, double bond position and stereo configuration (6Z) on FA1
 |===
 
 Please see <<sec:goslinObjectModel>> for an overview of the Goslin domain model which is used to represent the structural hierarchy by the different implementations.
