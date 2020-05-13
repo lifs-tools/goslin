@@ -64,22 +64,22 @@ upload a list of lipid names, defined by the user in an interactive form
 (see Figure <<fig-goslin-webapp-form-02>>). The
 latter form also allows pasting lists of lipid names directly from the
 clipboard with `CTRL+V`. Both forms provide feedback for issues
-concerning every processed lipid, such as invalid names or typos (see Figure #fig-goslin-webapp-rest-02a[[fig-goslin-webapp-rest-02a]]), to
+concerning every processed lipid, such as invalid names or typos (see Figure [[fig-goslin-webapp-rest-02a]]), to
 allow the user to cross-check their data before proceeding.
 
-[#fig-goslin-webapp-form-01]
+[[fig-goslin-webapp-form-01]]
 .Goslin web application submission form for text files with one lipid name per row.
 image:goslin-webapp-form-01.png[SubmissionForm1]
 
-[#fig-goslin-webapp-form-02]
+[[fig-goslin-webapp-form-02]]
 .Goslin web application submission form for user-defined lipid names.
 image:goslin-webapp-form-02.png[SubmissionForm2]
 
-[#fig-goslin-webapp-form-02a]
+[[fig-goslin-webapp-form-02a]]
 .Goslin web application submission form for user-defined lipid names provides feedback for unknown or unsupported names and parts thereof.
 image:goslin-webapp-form-02a.png[SubmissionForm3]
 
-[#fig-goslin-webapp-form-03]
+[[fig-goslin-webapp-form-03]]
 .Parsing results are displayed as ’cards’ for every lipid name. Clicking on a card opens it and shows details of the according lipid.
 image:goslin-webapp-result-03.png[ResultForm]
 
@@ -92,7 +92,7 @@ hydroxylations and detailed information, such as double bond position,
 long-chain-base status, and the bond type of the fatty acyl to the head
 group for each fatty acyl, if available (see Figure <<fig-goslin-webapp-rest-04>>) .
 
-[#fig-goslin-webapp-rest-04]
+[[fig-goslin-webapp-rest-04]]
 .Each result card displays summary and detail information about a lipid. Depending on the lipid level, this can include information about each individual fatty acyl. Cross-links to SwissLipids and LipidMAPS are shown where a normalized lipid name could be matched unambiguously against the normalized names of SwissLipids and / or LipidMAPS lipids.
 image:goslin-webapp-result-detail-04.png[ResultDetail]
 
@@ -110,7 +110,7 @@ https://apps.lifs.isas.de/goslin/swagger-ui.html (see Figure <<fig-goslin-webap
 illustrate its usage, we will briefly show a small example how a user
 can access the rest api with a standard http client.
 
-[#fig-goslin-webapp-rest-05]
+[[fig-goslin-webapp-rest-05]]
 .The goslin web application provides an interactive documentation for its rest api to simplify programmatic access.
 image:goslin-webapp-rest-05.png[RESTForm]
 
@@ -955,7 +955,7 @@ For an overview of the domain model used by jgoslin, please see
 Goslin Object Model
 -------------------
 
-[#fig-goslinObjectModel]
+[[fig-goslinObjectModel]]
 .The object model shared by the different implementations.
 image:uml-class-diagram.png[Goslin object model.]
 
