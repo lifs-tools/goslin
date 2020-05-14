@@ -979,8 +979,6 @@ bonds, etc, the class `LipidSpeciesInfo` is utilized.
 
 [[supportedLipidClasses]]
 Supported Lipid Classes
-=======================
+-----------------------
 
-|===
-include::../lipid-list.csv[]
-|===
+Please check the most recent version of our https://github.com/lifs-tools/goslin/blob/master/lipid-list.csv[lipid classes table here].
