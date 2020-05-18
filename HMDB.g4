@@ -64,7 +64,7 @@ ether_link_pos : number '-';
 ether_type : 'o-' | 'O-' | 'P-' | 'i-' | 'a-';
 hydroxyl : 'm' | 'd' | 't';
 fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
-fa_lcb_suffix_core : fa_lcb_suffix_number fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_separator fa_lcb_suffix_type;
+fa_lcb_suffix_core : fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_separator fa_lcb_suffix_type;
 fa_lcb_suffix_type : 'OH' | 'me';
 fa_lcb_suffix_number : number;
 fa_lcb_prefix : fa_lcb_prefix_type | fa_lcb_prefix_type fa_lcb_prefix_separator;
