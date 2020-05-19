@@ -105,8 +105,7 @@ hg_dlclc : hg_dlcl | hg_dlcl heavy_hg;
 hg_dlcl : 'DLCL';
 hg_plc : hg_pl | hg_pl heavy_hg;
 hg_pl : 'BMP' | 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | hg_pim | 'PnC' | 'PnE' | 'PT' | 'PE-NMe2' | 'PE-NMe' | 'PIMIP' | 'CDPDAG';
-hg_pim : 'PIM' hg_pim_number;
-hg_pim_number : number;
+hg_pim : 'PIM' number;
 hg_pip : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
 hg_pip_pure : 'PIP';
 hg_pip_m : '[3\']' | '[4\']' | '[5\']';
@@ -116,8 +115,7 @@ hg_tplc : hg_tpl | hg_tpl heavy_hg;
 hg_tpl : 'SLBPA' | 'NAPE';
 hg_lplc : hg_lpl | hg_lpl heavy_hg;
 hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA' | 'LCDPDAG' | 'LDMPE' | 'LMMPE' | 'LPIMIP' | 'LPIN';
-hg_lpim : 'LPIM' hg_lpim_number;
-hg_lpim_number : number;
+hg_lpim : 'LPIM' number;
 hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
 hg_lpl_o : 'LPC' | 'LPE';
 hg_pl_oc : hg_pl_o ' O' | hg_pl_o heavy_hg ' O';
@@ -203,11 +201,9 @@ digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
 
 
 heavy : '(+' isotopes  ')';
-isotopes : isotopes isotopes | isotope;
-isotope : isotope_number isotope_element number | isotope_number isotope_element;
+isotopes : isotopes isotopes | isotope_number isotope_element number | isotope_number isotope_element;
 isotope_number : '[' number ']';
-isotope_element : element;
-element : 'C' | 'H' | 'O' | 'N' | 'P' | 'S';
+isotope_element : 'C' | 'H' | 'O' | 'N' | 'P' | 'S';
 
 /* separators */
 SPACE : ' ';
