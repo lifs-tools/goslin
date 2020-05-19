@@ -30,12 +30,14 @@ grammar HMDB;
 
 
 /* first rule is always start rule */
-lipid : lipid_pure EOF;
+lipid : lipid_adduct EOF;
+lipid_adduct : lipid_pure | lipid_pure adduct_info;
 lipid_pure : lipid_class | lipid_class lipid_suffix;
 lipid_class : fatty_acid | gl | pl | sl | st;
 
 lipid_suffix : '[rac]';
 
+import AdductInfo;
 
 
 /* fatty acyl rules */

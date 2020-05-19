@@ -37,12 +37,8 @@ lipid_eof : lipid_pure | lipid_pure adduct_info;
 lipid_pure : gl | pl | sl | sterol | mediatorc | saccharolipid;
 
 
-/* adduct information */
-adduct_info : '[M' adduct ']' charge charge_sign | adduct_separator '[M' adduct ']' charge charge_sign;
-adduct : '+H' | '+2H' | '+NH4' | '-H' | '-2H' | '+HCOO' | '+CH3COO' | charge_sign arbitrary_adduct;
-arbitrary_adduct : adduct4 | adduct4 adduct4;
-adduct4 : adduct2 | adduct2 adduct2;
-adduct2 : character | character character;
+import AdductInfo;
+
 
 fa2 : fa2_unsorted | fa2_sorted;
 fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
@@ -227,7 +223,6 @@ RCB: ')';
 FRAGMENT_SEPARATOR : ' - ';
 
 sorted_fa_separator : SLASH | BACKSLASH;
-adduct_separator : SPACE;
 unsorted_fa_separator : DASH | UNDERSCORE;
 plasmalogen_separator : headgroup_separator | DASH;
 headgroup_separator : SPACE;
@@ -236,8 +231,4 @@ db_hydroxyl_separator : SEMICOLON;
 db_position_separator : COMMA;
 round_open_bracket : ROB;
 round_close_bracket : RCB;
-
-character : 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' |'0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
-charge : '1' | '2' | '3' | '4';
-charge_sign : '-' | '+';
 
