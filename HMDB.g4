@@ -38,6 +38,7 @@ lipid_class : fatty_acid | gl | pl | sl | st;
 lipid_suffix : '[rac]';
 
 import AdductInfo;
+import CommonRules;
 
 
 /* fatty acyl rules */
@@ -190,17 +191,6 @@ st_sub2_fa : ROB fa2 RCB;
 
 
 /* separators */
-SPACE : ' ';
-COLON : ':';
-SEMICOLON : ';';
-DASH : '-';
-UNDERSCORE : '_';
-SLASH : '/';
-BACKSLASH : '\\';
-COMMA: ',';
-ROB: '(';
-RCB: ')';
-
 unsorted_fa_separator : UNDERSCORE;
 sorted_fa_separator : SLASH;
 headgroup_separator : SPACE;
@@ -209,6 +199,3 @@ db_position_separator : COMMA;
 med_position_separator : COMMA;
 fa_lcb_suffix_separator : DASH;
 fa_lcb_prefix_separator : DASH;
-
-number :  digit;
-digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;

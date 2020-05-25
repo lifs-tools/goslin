@@ -35,6 +35,7 @@ lipid_adduct : lipid_pure | lipid_pure adduct_info;
 lipid_pure : fatty_acid | gl | pl | sl | st;
 
 import AdductInfo;
+import CommonRules;
 
 
 /* fatty acyl rules */
@@ -184,17 +185,6 @@ st_sub2_hg : 'SE' ROB number COLON number;
 
 
 /* separators */
-SPACE : ' ';
-COLON : ':';
-SEMICOLON : ';';
-DASH : '-';
-UNDERSCORE : '_';
-SLASH : '/';
-BACKSLASH : '\\';
-COMMA: ',';
-ROB: '(';
-RCB: ')';
-
 unsorted_fa_separator : UNDERSCORE;
 sorted_fa_separator : SLASH;
 headgroup_separator : SPACE;
@@ -203,5 +193,3 @@ db_position_separator : COMMA;
 med_position_separator : COMMA;
 fa_lcb_suffix_separator : DASH;
 fa_lcb_prefix_separator : DASH;
-
-number :  number number | '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
