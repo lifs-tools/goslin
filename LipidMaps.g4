@@ -30,7 +30,8 @@
 grammar LipidMaps;
 
 /* first rule is always start rule */
-lipid: lipid_rule EOF;
+lipid : lipid_adduct EOF;
+lipid_adduct : lipid_rule | lipid_rule adduct_info;
 lipid_rule: lipid_mono | lipid_mono isotope;
 lipid_mono: lipid_pure | lipid_pure isoform;
 lipid_pure: pure_fa | gl | pl | sl | pk | sterol | mediator;
@@ -38,6 +39,9 @@ isoform: square_open_bracket isoform_inner square_close_bracket;
 isoform_inner : 'rac' | 'iso' | 'iso' number | 'R';
 isotope: SPACE round_open_bracket element number round_close_bracket | DASH round_open_bracket element number round_close_bracket | DASH element number;
 element: 'd';
+
+import AdductInfo;
+import CommonRules;
 
 
 /* pure fatty acid */
@@ -175,32 +179,18 @@ lcb_fa: lcb_fa_unmod | lcb_fa_unmod lcb_fa_mod;
 lcb_fa_unmod: number carbon_db_separator db;
 lcb_fa_mod: round_open_bracket modification round_close_bracket;
 lcb: hydroxyl_lcb lcb_fa | lcb_fa;
-/* carbon: number; */
 db : number | number db_positions;
-/* db_count : number; */
 db_positions : ROB db_position RCB;
 db_position : db_single_position | db_position db_position_separator db_position;
 db_single_position : number | number cistrans;
-/* db_position_number : number; */
 cistrans : 'E' | 'Z';
 hydroxyl: db_hydroxyl_separator number;
 hydroxyl_lcb: 'm' | 'd' | 't';
-number:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | number number;
+
+
+
 
 /* separators */
-SPACE : ' ';
-COLON : ':';
-SEMICOLON : ';';
-DASH : '-';
-UNDERSCORE : '_';
-SLASH : '/';
-BACKSLASH : '\\';
-COMMA: ',';
-ROB: '(';
-RCB: ')';
-SOB: '[';
-SCB: ']';
-
 fa_separator: UNDERSCORE | SLASH | BACKSLASH | DASH;
 headgroup_separator: SPACE;
 fa_mod_separator: SPACE;

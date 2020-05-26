@@ -2,7 +2,6 @@
  * MIT License
  * 
  * Copyright (c) 2017 Dominik Kopczynski   -   dominik.kopczynski {at} isas.de
- *                    Bing Peng   -   bing.peng {at} isas.de
  *                    Nils Hoffmann  -  nils.hoffmann {at} isas.de
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,19 +23,29 @@
  * SOFTWARE.
 */
 
-/* This is a BNF / ANTLR4 grammar for lipid subspecies identifiers following
- * J.K. Pauling et al. 2017, PLoS One, 12(11):e0188394.
- */
-
-grammar Goslin;
-
-/* first rule is always start rule */
-lipid : lipid_eof EOF;
-lipid_eof : lipid_pure | lipid_pure adduct_info;
-lipid_pure : gl | pl | sl | sterol | mediatorc | saccharolipid;
+grammar CommonRules;
 
 
-import AdductInfo;
-import CommonRules;
-import GoslinCommon;
+
+
+/* separators */
+SPACE : ' ';
+COLON : ':';
+SEMICOLON : ';';
+DASH : '-';
+UNDERSCORE : '_';
+SLASH : '/';
+BACKSLASH : '\\';
+COMMA: ',';
+ROB: '(';
+RCB: ')';
+SOB: '[';
+SCB: ']';
+FRAGMENT_SEPARATOR : ' - ';
+
+
+
+
+number :  digit;
+digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
 

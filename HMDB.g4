@@ -30,12 +30,15 @@ grammar HMDB;
 
 
 /* first rule is always start rule */
-lipid : lipid_pure EOF;
+lipid : lipid_adduct EOF;
+lipid_adduct : lipid_pure | lipid_pure adduct_info;
 lipid_pure : lipid_class | lipid_class lipid_suffix;
 lipid_class : fatty_acid | gl | pl | sl | st;
 
 lipid_suffix : '[rac]';
 
+import AdductInfo;
+import CommonRules;
 
 
 /* fatty acyl rules */
@@ -49,22 +52,18 @@ furan_fa_di : number 'D' number | 'DiMe(' number ',' number ')';
 lcb : lcb_core | fa_lcb_prefix lcb_core | lcb_core fa_lcb_suffix | fa_lcb_prefix lcb_core fa_lcb_suffix;
 lcb_core : hydroxyl number carbon_db_separator db;
 
-/* carbon : number; */
 db : number | number db_positions | number db_suffix | number db_positions db_suffix;
-/* db_count : number; */
 db_suffix : 'e' | 'n' number;
-/* db_suffix_number : number; */
 db_positions : ROB db_position RCB;
 db_position : db_single_position | db_position db_position_separator db_position;
 db_single_position : number | number cistrans;
-/* db_position_number : number; */
 cistrans : 'E' | 'Z';
 ether : ether_type | ether_link_pos ether_type;
 ether_link_pos : number '-';
 ether_type : 'o-' | 'O-' | 'P-' | 'i-' | 'a-';
 hydroxyl : 'm' | 'd' | 't';
 fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
-fa_lcb_suffix_core : number fa_lcb_suffix_type | number fa_lcb_suffix_separator fa_lcb_suffix_type;
+fa_lcb_suffix_core : fa_lcb_suffix_type | number fa_lcb_suffix_type | number fa_lcb_suffix_separator fa_lcb_suffix_type;
 fa_lcb_suffix_type : 'OH' | 'me';
 fa_lcb_prefix : fa_lcb_prefix_type | fa_lcb_prefix_type fa_lcb_prefix_separator;
 fa_lcb_prefix_type : 'iso';
@@ -192,17 +191,6 @@ st_sub2_fa : ROB fa2 RCB;
 
 
 /* separators */
-SPACE : ' ';
-COLON : ':';
-SEMICOLON : ';';
-DASH : '-';
-UNDERSCORE : '_';
-SLASH : '/';
-BACKSLASH : '\\';
-COMMA: ',';
-ROB: '(';
-RCB: ')';
-
 unsorted_fa_separator : UNDERSCORE;
 sorted_fa_separator : SLASH;
 headgroup_separator : SPACE;
@@ -211,6 +199,3 @@ db_position_separator : COMMA;
 med_position_separator : COMMA;
 fa_lcb_suffix_separator : DASH;
 fa_lcb_prefix_separator : DASH;
-
-number :  digit;
-digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
