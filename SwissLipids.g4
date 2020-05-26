@@ -28,14 +28,14 @@
 
 grammar SwissLipids;
 
+import AdductInfo;
+import CommonRules;
+
 
 /* first rule is always start rule */
 lipid : lipid_adduct EOF;
 lipid_adduct : lipid_pure | lipid_pure adduct_info;
 lipid_pure : fatty_acid | gl | pl | sl | st;
-
-import AdductInfo;
-import CommonRules;
 
 
 /* fatty acyl rules */

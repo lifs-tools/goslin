@@ -30,6 +30,10 @@
 
 grammar GoslinFragments;
 
+import AdductInfo;
+import CommonRules;
+import GoslinCommon;
+
 /* first rule is always start rule */
 lipid : lipid_eof EOF;
 lipid_eof : just_lipid | just_lipid FRAGMENT_SEPARATOR fragment_name;
@@ -43,6 +47,3 @@ sign : '-' | '+' | ' ' | ',' | '(' | ')' | '[' | ']' | ':' | '*' | ';';
 
 
 
-import AdductInfo;
-import CommonRules;
-import GoslinCommon;

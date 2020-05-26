@@ -28,6 +28,8 @@
 
 grammar HMDB;
 
+import AdductInfo;
+import CommonRules;
 
 /* first rule is always start rule */
 lipid : lipid_adduct EOF;
@@ -37,8 +39,6 @@ lipid_class : fatty_acid | gl | pl | sl | st;
 
 lipid_suffix : '[rac]';
 
-import AdductInfo;
-import CommonRules;
 
 
 /* fatty acyl rules */

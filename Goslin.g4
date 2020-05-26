@@ -30,13 +30,14 @@
 
 grammar Goslin;
 
+import AdductInfo;
+import CommonRules;
+import GoslinCommon;
+
 /* first rule is always start rule */
 lipid : lipid_eof EOF;
 lipid_eof : lipid_pure | lipid_pure adduct_info;
 lipid_pure : gl | pl | sl | sterol | mediatorc | saccharolipid;
 
 
-import AdductInfo;
-import CommonRules;
-import GoslinCommon;
 

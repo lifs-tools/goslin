@@ -29,6 +29,9 @@
 
 grammar LipidMaps;
 
+import AdductInfo;
+import CommonRules;
+
 /* first rule is always start rule */
 lipid : lipid_adduct EOF;
 lipid_adduct : lipid_rule | lipid_rule adduct_info;
@@ -39,9 +42,6 @@ isoform: square_open_bracket isoform_inner square_close_bracket;
 isoform_inner : 'rac' | 'iso' | 'iso' number | 'R';
 isotope: SPACE round_open_bracket element number round_close_bracket | DASH round_open_bracket element number round_close_bracket | DASH element number;
 element: 'd';
-
-import AdductInfo;
-import CommonRules;
 
 
 /* pure fatty acid */
