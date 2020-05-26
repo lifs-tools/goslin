@@ -6,7 +6,6 @@ Goslin is the **G**rammar **o**n **s**uccinct **li**pid **n**omenclature.
 
 Goslin defines multiple grammers compatible with ANTLRv4 for different sources of shorthand lipid nomenclature. This allows to generate parsers based on the defined grammars, which provide immediate feedback whether a processed lipid shorthand notation string is compliant with a particular grammar, or not.
 
-
 [Overview of Goslin and Tutorials](docs/README.adoc)
 
 ## References
