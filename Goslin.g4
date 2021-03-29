@@ -123,9 +123,9 @@ hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA' | 'LCDP
 hg_lpim : 'LPIM' hg_lpim_number;
 hg_lpim_number : number;
 hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
-hg_lpl_o : 'LPC' | 'LPE';
+hg_lpl_o : hg_lpl;
 hg_pl_oc : hg_pl_o ' O' | hg_pl_o heavy_hg ' O';
-hg_pl_o : 'PA' | 'PC' | 'PE' | 'PG' | 'PI' | 'PS';
+hg_pl_o : hg_pl;
 
 
 
