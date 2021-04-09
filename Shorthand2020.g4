@@ -47,20 +47,26 @@ adduct2 : character | character character;
 
 
 /* mediators */
-med_hg_single : 'FA' | 'FOH' | 'FAL' | 'CAR' | 'CoA' | 'NAE' | 'NAT' | 'FE-EST';
-med_hg_double : 'WE' | 'WD' | 'NA' | 'FAHFA'
+med : med_species | med_subspecies;
+med_species : med_hg_double fatty_acyl_chain;
+med_subspecies : med_hg_single headgroup_separator fatty_acyl_chain | med_hg_double headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain | med_hg_triple headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain unsorted_fa_separator fatty_acyl_chain | med_hg_triple headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain;
+med_hg_single : 'FA' | 'FOH' | 'FAL' | 'CAR' | 'CoA' | 'NAE' | 'NAT';
+med_hg_double : 'WE' | 'NA' | 'FAHFA';
+med_hg_triple : 'WD';
 
 
 
 
 /* fatty acyl chain */
 lcb : fatty_acyl_chain;
-fatty_acyl_chain : fa_pure | fa_pure heavy_fa | ether fa_pure | ether fa_pure heavy_fa;
-heavy_fa : heavy;
+fatty_acyl_chain : fa_pure | ether fa_pure | fatty_acyl_linkage | fatty_alkyl_linkage;
+fatty_acyl_linkage : fatty_linkage_number 'O' ROB fa_pure RCB | 'O' ROB fa_pure RCB;
+fatty_alkyl_linkage : fatty_linkage_number 'O' ROB med RCB | 'O' ROB med RCB;
+fatty_linkage_number : number;
 fa_pure : carbon carbon_db_separator db | carbon carbon_db_separator db db_funcgroup_separator func_group;
 ether : ether_num ether_type | ether_type;
 ether_num : 'm' | 'd' | 't' | 'q';
-ether_type: 'O-' | 'P-';
+ether_type: 'O' plasmalogen_separator | 'P' plasmalogen_separator;
 carbon : number;
 db : db_count | db_count db_positions;
 db_count : number;
@@ -72,14 +78,22 @@ cistrans : 'E' | 'Z';
 
 func_group : func_group_entity;
 func_group_entity : func_group_entity funcgroup_separator func_group_entity | func_group_name | func_group_data;
-func_group_data : func_group_pos func_group_ext_name | func_group_ext_name func_group_number | func_group_placeholder;
+func_group_data : func_group_pos func_group_ext_name | func_group_pos func_group_ext_name func_group_stereo | func_group_ext_name func_group_number | func_group_ext_name func_group_number func_group_stereo | func_group_placeholder;
 func_group_pos : number;
 func_group_number : number;
+func_group_stereo : SOB func_group_stereo_number stereo_type SCB | SOB stereo_type SCB;
+func_group_stereo_number : number;
+stereo_type : 'R' | 'S';
 func_group_placeholder : 'O' | 'O' func_group_placeholder_number;
 func_group_placeholder_number : number;
-func_group_ext_name : round_open_bracket func_group_name round_close_bracket | func_group_name;
+func_group_ext_name : round_open_bracket func_group_name round_close_bracket | func_group_name | func_group_cycle;
 func_group_name : 'Et' | 'Me' | 'Br' | 'Cl' | 'F' | 'I' | 'NO2' | 'Ep' | 'OO' | 'OMe' | 'oxy' | 'NH2' | 'OOH' | 'SH' | 'OH' | 'oxo' | 'CN' | 'P' | 'S' | 'COOH' | 'G' | 'T';
-
+func_group_cycle : SOB cycle_start '-' cycle_end 'cy' cycle_number ':' cycle_number_db SCB | SOB cycle_start '-' cycle_end 'cy' cycle_number ':' cycle_number_db ';' cycle_func_group_data SCB | SOB cycle_start '-' cycle_end 'cy' cycle_number ';' cycle_func_group_data SCB;
+cycle_func_group_data : func_group_data;
+cycle_number_db : cycle_number_db_cnt | cycle_number_db_cnt ROB cycle_number_db_positions RCB;
+cycle_number_db_cnt : number;
+cycle_number_db_positions : cycle_number_db_position;
+cycle_number_db_position : cycle_number_db_position ',' cycle_number_db_position | number;
 
 
 /* separators */
@@ -93,12 +107,14 @@ BACKSLASH : '\\';
 COMMA: ',';
 ROB: '(';
 RCB: ')';
+SOB: '[';
+SCB: ']';
 FRAGMENT_SEPARATOR : ' - ';
 
-sorted_fa_separator : SLASH | BACKSLASH;
+sorted_fa_separator : SLASH;
 adduct_separator : SPACE;
-unsorted_fa_separator : DASH | UNDERSCORE;
-plasmalogen_separator : headgroup_separator | DASH;
+unsorted_fa_separator : UNDERSCORE;
+plasmalogen_separator : DASH;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;
 db_funcgroup_separator : SEMICOLON;
