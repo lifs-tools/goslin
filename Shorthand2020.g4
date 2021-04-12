@@ -1,8 +1,7 @@
 /*
  * MIT License
  * 
- * Copyright (c) 2017 Dominik Kopczynski   -   dominik.kopczynski {at} isas.de
- *                    Bing Peng   -   bing.peng {at} isas.de
+ * Copyright (c) 2021 Dominik Kopczynski   -   dominik.kopczynski {at} isas.de
  *                    Nils Hoffmann  -  nils.hoffmann {at} isas.de
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -68,7 +67,7 @@ sn : ROB 'sn-' sn_pos RCB;
 sn_pos : number;
 fa_pure_structure : carbon carbon_db_separator db | carbon carbon_db_separator db db_funcgroup_separator func_group | carbon carbon_db_separator db db_funcgroup_separator func_group_cycle | carbon carbon_db_separator db db_funcgroup_separator func_group_cycle db_funcgroup_separator func_group;
 ether : ether_num ether_type | ether_type;
-ether_num : 'm' | 'd' | 't' | 'q';
+ether_num : 'm' | 'd' | 't' | 'e';
 ether_type: 'O' plasmalogen_separator | 'P' plasmalogen_separator;
 carbon : number;
 db : db_count | db_count db_positions;
@@ -81,7 +80,7 @@ cistrans : 'E' | 'Z';
 
 func_group : func_group_entity;
 func_group_entity : func_group_entity funcgroup_separator func_group_entity | func_group_name | func_group_data | func_group_data_repetition;
-func_group_data : func_group_pos func_group_ext_name | func_group_pos func_group_ext_name stereo | func_group_ext_name func_group_number | func_group_ext_name func_group_number stereo | func_group_placeholder;
+func_group_data : func_group_pos func_group_ext_name | func_group_pos func_group_ext_name stereo | func_group_ext_name func_group_number | func_group_ext_name func_group_number stereo | func_group_placeholder | fatty_acyl_linkage | fatty_alkyl_linkage;
 func_group_data_repetition : func_group_data_repetition ',' func_group_data_repetition | func_group_data;
 func_group_pos : number;
 func_group_number : number;
@@ -102,6 +101,65 @@ cycle_number_db_cnt : number;
 cycle_number_db_positions : cycle_number_db_position;
 cycle_number_db_position : cycle_number_db_position ',' cycle_number_db_position | number;
 
+fatty_acyl_chain2 : fa2_sorted | fa2_unsorted;
+fa2_unsorted : fatty_acyl_chain unsorted_fa_separator fatty_acyl_chain;
+fa2_sorted : fatty_acyl_chain sorted_fa_separator fatty_acyl_chain;
+
+fatty_acyl_chain3 : f3_sorted | fa3_unsorted;
+f3_sorted : fa2_sorted sorted_fa_separator fatty_acyl_chain;
+fa3_unsorted : fa2_unsorted unsorted_fa_separator fatty_acyl_chain;
+
+fatty_acyl_chain4 : f4_sorted | fa4_unsorted;
+f4_sorted : fa2_sorted sorted_fa_separator fa2_sorted;
+fa4_unsorted : fa2_unsorted unsorted_fa_separator fa2_unsorted;
+
+
+/* glycero lipids */
+gl : gl_species | gl_subpsecies | gl_species_double;
+gl_species : gl_hg headgroup_separator fatty_acyl_chain;
+gl_species_double : gl_hg_triple headgroup_separator fatty_acyl_chain2;
+gl_subpsecies : gl_single | gl_double | gl_triple;
+gl_hg : gl_hg_double | gl_hg_triple;
+gl_hg_single : 'MG' | 'MGMG' | 'DGMG' | 'SQMG';
+gl_hg_double : 'DG' | 'MGDG' | 'DGDG' | 'SQDG';
+gl_hg_triple : 'TG';
+gl_single : gl_hg_single headgroup_separator fatty_acyl_chain | gl_full;
+gl_double : gl_hg_double headgroup_separator fatty_acyl_chain2 | gl_full;
+gl_full : gl_hg_single headgroup_separator fatty_acyl_chain3 | gl_hg_double headgroup_separator fatty_acyl_chain3;
+gl_triple : gl_hg_triple headgroup_separator fatty_acyl_chain3;
+
+
+pl : pl_species | pl_subspecies | pl_species_double | pl_species_triple;
+pl_species : pl_hg headgroup_separator fatty_acyl_chain;
+pl_subspecies : pl_single | pl_double | pl_triple | pl_quadro;
+pl_species_double : pl_hg_triple headgroup_separator fatty_acyl_chain2 | pl_hg_quadro headgroup_separator fatty_acyl_chain2;
+pl_species_triple : pl_hg_quadro headgroup_separator fatty_acyl_chain3;
+pl_single : pl_hg_single headgroup_separator fatty_acyl_chain | pl_full;
+pl_full : pl_hg_single headgroup_separator fatty_acyl_chain2;
+pl_double : pl_hg_double headgroup_separator fatty_acyl_chain2;
+pl_triple : pl_hg_triple headgroup_separator fatty_acyl_chain3 | pl_full4;
+pl_quadro : pl_hg_quadro headgroup_separator fatty_acyl_chain4;
+pl_full4 : pl_hg_triple headgroup_separator fatty_acyl_chain4;
+pl_hg : pl_hg_double | pl_hg_triple | pl_hg_quadro;
+pl_hg_single : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA' | 'LCDPDAG' | 'LDMPE' | 'LMMPE' | 'LPIMIP' | 'LPIN' | 'PE-isoLG';
+pl_hg_double : 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | hg_pip | 'PS' | 'LBPA' | 'PGP' | 'PPA' | 'Glc-GP' | '6-Ac-Glc-GP' | hg_pim | 'PnC' | 'PnE' | 'PT' | 'PE-NMe2' | 'PE-NMe' | 'PIMIP' | 'CDPDAG' | 'PS-N(' pl_hg_fa ')' | 'PE-N(' pl_hg_fa ')' | 'PS-N(' pl_hg_alk ')' | 'PE-N(' pl_hg_alk ')' | 'PS-CAP' | 'PS-MDA' | 'PE-CAP' | 'PE-Glc' | 'PE-GlcA' | 'PE-GlcK' | 'PE-CM' | 'PE-CE' | 'PE-FA' | 'PE-CA' | 'PE-MDA' | 'PE-HNE';
+pl_hg_triple : 'LCL';
+pl_hg_quadro : 'BMP' | 'CL';
+hg_pip : hg_pip_pure | hg_pip_pure hg_pip_m | hg_pip_pure hg_pip_d | hg_pip_pure hg_pip_t;
+hg_pip_pure : 'PIP';
+hg_pip_m : '(3' apostroph ')' | '(4' apostroph ')' | '(5' apostroph ')';
+hg_pip_d : '2' | '2(3' apostroph ',4' apostroph ')' | '2(4' apostroph ',5' apostroph ')' | '2(3' apostroph ',5' apostroph ')';
+hg_pip_t : '3' | '3(3' apostroph ',4' apostroph ',5' apostroph ')';
+hg_pim : 'PIM' hg_pim_number;
+hg_pim_number : number;
+hg_lpim : 'LPIM' hg_lpim_number;
+hg_lpim_number : number;
+pl_hg_fa : 'FA' | med;
+pl_hg_alk : 'Alk' | fa_pure;
+
+
+
+
 
 /* separators */
 SPACE : ' ';
@@ -118,6 +176,7 @@ SOB: '[';
 SCB: ']';
 FRAGMENT_SEPARATOR : ' - ';
 
+apostroph : '\'' | '′';
 sorted_fa_separator : SLASH;
 adduct_separator : SPACE;
 unsorted_fa_separator : UNDERSCORE;
