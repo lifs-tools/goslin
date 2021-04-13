@@ -33,7 +33,7 @@ grammar Shorthand2020;
 /* first rule is always start rule */
 lipid : lipid_eof EOF;
 lipid_eof : lipid_pure | lipid_pure adduct_info;
-lipid_pure : gl | pl | sl | sterol | med | sac; /* glycero lipids, phospho lipids, sphingo lipids, sterol lipids, lipid mediators, saccharo lipids
+lipid_pure : gl | pl | sl | sterol | med; /* glycero lipids, phospho lipids, sphingo lipids, sterol lipids, lipid mediators
 
 
 /* adduct information */
@@ -48,7 +48,7 @@ adduct2 : character | character character;
 /* mediators */
 med : med_species | med_subspecies;
 med_species : med_hg_double fatty_acyl_chain;
-med_subspecies : med_hg_single headgroup_separator fatty_acyl_chain | med_hg_double headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain | med_hg_triple headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain unsorted_fa_separator fatty_acyl_chain | med_hg_triple headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain;
+med_subspecies : med_hg_single fatty_acyl_chain | med_hg_single headgroup_separator fatty_acyl_chain | med_hg_double headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain | med_hg_triple headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain unsorted_fa_separator fatty_acyl_chain | med_hg_triple headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain;
 med_hg_single : 'FA' | 'FOH' | 'FAL' | 'CAR' | 'CoA' | 'NAE' | 'NAT';
 med_hg_double : 'WE' | 'NA' | 'FAHFA';
 med_hg_triple : 'WD';
@@ -80,18 +80,21 @@ cistrans : 'E' | 'Z';
 
 func_group : func_group_entity;
 func_group_entity : func_group_entity funcgroup_separator func_group_entity | func_group_name | func_group_data | func_group_data_repetition;
-func_group_data : func_group_pos func_group_ext_name | func_group_pos func_group_ext_name stereo | func_group_ext_name func_group_number | func_group_ext_name func_group_number stereo | func_group_placeholder | fatty_acyl_linkage | fatty_alkyl_linkage;
+func_group_data : func_group_pos func_group_ext_name | func_group_pos func_group_ext_name stereo | func_group_ext_name func_group_count | func_group_ext_name func_group_count stereo | func_group_placeholder | fatty_acyl_linkage | fatty_alkyl_linkage;
 func_group_data_repetition : func_group_data_repetition ',' func_group_data_repetition | func_group_data;
-func_group_pos : number;
-func_group_number : number;
+func_group_pos : func_group_pos_number | func_group_pos_number ring_stereo;
+ring_stereo : 'a' | 'b';
+func_group_pos_number : number;
+func_group_count : number;
 stereo : SOB stereo_number stereo_type SCB | SOB stereo_type SCB;
 stereo_number : number;
 stereo_type : 'R' | 'S';
 func_group_placeholder : 'O' | 'O' func_group_placeholder_number;
 func_group_placeholder_number : number;
 func_group_ext_name : round_open_bracket func_group_name round_close_bracket | func_group_name;
-func_group_name : 'Et' | 'Me' | 'Br' | 'Cl' | 'F' | 'I' | 'NO2' | 'Ep' | 'OO' | 'OMe' | 'oxy' | 'NH2' | 'OOH' | 'SH' | 'OH' | 'oxo' | 'CN' | 'P' | 'S' | 'COOH' | 'G' | 'T';
-func_group_cycle : SOB cycle_start '-' cycle_end 'cy' cycle_number ':' cycle_number_db SCB | SOB cycle_start '-' cycle_end 'cy' cycle_number ':' cycle_number_db ';' cycle_func_group_data SCB | SOB cycle_start '-' cycle_end 'cy' cycle_number ';' cycle_func_group_data SCB;
+func_group_name : 'Et' | 'Me' | 'Br' | 'Cl' | 'F' | 'I' | 'NO2' | 'Ep' | 'OO' | 'OMe' | 'oxy' | 'NH2' | 'OOH' | 'SH' | 'OH' | 'oxo' | 'CN' | 'P' | 'S' | 'COOH' | 'G' | 'T' | 'COG' | 'COT' | carbohydrate | 'H' | 'O' carbohydrate | med;
+func_group_cycle : SOB cycle_def ':' cycle_number_db SCB | SOB cycle_def ':' cycle_number_db ';' cycle_func_group_data SCB | SOB cycle_def ';' cycle_func_group_data SCB;
+cycle_def : cycle_start '-' cycle_end 'cy' cycle_number | 'cy' cycle_number;
 cycle_number : number;
 cycle_start : number;
 cycle_end : number;
@@ -158,6 +161,30 @@ pl_hg_fa : 'FA' | med;
 pl_hg_alk : 'Alk' | fa_pure;
 
 
+carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'SHex' | 'S(3' apostroph ')Hex' | 'NAc' | 'Nac' | 'S(3' apostroph ')Gal' | 'HexA';
+
+
+sl : sl_species | sl_subspecies;
+sl_species : sl_hg_double headgroup_separator lcb;
+sl_subspecies : sl_hg_single headgroup_separator lcb | sl_hg_single sl_hydroxyl headgroup_separator lcb | sl_double;
+sl_double : sl_hg_double headgroup_separator lcb sorted_fa_separator fatty_acyl_chain | sl_hg_double sl_hydroxyl headgroup_separator lcb sorted_fa_separator fatty_acyl_chain;
+sl_hydroxyl : ROB sl_hydroxyl_number RCB;
+sl_hydroxyl_number : number;
+sl_hg_single : 'SPB' | 'SPBP' | 'LIPC' | 'LSM';
+sl_hg_double : sl_hg_double_name | carbohydrate sl_hg_double  | carbohydrate '-' sl_hg_double;
+sl_hg_double_name : 'SM' | 'Cer' | 'CerP' | acer_hg | 'HexCer' | 'GlcCer' | 'GalCer' | 'Hex2Cer' | 'LacCer' | 'SHexCer' | 'IPC' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | 'Hex3Cer' | 'S(3' apostroph ')HexCer' | 'S(3' apostroph ')GalCer';
+acer_hg : acer_hg_pure | acer_med '-' acer_hg_pure;
+acer_hg_pure : 'ACer';
+acer_med : med;
+
+
+
+/* sterol lipids */
+sterol : st | st_ester;
+st : st_hg headgroup_separator fatty_acyl_chain;
+st_ester : st_hg_ester headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain;
+st_hg : 'ST' | 'BA' | 'FC' | 'CE' | 'SG' | 'ASG';
+st_hg_ester : 'SE';
 
 
 
