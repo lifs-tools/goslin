@@ -59,8 +59,8 @@ med_hg_triple : 'WD';
 /* fatty acyl chain */
 lcb : fatty_acyl_chain;
 fatty_acyl_chain : fa_pure | ether fa_pure | fatty_acyl_linkage | fatty_alkyl_linkage;
-fatty_acyl_linkage : fatty_linkage_number 'O' ROB fatty_acyl_chain RCB | 'O' ROB fatty_acyl_chain RCB;
-fatty_alkyl_linkage : fatty_linkage_number 'O' ROB med RCB | 'O' ROB med RCB;
+fatty_alkyl_linkage : fatty_linkage_number 'O' ROB fatty_acyl_chain RCB | 'O' ROB fatty_acyl_chain RCB;
+fatty_acyl_linkage : fatty_linkage_number 'O' ROB med RCB | 'O' ROB med RCB;
 fatty_linkage_number : number;
 fa_pure : fa_pure_structure | fa_pure_structure stereo | fa_pure_structure sn;
 sn : ROB 'sn-' sn_pos RCB;
