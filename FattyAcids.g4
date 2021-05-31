@@ -23,49 +23,12 @@
  * SOFTWARE.
 */
 
-grammar Systematic;
+grammar FattyAcids;
 
 
 /* first rule is always start rule, EOF = end of file */
-lipid : lipid_category EOF;
+lipid : fatty_acid EOF;
 
-lipid_category : FA | GL | GP | SL | ST;
-
-/* fatty acids */
-FA : fa;
-
-/* glycero lipids */
-GL : gl | xdg | xmg;
-gl : generic_fa DASH gl_ending | generic_fa2 DASH gl_ending | generic_fa3 DASH gl_ending;
-gl_ending : 'glycerol' | sn_rac DASH 'glycerol';
-xdg : generic_fa2 DASH xdg_xmg_ending;
-xmg : generic_fa DASH xdg_xmg_ending;
-xdg_xmg_ending : '3-o-β-d-galactosyl-sn-glycerol' | '3-o-(6\'-o-α-d-galactosyl-β-d-galactosyl)-sn-glycerol' | '3-o-(α-d-galactosyl1-6)-β-d-galactosyl-sn-glycerol' | '3-(6\'-sulfo-α-d-quinovosyl)-sn-glycerol';
-sn_rac : 'rac' | 'sn';
-        
-generic_fa : generic_position DASH generic_fa_rob | generic_position generic_fa_rob_s | generic_position DASH ROB number COLON number generic_fa_rob;
-generic_fa2 : generic_position COMMA generic_position DASH 'di' generic_fa_rob | generic_position COMMA generic_position DASH 'di' DASH generic_fa_rob | generic_fa DASH generic_fa;
-generic_fa3 : generic_position COMMA generic_position COMMA generic_position DASH 'tri' generic_fa_rob | generic_fa DASH generic_fa2 | generic_fa2 DASH generic_fa;
-generic_fa_rob : ROB fa RCB | fa;
-generic_fa_rob_s : ROB fa RCB;
-generic_position : generic_pos | generic_pos DASH 'o';
-generic_pos : number;
-
-
-/* phospho glycero lipids */
-GP : gp | cl;
-gp : generic_fa DASH gp_ending | generic_fa2 DASH gp_ending;
-
-/* PC, PE, PS */
-gp_ending : 'sn-glycero-3-phosphocholine' | 'sn-glycero-3-phosphoethanolamine' | 'sn-glycero-3-phosphoserine';
-
-
-
-
-
-
-fa : fatty_acid | acetyl;
-acetyl : 'acetyl';
 fatty_acid: regular_fatty_acid | wax | CAR | ethanolamine | amine | acetic_acid;
 wax : wax_ester fatty_acid_type | wax_ester regular_fatty_acid;
 wax_ester : fatty_acid SPACE | ROB fatty_acid RCB SPACE | methyl SPACE | methyl DASH;
@@ -84,9 +47,6 @@ acetic_recursion : fatty_acid | ROB fatty_acid RCB | SOB fatty_acid SCB | COB fa
 
 regular_fatty_acid : ate_type |
                      ol_position_description | 
-                     furan |
-                     additional_descriptions furan | 
-                     sum_add furan | 
                      additional_len acid_type_regular |
                      additional_len acid_type_double |
                      additional_descriptions double_bond_positions fatty_length acid_type_double |
@@ -123,10 +83,8 @@ prosta : 'prosta' | 'prost' | 'prostan';
 
 acid_type_regular: acid_single_type | acid_single_type cyclo_position;
 acid_type_double: db_num acid_type_regular;
-acid_single_type: 'noic acid' | 'nic acid' | 'nal' | dioic | 'noyloxy' | 'noyl' | ol | dial | 'noate' | 'nate' | CoA | yl | 'ne' | 'nyloxy';
+acid_single_type: 'noic acid' | 'nic acid' | 'nal' | dioic | 'noyloxy' | 'noyl' | ol | dial | 'noate' | 'nate' | CoA | yl | 'ne' | 'yloxy';
 CoA : 'noyl' coa | 'yl' coa | 'nyl' coa;
-furan : 'furan' DASH furan_pos DASH 'yl';
-furan_pos : number;
 coa : 'coa' | '-coa';
 yl : 'yl' | 'nyl' | 'n' DASH yl_ending DASH 'yl' | DASH yl_ending DASH 'yl';
 yl_ending: number;
