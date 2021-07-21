@@ -100,13 +100,14 @@ molecular_func_group : molecular_func_group_name | molecular_func_group_name fun
 func_group_ext_name : round_open_bracket func_group_name round_close_bracket | func_group_name;
 func_group_ext_count_name : round_open_bracket func_group_name round_close_bracket | molecular_func_group_name;
 func_group_name : 'Et' | 'Me' | 'Ac' | 'NO2' | 'My' | 'Ep' | 'OO' | 'dMe' | 'OMe' | 'oxy' | 'NH2' | 'OOH' | 'SH' | 'OH' | 'oxo' | 'CN' | 'Ph' | 'Su' | 'COOH' | 'G' | 'T' | 'COG' | 'COT' | carbohydrate | 'H' | med | 'Cys' | 'Phe' | 'SGlu' | 'SCys' | 'BOO' | 'MMAs' | 'SMe' | 'NH' | molecular_func_group_name | 'SCG';
-molecular_func_group_name : 'O' | 'N' | 'P' | 'S' | 'As' | 'Br' | 'Cl' | 'F' | 'I';
+molecular_func_group_name : elements;
+elements : 'O' | 'N' | 'P' | 'S' | 'As' | 'Br' | 'Cl' | 'F' | 'I';
 func_group_cycle : SOB cycle_base SCB | SOB cycle_base funcgroup_separator cycle_func_group_data SCB;
 cycle_base : cycle_def | cycle_def carbon_db_separator cycle_db;
 cycle_def : cycle_start cycle_separator cycle_end cycle_token cycle_number | cycle_start cycle_separator cycle_end cycle_bridge cycle_token cycle_number | cycle_bridge cycle_token cycle_number | cycle_token cycle_number;
-cycle_bridge : ROB cylce_elements RCB;
+cycle_bridge : cylce_elements;
 cylce_elements : cylce_elements cylce_elements | cylce_element;
-cylce_element : 'O' | 'C' | 'N';
+cylce_element : elements;
 cycle_token : 'cy';
 cycle_number : number;
 cycle_start : number;
@@ -222,7 +223,6 @@ ROB: '(';
 RCB: ')';
 SOB: '[';
 SCB: ']';
-FRAGMENT_SEPARATOR : ' - ';
 
 apostroph : '\'' | '′';
 sorted_fa_separator : SLASH;
