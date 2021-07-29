@@ -52,7 +52,8 @@ regular_fatty_acid : ate_type |
                      additional_descriptions double_bond_positions fatty_length acid_type_double |
                      sum_add fatty_length acid_type_regular | 
                      sum_add fatty_length acid_type_double | 
-                     fg_pos_summary fatty_length acid_type_double |  
+                     fg_pos_summary fatty_length acid_type_double |
+                     /* double_bond_positions fatty_length acid_type_double | */
                      fg_pos_summary double_bond_positions fatty_length acid_type_double |  
                      sum_add double_bond_positions fatty_length acid_type_double;
 
