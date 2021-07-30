@@ -1,0 +1,44 @@
+# regular lipid names on precursor level
+LPA 16:1p,LPA 16:1p
+LPS 12:0a,LPS 12:0a
+LPE O-20:1p,LPE O-20:1p
+PE 16:2-18:3;1,PE 16:2-18:3;1
+CL 18:1-18:1-18:1-18:1,CL 18:1-18:1-18:1-18:1
+MLCL 18:1-18:1-18:1,MLCL 18:1-18:1-18:1
+SHexCer 18:0;3/26:0;1,SHexCer 18:0;3/26:0;1
+PEt 16:0-18:1,PEt 16:0-18:1
+CDPDAG 18:1-18:1,CDPDAG 18:1-18:1
+BMP 18:1-18:1,BMP 18:1-18:1
+PE O-18:0a/22:6,PE O-18:0a/22:6
+Hex3Cer 18:1;2/24:1,Hex3Cer 18:1;2/24:1
+DGDG 16:0-16:1,DGDG 16:0-16:1
+LCB 17:1;2,LCB 17:1;2
+LPE O-19:1p,LPE O-19:1p
+Hex2Cer 18:1;2/12:0,Hex2Cer 18:1;2/12:0
+Cer 18:1;2/16:0,Cer 18:1;2/16:0
+MAG 16:0,MAG 16:0
+PIP2 21:0-22:6,PIP2 21:0-22:6
+12-HETE,12-HETE
+Palmitic acid,Palmitic acid
+
+# lipids on precursor level with one heavy labeled building block
+HexCer(+[13]C4) 18:1;2/16:0,HexCer(+[13]C4) 18:1;2/16:0
+MAG(+[18]O) 16:0,MAG(+[18]O) 16:0
+Ch(+[13]C),Ch(+[13]C)
+12-HETE(+[2]H2),12-HETE(+[2]H2)
+MAG 16:0(+[18]O),MAG 16:0(+[18]O)
+CL 18:1-18:1-18:1(+[13]C18)-18:1,CL 18:1-18:1-18:1(+[13]C18)-18:1
+PE O-18:0a/22:6(+[18]O),PE O-18:0a/22:6(+[18]O)
+LPE(+[13]C4) O-12:1a,LPE(+[13]C4) O-12:1a
+PC(+[13]C4) O-12:1a/10:1,PC(+[13]C4) O-12:1a/10:1
+
+# lipids on precursor level with several heavy labeled building blocks
+CDPDAG(+[18]O13) 18:1(+[13]C18)-18:1(+[13]C18),CDPDAG(+[18]O13) 18:1(+[13]C18)-18:1(+[13]C18)
+BMP(+[2]H10[32]P) 18:1-18:1(+[13]C18),BMP(+[2]H10[32]P) 18:1-18:1(+[13]C18)
+PE O-18:0a(+[13]C18)/22:6(+[18]O),PE O-18:0a(+[13]C18)/22:6(+[18]O)
+PC O-18:0a(+[13]C18)/22:6(+[18]O),PC O-18:0a(+[13]C18)/22:6(+[18]O)
+LPE O-18:1p(+[13]C18),LPE O-18:1p(+[13]C18)
+LPC O-16:1a(+[13]C16),LPC O-16:1a(+[13]C16)
+Hex3Cer(+[2]H30[13]C18) 18:1;2/24:1(+[13]C24),Hex3Cer(+[2]H30[13]C18) 18:1;2/24:1(+[13]C24)
+CL 18:1(+[13]C18)-18:1(+[13]C18)-18:1(+[13]C18)-18:1(+[13]C18),CL 18:1(+[13]C18)-18:1(+[13]C18)-18:1(+[13]C18)-18:1(+[13]C18)
+
