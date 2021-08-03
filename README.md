@@ -27,8 +27,8 @@ If you use Goslin or any of the specific implementations in your work, we kindly
 
 ## Test data
 
-1. lipidmaps-names-Feb-10-2020.tsv - generated from [LipidMAPS LMSDB](https://www.lipidmaps.org/) export on Feb. 10th, 2020. Filtered all entries without an abbreviation.
-2. swisslipids-names-Feb-10-2020.tsv - generated from [Swiss Lipids](https://www.swisslipids.org) (lipids table) export on Feb. 10th ,2020.
+1. testfiles/lipidmaps-names-Feb-10-2020.tsv - generated from [LipidMAPS LMSDB](https://www.lipidmaps.org/) export on Feb. 10th, 2020. Filtered all entries without an abbreviation.
+2. testfiles/swisslipids-names-Feb-10-2020.tsv - generated from [Swiss Lipids](https://www.swisslipids.org) (lipids table) export on Feb. 10th ,2020.
 
 Short samples of lipid names used for testing of the implementations are available from the [testfiles directory](testfiles/).
 
