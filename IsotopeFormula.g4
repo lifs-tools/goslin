@@ -25,15 +25,15 @@
 //// This is a BNF grammer for lipid subspecies identifiers followed by
 //// J.K. Pauling et al. 2017, PLoS One, 12(11):e0188394. 
 
-grammar SumFormula;
+grammar IsotopeFormula;
 
 /* first rule is always start rule */
-molecule: molecule_rule EOF;
-molecule_rule: molecule_group;
-molecule_group: element_group | single_element | molecule_group molecule_group;
-element_group: element count;
-single_element: element;
-element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As';
-count: digit | '-' digit;
-digit:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
-
+formula: '(+' isotopes  ')';
+isotopes : isotopes isotopes | isotope;
+isotope : '[' isotope_number ']' isotope_element isotope_count | '[' isotope_number ']' isotope_element;
+isotope_number : number;
+isotope_element : element;
+isotope_count : number;
+element : 'C' | 'H' | 'O' | 'N' | 'P' | 'S';
+number :  digit;
+digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;

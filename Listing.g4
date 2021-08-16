@@ -22,18 +22,23 @@
 // SOFTWARE.
 ////////////////////////////////////////////////////////////////////////////////
 
-//// This is a BNF grammer for lipid subspecies identifiers followed by
+//// This is a BNF grammar for lipid subspecies identifiers followed by
 //// J.K. Pauling et al. 2017, PLoS One, 12(11):e0188394. 
 
-grammar SumFormula;
+grammar Listing;
 
 /* first rule is always start rule */
-molecule: molecule_rule EOF;
-molecule_rule: molecule_group;
-molecule_group: element_group | single_element | molecule_group molecule_group;
-element_group: element count;
-single_element: element;
-element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As';
-count: digit | '-' digit;
-digit:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
+Listing: ListingRule EOF;
+ListingRule: Token;
+Token: SingleValue | Range | Token Separator Token;
+Range: LowerValue RangeSeparator UpperValue;
 
+SingleValue: Number;
+LowerValue: Number;
+UpperValue: Number;
+
+Number: Digit | Number Number;
+Digit:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
+
+Separator: ',';
+RangeSeparator: '-';
