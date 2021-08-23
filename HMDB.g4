@@ -211,5 +211,5 @@ med_position_separator : COMMA;
 fa_lcb_suffix_separator : DASH;
 fa_lcb_prefix_separator : DASH;
 
-number :  digit;
-digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | digit digit;
+number :  digit | digit number;
+digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';

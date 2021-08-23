@@ -35,4 +35,5 @@ Element_Group: Element Count;
 Single_Element: Element;
 Element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S';
 Count: Number;
-Number:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | Number Number;
+Number: Digit | Digit Number;
+Digit: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';

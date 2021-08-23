@@ -41,5 +41,5 @@ Molecule_Group: Count Heavy_Molecule_IUPAC;
 Count: Number;
 Heavy_Molecule_IUPAC: 'H2' | 'C13' | 'N15' | 'O17' | 'O18' | 'P32' | 'S34' | 'S33';
 
-Number: Digit | Number Number;
+Number: Digit | Digit Number;
 Digit:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';

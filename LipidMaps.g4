@@ -189,7 +189,8 @@ db_position_number : number;
 cistrans : 'E' | 'Z';
 hydroxyl: number;
 hydroxyl_lcb: 'm' | 'd' | 't';
-number:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | number number;
+number: digit | digit number;
+digit: '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 
 /* separators */
 SPACE : ' ';
