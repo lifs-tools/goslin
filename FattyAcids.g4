@@ -30,7 +30,7 @@ lipid : fatty_acid EOF;
 
 fatty_acid: regular_fatty_acid | wax | car | ethanolamine | amine | acetic_acid;
 wax : wax_ester regular_fatty_acid;
-wax_ester : fatty_acid SPACE | ROB fatty_acid RCB SPACE | methyl SPACE | methyl DASH;
+wax_ester : regular_fatty_acid SPACE | ROB regular_fatty_acid RCB SPACE | methyl SPACE | methyl DASH;
 methyl : 'methyl';
 car : car_positions DASH car_fa '-4-(' car_spec ')butanoate';
 car_fa : SOB regular_fatty_acid SCB | COB regular_fatty_acid CCB;
@@ -43,7 +43,7 @@ amine : amine_prefix amine_n DASH regular_fatty_acid SPACE 'amine';
 amine_prefix : 'n-' | '(+/-)n-';
 amine_n : fatty_acid | ROB fatty_acid RCB | methyl;
 acetic_acid : acetic_recursion 'acetic acid';
-acetic_recursion : fatty_acid | ROB fatty_acid RCB | SOB fatty_acid SCB | COB fatty_acid CCB;
+acetic_recursion : regular_fatty_acid | ROB regular_fatty_acid RCB | SOB regular_fatty_acid SCB | COB regular_fatty_acid CCB;
 
 regular_fatty_acid : ate_type |
                      ol_position_description | 
