@@ -146,11 +146,10 @@ gl_hg_triple : 'TG';
 
 
 
-pl : pl_species | pl_subspecies | pl_molecular_species_double | pl_molecular_species_triple;
+pl : pl_species | pl_subspecies | pl_molecular_species | pl_molecular_species_triple;
 pl_species : pl_hg headgroup_separator fatty_acyl_chain;
 pl_subspecies : pl_single | pl_double | pl_quadro;
-pl_molecular_species_double : pl_hg_triple headgroup_separator fatty_acyl_chain2 | pl_hg_quadro headgroup_separator fatty_acyl_chain2;
-pl_molecular_species_triple : pl_hg_quadro headgroup_separator fatty_acyl_chain3;
+pl_molecular_species : pl_hg_quadro headgroup_separator fatty_acyl_chain2 | pl_hg_quadro headgroup_separator fatty_acyl_chain3;
 pl_single : pl_hg_single headgroup_separator fatty_acyl_chain;
 pl_full : pl_hg_single headgroup_separator fatty_acyl_chain2;
 pl_double : pl_full | pl_hg_double_all headgroup_separator fatty_acyl_chain2;
