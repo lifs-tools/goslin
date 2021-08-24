@@ -37,4 +37,5 @@ jobs:
       - name: Gradle Build Action
         uses: gradle/gradle-build-action@v1.5.0
         with:
+          gradle-executable: '.sdkman/candidates/gradle/current/bin/gradle'
           arguments: build --continue # continue build on task errors to get overview of all tasks
