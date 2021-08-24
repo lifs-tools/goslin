@@ -9,7 +9,7 @@ repositories {
 dependencies {
     antlr "org.antlr:antlr4:4.9.2"
 }
-// grammars to includ for checking
+// grammars to include for checking
 ext {
     grammars = [
     "FattyAcids.g4",
@@ -26,7 +26,7 @@ ext {
 
 grammars.each {
     def grammar = [it]
-    println "Checking $grammar with Antlr"
+    println "Checking '$it' with Antlr"
     def taskName = "antlr-${it}"
     def outputDir = "${project.buildDir}/generated-src/antlr/${it}" as File
     def sourceDirectorySet = getObjects().sourceDirectorySet(it,it)
