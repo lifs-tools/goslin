@@ -1,0 +1,45 @@
+plugins {
+    id 'antlr'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    antlr "org.antlr:antlr4:4.9.2"
+}
+// grammars to include for checking
+ext {
+    grammars = [
+    "FattyAcids.g4",
+    "GoslinFragments.g4",
+    "Goslin.g4",
+    "HMDB.g4",
+    "LipidMaps.g4",
+    "Shorthand2020.g4",
+    "SumFormula.g4",
+    "SwissLipids.g4",
+//    "Systematic.g4"
+    ]
+}
+
+grammars.each {
+    def grammar = [it]
+    println "Checking '$it' with Antlr"
+    def taskName = "antlr-${it}"
+    def outputDir = "${project.buildDir}/generated-src/antlr/${it}" as File
+    def sourceDirectorySet = getObjects().sourceDirectorySet(it,it)
+    sourceDirectorySet.srcDir(".")
+    sourceDirectorySet.include(it)
+    outputDir.mkdirs()
+    tasks.create(name: taskName, type: AntlrTask) {
+        source = sourceDirectorySet
+        outputDirectory = outputDir
+        maxHeapSize = '1G'
+        arguments = []
+    }
+    tasks.named('compileJava') { dependsOn(taskName) }
+}
+
+

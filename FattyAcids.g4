@@ -28,13 +28,13 @@ grammar FattyAcids;
 /* first rule is always start rule, EOF = end of file */
 lipid : fatty_acid EOF;
 
-fatty_acid: regular_fatty_acid | wax | CAR | ethanolamine | amine | acetic_acid;
+fatty_acid: regular_fatty_acid | wax | car | ethanolamine | amine | acetic_acid;
 wax : wax_ester regular_fatty_acid;
 wax_ester : fatty_acid SPACE | ROB fatty_acid RCB SPACE | methyl SPACE | methyl DASH;
 methyl : 'methyl';
-CAR : car_positions DASH CAR_fa '-4-(' CAR_spec ')butanoate';
-CAR_fa : SOB regular_fatty_acid SCB | COB regular_fatty_acid CCB;
-CAR_spec : 'trimethylammonio' | 'trimethylazaniumyl';
+car : car_positions DASH car_fa '-4-(' car_spec ')butanoate';
+car_fa : SOB regular_fatty_acid SCB | COB regular_fatty_acid CCB;
+car_spec : 'trimethylammonio' | 'trimethylazaniumyl';
 
 car_positions : functional_position | ROB car_position RCB DASH functional_position;
 car_position : number;
@@ -84,9 +84,9 @@ prosta : 'prosta' | 'prost' | 'prostan';
 
 acid_type_regular: acid_single_type | acid_single_type cyclo_position;
 acid_type_double: db_num acid_type_regular;
-acid_single_type: 'noic acid' | 'nic acid' | 'nal' | dioic | 'noyloxy' | 'noyl' | ol | dial | 'noate' | 'nate' | CoA | yl | 'ne' | 'yloxy';
-CoA : 'noyl' coa | 'yl' coa | 'nyl' coa;
-coa : 'coa' | '-coa';
+acid_single_type: 'noic acid' | 'nic acid' | 'nal' | dioic | 'noyloxy' | 'noyl' | ol | dial | 'noate' | 'nate' | coa | yl | 'ne' | 'yloxy';
+coa : 'noyl' coa_ending | 'yl' coa_ending | 'nyl' coa_ending;
+coa_ending : 'coa' | '-coa';
 yl : 'yl' | 'nyl' | 'n' DASH yl_ending DASH 'yl' | DASH yl_ending DASH 'yl';
 yl_ending: number;
 
