@@ -146,7 +146,7 @@ gl_hg_triple : 'TG';
 
 
 
-pl : pl_species | pl_subspecies | pl_molecular_species | pl_molecular_species_triple;
+pl : pl_species | pl_subspecies | pl_molecular_species;
 pl_species : pl_hg headgroup_separator fatty_acyl_chain;
 pl_subspecies : pl_single | pl_double | pl_quadro;
 pl_molecular_species : pl_hg_quadro headgroup_separator fatty_acyl_chain2 | pl_hg_quadro headgroup_separator fatty_acyl_chain3;
