@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Kopczynski
+    given-names: Dominik
+    orcid: https://orcid.org/0000-0001-5885-4568
+title: "My Research Software"
+version: 2.0.4
+doi: 10.1021/acs.analchem.0c01690
+date-released: 2020-06-26
