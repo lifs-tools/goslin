@@ -20,4 +20,4 @@ identifiers:
   - description: "Main Publication: Goslin: A Grammar of Succinct Lipid Nomenclature"
     type: doi
     value: "10.1021/acs.analchem.0c01690"
-license: Apache-2.0
+license: MIT
