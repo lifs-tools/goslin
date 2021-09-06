@@ -119,10 +119,17 @@ sphinganine_name: 'Sphinganine' | 'Sa' | 'Sphinganine-1-phosphate';
 ctype: 'C' number;
 
 hg_dslc: hg_dsl | hg_dsl headgroup_separator;
+hg_dsl_global : hg_dsl | special_cer_hg;
 hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | 'C1P' | special_cer;
-special_cer : special_cer_prefix '-Cer';
-special_cer_prefix : '1-O-' special_cer_prefix_1_O | '(3\'-sulfo)Galbeta';
-special_cer_prefix_1_O : 'myristoyl' | 'palmitoyl' | 'stearoyl' | 'eicosanoyl' | 'behenoyl' | 'lignoceroyl' | 'cerotoyl' | 'carboceroyl' | 'tricosanoyl';
+special_cer : special_cer_prefix '-' special_cer_hg;
+special_cer_hg : 'Cer';
+special_cer_prefix : '1-O-' special_cer_prefix_1_O | '(3\'-sulfo)Galbeta' | glyco_cer;
+special_cer_prefix_1_O : 'myristoyl' | 'palmitoyl' | 'stearoyl' | 'eicosanoyl' | 'behenoyl' | 'lignoceroyl' | 'cerotoyl' | 'glyco_ceroyl' | 'tricosanoyl';
+glyco_cer : glyco_entity | glyco_entity '-' glyco_cer | number '(' glyco_cer '-' number ')' glyco_branch;
+glyco_branch : glyco_cer;
+glyco_entity : glyco_struct | number glyco_struct | number glyco_struct greek | number glyco_struct greek number | number glyco_struct  number | glyco_struct greek | glyco_struct greek number;
+glyco_struct : 'Gal' | 'Glc' | 'GalNAc' | 'GlcNAc' | 'Fuc' | 'Man' | 'Hex' | 'HexNAc' | 'NeuAc';
+greek : 'alpha' | 'beta' | 'α' | 'β';
 
 
 hg_lslc: hg_lsl | hg_lsl headgroup_separator;
