@@ -120,7 +120,8 @@ ctype: 'C' number;
 
 hg_dslc: hg_dsl_global | hg_dsl_global headgroup_separator;
 hg_dsl_global : hg_dsl | special_cer;
-hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | 'C1P';
+hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | 'C1P' | omega_linoleoyloxy_Cer;
+omega_linoleoyloxy_Cer : 'omega-linoleoyloxy-' special_cer_hg;
 special_cer : special_cer_prefix '-' special_cer_hg;
 special_cer_hg : 'Cer';
 special_cer_prefix : '1-O-' special_cer_prefix_1_O | '(3\'-sulfo)Galbeta' | glyco_cer;
