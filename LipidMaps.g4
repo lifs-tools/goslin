@@ -128,7 +128,7 @@ special_cer_prefix_1_O : 'myristoyl' | 'palmitoyl' | 'stearoyl' | 'eicosanoyl' |
 glyco_cer : glyco_entity | glyco_entity '-' glyco_cer | number '(' glyco_cer '-' number ')' glyco_branch;
 glyco_branch : glyco_cer;
 glyco_entity : glyco_struct | number glyco_struct | number glyco_struct greek | number glyco_struct greek number | number glyco_struct  number | glyco_struct greek | glyco_struct greek number;
-glyco_struct : 'Gal' | 'Glc' | 'GalNAc' | 'GlcNAc' | 'Fuc' | 'Man' | 'Hex' | 'HexNAc' | 'NeuAc';
+glyco_struct : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'KDN';
 greek : 'alpha' | 'beta' | 'α' | 'β';
 
 
