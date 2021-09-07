@@ -127,8 +127,9 @@ special_cer_hg : 'Cer';
 special_cer_prefix : '1-O-' special_cer_prefix_1_O | '(3\'-sulfo)Galbeta' | glyco_cer;
 special_cer_prefix_1_O : 'myristoyl' | 'palmitoyl' | 'stearoyl' | 'eicosanoyl' | 'behenoyl' | 'lignoceroyl' | 'cerotoyl' | 'glyco_ceroyl' | 'tricosanoyl';
 glyco_cer : glyco_entity | glyco_entity '-' glyco_cer | number '(' glyco_cer '-' number ')' glyco_cer;
-glyco_entity : glyco_struct | number glyco_struct | number glyco_struct greek | number glyco_struct greek number | number glyco_struct  number | glyco_struct greek | glyco_struct greek number;
-glyco_struct : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'KDN';
+glyco_entity : glyco_struct | glyco_number glyco_struct | glyco_number glyco_struct greek | glyco_number glyco_struct greek number | glyco_number glyco_struct number | glyco_struct greek | glyco_struct greek number;
+glyco_number : number | number '-';
+glyco_struct : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'KDN' | 'OAc-NeuAc';
 greek : 'alpha' | 'beta' | 'α' | 'β';
 
 
