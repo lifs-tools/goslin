@@ -72,16 +72,17 @@ ol_position : ol_pos | ol_pos PRIME | ol_pos cistrans_b | ol_pos PRIME cistrans_
 ol_pos : number;
 
 
-fatty_length : notation_specials | notation_regular | cycle notation_specials | cycle notation_regular;
+fatty_length : notation_specials | notation_regular | cycle notation_specials | cycle notation_regular | tetrahydrofuran notation_specials;
 notation_regular : notation_last_digit | notation_last_digit notation_second_digit | notation_second_digit;
 /* 1, 2, 2, 3, 4, 4, 4, 5, 6, 7, 8, 9 */
 notation_last_digit : 'un' | 'hen' | 'do' | 'di' | 'tri' | 'buta' | 'but' | 'tetra' | 'penta' | 'pent' | 'hexa' | 'hex' | 'hepta' | 'hept' | 'octa' | 'oct' | 'nona' | 'non';
 /* 0, 10, 10, 20, 20, 30 */
 notation_second_digit: 'deca' | 'dec' | 'cosa' | 'cos' | 'eicosa' | 'eicos' | 'triaconta' | 'triacont' | 'tetraconta'  | 'tetracont' | 'pentaconta' | 'pantacont' | 'hexaconta' | 'hexacont' | 'heptaconta' | 'heptacont' | 'octaconta' | 'octacont' | 'nonaconta' | 'nonacont';
 /* 4, 10, 20, 21, 21, 30, 30 */
-notation_specials: 'etha' | 'eth' | 'buta' | 'but' | 'butr' | 'valer' | 'propa' | 'propi' | 'propio' | 'prop' | 'eicosa' | 'eicos' | 'icosa' | 'icos' | prosta | isoprop;
+notation_specials: 'etha' | 'eth' | 'buta' | 'but' | 'butr' | 'valer' | 'propa' | 'propi' | 'propio' | 'prop' | 'eicosa' | 'eicos' | 'icosa' | 'icos' | prosta | isoprop | 'furan';
 isoprop: 'isoprop';
 prosta : 'prosta' | 'prost' | 'prostan';
+tetrahydrofuran : 'tetrahydro';
 
 acid_type_regular: acid_single_type | acid_single_type cyclo_position;
 acid_type_double: db_num acid_type_regular;
