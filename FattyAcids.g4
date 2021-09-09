@@ -79,10 +79,11 @@ notation_last_digit : 'un' | 'hen' | 'do' | 'di' | 'tri' | 'buta' | 'but' | 'tet
 /* 0, 10, 10, 20, 20, 30 */
 notation_second_digit: 'deca' | 'dec' | 'cosa' | 'cos' | 'eicosa' | 'eicos' | 'triaconta' | 'triacont' | 'tetraconta'  | 'tetracont' | 'pentaconta' | 'pantacont' | 'hexaconta' | 'hexacont' | 'heptaconta' | 'heptacont' | 'octaconta' | 'octacont' | 'nonaconta' | 'nonacont';
 /* 4, 10, 20, 21, 21, 30, 30 */
-notation_specials: 'etha' | 'eth' | 'buta' | 'but' | 'butr' | 'valer' | 'propa' | 'propi' | 'propio' | 'prop' | 'eicosa' | 'eicos' | 'icosa' | 'icos' | prosta | isoprop | 'furan';
+notation_specials: 'etha' | 'eth' | 'buta' | 'but' | 'butr' | 'valer' | 'propa' | 'propi' | 'propio' | 'prop' | 'eicosa' | 'eicos' | 'icosa' | 'icos' | prosta | isoprop | furan;
 isoprop: 'isoprop';
 prosta : 'prosta' | 'prost' | 'prostan';
 tetrahydrofuran : 'tetrahydro';
+furan : 'furan';
 
 acid_type_regular: acid_single_type | acid_single_type cyclo_position;
 acid_type_double: db_num acid_type_regular;
