@@ -67,7 +67,8 @@ tgl_species: round_open_bracket fa round_close_bracket | fa;
 tgl_subspecies: round_open_bracket fa3 round_close_bracket | fa3;
 
 hg_sglc: hg_sgl | hg_sgl headgroup_separator;
-hg_sgl: 'MGDG' | 'DGDG' | 'SQDG' | 'SQMG' | 'DG' | 'DGCC' | 'PE-GlcDG';
+hg_sgl: 'MGDG' | 'DGDG' | 'SQDG' | 'SQMG' | hg_dg | 'DGCC' | 'PE-GlcDG';
+hg_dg : 'DG';
 hg_glc: hg_gl | hg_gl headgroup_separator;
 hg_gl: 'MG' | 'DG' | 'TG';
 
@@ -75,9 +76,11 @@ hg_gl: 'MG' | 'DG' | 'TG';
 
 
 /* phospholipid rules */
-pl: lpl | dpl | cl | fourpl | threepl;
+pl: lpl | dpl | cl | fourpl | threepl | cpa;
 lpl: hg_lplc round_open_bracket fa_lpl round_close_bracket | hg_lplc fa_lpl;
-fa_lpl: fa | fa2;
+cpa : hg_cpa round_open_bracket fa round_close_bracket;
+fa_lpl: fa_lpl_molecular | fa2;
+fa_lpl_molecular: fa;
 dpl: hg_ddpl dpl_species | hg_ddpl dpl_subspecies;
 dpl_species: round_open_bracket fa round_close_bracket | fa;
 dpl_subspecies: round_open_bracket fa2 round_close_bracket | fa2;
@@ -92,9 +95,11 @@ hg_ddpl: hg_dplc pip_position | hg_dplc;
 hg_clc: hg_cl | hg_cl headgroup_separator;
 hg_cl: 'CL';
 hg_dplc: hg_dpl | hg_dpl headgroup_separator;
-hg_dpl: 'LBPA' | 'CDP-DG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS' | 'PIM1' | 'PIM2' | 'PIM3' | 'PIM4' | 'PIM5' | 'PIM6' | 'Glc-DG' | 'PGP' | 'PE-NMe2' | 'AC2SGL' | 'DAT' | 'PE-NMe' | 'PT' | 'Glc-GP' | 'PPA' | 'PnC' | 'PnE' | '6-Ac-Glc-GP';
+hg_cpa: 'CPA';
+hg_dpl: hg_lbpa | 'CDP-DG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS' | 'PIM1' | 'PIM2' | 'PIM3' | 'PIM4' | 'PIM5' | 'PIM6' | 'Glc-DG' | 'PGP' | 'PE-NMe2' | 'AC2SGL' | 'DAT' | 'PE-NMe' | 'PT' | 'Glc-GP' | 'PPA' | 'PnC' | 'PnE' | '6-Ac-Glc-GP';
+hg_lbpa : 'LBPA';
 hg_lplc: hg_lpl | hg_lpl headgroup_separator;
-hg_lpl: 'LysoPC' | 'LPC' | 'LysoPE' | 'LPE' | 'LPI' | 'LPG' | 'LPS' | 'LPIM1' | 'LPIM2' | 'LPIM3' | 'LPIM4' | 'LPIM5' | 'LPIM6' | 'CPA' | 'LPA';
+hg_lpl: 'LysoPC' | 'LPC' | 'LysoPE' | 'LPE' | 'LPI' | 'LPG' | 'LPS' | 'LPIM1' | 'LPIM2' | 'LPIM3' | 'LPIM4' | 'LPIM5' | 'LPIM6' | 'LPA';
 hg_fourplc: hg_fourpl | hg_fourpl headgroup_separator;
 hg_fourpl: 'PAT16' | 'PAT18';
 pip_position: square_open_bracket pip_pos square_close_bracket;
