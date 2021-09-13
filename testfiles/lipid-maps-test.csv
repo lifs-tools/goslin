@@ -33595,8 +33595,8 @@ SIP(d16:1),SPBP 16:1;OH
 C1P(d16:0),CerP 16:0;O2
 SIP(d17:1),SPBP 17:1;OH
 SIP(d17:0),SPBP 17:0;OH
-LysoSM(d18:1),LSM 18:1;O
-LysoSM(d17:1),LSM 17:1;O
+LysoSM(d18:1),LSM 18:1;OH
+LysoSM(d17:1),LSM 17:1;OH
 1-O-myristoyl-Cer(d34:1),1-O-myristoyl-Cer 34:1;O2
 1-O-palmitoyl-Cer(d34:1),1-O-palmitoyl-Cer 34:1;O2
 1-O-stearoyl-Cer(d34:1),1-O-stearoyl-Cer 34:1;O2
