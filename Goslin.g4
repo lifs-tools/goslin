@@ -100,7 +100,7 @@ heavy_hg : heavy;
 
 
 hg_clc : hg_cl | hg_cl heavy_hg;
-hg_cl : 'CL';
+hg_cl : 'CL' | 'SLBPA' | 'MLCL' | 'BMP';
 hg_mlclc : hg_mlcl | hg_mlcl heavy_hg;
 hg_mlcl : 'MLCL';
 hg_dlclc : hg_dlcl | hg_dlcl heavy_hg;
@@ -115,7 +115,8 @@ hg_pip_m : '[3\']' | '[4\']' | '[5\']';
 hg_pip_d : '2' | '2[3\',4\']' | '2[4\',5\']' | '2[3\',5\']';
 hg_pip_t : '3' | '3[3\',4\',5\']';
 hg_tplc : hg_tpl | hg_tpl heavy_hg;
-hg_tpl : 'SLBPA' | 'NAPE';
+hg_tpl : slbpa | 'NAPE';
+slbpa : 'SLBPA';
 hg_lplc : hg_lpl | hg_lpl heavy_hg;
 hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA' | 'LCDPDAG' | 'LDMPE' | 'LMMPE' | 'LPIMIP' | 'LPIN';
 hg_lpim : 'LPIM' hg_lpim_number;
