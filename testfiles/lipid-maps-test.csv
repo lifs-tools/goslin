@@ -2,11 +2,11 @@ FA(27:0),FA 27:0
 FA(27:0)(OH),FA 27:0;OH
 Serratamic acid,
 PC(O-14:0/0:0),LPC O-14:0/0:0
-Sphinganine,Sphinganine
 PI-Cer(d18:1/22:0),IPC 18:1;OH/22:0
-"CL(1'-[18:2(9Z,12Z)/0:0],3'-[18:2(9Z,12Z)/0:0])","CL 18:2(9Z,12Z)/0:0/18:2(9Z,12Z)/0:0"
+"CL(1'-[18:2(9Z,12Z)/0:0],3'-[18:2(9Z,12Z)/0:0])","DLCL 18:2(9Z,12Z)/0:0/18:2(9Z,12Z)/0:0"
 N-linolenoyl-glutamine,
 Lysine-containing siolipin,
+Sphingosine,
 n-decanohydroxamic acid,
 "(9S,10S)-10-hydroxy-9-(phosphonooxy)octadecanoic acid",
 N-(6-aminohexanoyl)-6-aminohexanoic acid,
@@ -22069,7 +22069,7 @@ Cardiolipin (CL),
 "CL(1'-[20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)],3'-[20:4(5Z,8Z,11Z,14Z)/18:2(9Z,12Z)])","CL 20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)/18:2(9Z,12Z)"
 "CL(1'-[20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)],3'-[20:4(5Z,8Z,11Z,14Z)/20:0])","CL 20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)/20:0"
 "CL(1'-[20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)],3'-[20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)])","CL 20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)/20:4(5Z,8Z,11Z,14Z)"
-"CL(1'-[18:2(9Z,12Z)/18:2(9Z,12Z)],3'-[18:2(9Z,12Z)/0:0])","CL 18:2(9Z,12Z)/18:2(9Z,12Z)/18:2(9Z,12Z)/0:0"
+"CL(1'-[18:2(9Z,12Z)/18:2(9Z,12Z)],3'-[18:2(9Z,12Z)/0:0])","LCL 18:2(9Z,12Z)/18:2(9Z,12Z)/18:2(9Z,12Z)/0:0"
 "BPG(C20,C20,C20,C20)",
 "BPG(C25,C20,C20,C20)",
 "BPG(C25,C20,C25,C20)",
@@ -30435,25 +30435,24 @@ Cer(m18:0/22:0),Cer 18:0;OH/22:0
 Cer(m18:0/20:0),Cer 18:0;OH/20:0
 Cer(m18:0/18:0),Cer 18:0;OH/18:0
 Cer(m18:0/16:0),Cer 18:0;OH/16:0
-Sphingosine,Sphingosine
+Sphingosine,
 3-ketosphingosine,
-Sphinganine,Sphinganine
 3-ketosphinganine,
 Phytosphingosine,
 Dehydrophytosphingosine,
-C16 Sphinganine,Sphinganine
-C17 Sphingosine,Sphingosine
-C17 Sphinganine,Sphinganine
+C16 Sphinganine,
+C17 Sphingosine,
+C17 Sphinganine,
 C14 sphingosine,
-C16 Sphingosine,Sphingosine
-Sphingosine-1-phosphate,Sphingosine-1-phosphate
+C16 Sphingosine,
+Sphingosine-1-phosphate,
 Sphinganine-phosphate,
 Phytosphingosine 1-phosphate,
-C19 Sphingosine-1-phosphate,Sphingosine-1-phosphate
-C16 Sphingosine-1-phosphate,Sphingosine-1-phosphate
-C16 Sphinganine-1-phosphate,Sphinganine-1-phosphate
-C17 Sphingosine-1-phosphate,Sphingosine-1-phosphate
-C17 Sphinganine-1-phosphate,Sphinganine-1-phosphate
+C19 Sphingosine-1-phosphate,
+C16 Sphingosine-1-phosphate,
+C16 Sphinganine-1-phosphate,
+C17 Sphingosine-1-phosphate,
+C17 Sphinganine-1-phosphate,
 Sphingosine-1-phosphocholine,
 Sphinganine-1-phosphocholine,
 C17 sphingosine-1-phosphocholine,
@@ -33584,49 +33583,6 @@ LPI(P-18:0),LPI P-18:0
 LPI(P-16:0),LPI P-16:0
 PPA(34:1),PPA 34:1
 PPA(36:2),PPA 36:2
-PHENOL(15:1(8Z)),PHENOL 15:1
-PHENOL(21:1(14Z)),PHENOL 21:1
-"PHENOL(15:2(8Z,11Z))",PHENOL 15:2
-PHENOL(19:1(9Z)(2Ke)),PHENOL 19:2;O
-"CATECHOL(15:2(8Z,11Z))",CATECHOL 15:2
-"CATECHOL(15:3(8Z,11E,13Z))",CATECHOL 15:3
-"CATECHOL(15:3(8Z,11Z,14Z))",CATECHOL 15:3
-RESORCINOL(5:0),RESORCINOL 5:0
-RESORCINOL(9:0),RESORCINOL 9:0
-RESORCINOL(11:0),RESORCINOL 11:0
-RESORCINOL(13:0),RESORCINOL 13:0
-RESORCINOL(15:0),RESORCINOL 15:0
-RESORCINOL(27:0),RESORCINOL 27:0
-RESORCINOL(29:0),RESORCINOL 29:0
-RESORCINOL(11:1(3Z)),RESORCINOL 11:1
-RESORCINOL(9:1(2Z)),RESORCINOL 9:1
-RESORCINOL(13:1(8Z)),RESORCINOL 13:1
-RESORCINOL(15:1(4Z)),RESORCINOL 15:1
-RESORCINOL(15:1(6Z)),RESORCINOL 15:1
-RESORCINOL(15:1(10Z)),RESORCINOL 15:1
-"RESORCINOL(15:2(8Z,11Z))",RESORCINOL 15:2
-"RESORCINOL(15:3(8Z,11Z,14Z))",RESORCINOL 15:3
-RESORCINOL(17:1(2Z)),RESORCINOL 17:1
-RESORCINOL(17:1(8Z)),RESORCINOL 17:1
-RESORCINOL(17:1(10Z)),RESORCINOL 17:1
-RESORCINOL(17:1(12Z)),RESORCINOL 17:1
-"RESORCINOL(17:2(8Z,11Z))",RESORCINOL 17:2
-"RESORCINOL(17:3(8Z,11Z,14Z))",RESORCINOL 17:3
-"RESORCINOL(17:3(5Z,8Z,11Z))",RESORCINOL 17:3
-"RESORCINOL(17:4(5Z,8Z,11Z,14Z))",RESORCINOL 17:4
-RESORCINOL(19:1(8Z)),RESORCINOL 19:1
-"RESORCINOL(19:2(8Z,11Z))",RESORCINOL 19:2
-"RESORCINOL(19:4(7Z,10Z,13Z,16Z))",RESORCINOL 19:4
-"RESORCINOL(19:5(4Z,7Z,10Z,13Z,16Z))",RESORCINOL 19:5
-RESORCINOL(21:1(8Z)),RESORCINOL 21:1
-RESORCINOL(21:1(14Z)),RESORCINOL 21:1
-"RESORCINOL(21:2(8Z,11Z))",RESORCINOL 21:2
-"RESORCINOL(21:6(3Z,6Z,9Z,12Z,15Z,18Z))",RESORCINOL 21:6
-ANACARD(15:1(8Z)),ANACARD 15:1
-"ANACARD(17:3(8Z,11Z,14Z))",ANACARD 17:3
-ANACARD(17:1(8Z)),ANACARD 17:1
-ANACARD(15:1(8Z)(14OH)),ANACARD 15:1;O
-ANACARD(15:1(10Z)),ANACARD 15:1
 Sph(d18:1),SPB 18:1;OH
 Sph(d14:0),SPB 14:0;OH
 Sph(d17:1),SPB 17:1;OH

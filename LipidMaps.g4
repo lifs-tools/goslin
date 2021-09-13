@@ -105,18 +105,12 @@ hg_threepl: 'SLBPA' | 'PS-NAc' | 'NAPE';
 
 
 /* sphingolipid rules */
-sl: lsl | dsl | sphingoxine;
+sl: lsl | dsl;
 lsl: hg_lslc round_open_bracket lcb round_close_bracket | hg_lslc lcb;
 dsl: hg_dslc dsl_species | hg_dslc dsl_subspecies;
 dsl_species: round_open_bracket lcb round_close_bracket | lcb;
 dsl_subspecies: round_open_bracket lcb_fa_sorted round_close_bracket | lcb_fa_sorted;
 
-sphingoxine: sphingoxine_pure | sphingoxine_var;
-sphingoxine_pure: sphingosine_name | sphinganine_name;
-sphingoxine_var: ctype headgroup_separator sphingosine_name | ctype headgroup_separator sphinganine_name;
-sphingosine_name: 'Sphingosine' | 'So' | 'Sphingosine-1-phosphate';
-sphinganine_name: 'Sphinganine' | 'Sa' | 'Sphinganine-1-phosphate';
-ctype: 'C' number;
 
 hg_dslc: hg_dsl_global | hg_dsl_global headgroup_separator;
 hg_dsl_global : hg_dsl | special_cer | special_glyco;
