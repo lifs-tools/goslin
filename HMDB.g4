@@ -41,8 +41,10 @@ fa : fa_core | furan_fa | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb
 fa_core : carbon carbon_db_separator db | ether carbon carbon_db_separator db | methyl carbon carbon_db_separator db;
 
 furan_fa : furan_fa_mono | furan_fa_di;
-furan_fa_mono : number 'M' number | 'MonoMe(' number ',' number ')';
-furan_fa_di : number 'D' number | 'DiMe(' number ',' number ')';
+furan_fa_mono : furan_first_number 'M' furan_second_number | 'MonoMe(' furan_first_number ',' furan_second_number ')';
+furan_fa_di : furan_first_number 'D' furan_second_number | 'DiMe(' furan_first_number ',' furan_second_number ')';
+furan_first_number : number;
+furan_second_number : number;
 
 lcb : lcb_core | fa_lcb_prefix lcb_core | lcb_core fa_lcb_suffix | fa_lcb_prefix lcb_core fa_lcb_suffix;
 lcb_core : hydroxyl carbon carbon_db_separator db;
