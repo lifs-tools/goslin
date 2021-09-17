@@ -1,4 +1,5 @@
 Type,Name,Elements,Double bonds,is atomic,Description,Synonyms,
+FG,X,O,0,0,Hidden
 FG,OH,O,0,0,Hydroxyl,,
 FG,Me,CH2,0,0,Methyl,,
 FG,My,C,1,0,Methylene,,
