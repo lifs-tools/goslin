@@ -33331,7 +33331,7 @@ Cholesteryl-6-O-(dimyristoyl-glycerophospho)-alpha-D-glucoside,
 FA(27:0)(OH),FA 27:0;OH
 FA(19:0)(OH),FA 19:0;OH
 FA(20:5)(OH3),FA 20:5;O3
-FA(18:5)(Ke),FA 18:5;O
+FA(18:5)(Ke),FA 18:6;O
 FA(8:2)(OH),FA 8:2;O
 FA(17:4)(OH),FA 17:4;O
 FA(18:1)(OH),FA 18:1;O
@@ -33345,10 +33345,10 @@ FA(24:1)(OH),FA 24:1;O
 FA(22:0)(OH2),FA 22:0;(OH)2
 FA(18:0)(OH2),FA 18:0;(OH)2
 "FA(18:0)(OH,Ke)",FA 18:0;OH;oxo
-FA(18:4)(Ke),FA 18:4;O
-FA(18:5)(Ke),FA 18:5;O
+FA(18:4)(Ke),FA 18:5;O
+FA(18:5)(Ke),FA 18:6;O
 "FA(18:0)(OH,Ke)",FA 18:0;OH;oxo
-FA(18:1)(Ke),FA 18:1;O
+FA(18:1)(Ke),FA 18:2;O
 "FA(16:1)(Ep,cyclo)",
 "FA(10:5)(Ep,cyclo)",
 "FA(18:2)(Ep,cyclo)",
@@ -33393,7 +33393,7 @@ CAR(16:2),CAR 16:2
 CAR(20:1),CAR 20:1
 CAR(20:2),CAR 20:2
 CAR(22:2),CAR 22:2
-CAR(6:1(COOH)),CAR 6:1;O2
+CAR(6:1(COOH)),CAR 7:2;O2
 CAR(8:1),CAR 8:1
 CAR(10:2),CAR 10:2
 CAR(10:3),CAR 10:3
