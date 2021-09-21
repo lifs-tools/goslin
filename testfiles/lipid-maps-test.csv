@@ -2,7 +2,7 @@ FA(27:0),FA 27:0
 FA(27:0)(OH),FA 27:0;OH
 Serratamic acid,
 PC(O-14:0/0:0),LPC O-14:0/0:0
-PI-Cer(d18:1/22:0),IPC 18:1;OH/22:0
+PI-Cer(d18:1/22:0),IPC 18:1;O2/22:0
 "CL(1'-[18:2(9Z,12Z)/0:0],3'-[18:2(9Z,12Z)/0:0])","DLCL 18:2(9Z,12Z)/0:0/18:2(9Z,12Z)/0:0"
 N-linolenoyl-glutamine,
 Lysine-containing siolipin,
@@ -1231,14 +1231,14 @@ Glutinic acid,
 13-Oxo-ODE,
 9S-HpOTrE,
 9H-12(13)-EpODE,
-9S-HOTrE,Unsupported lipid
+9S-HOTrE,9S-HOTrE
 13-HOTE,
 "15,16-EpODE",
 2R-HpOTrE,
-2R-HOTrE,Unsupported lipid
+2R-HOTrE,2R-HOTrE
 13S-HpODE,
 13R-HODE,13R-HODE
-9R-HODE,Unsupported lipid
+9R-HODE,9R-HODE
 9(10)-EpOME,9(10)-EpOME
 12(13)-EpOME,12(13)-EpOME
 alpha-9(10)-EpODE,
@@ -1253,7 +1253,7 @@ gamma- 12(13)-EpODE,
 "gamma- 6,7-DiHODE",
 "gamma- 9,10-DiHODE",
 "gamma- 12,13-DiHODE",
-13S-HOTrE,Unsupported lipid
+13S-HOTrE,13S-HOTrE
 13S-HpOTrE,
 "12,13S-EOT",
 Avenoleic acid,
@@ -1267,8 +1267,8 @@ Avenoleic acid,
 "5S,8R-DiHOME",
 "8R,11S-DiHOME",
 "8R,11S-DiHODE",
-10R-HODE,Unsupported lipid
-10S-HODE,Unsupported lipid
+10R-HODE,10R-HODE
+10S-HODE,10S-HODE
 11R-HpOME,
 13R-HpOME(11E),
 13S-HpOME(11E),
@@ -1371,12 +1371,12 @@ beta-kamlolenic acid,
 9-HOME(12),
 17-HOME(9Z),
 19-HOME(9Z),
-6-HODE,Unsupported lipid
+6-HODE,6-HODE
 2-HoTrE,
 Ricinoleic acid,
 beta-Dimorphecolic acid,
-9S-HODE,Unsupported lipid
-12R-HODE,Unsupported lipid
+9S-HODE,9S-HODE
+12R-HODE,12R-HODE
 13R-HODE,13R-HODE
 2R-hydroxy-stearic acid,
 Isanolic acid,
@@ -1401,14 +1401,14 @@ Helenynolic acid,
 "7S,8S-DiHODE",
 "7S,8S-DiHOME(9Z)",
 "7S,8S-DiHOTrE",
-8S-HODE,Unsupported lipid
-13S-HODE,Unsupported lipid
+8S-HODE,8S-HODE
+13S-HODE,13S-HODE
 "9,10-DiHOME",
 "12,13-DiHOME",
-9S-HODE-d4,Unsupported lipid
+9S-HODE-d4,9S-HODE
 "12,13 diHOME-(d4)",
 "9,10-diHOME-(d4)",
-13S-HODE-(d4),Unsupported lipid
+13S-HODE-(d4),13S-HODE
 (R)-10-hydroxystearic acid,
 "(9S,10S)-9,10-dihydroxyoctadecanoic acid",
 17-hydroxy-linolenic acid,
@@ -1432,12 +1432,12 @@ alpha-Licanic acid,
 "12,13-EpOME(9)",
 "9,10-EpOME(12)",
 "12,13S-EpODE",
-"12S,13R-EpOME",Unsupported lipid
-"9R,10S-EpOME",Unsupported lipid
+"12S,13R-EpOME","12S,13R-EpOME"
+"9R,10S-EpOME","9R,10S-EpOME"
 "5S,8R-DiHODE",
 10R-HpODE,
 10S-HpODE,
-8R-HODE,Unsupported lipid
+8R-HODE,8R-HODE
 13-hydroxy-9-methoxy-10-oxooctadec-11-enoic acid,
 Cibaric acid,
 "2-hydroxy-9Z,12Z-Octadecadienoic acid",
@@ -1718,12 +1718,12 @@ delta14-10-PhytoF,
 "(9S,12S,16S)-delta14-10-PhytoF[10S,13S]",
 "(9Z,11E)-12-((3S,5R)-5-((R)-1-hydroxypropyl)-1,2-dioxolan-3-yl)dodeca-9,11-dienoic acid",
 "(9Z,11E)-12-((3S,5S)-5-((S)-1-hydroxypropyl)-1,2-dioxolan-3-yl)dodeca-9,11-dienoic acid",
-8(9)-EpETE,Unsupported lipid
-11(12)-EpETE,Unsupported lipid
+8(9)-EpETE,8(9)-EpETE
+11(12)-EpETE,11(12)-EpETE
 14(15)-EpETE,14(15)-EpETE
-17(18)-EpETE,Unsupported lipid
+17(18)-EpETE,17(18)-EpETE
 11R-HEDE,
-"17R,18S-EpETE",Unsupported lipid
+"17R,18S-EpETE","17R,18S-EpETE"
 15R-HEDE,
 11S-HEDE,
 20-HEDE,
@@ -2014,10 +2014,10 @@ Lipoxin D4,
 Lipoxin E4,
 epi-Lipoxin B4,
 "13,14-dihydro-15-keto-LXA4",
-15-oxo-LXA4,Unsupported lipid
+15-oxo-LXA4,15-oxo-LXA4
 15-epi-lipoxin A4,
 15-Oxo-lipoxin A4,
-12S-HHTrE,Unsupported lipid
+12S-HHTrE,12S-HHTrE
 "(+/-)5,6-DiHETrE",
 5S-HETrE,
 "(+/-)8,9-DiHETrE",
@@ -2036,101 +2036,101 @@ epi-Lipoxin B4,
 5-HETrE,
 8(S)-HETrE,
 8-HETrE,
-15S-HETE,Unsupported lipid
-5S-HETE,Unsupported lipid
-11S-HETE,Unsupported lipid
-5S-HETE-d8,Unsupported lipid
-8S-HETE,Unsupported lipid
-12S-HETE,Unsupported lipid
-12R-HETE,Unsupported lipid
-20-HETE,Unsupported lipid
-"5S,15S-DiHETE",Unsupported lipid
-5-Oxo-ETE,Unsupported lipid
-5S-HpETE,Unsupported lipid
-12S-HpETE,Unsupported lipid
-15S-HpETE,Unsupported lipid
-"5S,6R-DiHETE",Unsupported lipid
-"5S,6S-DiHETE",Unsupported lipid
-12-oxo-ETE,Unsupported lipid
-8R-HETE,Unsupported lipid
-3R-HETE,Unsupported lipid
-5R-HETE,Unsupported lipid
-9R-HETE,Unsupported lipid
-9S-HETE,Unsupported lipid
-11R-HETE,Unsupported lipid
-15R-HETE,Unsupported lipid
-8R-HpETE,Unsupported lipid
-9-HpETE,Unsupported lipid
-11-HpETE,Unsupported lipid
+15S-HETE,15S-HETE
+5S-HETE,5S-HETE
+11S-HETE,11S-HETE
+5S-HETE-d8,5S-HETE
+8S-HETE,8S-HETE
+12S-HETE,12S-HETE
+12R-HETE,12R-HETE
+20-HETE,20-HETE
+"5S,15S-DiHETE","5S,15S-DiHETE"
+5-Oxo-ETE,5-Oxo-ETE
+5S-HpETE,5S-HpETE
+12S-HpETE,12S-HpETE
+15S-HpETE,15S-HpETE
+"5S,6R-DiHETE","5S,6R-DiHETE"
+"5S,6S-DiHETE","5S,6S-DiHETE"
+12-oxo-ETE,12-oxo-ETE
+8R-HETE,8R-HETE
+3R-HETE,3R-HETE
+5R-HETE,5R-HETE
+9R-HETE,9R-HETE
+9S-HETE,9S-HETE
+11R-HETE,11R-HETE
+15R-HETE,15R-HETE
+8R-HpETE,8R-HpETE
+9-HpETE,9-HpETE
+11-HpETE,11-HpETE
 "5,12-diHPETE",
 "5,15-diHPETE",
 "8,15-diHPETE",
-"8S,15S-DiHETE",Unsupported lipid
-15-Oxo-ETE,Unsupported lipid
+"8S,15S-DiHETE","8S,15S-DiHETE"
+15-Oxo-ETE,15-Oxo-ETE
 "5,12-DiHETE","5,12-DiHETE"
-16R-HETE,Unsupported lipid
-12R-HpETE,Unsupported lipid
-11R-HpETE,Unsupported lipid
-9S-HpETE,Unsupported lipid
-8S-HpETE,Unsupported lipid
-19S-HETE,Unsupported lipid
+16R-HETE,16R-HETE
+12R-HpETE,12R-HpETE
+11R-HpETE,11R-HpETE
+9S-HpETE,9S-HpETE
+8S-HpETE,8S-HpETE
+19S-HETE,19S-HETE
 "5,6-Ep-15S-HETE",
-"8,9-DiHETE",Unsupported lipid
-"14,15-DiHETE",Unsupported lipid
-"17,18-DiHETE",Unsupported lipid
-"11,12-DiHETE",Unsupported lipid
-15S-HETE-d8,Unsupported lipid
-12S-HETE-d8,Unsupported lipid
-20-HETE-d6,Unsupported lipid
-5-Oxo-ETE-d7,Unsupported lipid
+"8,9-DiHETE","8,9-DiHETE"
+"14,15-DiHETE","14,15-DiHETE"
+"17,18-DiHETE","17,18-DiHETE"
+"11,12-DiHETE","11,12-DiHETE"
+15S-HETE-d8,15S-HETE
+12S-HETE-d8,12S-HETE
+20-HETE-d6,20-HETE
+5-Oxo-ETE-d7,5-Oxo-ETE
 5-HETE,5-HETE
 11-HETE,11-HETE
 8-HETE,8-HETE
 15-HETE,15-HETE
 12-HETE,12-HETE
 9-HETE,9-HETE
-17-HETE,Unsupported lipid
-18-HETE,Unsupported lipid
+17-HETE,17-HETE
+18-HETE,18-HETE
 18-hydroxy-arachidonic acid,
 20-hydroxy-eicosatetraenoic acid,
-"5S,11R-DiHETE",Unsupported lipid
+"5S,11R-DiHETE","5S,11R-DiHETE"
 "5S,15R-diHETE",
 "5S,15S-diHPETE",
 "8S,15S-diHPETE",
-"5S,12S-DiHETE",Unsupported lipid
-10-HETE,Unsupported lipid
-13-HETE,Unsupported lipid
+"5S,12S-DiHETE","5S,12S-DiHETE"
+10-HETE,10-HETE
+13-HETE,13-HETE
 16-HETE,16-HETE
-19-HETE,Unsupported lipid
-"5,15-DiHETE",Unsupported lipid
+19-HETE,19-HETE
+"5,15-DiHETE","5,15-DiHETE"
 5-HPETE,
-"8,15-DiHETE",Unsupported lipid
+"8,15-DiHETE","8,15-DiHETE"
 10S-Hydroxy-arachidonic acid,
 "(5Z,8R,11Z,14Z)-8,9-epoxy-5,9,11,14-eicosatetraenoic acid",
 5S-HpEPE,
-8R-HEPE,Unsupported lipid
-8S-HEPE,Unsupported lipid
-9S-HEPE,Unsupported lipid
-11R-HEPE,Unsupported lipid
-11S-HEPE,Unsupported lipid
-12R-HEPE,Unsupported lipid
-12S-HEPE,Unsupported lipid
-15S-HEPE,Unsupported lipid
-5S-HEPE,Unsupported lipid
+8R-HEPE,8R-HEPE
+8S-HEPE,8S-HEPE
+9S-HEPE,9S-HEPE
+11R-HEPE,11R-HEPE
+11S-HEPE,11S-HEPE
+12R-HEPE,12R-HEPE
+12S-HEPE,12S-HEPE
+15S-HEPE,15S-HEPE
+5S-HEPE,5S-HEPE
 12S-HpEPE,
 15S-HpEPE,
-18R-HEPE,Unsupported lipid
+18R-HEPE,18R-HEPE
 "5S,6S-epoxy-18R-HEPE",
-(+/-)-5-HEPE,Unsupported lipid
-(+/-)-8-HEPE,Unsupported lipid
-(+/-)-9-HEPE,Unsupported lipid
-(+/-)-11-HEPE,Unsupported lipid
-(+/-)-12-HEPE,Unsupported lipid
-(+/-)-15-HEPE,Unsupported lipid
-(+/-)-18-HEPE,Unsupported lipid
+(+/-)-5-HEPE,(+/-)-5-HEPE
+(+/-)-8-HEPE,(+/-)-8-HEPE
+(+/-)-9-HEPE,(+/-)-9-HEPE
+(+/-)-11-HEPE,(+/-)-11-HEPE
+(+/-)-12-HEPE,(+/-)-12-HEPE
+(+/-)-15-HEPE,(+/-)-15-HEPE
+(+/-)-18-HEPE,(+/-)-18-HEPE
 5S-Hp-18R-HEPE,
-15R-HEPE,Unsupported lipid
-18S-HEPE,Unsupported lipid
+15R-HEPE,15R-HEPE
+18S-HEPE,18S-HEPE
 5S-Hp-18S-HEPE,
 "5S,6-Ep-18S-HEPE",
 "6-trans-5,12,18-triHEPE",
@@ -2140,7 +2140,7 @@ epi-Lipoxin B4,
 "12,18-di-HEPE",
 "8,18-di-HEPE",
 15-HEPE,15-HEPE
-18S-HEPE,Unsupported lipid
+18S-HEPE,18S-HEPE
 "14R,15S-EpETrE",
 "(+/-)5,6-EpETrE",
 "(+/-)8,9-EpETrE",
@@ -2804,16 +2804,16 @@ Dioxolane A3,
 17S-HDHA,
 "7,8-epoxy-17S-HDHA",
 "16,17-epoxy-DHA",
-(+/-)-4-HDoHE,Unsupported lipid
-(+/-)-7-HDoHE,Unsupported lipid
-(+/-)-8-HDoHE,Unsupported lipid
-(+/-)-10-HDoHE,Unsupported lipid
-(+/-)-11-HDoHE,Unsupported lipid
-(+/-)-13-HDoHE,Unsupported lipid
-(+/-)-14-HDoHE,Unsupported lipid
-(+/-)-16-HDoHE,Unsupported lipid
-(+/-)-17-HDoHE,Unsupported lipid
-(+/-)-20-HDoHE,Unsupported lipid
+(+/-)-4-HDoHE,(+/-)-4-HDoHE
+(+/-)-7-HDoHE,(+/-)-7-HDoHE
+(+/-)-8-HDoHE,(+/-)-8-HDoHE
+(+/-)-10-HDoHE,(+/-)-10-HDoHE
+(+/-)-11-HDoHE,(+/-)-11-HDoHE
+(+/-)-13-HDoHE,(+/-)-13-HDoHE
+(+/-)-14-HDoHE,(+/-)-14-HDoHE
+(+/-)-16-HDoHE,(+/-)-16-HDoHE
+(+/-)-17-HDoHE,(+/-)-17-HDoHE
+(+/-)-20-HDoHE,(+/-)-20-HDoHE
 7(8)-EpDPE,
 10(11)-EpDPE,
 13(14)-EpDPE,
@@ -30520,52 +30520,52 @@ Sphingofungin D,
 Sphingofungin E,
 Sphingofungin F,
 Ceramide,
-Cer(d18:1/14:0),Cer 18:1;(OH)2/14:0
-Cer(d18:1/12:0),Cer 18:1;(OH)2/12:0
-Cer(d18:1/18:1(9Z)),Cer 18:1;(OH)2/18:1(9)
-Cer(d18:1/16:0),Cer 18:1;(OH)2/16:0
-Cer(d18:1/18:0),Cer 18:1;(OH)2/18:0
-Cer(d18:1/20:0),Cer 18:1;(OH)2/20:0
-Cer(d18:1/22:0),Cer 18:1;(OH)2/22:0
-Cer(d18:1/24:1(15Z)),Cer 18:1;(OH)2/24:1(15)
-Cer(d18:1/26:1(17Z)),Cer 18:1;(OH)2/26:1(17)
-Cer(d18:1/26:0),Cer 18:1;(OH)2/26:0
-Cer(d18:1/24:0),Cer 18:1;(OH)2/24:0
-Cer(d18:1/25:0),Cer 18:1;(OH)2/25:0
-Cer(d18:1/2:0),Cer 18:1;(OH)2/2:0
-Cer(d16:1/17:0),Cer 16:1;(OH)2/17:0
-Cer(d16:1/22:0),Cer 16:1;(OH)2/22:0
-Cer(d16:1/23:0),Cer 16:1;(OH)2/23:0
-Cer(d18:1/17:0),Cer 18:1;(OH)2/17:0
-Cer(d18:1/23:0),Cer 18:1;(OH)2/23:0
-Cer(d18:2/14:0),Cer 18:2;(OH)2/14:0
-Cer(d18:2/15:0),Cer 18:2;(OH)2/15:0
-Cer(d18:2/16:0),Cer 18:2;(OH)2/16:0
-Cer(d18:2/18:1),Cer 18:2;(OH)2/18:1
-Cer(d18:2/20:0),Cer 18:2;(OH)2/20:0
-Cer(d18:2/20:1),Cer 18:2;(OH)2/20:1
-Cer(d18:2/21:0),Cer 18:2;(OH)2/21:0
-Cer(d18:2/22:0),Cer 18:2;(OH)2/22:0
-Cer(d18:2/23:0),Cer 18:2;(OH)2/23:0
-Cer(d18:1/19:0),Cer 18:1;(OH)2/19:0
-Cer(d14:1/16:0),Cer 14:1;(OH)2/16:0
-Cer(d14:1/18:0),Cer 14:1;(OH)2/18:0
-Cer(d14:1/18:1),Cer 14:1;(OH)2/18:1
-Cer(d14:1/20:0),Cer 14:1;(OH)2/20:0
-Cer(d14:1/20:1),Cer 14:1;(OH)2/20:1
-Cer(d14:1/22:0),Cer 14:1;(OH)2/22:0
-Cer(d14:1/22:1),Cer 14:1;(OH)2/22:1
-Cer(d14:1/24:0),Cer 14:1;(OH)2/24:0
-Cer(d14:1/24:1),Cer 14:1;(OH)2/24:1
-Cer(d14:1/26:0),Cer 14:1;(OH)2/26:0
-Cer(d15:1/20:0),Cer 15:1;(OH)2/20:0
-Cer(d15:1/22:0),Cer 15:1;(OH)2/22:0
-Cer(d15:1/24:0),Cer 15:1;(OH)2/24:0
-Cer(d16:1/18:0),Cer 16:1;(OH)2/18:0
-Cer(d16:1/20:0),Cer 16:1;(OH)2/20:0
-Cer(d16:1/20:1),Cer 16:1;(OH)2/20:1
-Cer(d16:1/22:1),Cer 16:1;(OH)2/22:1
-Cer(d16:1/24:0),Cer 16:1;(OH)2/24:0
+Cer(d18:1/14:0),Cer 18:1;O2/14:0
+Cer(d18:1/12:0),Cer 18:1;O2/12:0
+Cer(d18:1/18:1(9Z)),Cer 18:1;O2/18:1
+Cer(d18:1/16:0),Cer 18:1;O2/16:0
+Cer(d18:1/18:0),Cer 18:1;O2/18:0
+Cer(d18:1/20:0),Cer 18:1;O2/20:0
+Cer(d18:1/22:0),Cer 18:1;O2/22:0
+Cer(d18:1/24:1(15Z)),Cer 18:1;O2/24:1
+Cer(d18:1/26:1(17Z)),Cer 18:1;O2/26:1
+Cer(d18:1/26:0),Cer 18:1;O2/26:0
+Cer(d18:1/24:0),Cer 18:1;O2/24:0
+Cer(d18:1/25:0),Cer 18:1;O2/25:0
+Cer(d18:1/2:0),Cer 18:1;O2/2:0
+Cer(d16:1/17:0),Cer 16:1;O2/17:0
+Cer(d16:1/22:0),Cer 16:1;O2/22:0
+Cer(d16:1/23:0),Cer 16:1;O2/23:0
+Cer(d18:1/17:0),Cer 18:1;O2/17:0
+Cer(d18:1/23:0),Cer 18:1;O2/23:0
+Cer(d18:2/14:0),Cer 18:2;O2/14:0
+Cer(d18:2/15:0),Cer 18:2;O2/15:0
+Cer(d18:2/16:0),Cer 18:2;O2/16:0
+Cer(d18:2/18:1),Cer 18:2;O2/18:1
+Cer(d18:2/20:0),Cer 18:2;O2/20:0
+Cer(d18:2/20:1),Cer 18:2;O2/20:1
+Cer(d18:2/21:0),Cer 18:2;O2/21:0
+Cer(d18:2/22:0),Cer 18:2;O2/22:0
+Cer(d18:2/23:0),Cer 18:2;O2/23:0
+Cer(d18:1/19:0),Cer 18:1;O2/19:0
+Cer(d14:1/16:0),Cer 14:1;O2/16:0
+Cer(d14:1/18:0),Cer 14:1;O2/18:0
+Cer(d14:1/18:1),Cer 14:1;O2/18:1
+Cer(d14:1/20:0),Cer 14:1;O2/20:0
+Cer(d14:1/20:1),Cer 14:1;O2/20:1
+Cer(d14:1/22:0),Cer 14:1;O2/22:0
+Cer(d14:1/22:1),Cer 14:1;O2/22:1
+Cer(d14:1/24:0),Cer 14:1;O2/24:0
+Cer(d14:1/24:1),Cer 14:1;O2/24:1
+Cer(d14:1/26:0),Cer 14:1;O2/26:0
+Cer(d15:1/20:0),Cer 15:1;O2/20:0
+Cer(d15:1/22:0),Cer 15:1;O2/22:0
+Cer(d15:1/24:0),Cer 15:1;O2/24:0
+Cer(d16:1/18:0),Cer 16:1;O2/18:0
+Cer(d16:1/20:0),Cer 16:1;O2/20:0
+Cer(d16:1/20:1),Cer 16:1;O2/20:1
+Cer(d16:1/22:1),Cer 16:1;O2/22:1
+Cer(d16:1/24:0),Cer 16:1;O2/24:0
 "Cer(d14:2(4E,6E)/16:0)","Cer 14:2(4,6);(OH)2/16:0"
 "Cer(d14:2(4E,6E)/18:0)","Cer 14:2(4,6);(OH)2/18:0"
 "Cer(d14:2(4E,6E)/18:1(9Z))","Cer 14:2(4,6);(OH)2/18:1(9)"
@@ -30669,50 +30669,50 @@ Cer(t20:0/20:0(2OH)),Cer 20:0;(OH)3/20:0;OH
 Cer(t20:0/22:0(2OH)),Cer 20:0;(OH)3/22:0;OH
 Cer(t20:0/24:0(2OH)),Cer 20:0;(OH)3/24:0;OH
 Cer(t20:0/26:0(2OH)),Cer 20:0;(OH)3/26:0;OH
-1-O-myristoyl-Cer(d18:1/16:0),1-O-myristoyl-Cer 18:1;OH/16:0
-1-O-palmitoyl-Cer(d18:1/16:0),1-O-palmitoyl-Cer 18:1;OH/16:0
-1-O-stearoyl-Cer(d18:1/16:0),1-O-stearoyl-Cer 18:1;OH/16:0
-1-O-eicosanoyl-Cer(d18:1/16:0),1-O-eicosanoyl-Cer 18:1;OH/16:0
-1-O-behenoyl-Cer(d18:1/16:0),1-O-behenoyl-Cer 18:1;OH/16:0
-1-O-lignoceroyl-Cer(d18:1/16:0),1-O-lignoceroyl-Cer 18:1;OH/16:0
-1-O-cerotoyl-Cer(d18:1/16:0),1-O-cerotoyl-Cer 18:1;OH/16:0
-1-O-carboceroyl-Cer(d18:1/16:0),1-O-carboceroyl-Cer 18:1;OH/16:0
-1-O-tricosanoyl-Cer(d18:1/16:0),1-O-tricosanoyl-Cer 18:1;OH/16:0
-1-O-palmitoyl-Cer(d18:1/18:0),1-O-palmitoyl-Cer 18:1;OH/18:0
-1-O-myristoyl-Cer(d18:1/18:0),1-O-myristoyl-Cer 18:1;OH/18:0
-1-O-stearoyl-Cer(d18:1/18:0),1-O-stearoyl-Cer 18:1;OH/18:0
-1-O-eicosanoyl-Cer(d18:1/18:0),1-O-eicosanoyl-Cer 18:1;OH/18:0
-1-O-behenoyl-Cer(d18:1/18:0),1-O-behenoyl-Cer 18:1;OH/18:0
-1-O-lignoceroyl-Cer(d18:1/18:0),1-O-lignoceroyl-Cer 18:1;OH/18:0
-1-O-cerotoyl-Cer(d18:1/18:0),1-O-cerotoyl-Cer 18:1;OH/18:0
-1-O-carboceroyl-Cer(d18:1/18:0),1-O-carboceroyl-Cer 18:1;OH/18:0
-1-O-tricosanoyl-Cer(d18:1/18:0),1-O-tricosanoyl-Cer 18:1;OH/18:0
+1-O-myristoyl-Cer(d18:1/16:0),1-O-myristoyl-Cer 18:1;O2/16:0
+1-O-palmitoyl-Cer(d18:1/16:0),1-O-palmitoyl-Cer 18:1;O2/16:0
+1-O-stearoyl-Cer(d18:1/16:0),1-O-stearoyl-Cer 18:1;O2/16:0
+1-O-eicosanoyl-Cer(d18:1/16:0),1-O-eicosanoyl-Cer 18:1;O2/16:0
+1-O-behenoyl-Cer(d18:1/16:0),1-O-behenoyl-Cer 18:1;O2/16:0
+1-O-lignoceroyl-Cer(d18:1/16:0),1-O-lignoceroyl-Cer 18:1;O2/16:0
+1-O-cerotoyl-Cer(d18:1/16:0),1-O-cerotoyl-Cer 18:1;O2/16:0
+1-O-carboceroyl-Cer(d18:1/16:0),1-O-carboceroyl-Cer 18:1;O2/16:0
+1-O-tricosanoyl-Cer(d18:1/16:0),1-O-tricosanoyl-Cer 18:1;O2/16:0
+1-O-palmitoyl-Cer(d18:1/18:0),1-O-palmitoyl-Cer 18:1;O2/18:0
+1-O-myristoyl-Cer(d18:1/18:0),1-O-myristoyl-Cer 18:1;O2/18:0
+1-O-stearoyl-Cer(d18:1/18:0),1-O-stearoyl-Cer 18:1;O2/18:0
+1-O-eicosanoyl-Cer(d18:1/18:0),1-O-eicosanoyl-Cer 18:1;O2/18:0
+1-O-behenoyl-Cer(d18:1/18:0),1-O-behenoyl-Cer 18:1;O2/18:0
+1-O-lignoceroyl-Cer(d18:1/18:0),1-O-lignoceroyl-Cer 18:1;O2/18:0
+1-O-cerotoyl-Cer(d18:1/18:0),1-O-cerotoyl-Cer 18:1;O2/18:0
+1-O-carboceroyl-Cer(d18:1/18:0),1-O-carboceroyl-Cer 18:1;O2/18:0
+1-O-tricosanoyl-Cer(d18:1/18:0),1-O-tricosanoyl-Cer 18:1;O2/18:0
 N-Acyl ceramide phosphate,
-CerP(d18:1/12:0),CerP 18:1;OH/12:0
-CerP(d18:1/16:0),CerP 18:1;OH/16:0
+CerP(d18:1/12:0),CerP 18:1;O2/12:0
+CerP(d18:1/16:0),CerP 18:1;O2/16:0
 CerP(d18:0/16:0),CerP 18:0;OH/16:0
-CerP(d18:1/18:0),CerP 18:1;OH/18:0
-CerP(d18:1/20:0),CerP 18:1;OH/20:0
-CerP(d18:1/22:0),CerP 18:1;OH/22:0
-CerP(d18:1/24:1(15Z)),CerP 18:1;OH/24:1(15)
-CerP(d18:1/24:0),CerP 18:1;OH/24:0
-CerP(d18:1/26:0),CerP 18:1;OH/26:0
-CerP(d18:1/26:1(17Z)),CerP 18:1;OH/26:1(17)
-CerP(d18:1/8:0),CerP 18:1;OH/8:0
-CerP(d18:1/14:0),CerP 18:1;OH/14:0
-CerP(d18:1/2:0),CerP 18:1;OH/2:0
+CerP(d18:1/18:0),CerP 18:1;O2/18:0
+CerP(d18:1/20:0),CerP 18:1;O2/20:0
+CerP(d18:1/22:0),CerP 18:1;O2/22:0
+CerP(d18:1/24:1(15Z)),CerP 18:1;O2/24:1
+CerP(d18:1/24:0),CerP 18:1;O2/24:0
+CerP(d18:1/26:0),CerP 18:1;O2/26:0
+CerP(d18:1/26:1(17Z)),CerP 18:1;O2/26:1
+CerP(d18:1/8:0),CerP 18:1;O2/8:0
+CerP(d18:1/14:0),CerP 18:1;O2/14:0
+CerP(d18:1/2:0),CerP 18:1;O2/2:0
 Dihydroceramide phosphate,
 Sphingomyelin,
-SM(d18:1/18:0),SM 18:1;OH/18:0
-SM(d18:1/12:0),SM 18:1;OH/12:0
-SM(d18:1/16:0),SM 18:1;OH/16:0
+SM(d18:1/18:0),SM 18:1;O2/18:0
+SM(d18:1/12:0),SM 18:1;O2/12:0
+SM(d18:1/16:0),SM 18:1;O2/16:0
 SM(d18:0/16:0),SM 18:0;OH/16:0
-SM(d18:1/20:0),SM 18:1;OH/20:0
-SM(d18:1/22:0),SM 18:1;OH/22:0
-SM(d18:1/24:1(15Z)),SM 18:1;OH/24:1(15)
-SM(d18:1/24:0),SM 18:1;OH/24:0
-SM(d18:1/26:1(17Z)),SM 18:1;OH/26:1(17)
-SM(d18:1/26:0),SM 18:1;OH/26:0
+SM(d18:1/20:0),SM 18:1;O2/20:0
+SM(d18:1/22:0),SM 18:1;O2/22:0
+SM(d18:1/24:1(15Z)),SM 18:1;O2/24:1
+SM(d18:1/24:0),SM 18:1;O2/24:0
+SM(d18:1/26:1(17Z)),SM 18:1;O2/26:1
+SM(d18:1/26:0),SM 18:1;O2/26:0
 SM(d18:0/18:0),SM 18:0;OH/18:0
 SM(d18:0/20:0),SM 18:0;OH/20:0
 SM(d18:0/22:0),SM 18:0;OH/22:0
@@ -30720,69 +30720,69 @@ SM(d18:0/24:1(15Z)),SM 18:0;OH/24:1(15)
 SM(d18:0/24:0),SM 18:0;OH/24:0
 SM(d18:0/26:1(17Z)),SM 18:0;OH/26:1(17)
 SM(d18:0/26:0),SM 18:0;OH/26:0
-SM(d18:1/25:0),SM 18:1;OH/25:0
-SM(d18:1/14:0),SM 18:1;OH/14:0
-SM(d18:1/18:1(9Z)),SM 18:1;OH/18:1(9)
+SM(d18:1/25:0),SM 18:1;O2/25:0
+SM(d18:1/14:0),SM 18:1;O2/14:0
+SM(d18:1/18:1(9Z)),SM 18:1;O2/18:1
 SM(d18:0/14:0),SM 18:0;OH/14:0
 SM(d18:0/18:1(9Z)),SM 18:0;OH/18:1(9)
 SM(d18:0/13:0),SM 18:0;OH/13:0
-SM(d18:2/14:0),SM 18:2;OH/14:0
-SM(d16:1/16:0),SM 16:1;OH/16:0
-SM(d18:2/15:0),SM 18:2;OH/15:0
-SM(d16:1/17:0),SM 16:1;OH/17:0
-SM(d18:1/15:0),SM 18:1;OH/15:0
-SM(d16:1/18:1),SM 16:1;OH/18:1
-SM(d18:1/16:1),SM 18:1;OH/16:1
-SM(d16:1/18:0),SM 16:1;OH/18:0
-SM(d17:1/17:0),SM 17:1;OH/17:0
-SM(d18:1/17:0),SM 18:1;OH/17:0
-SM(d19:1/16:0),SM 19:1;OH/16:0
+SM(d18:2/14:0),SM 18:2;O2/14:0
+SM(d16:1/16:0),SM 16:1;O2/16:0
+SM(d18:2/15:0),SM 18:2;O2/15:0
+SM(d16:1/17:0),SM 16:1;O2/17:0
+SM(d18:1/15:0),SM 18:1;O2/15:0
+SM(d16:1/18:1),SM 16:1;O2/18:1
+SM(d18:1/16:1),SM 18:1;O2/16:1
+SM(d16:1/18:0),SM 16:1;O2/18:0
+SM(d17:1/17:0),SM 17:1;O2/17:0
+SM(d18:1/17:0),SM 18:1;O2/17:0
+SM(d19:1/16:0),SM 19:1;O2/16:0
 SM(d18:0/17:0),SM 18:0;OH/17:0
-SM(d18:2/18:1),SM 18:2;OH/18:1
-SM(d16:1/20:1),SM 16:1;OH/20:1
-SM(d18:0/18:2),SM 18:0;OH/18:2
-SM(d18:2/18:0),SM 18:2;OH/18:0
-SM(d19:1/17:1),SM 19:1;OH/17:1
-SM(d16:1/20:0),SM 16:1;OH/20:0
+SM(d18:2/18:1),SM 18:2;O2/18:1
+SM(d16:1/20:1),SM 16:1;O2/20:1
+SM(d18:0/18:2),SM 18:0;O2/18:2
+SM(d18:2/18:0),SM 18:2;O2/18:0
+SM(d19:1/17:1),SM 19:1;O2/17:1
+SM(d16:1/20:0),SM 16:1;O2/20:0
 SM(d16:0/20:0),SM 16:0;OH/20:0
 SM(d19:0/17:0),SM 19:0;OH/17:0
-SM(d18:1/19:0),SM 18:1;OH/19:0
-SM(d19:1/18:0),SM 19:1;OH/18:0
-SM(d18:2/20:1),SM 18:2;OH/20:1
-SM(d16:1/22:1),SM 16:1;OH/22:1
-SM(d18:1/20:1),SM 18:1;OH/20:1
-SM(d18:2/20:0),SM 18:2;OH/20:0
-SM(d16:1/22:0),SM 16:1;OH/22:0
+SM(d18:1/19:0),SM 18:1;O2/19:0
+SM(d19:1/18:0),SM 19:1;O2/18:0
+SM(d18:2/20:1),SM 18:2;O2/20:1
+SM(d16:1/22:1),SM 16:1;O2/22:1
+SM(d18:1/20:1),SM 18:1;O2/20:1
+SM(d18:2/20:0),SM 18:2;O2/20:0
+SM(d16:1/22:0),SM 16:1;O2/22:0
 SM(d16:0/22:0),SM 16:0;OH/22:0
-SM(d18:2/21:0),SM 18:2;OH/21:0
-SM(d16:1/23:0),SM 16:1;OH/23:0
-SM(d17:1/22:0),SM 17:1;OH/22:0
-SM(d18:1/21:0),SM 18:1;OH/21:0
-SM(d19:1/20:0),SM 19:1;OH/20:0
-SM(d20:1/19:0),SM 20:1;OH/19:0
-SM(d18:2/22:1),SM 18:2;OH/22:1
-SM(d16:1/24:1),SM 16:1;OH/24:1
-SM(d18:1/22:1),SM 18:1;OH/22:1
-SM(d16:1/24:0),SM 16:1;OH/24:0
-SM(d17:1/24:1),SM 17:1;OH/24:1
-SM(d18:2/23:0),SM 18:2;OH/23:0
-SM(d16:1/25:0),SM 16:1;OH/25:0
-SM(d17:1/24:0),SM 17:1;OH/24:0
-SM(d18:1/23:0),SM 18:1;OH/23:0
+SM(d18:2/21:0),SM 18:2;O2/21:0
+SM(d16:1/23:0),SM 16:1;O2/23:0
+SM(d17:1/22:0),SM 17:1;O2/22:0
+SM(d18:1/21:0),SM 18:1;O2/21:0
+SM(d19:1/20:0),SM 19:1;O2/20:0
+SM(d20:1/19:0),SM 20:1;O2/19:0
+SM(d18:2/22:1),SM 18:2;O2/22:1
+SM(d16:1/24:1),SM 16:1;O2/24:1
+SM(d18:1/22:1),SM 18:1;O2/22:1
+SM(d16:1/24:0),SM 16:1;O2/24:0
+SM(d17:1/24:1),SM 17:1;O2/24:1
+SM(d18:2/23:0),SM 18:2;O2/23:0
+SM(d16:1/25:0),SM 16:1;O2/25:0
+SM(d17:1/24:0),SM 17:1;O2/24:0
+SM(d18:1/23:0),SM 18:1;O2/23:0
 SM(d18:0/12:0),SM 18:0;OH/12:0
-SM(d18:2/24:1),SM 18:2;OH/24:1
-SM(d18:2/24:0),SM 18:2;OH/24:0
-SM(d17:1/26:1),SM 17:1;OH/26:1
-SM(d18:2/25:0),SM 18:2;OH/25:0
-SM(d19:1/24:1),SM 19:1;OH/24:1
-SM(d19:0/24:1),SM 19:0;OH/24:1
-SM(d19:1/24:0),SM 19:1;OH/24:0
-SM(d20:1/23:0),SM 20:1;OH/23:0
-SM(d20:0/24:1),SM 20:0;OH/24:1
+SM(d18:2/24:1),SM 18:2;O2/24:1
+SM(d18:2/24:0),SM 18:2;O2/24:0
+SM(d17:1/26:1),SM 17:1;O2/26:1
+SM(d18:2/25:0),SM 18:2;O2/25:0
+SM(d19:1/24:1),SM 19:1;O2/24:1
+SM(d19:0/24:1),SM 19:0;O2/24:1
+SM(d19:1/24:0),SM 19:1;O2/24:0
+SM(d20:1/23:0),SM 20:1;O2/23:0
+SM(d20:0/24:1),SM 20:0;O2/24:1
 SM(d17:0/27:0),SM 17:0;OH/27:0
-SM(d18:2/16:0),SM 18:2;OH/16:0
+SM(d18:2/16:0),SM 18:2;O2/16:0
 SM(d18:0/15:0),SM 18:0;OH/15:0
-SM(d18:2/22:0),SM 18:2;OH/22:0
+SM(d18:2/22:0),SM 18:2;O2/22:0
 Dihydrosphingomyelin,
 N-Acyl ceramide phosphoethanolamine,
 PE-Cer(d14:1(4E)/18:0),EPC 14:1(4);OH/18:0
@@ -30879,7 +30879,7 @@ PE-Cer(d16:1(4E)/24:0(2OH)),EPC 16:1(4);OH/24:0;OH
 "PE-Cer(d16:2(4E,6E)/22:1(13Z)(2OH))","EPC 16:2(4,6);OH/22:1(13);OH"
 "PE-Cer(d16:2(4E,6E)/24:0(2OH))","EPC 16:2(4,6);OH/24:0;OH"
 "PE-Cer(d16:2(4E,6E)/24:1(15Z)(2OH))","EPC 16:2(4,6);OH/24:1(15);OH"
-PI-Cer(d18:1/22:0),IPC 18:1;OH/22:0
+PI-Cer(d18:1/22:0),IPC 18:1;O2/22:0
 M(IP)2C(t18:0/26:0(2OH)),M(IP)2C 18:0;(OH)2/26:0;OH
 MIPC(t18:0/26:0(2OH)),MIPC 18:0;(OH)2/26:0;OH
 GlcN-alpha1-4-GlcUA-alpha1-2-PI-Cer(t18:1/24:0(2OH)),
@@ -31025,34 +31025,34 @@ M(IP)2C(t20:0/20:0),M(IP)2C 20:0;(OH)2/20:0
 M(IP)2C(t20:0/22:0),M(IP)2C 20:0;(OH)2/22:0
 M(IP)2C(t20:0/24:0),M(IP)2C 20:0;(OH)2/24:0
 M(IP)2C(t20:0/26:0),M(IP)2C 20:0;(OH)2/26:0
-PI-Cer(d18:1/14:0),IPC 18:1;OH/14:0
-PI-Cer(d20:1/14:0),IPC 20:1;OH/14:0
+PI-Cer(d18:1/14:0),IPC 18:1;O2/14:0
+PI-Cer(d20:1/14:0),IPC 20:1;O2/14:0
 PI-Cer(d20:0/14:0),IPC 20:0;OH/14:0
 PI-Cer(t20:0/14:0),IPC 20:0;(OH)2/14:0
-PI-Cer(d20:1/16:0),IPC 20:1;OH/16:0
+PI-Cer(d20:1/16:0),IPC 20:1;O2/16:0
 Ceramide ciliatine,
 N-palmitoyl-D-sphingosyl-1-(2-aminoethyl)phosphonate,
 Syriacin,
 Glucosyl sphingosine,
-FMC-5(d18:1/18:0),FMC-5 18:1;OH/18:0
-FMC-5(d18:1/20:0),FMC-5 18:1;OH/20:0
-FMC-5(d18:1/22:0),FMC-5 18:1;OH/22:0
-FMC-5(d18:1/24:0),FMC-5 18:1;OH/24:0
-FMC-5(d18:1/24:1),FMC-5 18:1;OH/24:1
+FMC-5(d18:1/18:0),FMC-5 18:1;O2/18:0
+FMC-5(d18:1/20:0),FMC-5 18:1;O2/20:0
+FMC-5(d18:1/22:0),FMC-5 18:1;O2/22:0
+FMC-5(d18:1/24:0),FMC-5 18:1;O2/24:0
+FMC-5(d18:1/24:1),FMC-5 18:1;O2/24:1
 FMC-6(d18:1/24:0(2-OH)),
 FMC-6(d18:1/22:0(2-OH)),
 Phalluside-1,
 GlcCer,
-GlcCer(d18:1/12:0),GlcCer 18:1;OH/12:0
-GlcCer(d18:1/16:0),GlcCer 18:1;OH/16:0
+GlcCer(d18:1/12:0),GlcCer 18:1;O2/12:0
+GlcCer(d18:1/16:0),GlcCer 18:1;O2/16:0
 GlcCer(d18:0/16:0),GlcCer 18:0;OH/16:0
-GlcCer(d18:1/18:0),GlcCer 18:1;OH/18:0
-GlcCer(d18:1/20:0),GlcCer 18:1;OH/20:0
-GlcCer(d18:1/22:0),GlcCer 18:1;OH/22:0
-GlcCer(d18:1/24:1(15Z)),GlcCer 18:1;OH/24:1(15)
-GlcCer(d18:1/24:0),GlcCer 18:1;OH/24:0
-GlcCer(d18:1/26:1(17Z)),GlcCer 18:1;OH/26:1(17)
-GlcCer(d18:1/26:0),GlcCer 18:1;OH/26:0
+GlcCer(d18:1/18:0),GlcCer 18:1;O2/18:0
+GlcCer(d18:1/20:0),GlcCer 18:1;O2/20:0
+GlcCer(d18:1/22:0),GlcCer 18:1;O2/22:0
+GlcCer(d18:1/24:1(15Z)),GlcCer 18:1;O2/24:1
+GlcCer(d18:1/24:0),GlcCer 18:1;O2/24:0
+GlcCer(d18:1/26:1(17Z)),GlcCer 18:1;O2/26:1
+GlcCer(d18:1/26:0),GlcCer 18:1;O2/26:0
 GlcCer(d18:0/18:0),GlcCer 18:0;OH/18:0
 GlcCer(d18:0/20:0),GlcCer 18:0;OH/20:0
 GlcCer(d18:0/22:0),GlcCer 18:0;OH/22:0
@@ -31060,32 +31060,32 @@ GlcCer(d18:0/24:1(15Z)),GlcCer 18:0;OH/24:1(15)
 GlcCer(d18:0/24:0),GlcCer 18:0;OH/24:0
 GlcCer(d18:0/26:1(17Z)),GlcCer 18:0;OH/26:1(17)
 GlcCer(d18:0/26:0),GlcCer 18:0;OH/26:0
-GlcCer(d18:1/14:0),GlcCer 18:1;OH/14:0
-GlcCer(d18:1/18:1(9Z)),GlcCer 18:1;OH/18:1(9)
+GlcCer(d18:1/14:0),GlcCer 18:1;O2/14:0
+GlcCer(d18:1/18:1(9Z)),GlcCer 18:1;O2/18:1
 GlcCer(d18:0/14:0),GlcCer 18:0;OH/14:0
 GlcCer(d18:0/18:1(9Z)),GlcCer 18:0;OH/18:1(9)
-GlcCer(d16:1/22:0),GlcCer 16:1;OH/22:0
-GlcCer(d16:1/23:0),GlcCer 16:1;OH/23:0
-GlcCer(d18:1/23:0),GlcCer 18:1;OH/23:0
-GlcCer(d18:2/16:0),GlcCer 18:2;OH/16:0
-GlcCer(d18:2/20:0),GlcCer 18:2;OH/20:0
-GlcCer(d18:2/20:1),GlcCer 18:2;OH/20:1
-GlcCer(d18:2/21:0),GlcCer 18:2;OH/21:0
-GlcCer(d18:2/22:0),GlcCer 18:2;OH/22:0
-GlcCer(d18:2/23:0),GlcCer 18:2;OH/23:0
-GlcCer(d14:1/16:0),GlcCer 14:1;OH/16:0
-GlcCer(d14:1/18:0),GlcCer 14:1;OH/18:0
-GlcCer(d14:1/18:1),GlcCer 14:1;OH/18:1
-GlcCer(d14:1/20:0),GlcCer 14:1;OH/20:0
-GlcCer(d14:1/22:0),GlcCer 14:1;OH/22:0
-GlcCer(d14:1/24:0),GlcCer 14:1;OH/24:0
-GlcCer(d14:1/24:1),GlcCer 14:1;OH/24:1
-GlcCer(d15:1/18:0),GlcCer 15:1;OH/18:0
-GlcCer(d15:1/20:0),GlcCer 15:1;OH/20:0
-GlcCer(d15:1/22:0),GlcCer 15:1;OH/22:0
-GlcCer(d16:1/18:0),GlcCer 16:1;OH/18:0
-GlcCer(d16:1/20:0),GlcCer 16:1;OH/20:0
-GlcCer(d16:1/24:0),GlcCer 16:1;OH/24:0
+GlcCer(d16:1/22:0),GlcCer 16:1;O2/22:0
+GlcCer(d16:1/23:0),GlcCer 16:1;O2/23:0
+GlcCer(d18:1/23:0),GlcCer 18:1;O2/23:0
+GlcCer(d18:2/16:0),GlcCer 18:2;O2/16:0
+GlcCer(d18:2/20:0),GlcCer 18:2;O2/20:0
+GlcCer(d18:2/20:1),GlcCer 18:2;O2/20:1
+GlcCer(d18:2/21:0),GlcCer 18:2;O2/21:0
+GlcCer(d18:2/22:0),GlcCer 18:2;O2/22:0
+GlcCer(d18:2/23:0),GlcCer 18:2;O2/23:0
+GlcCer(d14:1/16:0),GlcCer 14:1;O2/16:0
+GlcCer(d14:1/18:0),GlcCer 14:1;O2/18:0
+GlcCer(d14:1/18:1),GlcCer 14:1;O2/18:1
+GlcCer(d14:1/20:0),GlcCer 14:1;O2/20:0
+GlcCer(d14:1/22:0),GlcCer 14:1;O2/22:0
+GlcCer(d14:1/24:0),GlcCer 14:1;O2/24:0
+GlcCer(d14:1/24:1),GlcCer 14:1;O2/24:1
+GlcCer(d15:1/18:0),GlcCer 15:1;O2/18:0
+GlcCer(d15:1/20:0),GlcCer 15:1;O2/20:0
+GlcCer(d15:1/22:0),GlcCer 15:1;O2/22:0
+GlcCer(d16:1/18:0),GlcCer 16:1;O2/18:0
+GlcCer(d16:1/20:0),GlcCer 16:1;O2/20:0
+GlcCer(d16:1/24:0),GlcCer 16:1;O2/24:0
 "GlcCer(d14:2(4E,6E)/16:0)","GlcCer 14:2(4,6);OH/16:0"
 "GlcCer(d14:2(4E,6E)/18:0)","GlcCer 14:2(4,6);OH/18:0"
 "GlcCer(d14:2(4E,6E)/18:1(9Z))","GlcCer 14:2(4,6);OH/18:1(9)"
@@ -31117,17 +31117,17 @@ GlcCer(d16:1(4E)/22:0(2OH)),GlcCer 16:1(4);OH/22:0;OH
 "GlcCer(d16:2(4E,6E)/22:0(2OH))","GlcCer 16:2(4,6);OH/22:0;OH"
 "GlcCer(d16:2(4E,6E)/24:0(2OH))","GlcCer 16:2(4,6);OH/24:0;OH"
 LacCer,
-LacCer(d18:1/12:0),LacCer 18:1;OH/12:0
-LacCer(d18:1/16:0),LacCer 18:1;OH/16:0
-LacCer(d18:1/18:0),LacCer 18:1;OH/18:0
-LacCer(d18:1/20:0),LacCer 18:1;OH/20:0
-LacCer(d18:1/22:0),LacCer 18:1;OH/22:0
-LacCer(d18:1/24:0),LacCer 18:1;OH/24:0
-LacCer(d18:1/26:0),LacCer 18:1;OH/26:0
-LacCer(d18:1/24:1(15Z)),LacCer 18:1;OH/24:1(15)
-LacCer(d18:1/26:1(17Z)),LacCer 18:1;OH/26:1(17)
-LacCer(d18:1/18:1(9Z)),LacCer 18:1;OH/18:1(9)
-LacCer(d18:1/14:0),LacCer 18:1;OH/14:0
+LacCer(d18:1/12:0),LacCer 18:1;O2/12:0
+LacCer(d18:1/16:0),LacCer 18:1;O2/16:0
+LacCer(d18:1/18:0),LacCer 18:1;O2/18:0
+LacCer(d18:1/20:0),LacCer 18:1;O2/20:0
+LacCer(d18:1/22:0),LacCer 18:1;O2/22:0
+LacCer(d18:1/24:0),LacCer 18:1;O2/24:0
+LacCer(d18:1/26:0),LacCer 18:1;O2/26:0
+LacCer(d18:1/24:1(15Z)),LacCer 18:1;O2/24:1
+LacCer(d18:1/26:1(17Z)),LacCer 18:1;O2/26:1
+LacCer(d18:1/18:1(9Z)),LacCer 18:1;O2/18:1
+LacCer(d18:1/14:0),LacCer 18:1;O2/14:0
 LacCer(d18:0/14:0),LacCer 18:0;OH/14:0
 LacCer(d18:0/16:0),LacCer 18:0;OH/16:0
 LacCer(d18:0/18:0),LacCer 18:0;OH/18:0
@@ -31135,34 +31135,34 @@ LacCer(d18:0/20:0),LacCer 18:0;OH/20:0
 LacCer(d18:0/22:0),LacCer 18:0;OH/22:0
 LacCer(d18:0/24:0),LacCer 18:0;OH/24:0
 LacCer(d18:0/26:0),LacCer 18:0;OH/26:0
-LacCer(d18:0/26:1),LacCer 18:0;OH/26:1
-LacCer(d18:0/24:1),LacCer 18:0;OH/24:1
-LacCer(d18:0/18:1),LacCer 18:0;OH/18:1
+LacCer(d18:0/26:1),LacCer 18:0;O2/26:1
+LacCer(d18:0/24:1),LacCer 18:0;O2/24:1
+LacCer(d18:0/18:1),LacCer 18:0;O2/18:1
 LacCer(d14:0/18:0),LacCer 14:0;OH/18:0
-LacCer(d14:1/16:0),LacCer 14:1;OH/16:0
-GalCer(d18:1/16:0),GalCer 18:1;OH/16:0
-GalCer(d18:1/18:0),GalCer 18:1;OH/18:0
-GalCer(d18:1/20:0),GalCer 18:1;OH/20:0
-GalCer(d18:1/22:0),GalCer 18:1;OH/22:0
-GalCer(d18:1/24:0),GalCer 18:1;OH/24:0
-GalCer(d18:1/26:0),GalCer 18:1;OH/26:0
-GalCer(d18:1/24:1(15Z)),GalCer 18:1;OH/24:1(15)
-GalCer(d18:1/26:1(17Z)),GalCer 18:1;OH/26:1(17)
-GalCer(d16:1/22:0),GalCer 16:1;OH/22:0
-GalCer(d16:1/23:0),GalCer 16:1;OH/23:0
+LacCer(d14:1/16:0),LacCer 14:1;O2/16:0
+GalCer(d18:1/16:0),GalCer 18:1;O2/16:0
+GalCer(d18:1/18:0),GalCer 18:1;O2/18:0
+GalCer(d18:1/20:0),GalCer 18:1;O2/20:0
+GalCer(d18:1/22:0),GalCer 18:1;O2/22:0
+GalCer(d18:1/24:0),GalCer 18:1;O2/24:0
+GalCer(d18:1/26:0),GalCer 18:1;O2/26:0
+GalCer(d18:1/24:1(15Z)),GalCer 18:1;O2/24:1
+GalCer(d18:1/26:1(17Z)),GalCer 18:1;O2/26:1
+GalCer(d16:1/22:0),GalCer 16:1;O2/22:0
+GalCer(d16:1/23:0),GalCer 16:1;O2/23:0
 GalCer(d18:0/16:0),GalCer 18:0;OH/16:0
 GalCer(d18:0/20:0),GalCer 18:0;OH/20:0
 GalCer(d18:0/22:0),GalCer 18:0;OH/22:0
 GalCer(d18:0/24:0),GalCer 18:0;OH/24:0
 GalCer(d18:0/26:0),GalCer 18:0;OH/26:0
-GalCer(d18:0/26:1),GalCer 18:0;OH/26:1
-GalCer(d18:1/23:0),GalCer 18:1;OH/23:0
-GalCer(d18:2/16:0),GalCer 18:2;OH/16:0
-GalCer(d18:2/20:0),GalCer 18:2;OH/20:0
-GalCer(d18:2/20:1),GalCer 18:2;OH/20:1
-GalCer(d18:2/21:0),GalCer 18:2;OH/21:0
-GalCer(d18:2/22:0),GalCer 18:2;OH/22:0
-GalCer(d18:2/23:0),GalCer 18:2;OH/23:0
+GalCer(d18:0/26:1),GalCer 18:0;O2/26:1
+GalCer(d18:1/23:0),GalCer 18:1;O2/23:0
+GalCer(d18:2/16:0),GalCer 18:2;O2/16:0
+GalCer(d18:2/20:0),GalCer 18:2;O2/20:0
+GalCer(d18:2/20:1),GalCer 18:2;O2/20:1
+GalCer(d18:2/21:0),GalCer 18:2;O2/21:0
+GalCer(d18:2/22:0),GalCer 18:2;O2/22:0
+GalCer(d18:2/23:0),GalCer 18:2;O2/23:0
 Gb3,
 Globoside I/Cytolipin K,
 Forssman antigen,
@@ -31295,18 +31295,18 @@ X3 ganglioside,
 X4 ganglioside,
 KDN-(2-6)-neolactotetraosylceramide/sialyl-(2-6)-paragloboside,
 Galactosylceramide sulfate,
-(3'-sulfo)Galbeta-Cer(d18:1/18:0),SHexCer 18:1;OH/18:0
-(3'-sulfo)Galbeta-Cer(d18:1/16:0),SHexCer 18:1;OH/16:0
-(3'-sulfo)Galbeta-Cer(d18:1/16:0(2OH)),SHexCer 18:1;OH/16:0;OH
-(3'-sulfo)Galbeta-Cer(d18:1/18:0(2OH)),SHexCer 18:1;OH/18:0;OH
-(3'-sulfo)Galbeta-Cer(d18:1/20:0(2OH)),SHexCer 18:1;OH/20:0;OH
-(3'-sulfo)Galbeta-Cer(d18:1/22:0),SHexCer 18:1;OH/22:0
-(3'-sulfo)Galbeta-Cer(d18:1/20:0),SHexCer 18:1;OH/20:0
-(3'-sulfo)Galbeta-Cer(d18:1/22:0(2OH)),SHexCer 18:1;OH/22:0;OH
-(3'-sulfo)Galbeta-Cer(d18:1/24:0),SHexCer 18:1;OH/24:0
-(3'-sulfo)Galbeta-Cer(d18:1/24:0(2OH)),SHexCer 18:1;OH/24:0;OH
-(3'-sulfo)Galbeta-Cer(d18:1/24:1(15Z)),SHexCer 18:1;OH/24:1(15)
-(3'-sulfo)Galbeta-Cer(d18:1/24:1(15Z)(2OH)),SHexCer 18:1;OH/24:1(15);OH
+(3'-sulfo)Galbeta-Cer(d18:1/18:0),SHexCer 18:1;O2/18:0
+(3'-sulfo)Galbeta-Cer(d18:1/16:0),SHexCer 18:1;O2/16:0
+(3'-sulfo)Galbeta-Cer(d18:1/16:0(2OH)),SHexCer 18:1;O2/16:0;O
+(3'-sulfo)Galbeta-Cer(d18:1/18:0(2OH)),SHexCer 18:1;O2/18:0;O
+(3'-sulfo)Galbeta-Cer(d18:1/20:0(2OH)),SHexCer 18:1;O2/20:0;O
+(3'-sulfo)Galbeta-Cer(d18:1/22:0),SHexCer 18:1;O2/22:0
+(3'-sulfo)Galbeta-Cer(d18:1/20:0),SHexCer 18:1;O2/20:0
+(3'-sulfo)Galbeta-Cer(d18:1/22:0(2OH)),SHexCer 18:1;O2/22:0;O
+(3'-sulfo)Galbeta-Cer(d18:1/24:0),SHexCer 18:1;O2/24:0
+(3'-sulfo)Galbeta-Cer(d18:1/24:0(2OH)),SHexCer 18:1;O2/24:0;O
+(3'-sulfo)Galbeta-Cer(d18:1/24:1(15Z)),SHexCer 18:1;O2/24:1
+(3'-sulfo)Galbeta-Cer(d18:1/24:1(15Z)(2OH)),SHexCer 18:1;O2/24:1;O
 SM3,
 Globopentaosylceramide sulfate,
 Sulfoglobotetraosylceramide,
@@ -33330,25 +33330,25 @@ Cholesteryl-6-O-myristoyl-alpha-D-glucoside,
 Cholesteryl-6-O-(dimyristoyl-glycerophospho)-alpha-D-glucoside,
 FA(27:0)(OH),FA 27:0;OH
 FA(19:0)(OH),FA 19:0;OH
-FA(20:5)(OH3),FA 20:5;(OH)3
-FA(18:5)(Ke),FA 18:5;oxo
-FA(8:2)(OH),FA 8:2;OH
-FA(17:4)(OH),FA 17:4;OH
-FA(18:1)(OH),FA 18:1;OH
+FA(20:5)(OH3),FA 20:5;O3
+FA(18:5)(Ke),FA 18:5;O
+FA(8:2)(OH),FA 8:2;O
+FA(17:4)(OH),FA 17:4;O
+FA(18:1)(OH),FA 18:1;O
 FA(30:0(Me6)),FA 30:0;(Me)6
 FA(18:0)(OH6),FA 18:0;(OH)6
 "FA(18:0)(OH,Ke)",FA 18:0;OH;oxo
-FA(18:1)(OH),FA 18:1;OH
-FA(18:1)(OH3),FA 18:1;(OH)3
+FA(18:1)(OH),FA 18:1;O
+FA(18:1)(OH3),FA 18:1;O3
 FA(15:0)(OH),FA 15:0;OH
-FA(24:1)(OH),FA 24:1;OH
+FA(24:1)(OH),FA 24:1;O
 FA(22:0)(OH2),FA 22:0;(OH)2
 FA(18:0)(OH2),FA 18:0;(OH)2
 "FA(18:0)(OH,Ke)",FA 18:0;OH;oxo
-FA(18:4)(Ke),FA 18:4;oxo
-FA(18:5)(Ke),FA 18:5;oxo
+FA(18:4)(Ke),FA 18:4;O
+FA(18:5)(Ke),FA 18:5;O
 "FA(18:0)(OH,Ke)",FA 18:0;OH;oxo
-FA(18:1)(Ke),FA 18:1;oxo
+FA(18:1)(Ke),FA 18:1;O
 "FA(16:1)(Ep,cyclo)",
 "FA(10:5)(Ep,cyclo)",
 "FA(18:2)(Ep,cyclo)",
@@ -33393,7 +33393,7 @@ CAR(16:2),CAR 16:2
 CAR(20:1),CAR 20:1
 CAR(20:2),CAR 20:2
 CAR(22:2),CAR 22:2
-CAR(6:1(COOH)),CAR 6:1;COOH
+CAR(6:1(COOH)),CAR 6:1;O2
 CAR(8:1),CAR 8:1
 CAR(10:2),CAR 10:2
 CAR(10:3),CAR 10:3
@@ -33407,13 +33407,13 @@ CAR(5:1),CAR 5:1
 CAR(6:1),CAR 6:1
 CAR(5:0),CAR 5:0
 CAR(8:1),CAR 8:1
-CAR(20:4(OH)),CAR 20:4;OH
-CAR(8:1(OH)),CAR 8:1;OH
+CAR(20:4(OH)),CAR 20:4;O
+CAR(8:1(OH)),CAR 8:1;O
 CAR(12:0(OH)),CAR 12:0;OH
 CAR(20:0(OH)),CAR 20:0;OH
-CAR(18:2(OH)),CAR 18:2;OH
+CAR(18:2(OH)),CAR 18:2;O
 CAR(18:0(OH)),CAR 18:0;OH
-CAR(16:1(OH)),CAR 16:1;OH
+CAR(16:1(OH)),CAR 16:1;O
 CAR(14:0(OH)),CAR 14:0;OH
 CAR(11:0),CAR 11:0
 CAR(10:1),CAR 10:1
@@ -33583,20 +33583,20 @@ LPI(P-18:0),LPI P-18:0
 LPI(P-16:0),LPI P-16:0
 PPA(34:1),PPA 34:1
 PPA(36:2),PPA 36:2
-Sph(d18:1),SPB 18:1;(OH)2
+Sph(d18:1),SPB 18:1;O2
 Sph(d14:0),SPB 14:0;(OH)2
-Sph(d17:1),SPB 17:1;(OH)2
+Sph(d17:1),SPB 17:1;O2
 Sph(d17:0),SPB 17:0;(OH)2
-Sph(d14:1),SPB 14:1;(OH)2
+Sph(d14:1),SPB 14:1;O2
 Sph(d16:0),SPB 16:0;(OH)2
 C1P(d18:1),CerP 18:1;O2
-SIP(d19:1),SPBP 19:1;OH
-SIP(d16:1),SPBP 16:1;OH
+SIP(d19:1),SPBP 19:1;O2
+SIP(d16:1),SPBP 16:1;O2
 C1P(d16:0),CerP 16:0;O2
-SIP(d17:1),SPBP 17:1;OH
+SIP(d17:1),SPBP 17:1;O2
 SIP(d17:0),SPBP 17:0;OH
-LysoSM(d18:1),LSM 18:1;OH
-LysoSM(d17:1),LSM 17:1;OH
+LysoSM(d18:1),LSM 18:1;O2
+LysoSM(d17:1),LSM 17:1;O2
 1-O-myristoyl-Cer(d34:1),1-O-myristoyl-Cer 34:1;O2
 1-O-palmitoyl-Cer(d34:1),1-O-palmitoyl-Cer 34:1;O2
 1-O-stearoyl-Cer(d34:1),1-O-stearoyl-Cer 34:1;O2
