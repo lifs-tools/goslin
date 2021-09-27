@@ -2809,7 +2809,7 @@ LMFA03010002,"9S,11R,15S-trihydroxy-5Z,13E-prostadienoic acid",C20H34O5,"FA 20:2
 LMFA03010003,"9-oxo-11R,15S-dihydroxy-5Z,13E-prostadienoic acid",C20H32O5,"FA 20:2(5Z,13E);[8-12cy5:0;11OH;9oxo];15OH"
 LMFA03010004,"9S,15S-dihydroxy-11-oxo-5Z,13E-prostadienoic acid",C20H32O5,"FA 20:2(5Z,13E);[8-12cy5:0;9OH;11oxo];15OH"
 LMFA03010005,"9-oxo-15S-hydroxy-10Z,13E-prostadienoic acid",C20H32O4,FA 20:1(13E);[8-12cy5:1(10Z);9oxo];15OH
-LMFA03010011,"9S,11S,15S-trihydroxy-2,3-dinor-5Z,13E-prostadienoic acid",C18H30O5,"FA 18:2(3Z,11E);[6-10cy5:0;9OH];11OH,15OH"
+LMFA03010011,"9S,11S,15S-trihydroxy-2,3-dinor-5Z,13E-prostadienoic acid",C18H30O5,"FA 18:2(3Z,11E);[6-10cy5:0;7OH,9OH];13OH"
 LMFA03010012,"6,9-dioxo-11R,15S-dihydroxy-13E-prostenoic acid",C20H32O6,FA 20:1(13E);[8-12cy5:0;11OH;9oxo];15OH;6oxo
 LMFA03010013,"6,15-dioxo-9S,11R-dihydroxyprostanoic acid",C20H34O6,"FA 20:0;[8-12cy5:0;9OH,11OH];6oxo,15oxo"
 LMFA03010014,"9-oxo-11R,15S,20-trihydroxy-5Z,13E-prostadienoic acid",C20H32O6,"FA 20:2(5Z,13E);[8-12cy5:0;11OH;9oxo];15OH,20OH"
@@ -2825,7 +2825,7 @@ LMFA03010027,"9S,11S-dihydroxy-15-oxo-5Z-prostenoic acid",C20H34O5,"FA 20:1(5Z);
 LMFA03010029,"9S,11S,15S,20-tetrahydroxy-5Z,13E-prostadienoic acid",C20H34O6,"FA 20:2(5Z,13E);[8-12cy5:0;9OH,11OH];15OH,20OH"
 LMFA03010030,"9,15-dioxo-11R-hydroxy-5Z,13E-prostadienoic acid",C20H30O5,"FA 20:2(5Z,13E);[8-12cy5:0;11OH;9oxo];15oxo"
 LMFA03010031,"9,15-dioxo-11R-hydroxy-5Z-prostenoic acid",C20H32O5,FA 20:1(5Z);[8-12cy5:0;11OH;9oxo];15oxo
-LMFA03010032,"11R-hydroxy-9,15-dioxo-2,3,4,5-tetranor-prostan-1,20-dioic acid",C16H24O7,"FA 15:0;19COOH;[4-8cy5:0];11OH;9oxo,15oxo"
+LMFA03010032,"11R-hydroxy-9,15-dioxo-2,3,4,5-tetranor-prostan-1,20-dioic acid",C16H24O7,FA 15:0;15COOH;[4-8cy5:0;7OH;5oxo];11oxo
 LMFA03010033,"9,15-dioxo-5Z,10-prostadienoic acid",C20H30O4,FA 20:1(5Z);[8-12cy5:1(10);9oxo];15oxo
 LMFA03010035,"9-oxo-15S-hydroxy-5Z,10Z,13E-prostatrienoic acid",C20H30O4,"FA 20:2(5Z,13E);[8-12cy5:1(10Z);9oxo];15OH"
 LMFA03010036,"9S,11S,15S-trihydroxy-5Z,13E-prostadienoic acid",C20H34O5,"FA 20:2(5Z,13E);[8-12cy5:0;9OH,11OH];15OH"
@@ -2864,7 +2864,7 @@ LMFA03010083,"9R,11R,15R-trihydroxy-16,16-dimethyl-5Z,13E-prostadienoic acid",C2
 LMFA03010085,"9-oxo-15R-hydroxy-16,16-dimethyl-10Z,13E-prostadienoic acid",C22H36O4,"FA 20:1(13E);[8-12cy5:1(10Z);9oxo];16Me,16Me;15OH"
 LMFA03010086,"9oxo-15R-hydroxy-16,16-dimethyl-5Z,10Z,13E-prostatrienoic acid",C22H34O4,"FA 20:2(5Z,13E);[8-12cy5:1(10Z);9oxo];16Me,16Me;15OH"
 LMFA03010087,"6,9S-epoxy-11R,15S-dihydroxy-5Z,13E-prostadienoic acid",C20H32O5,"FA 20:2(5Z,13E);[8-12cy5:0;11OH];6Ep;15OH"
-LMFA03010089,"6-oxo-9S,11R,15S-trihydroxy-2,3-dinor-13E-prostaenoic acid",C18H30O6,"FA 18:1(11E);[6-10cy5:0;9OH;6oxo];11OH,15OH"
+LMFA03010089,"6-oxo-9S,11R,15S-trihydroxy-2,3-dinor-13E-prostaenoic acid",C18H30O6,"FA 18:1(11E);[6-10cy5:0;7OH,9OH];13OH;4oxo"
 LMFA03010092,"9oxo-15R-hydroxy-5Z,10Z,13E-prostatrienoic acid",C20H30O4,"FA 20:2(5Z,13E);[8-12cy5:1(10Z);9oxo];15OH"
 LMFA03010094,"9-oxo-11R,15R-dihydroxy-5Z,13E-prostadienoic acid",C20H32O5,"FA 20:2(5Z,13E);[8-12cy5:0;11OH;9oxo];15OH"
 LMFA03010095,"methyl 9-oxo-11R,15R-dihydroxy-5Z,13E-prostadienoate",C21H34O5,"WE 1:0/20:2(5Z,13E);[8-12cy5:0;11OH;9oxo];15OH"
@@ -2892,7 +2892,7 @@ LMFA03010134,"9-oxo-11R,15S-dihydroxy-13E-prostaenoic acid",C20H34O5,FA 20:1(13E
 LMFA03010135,"9-oxo-11R,15S-dihydroxy-5Z,13E,17Z-prostatrienoic acid",C20H30O5,"FA 20:3(5Z,13E,17Z);[8-12cy5:0;11OH;9oxo];15OH"
 LMFA03010137,"9S,11R,15S-trihydroxy-13E-prostaenoic acid",C20H36O5,"FA 20:1(13E);[8-12cy5:0;9OH,11OH];15OH"
 LMFA03010138,"9S,11R,15S-trihydroxy-5Z,13E,17Z-prostatrienoic acid",C20H32O5,"FA 20:3(5Z,13E,17Z);[8-12cy5:0;9OH,11OH];15OH"
-LMFA03010139,"9S,11R-dihydroxy-15-oxo-2,3,4,5-tetranor-prostan-1,20-dioic acid",C16H26O7,"FA 15:0;19COOH;[4-8cy5:0];9OH,11OH;15oxo"
+LMFA03010139,"9S,11R-dihydroxy-15-oxo-2,3,4,5-tetranor-prostan-1,20-dioic acid",C16H26O7,"FA 15:0;15COOH;[4-8cy5:0;5OH,7OH];11oxo"
 LMFA03010140,"9-oxo-15S-hydroxy-5Z,10Z,13E,17Z-prostatetraenoic acid",C20H28O4,"FA 20:3(5Z,13E,17Z);[8-12cy5:1(10Z);9oxo];15OH"
 LMFA03010142,"9S,15S-dihydroxy-11-oxo-5Z,13E,17Z-prostatrienoic acid",C20H30O5,"FA 20:3(5Z,13E,17Z);[8-12cy5:0;9OH;11oxo];15OH"
 LMFA03010143,"9-oxo-11R,15S-dihydroxy-13E,17Z-prostadienoic acid",C20H32O5,"FA 20:2(13E,17Z);[8-12cy5:0;11OH;9oxo];15OH"
@@ -2905,7 +2905,7 @@ LMFA03010149,"6-oxo-9S,11R,15S-trihydroxy-13E,17Z-prostadienoic acid",C20H32O6,"
 LMFA03010150,"9S,11R-dihydroxy-15-oxo-13E-prostaenoic acid",C20H34O5,"FA 20:1(13E);[8-12cy5:0;9OH,11OH];15oxo"
 LMFA03010151,"N-(11R,15S-dihydroxy-9-oxo-5Z,13E-prostadienoyl)-ethanolamine",C22H37NO5,"NAE 20:2(5Z,13E);[8-12cy5:0;11OH;9oxo];15OH"
 LMFA03010152,"N-(9S,15S-dihydroxy-11-oxo-5Z,13E-prostadienoyl)-ethanolamine",C22H37NO5,"NAE 20:2(5Z,13E);[8-12cy5:0;9OH;11oxo];15OH"
-LMFA03010154,"9S,11R,15S-trihydroxy-2,3-dinor-13E-prostaenoic acid-cyclo[8S,12R]",C18H32O5,"FA 18:0;[8-12cy5:1(11E);9OH,11OH];15OH"
+LMFA03010154,"9S,11R,15S-trihydroxy-2,3-dinor-13E-prostaenoic acid-cyclo[8S,12R]",C18H32O5,"FA 18:0;[8-12cy5:1(11E);9OH];7OH,13OH"
 LMFA03010155,"1a,1b-dihomo-9-oxo-11R,15S-dihydroxy-5Z,13E-prostadienoic acid",C22H36O5,"FA 22:2(7Z,15E);[10-14cy5:0;13OH;11oxo];17OH"
 LMFA03010156,"1a,1b-dihomo-9S,15S-dihydroxy-11-oxo-5Z,13E-prostadienoic acid",C22H36O5,"FA 22:2(7Z,15E);[10-14cy5:0;11OH;13oxo];17OH"
 LMFA03010157,"1a,1b-dihomo-9S,11R,15S-trihydroxy-5Z,13E-prostadienoic acid",C22H38O5,"FA 22:2(7Z,15E);[10-14cy5:0;11OH,13OH];17OH"
@@ -2917,7 +2917,7 @@ LMFA03010164,"9R,15S-dihydroxy-5Z,13E-prostadienoic acid",C20H34O4,"FA 20:2(5Z,1
 LMFA03010165,"9-oxo-11R,15S,19R-trihydroxy-prostanoic acid",C20H36O6,"FA 20:0;[8-12cy5:0;11OH;9oxo];15OH,19OH"
 LMFA03010166,"9-oxo-15S,19R-dihydroxy-5Z,10Z,13E-prostatrienoic acid",C20H30O5,"FA 20:2(5Z,13E);[8-12cy5:1(10Z);9oxo];15OH,19OH"
 LMFA03010168,"9S,11R-dihydroxy-15-oxo-prostanoic acid",C20H36O5,"FA 20:0;[8-12cy5:0;9OH,11OH];15oxo"
-LMFA03010169,"9-oxo-11R,15S-dihydroxy-2,3-dinor-13E-prostenoic acid",C18H30O5,"FA 18:1(11E);[6-10cy5:0;9oxo];11OH,15OH"
+LMFA03010169,"9-oxo-11R,15S-dihydroxy-2,3-dinor-13E-prostenoic acid",C18H30O5,FA 18:1(11E);[6-10cy5:0;9OH;7oxo];13OH
 LMFA03010170,"9,11-dioxo-15S-hydroxy-13E-prostenoic acid",C20H32O5,"FA 20:1(13E);[8-12cy5:0;9oxo,11oxo];15OH"
 LMFA03010171,"9-oxo-10,12Z,14E-prostatrienoic acid",C20H30O3,"FA 20:1(14E);[8-12cy5:2(10,12Z);9oxo]"
 LMFA03010172,"9-oxo-5Z,10,12Z,14E-prostatetraenoic acid",C20H28O3,"FA 20:2(5Z,14E);[8-12cy5:2(10,12Z);9oxo]"
@@ -2942,7 +2942,7 @@ LMFA03010215,"2,3,4,5-tetranor-9S,15S-dihydroxy-11-oxo-13E-prostenoic acid",C16H
 LMFA03010216,"9S,15S,20-trihydroxy-11-oxo-5Z,13E-prostadienoic acid",C20H32O6,"FA 20:2(5Z,13E);[8-12cy5:0;9OH;11oxo];15OH,20OH"
 LMFA03010217,"9-oxo-11R-hydroxy-15S-hydroperoxy-5Z,13E-prostadienoic acid",C20H32O6,"FA 20:2(5Z,13E);[8-12cy5:0;11OH;9oxo];15OOH"
 LMFA03010220,"9S-hydroxy-11-oxo-15S-hydroperoxy-5Z,13E-prostadienoic acid",C20H32O6,"FA 20:2(5Z,13E);[8-12cy5:0;9OH;11oxo];15OOH"
-LMFA03010221,"9S-hydroxy-11,15-dioxo-2,3,4,5-tetranor-prostan-1,20-dioic acid",C16H24O7,"FA 15:0;19COOH;[4-8cy5:0];9OH;11oxo,15oxo"
+LMFA03010221,"9S-hydroxy-11,15-dioxo-2,3,4,5-tetranor-prostan-1,20-dioic acid",C16H24O7,FA 15:0;15COOH;[4-8cy5:0;5OH;7oxo];11oxo
 LMFA03010223,"methyl 9S,11R,15S,18-tetraacetoxy-5Z,13E-prostadienoate",C29H44O10,"WE 1:0/20:2(5Z,13E);15O(FA 2:0),18O(FA 2:0);[8-12cy5:0;9O(FA 2:0),11O(FA 2:0)]"
 LMFA03010224,"methyl 15S-hydroxy-9S,11R,18-triacetoxy-5Z,13E-prostadienoate",C27H42O9,"WE 1:0/20:2(5Z,13E);18O(FA 2:0);[8-12cy5:0;9O(FA 2:0),11O(FA 2:0)];15OH"
 LMFA03010225,"methyl 18-oxo-9S,11R,15S-triacetoxy-5Z,13E-prostadienoate",C27H40O9,"WE 1:0/20:2(5Z,13E);15O(FA 2:0);[8-12cy5:0;9O(FA 2:0),11O(FA 2:0)];18oxo"
@@ -3183,7 +3183,7 @@ LMFA03110006,"9R,11R,15S-trihydroxy-5Z,13E-prostadienoic acid-cyclo[8S,12R]",C20
 LMFA03110007,"9S,11R,15S-trihydroxy-5Z,13E,17Z-prostatrienoic acid-cyclo[8S,12R]",C20H32O5,"FA 20:3(5Z,13E,17Z);[8-12cy5:0;9OH,11OH];15OH"
 LMFA03110008,"9-oxo-15S-hydroxy-10Z,13E-prostadienoic acid-cyclo[8S,12S]",C20H32O4,FA 20:1(13E);[8-12cy5:1(10Z);9oxo];15OH
 LMFA03110009,"9,15-dioxo-11R-hydroxy-5Z,13E-prostadienoic acid-cyclo[8S,12R]",C20H30O5,"FA 20:2(5Z,13E);[8-12cy5:0;11OH;9oxo];15oxo"
-LMFA03110010,"9S,11R,15S-trihydroxy-2,3-dinor-5Z,13E-prostadienoic acid-cyclo[8S,12R]",C18H30O5,"FA 18:1(3Z);[8-12cy5:1(11E);9OH,11OH];15OH"
+LMFA03110010,"9S,11R,15S-trihydroxy-2,3-dinor-5Z,13E-prostadienoic acid-cyclo[8S,12R]",C18H30O5,"FA 18:1(3Z);[8-12cy5:1(11E);9OH];7OH,13OH"
 LMFA03110011,"5,9S,11R-trihydroxy-6E,14Z-prostadienoic acid-cyclo[8S,12R]",C20H34O5,"FA 20:2(6E,14Z);[8-12cy5:0;9OH,11OH];5OH"
 LMFA03110018,"8R,12R,14S-trihydroxy-5Z,9E-prostadienoic acid-cyclo[11S,15R]",C20H34O5,"FA 20:2(5Z,9E);[11-15cy5:0;12OH,14OH];8OH"
 LMFA03110019,"8S,12S,14R-trihydroxy-5Z,9E-prostadienoic acid-cyclo[11R,15S]",C20H34O5,"FA 20:2(5Z,9E);[11-15cy5:0;12OH,14OH];8OH"
