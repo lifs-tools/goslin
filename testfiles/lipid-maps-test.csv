@@ -30669,24 +30669,24 @@ Cer(t20:0/20:0(2OH)),Cer 20:0;(OH)3/20:0;OH
 Cer(t20:0/22:0(2OH)),Cer 20:0;(OH)3/22:0;OH
 Cer(t20:0/24:0(2OH)),Cer 20:0;(OH)3/24:0;OH
 Cer(t20:0/26:0(2OH)),Cer 20:0;(OH)3/26:0;OH
-1-O-myristoyl-Cer(d18:1/16:0),1-O-myristoyl-Cer 18:1;O2/16:0
-1-O-palmitoyl-Cer(d18:1/16:0),1-O-palmitoyl-Cer 18:1;O2/16:0
-1-O-stearoyl-Cer(d18:1/16:0),1-O-stearoyl-Cer 18:1;O2/16:0
-1-O-eicosanoyl-Cer(d18:1/16:0),1-O-eicosanoyl-Cer 18:1;O2/16:0
-1-O-behenoyl-Cer(d18:1/16:0),1-O-behenoyl-Cer 18:1;O2/16:0
-1-O-lignoceroyl-Cer(d18:1/16:0),1-O-lignoceroyl-Cer 18:1;O2/16:0
-1-O-cerotoyl-Cer(d18:1/16:0),1-O-cerotoyl-Cer 18:1;O2/16:0
-1-O-carboceroyl-Cer(d18:1/16:0),1-O-carboceroyl-Cer 18:1;O2/16:0
-1-O-tricosanoyl-Cer(d18:1/16:0),1-O-tricosanoyl-Cer 18:1;O2/16:0
-1-O-palmitoyl-Cer(d18:1/18:0),1-O-palmitoyl-Cer 18:1;O2/18:0
-1-O-myristoyl-Cer(d18:1/18:0),1-O-myristoyl-Cer 18:1;O2/18:0
-1-O-stearoyl-Cer(d18:1/18:0),1-O-stearoyl-Cer 18:1;O2/18:0
-1-O-eicosanoyl-Cer(d18:1/18:0),1-O-eicosanoyl-Cer 18:1;O2/18:0
-1-O-behenoyl-Cer(d18:1/18:0),1-O-behenoyl-Cer 18:1;O2/18:0
-1-O-lignoceroyl-Cer(d18:1/18:0),1-O-lignoceroyl-Cer 18:1;O2/18:0
-1-O-cerotoyl-Cer(d18:1/18:0),1-O-cerotoyl-Cer 18:1;O2/18:0
-1-O-carboceroyl-Cer(d18:1/18:0),1-O-carboceroyl-Cer 18:1;O2/18:0
-1-O-tricosanoyl-Cer(d18:1/18:0),1-O-tricosanoyl-Cer 18:1;O2/18:0
+1-O-myristoyl-Cer(d18:1/16:0),ACer(FA 14:0) 18:1;O2/16:0
+1-O-palmitoyl-Cer(d18:1/16:0),ACer(FA 16:0) 18:1;O2/16:0
+1-O-stearoyl-Cer(d18:1/16:0),ACer(FA 18:0) 18:1;O2/16:0
+1-O-eicosanoyl-Cer(d18:1/16:0),ACer(FA 20:0) 18:1;O2/16:0
+1-O-behenoyl-Cer(d18:1/16:0),ACer(FA 22:0) 18:1;O2/16:0
+1-O-lignoceroyl-Cer(d18:1/16:0),ACer(FA 24:0) 18:1;O2/16:0
+1-O-cerotoyl-Cer(d18:1/16:0),ACer(FA 26:0) 18:1;O2/16:0
+1-O-carboceroyl-Cer(d18:1/16:0),ACer(FA 28:0) 18:1;O2/16:0
+1-O-tricosanoyl-Cer(d18:1/16:0),ACer(FA 30:0) 18:1;O2/16:0
+1-O-palmitoyl-Cer(d18:1/18:0),ACer(FA 16:0) 18:1;O2/18:0
+1-O-myristoyl-Cer(d18:1/18:0),ACer(FA 14:0) 18:1;O2/18:0
+1-O-stearoyl-Cer(d18:1/18:0),ACer(FA 18:0) 18:1;O2/18:0
+1-O-eicosanoyl-Cer(d18:1/18:0),ACer(FA 20:0) 18:1;O2/18:0
+1-O-behenoyl-Cer(d18:1/18:0),ACer(FA 22:0) 18:1;O2/18:0
+1-O-lignoceroyl-Cer(d18:1/18:0),ACer(FA 24:0) 18:1;O2/18:0
+1-O-cerotoyl-Cer(d18:1/18:0),ACer(FA 26:0) 18:1;O2/18:0
+1-O-carboceroyl-Cer(d18:1/18:0),ACer(FA 28:0) 18:1;O2/18:0
+1-O-tricosanoyl-Cer(d18:1/18:0),ACer(FA 30:0) 18:1;O2/18:0
 N-Acyl ceramide phosphate,
 CerP(d18:1/12:0),CerP 18:1;O2/12:0
 CerP(d18:1/16:0),CerP 18:1;O2/16:0
@@ -33597,22 +33597,22 @@ SIP(d17:1),SPBP 17:1;O2
 SIP(d17:0),SPBP 17:0;OH
 LysoSM(d18:1),LSM 18:1;O2
 LysoSM(d17:1),LSM 17:1;O2
-1-O-myristoyl-Cer(d34:1),1-O-myristoyl-Cer 34:1;O2
-1-O-palmitoyl-Cer(d34:1),1-O-palmitoyl-Cer 34:1;O2
-1-O-stearoyl-Cer(d34:1),1-O-stearoyl-Cer 34:1;O2
-1-O-eicosanoyl-Cer(d34:1),1-O-eicosanoyl-Cer 34:1;O2
-1-O-behenoyl-Cer(d34:1),1-O-behenoyl-Cer 34:1;O2
-1-O-lignoceroyl-Cer(d34:1),1-O-lignoceroyl-Cer 34:1;O2
-1-O-cerotoyl-Cer(d34:1),1-O-cerotoyl-Cer 34:1;O2
-1-O-carboceroyl-Cer(d34:1),1-O-carboceroyl-Cer 34:1;O2
-1-O-tricosanoyl-Cer(d34:1),1-O-tricosanoyl-Cer 34:1;O2
-1-O-palmitoyl-Cer(d36:1),1-O-palmitoyl-Cer 36:1;O2
-1-O-myristoyl-Cer(d36:1),1-O-myristoyl-Cer 36:1;O2
-1-O-stearoyl-Cer(d36:1),1-O-stearoyl-Cer 36:1;O2
-1-O-eicosanoyl-Cer(d36:1),1-O-eicosanoyl-Cer 36:1;O2
-1-O-behenoyl-Cer(d36:1),1-O-behenoyl-Cer 36:1;O2
-1-O-lignoceroyl-Cer(d36:1),1-O-lignoceroyl-Cer 36:1;O2
-1-O-cerotoyl-Cer(d36:1),1-O-cerotoyl-Cer 36:1;O2
-1-O-carboceroyl-Cer(d36:1),1-O-carboceroyl-Cer 36:1;O2
-1-O-tricosanoyl-Cer(d36:1),1-O-tricosanoyl-Cer 36:1;O2
+1-O-myristoyl-Cer(d34:1),ACer(FA) 48:1;O2
+1-O-palmitoyl-Cer(d34:1),ACer(FA) 50:1;O2
+1-O-stearoyl-Cer(d34:1),ACer(FA) 52:1;O2
+1-O-eicosanoyl-Cer(d34:1),ACer(FA) 54:1;O2
+1-O-behenoyl-Cer(d34:1),ACer(FA) 56:1;O2
+1-O-lignoceroyl-Cer(d34:1),ACer(FA) 58:1;O2
+1-O-cerotoyl-Cer(d34:1),ACer(FA) 60:1;O2
+1-O-carboceroyl-Cer(d34:1),ACer(FA) 62:1;O2
+1-O-tricosanoyl-Cer(d34:1),ACer(FA) 64:1;O2
+1-O-palmitoyl-Cer(d36:1),ACer(FA) 52:1;O2
+1-O-myristoyl-Cer(d36:1),ACer(FA) 50:1;O2
+1-O-stearoyl-Cer(d36:1),ACer(FA) 54:1;O2
+1-O-eicosanoyl-Cer(d36:1),ACer(FA) 56:1;O2
+1-O-behenoyl-Cer(d36:1),ACer(FA) 58:1;O2
+1-O-lignoceroyl-Cer(d36:1),ACer(FA) 60:1;O2
+1-O-cerotoyl-Cer(d36:1),ACer(FA) 62:1;O2
+1-O-carboceroyl-Cer(d36:1),ACer(FA) 64:1;O2
+1-O-tricosanoyl-Cer(d36:1),ACer(FA) 66:1;O2
 Cer(d34:1),Cer 34:1;O2
