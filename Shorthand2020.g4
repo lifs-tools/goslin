@@ -183,19 +183,23 @@ carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'Gl
 
 
 sl : sl_species | sl_subspecies;
-sl_species : sl_hg_double headgroup_separator lcb;
+sl_species : sl_hg_double headgroup_separator lcb | acer_species headgroup_separator lcb;
 sl_subspecies : sl_hg_single headgroup_separator lcb | sl_hg_single sl_hydroxyl headgroup_separator lcb | sl_double;
 sl_double : sl_hg_double headgroup_separator lcb sorted_fa_separator fatty_acyl_chain | sl_hg_double sl_hydroxyl headgroup_separator lcb sorted_fa_separator fatty_acyl_chain;
 sl_hydroxyl : ROB sl_hydroxyl_number RCB;
 sl_hydroxyl_number : number;
 sl_hg_single : 'SPB' | 'SPBP' | 'LIPC' | 'LSM';
-sl_hg_double : sl_hg_double_name | carbohydrate_structural sl_hg_double  | carbohydrate_isomeric sl_hg_double;
+sl_hg_double : acer_hg | sl_hg_double_name | carbohydrate_structural sl_hg_double  | carbohydrate_isomeric sl_hg_double;
 carbohydrate_structural : carbohydrate;
 carbohydrate_isomeric : carbohydrate carbohydrate_separator;
 sl_hg_double_name : 'SM' | 'Cer' | 'CerP' | acer_hg | 'HexCer' | 'GlcCer' | 'GalCer' | 'Hex2Cer' | 'LacCer' | 'SHexCer' | 'IPC' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | 'Hex3Cer' | 'S(3' apostroph ')HexCer' | 'S(3' apostroph ')GalCer';
-acer_hg : acer_hg_pure | acer_med '-' acer_hg_pure;
+acer_hg : acer_hg_pure '(' med ')';
 acer_hg_pure : 'ACer';
+acer_species : 'ACer(FA)';
+/*
+acer_hg : acer_hg_pure | acer_med '-' acer_hg_pure;
 acer_med : med;
+*/
 
 
 
