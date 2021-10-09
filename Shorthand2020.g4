@@ -168,9 +168,9 @@ hg_pip : hg_pip_pure_m | hg_pip_pure_d | hg_pip_pure_t | hg_pip_pure_m ROB hg_pi
 hg_pip_pure_m : 'PIP';
 hg_pip_pure_d : 'PIP2';
 hg_pip_pure_t : 'PIP3';
-hg_pip_m : '3' apostroph | '4' apostroph | '5' apostroph;
-hg_pip_d : '3' apostroph ',4' apostroph | '4' apostroph ',5' apostroph | '3' apostroph ',5' apostroph;
-hg_pip_t : '3' apostroph ',4' apostroph ',5' apostroph;
+hg_pip_m : '3' APOSTROPH | '4' APOSTROPH | '5' APOSTROPH;
+hg_pip_d : '3' APOSTROPH COMMA '4' APOSTROPH | '4' APOSTROPH COMMA '5' APOSTROPH | '3' APOSTROPH COMMA '5' APOSTROPH;
+hg_pip_t : '3' APOSTROPH COMMA '4' APOSTROPH COMMA '5' APOSTROPH;
 hg_pim : 'PIM' hg_pim_number;
 hg_pim_number : number;
 hg_lpim : 'LPIM' hg_lpim_number;
@@ -179,7 +179,7 @@ pl_hg_fa : med;
 pl_hg_alk : fatty_acyl_chain;
 
 
-carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'SHex' | 'S(3' apostroph ')Hex' | 'NAc' | 'Nac' | 'SGal' | 'S(3' apostroph ')Gal' | 'HexA' | 'OGlcNAc' | 'OGlc';
+carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'SHex' | 'S' ROB '3' APOSTROPH RCB 'Hex' | 'NAc' | 'Nac' | 'SGal' | 'S' ROB '3' APOSTROPH RCB 'Gal' | 'HexA' | 'OGlcNAc' | 'OGlc';
 
 
 sl : sl_species | sl_subspecies;
@@ -192,8 +192,8 @@ sl_hg_single : 'SPB' | 'SPBP' | 'LIPC' | 'LSM';
 sl_hg_double : acer_hg | sl_hg_double_name | carbohydrate_structural sl_hg_double  | carbohydrate_isomeric sl_hg_double;
 carbohydrate_structural : carbohydrate;
 carbohydrate_isomeric : carbohydrate carbohydrate_separator;
-sl_hg_double_name : 'SM' | 'Cer' | 'CerP' | acer_hg | 'HexCer' | 'GlcCer' | 'GalCer' | 'Hex2Cer' | 'LacCer' | 'SHexCer' | 'IPC' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | 'Hex3Cer' | 'S(3' apostroph ')HexCer' | 'S(3' apostroph ')GalCer';
-acer_hg : acer_hg_pure '(' med ')';
+sl_hg_double_name : 'SM' | 'Cer' | 'CerP' | acer_hg | 'HexCer' | 'GlcCer' | 'GalCer' | 'Hex2Cer' | 'LacCer' | 'SHexCer' | 'IPC' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | 'Hex3Cer' | 'S' ROB '3' APOSTROPH RCB 'HexCer' | 'S' ROB '3' APOSTROPH RCB 'GalCer';
+acer_hg : acer_hg_pure ROB med RCB;
 acer_hg_pure : 'ACer';
 acer_species : 'ACer(FA)';
 /*
@@ -226,7 +226,7 @@ RCB: ')';
 SOB: '[';
 SCB: ']';
 
-apostroph : '\'' | '′';
+APOSTROPH : '\'' | '′';
 sorted_fa_separator : SLASH;
 adduct_separator : SPACE;
 unsorted_fa_separator : UNDERSCORE;
