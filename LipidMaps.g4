@@ -180,7 +180,7 @@ isomeric_mod : mod_pos mod_text;
 structural_mod : mod_text | mod_text mod_num;
 mod_pos : number;
 mod_num : number;
-mod_text: 'OH' | 'Ke' | 'OOH' | 'My' | 'Me' | 'Br' | 'CHO' | 'COOH' | 'Cp' | 'Ep' | 'KE' | 'NH'  | 'Y';
+mod_text: 'OH' | 'Ke' | 'OOH' | 'My' | 'Me' | 'Br' | 'CHO' | 'COOH' | 'Cp' | 'Ep' | 'KE' | 'NH';
 ether : 'P-' | 'O-';
 stereo : 'R' | 'S';
 fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
