@@ -28,7 +28,7 @@
 grammar LipidMaps;
 
 /* first rule is always start rule */
-lipid : lipid_pure EOF | lipid_pure adduct_info EOF;
+lipid : lipid_rule EOF | lipid_rule adduct_info EOF;
 lipid_rule: lipid_mono | lipid_mono isotope;
 lipid_mono: lipid_pure | lipid_pure isoform;
 lipid_pure: pure_fa | gl | pl | sl | pk | sterol | mediator;
