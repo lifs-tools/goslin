@@ -214,6 +214,7 @@ RCB: ')';
 
 unsorted_fa_separator : UNDERSCORE;
 sorted_fa_separator : SLASH;
+adduct_separator : SPACE;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;
 db_position_separator : COMMA;

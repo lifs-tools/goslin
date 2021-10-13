@@ -227,6 +227,7 @@ SOB: '[';
 SCB: ']';
 
 fa_separator: UNDERSCORE | SLASH | BACKSLASH | DASH;
+adduct_separator : SPACE;
 headgroup_separator: SPACE;
 fa_mod_separator: SPACE;
 carbon_db_separator: COLON;
