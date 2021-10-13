@@ -41,11 +41,9 @@ isotope_element: 'd';
 /* adduct information */
 adduct_info : adduct_sep | adduct_separator adduct_sep;
 adduct_sep : '[M' adduct ']' charge_sign | '[M' adduct ']' charge charge_sign;
-adduct : plus_minus arbitrary_adduct;
-arbitrary_adduct : adduct4 | adduct4 adduct4;
-adduct4 : adduct2 | adduct2 adduct2;
-adduct2 : adduct1 | adduct1 adduct1;
-adduct1 : element | element number;
+adduct : adduct_set;
+adduct_set : adduct_element | adduct_element adduct_set;
+adduct_element : element | element number | number element | plus_minus element | plus_minus element number | plus_minus number element;
 
 
 
