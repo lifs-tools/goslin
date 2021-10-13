@@ -34,8 +34,8 @@ lipid_mono: lipid_pure | lipid_pure isoform;
 lipid_pure: pure_fa | gl | pl | sl | pk | sterol | mediator;
 isoform: square_open_bracket isoform_inner square_close_bracket;
 isoform_inner : 'rac' | 'iso' | 'iso' number | 'R';
-isotope: SPACE round_open_bracket element number round_close_bracket | DASH round_open_bracket element number round_close_bracket | DASH element number;
-element: 'd';
+isotope: SPACE round_open_bracket isotope_element number round_close_bracket | DASH round_open_bracket isotope_element number round_close_bracket | DASH isotope_element number;
+isotope_element: 'd';
 
 
 /* adduct information */
