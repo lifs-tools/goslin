@@ -28,10 +28,18 @@ grammar SwissLipids;
 
 
 /* first rule is always start rule */
-lipid : lipid_pure EOF;
+lipid : lipid_pure EOF | lipid_pure adduct_info EOF;
 lipid_pure : fatty_acid | gl | pl | sl | st;
 
 
+/* adduct information */
+adduct_info : adduct_sep | adduct_separator adduct_sep;
+adduct_sep : '[M' adduct ']' charge_sign | '[M' adduct ']' charge charge_sign;
+adduct : plus_minus arbitrary_adduct;
+arbitrary_adduct : adduct4 | adduct4 adduct4;
+adduct4 : adduct2 | adduct2 adduct2;
+adduct2 : adduct1 | adduct1 adduct1;
+adduct1 : element | element number;
 
 
 /* fatty acyl rules */
@@ -174,10 +182,6 @@ st_sub2 : st_sub2_hg sorted_fa_separator fa RCB;
 st_sub2_hg : 'SE' ROB number COLON number;
 
 
-
-
-
-
 /* separators */
 SPACE : ' ';
 COLON : ':';
@@ -191,6 +195,7 @@ ROB: '(';
 RCB: ')';
 
 unsorted_fa_separator : UNDERSCORE;
+adduct_separator : SPACE;
 sorted_fa_separator : SLASH;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;
@@ -201,3 +206,8 @@ fa_lcb_prefix_separator : DASH;
 
 number :  digit | digit number;
 digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
+
+element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As';
+charge : '1' | '2' | '3' | '4';
+charge_sign : plus_minus;
+plus_minus : '-' | '+';

@@ -22,10 +22,6 @@
  * SOFTWARE.
 */
 
-/* This is a BNF / ANTLR4 grammar for lipid subspecies identifiers following
- * J.K. Pauling et al. 2017, PLoS One, 12(11):e0188394.
- */
-
 grammar Goslin;
 
 
@@ -36,11 +32,13 @@ lipid_pure : gl | pl | sl | sterol | mediatorc | saccharolipid;
 
 
 /* adduct information */
-adduct_info : '[M' adduct ']' charge charge_sign | adduct_separator '[M' adduct ']' charge charge_sign;
-adduct : '+H' | '+2H' | '+NH4' | '-H' | '-2H' | '+HCOO' | '+CH3COO' | charge_sign arbitrary_adduct;
+adduct_info : adduct_sep | adduct_separator adduct_sep;
+adduct_sep : '[M' adduct ']' charge_sign | '[M' adduct ']' charge charge_sign;
+adduct : plus_minus arbitrary_adduct;
 arbitrary_adduct : adduct4 | adduct4 adduct4;
 adduct4 : adduct2 | adduct2 adduct2;
-adduct2 : character | character character;
+adduct2 : adduct1 | adduct1 adduct1;
+adduct1 : element | element number;
 
 fa2 : fa2_unsorted | fa2_sorted;
 fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
@@ -237,7 +235,8 @@ db_position_separator : COMMA;
 round_open_bracket : ROB;
 round_close_bracket : RCB;
 
-character : 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' |'0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
+element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As';
 charge : '1' | '2' | '3' | '4';
-charge_sign : '-' | '+';
+charge_sign : plus_minus;
+plus_minus : '-' | '+';
 
