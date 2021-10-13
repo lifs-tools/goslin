@@ -209,7 +209,6 @@ isotope : '[' isotope_number ']' isotope_element isotope_count | '[' isotope_num
 isotope_number : number;
 isotope_element : element;
 isotope_count : number;
-element : 'C' | 'H' | 'O' | 'N' | 'P' | 'S';
 
 /* separators */
 SPACE : ' ';
