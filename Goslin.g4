@@ -77,10 +77,10 @@ hg_tgl : 'TAG';
 pl : lpl | dpl | tpl | pl_o | cl | mlcl | dlcl;
 pl_o : lpl_o | dpl_o;
 lpl : hg_lplc headgroup_separator fa;
-lpl_o : hg_lpl_oc plasmalogen_separator fa;
+lpl_o : hg_lpl_oc plasmalogen_separator fa | hg_lpl_spec headgroup_separator fa;
 dpl : hg_plc headgroup_separator pl_species | hg_plc headgroup_separator pl_subspecies;
 tpl : hg_tplc headgroup_separator pl_species | hg_tplc headgroup_separator tpl_subspecies;
-dpl_o : hg_pl_oc plasmalogen_separator pl_species | hg_pl_oc plasmalogen_separator pl_subspecies;
+dpl_o : hg_pl_oc plasmalogen_separator pl_species | hg_pl_oc plasmalogen_separator pl_subspecies | hg_pl_spec headgroup_separator pl_species | hg_pl_spec headgroup_separator pl_subspecies;
 dlcl : hg_dlclc headgroup_separator pl_species | hg_dlclc headgroup_separator dlcl_subspecies;
 mlcl : hg_mlclc headgroup_separator pl_species | hg_mlclc headgroup_separator mlcl_subspecies;
 cl : hg_clc headgroup_separator pl_species | hg_clc headgroup_separator cl_subspecies;
@@ -117,11 +117,14 @@ hg_lplc : hg_lpl | hg_lpl heavy_hg;
 hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA' | 'LCDPDAG' | 'LDMPE' | 'LMMPE' | 'LPIMIP' | 'LPIN';
 hg_lpim : 'LPIM' hg_lpim_number;
 hg_lpim_number : number;
+hg_lpl_spec : hg_lpl plasmalogen_separator plasmalogen;
 hg_lpl_oc : hg_lpl_o ' O' | hg_lpl_o heavy_hg ' O';
 hg_lpl_o : hg_lpl;
+hg_pl_spec : hg_pl plasmalogen_separator plasmalogen;
 hg_pl_oc : hg_pl_o ' O' | hg_pl_o heavy_hg ' O';
 hg_pl_o : hg_pl;
 
+plasmalogen : 'O' | 'o' | 'P' | 'p';
 
 
 /* sphingolipid rules (21) */
