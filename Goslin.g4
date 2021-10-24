@@ -185,7 +185,7 @@ fa_pure : carbon carbon_db_separator db | carbon carbon_db_separator db db_hydro
 ether : 'a' | 'p';
 lcb : lcb_pure | lcb_pure heavy_lcb;
 heavy_lcb : heavy;
-lcb_pure : carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | old_hydroxyl carbon carbon_db_separator db;
+lcb_pure : carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | old_hydroxyl carbon carbon_db_separator db | old_hydroxyl SPACE carbon carbon_db_separator db;
 carbon : number;
 db : db_count | db_count db_positions;
 db_count : number;
