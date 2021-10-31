@@ -227,7 +227,7 @@ FRAGMENT_SEPARATOR : ' - ';
 sorted_fa_separator : SLASH | BACKSLASH;
 adduct_separator : SPACE;
 unsorted_fa_separator : DASH | UNDERSCORE;
-plasmalogen_separator : headgroup_separator | DASH;
+plasmalogen_separator : headgroup_separator | DASH | DASH SPACE;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;
 db_hydroxyl_separator : SEMICOLON;
