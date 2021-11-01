@@ -115,7 +115,7 @@ hg_lpl : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA' | 'LCDP
 hg_lpim : 'LPIM' hg_lpim_number;
 hg_lpim_number : number;
 
-plasmalogen_hg : plasmalogen_separator plasmalogen plasmalogen_separator | plasmalogen_separator plasmalogen;
+plasmalogen_hg : plasmalogen_separator plasmalogen plasmalogen_separator | plasmalogen_separator plasmalogen | plasmalogen plasmalogen_separator;
 plasmalogen : 'O' | 'o' | 'P' | 'p';
 
 
@@ -171,7 +171,9 @@ sac_f_subspecies : fa4;
 
 
 /* generic rules */
-fa : fa_pure | fa_pure heavy_fa | fa_pure ether | fa_pure ether heavy_fa;
+fa : fa_ester | fa_ether;
+fa_ester : fa_pure | fa_pure heavy_fa;
+fa_ether : plasmalogen_hg fa_pure | plasmalogen_hg fa_pure ether | fa_pure ether | plasmalogen_hg fa_pure heavy_fa | plasmalogen_hg fa_pure ether heavy_fa | fa_pure ether heavy_fa;
 heavy_fa : heavy;
 fa_pure : carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
 ether : 'a' | 'p';
