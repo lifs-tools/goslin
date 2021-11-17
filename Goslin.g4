@@ -150,12 +150,14 @@ hg_stes : 'ChE' | 'CE';
 
 /* mediator lipids (1 class) */
 mediatorc : mediator | mediator heavy_hg;
-mediator : unstructured_mediator | mediator_functional_group mediator_fa mediator_suffix | mediator_functional_group mediator_fa;
+mediator : unstructured_mediator | trivial_mediator | mediator_functional_group mediator_fa mediator_suffix | mediator_functional_group mediator_fa;
 mediator_fa : mediator_carbon mediator_db;
 mediator_carbon : 'H' | 'O' | 'E' | 'Do';
 mediator_db : 'M' | 'D' | 'Tr' | 'T' | 'P' | 'H';
 mediator_suffix: 'E';
-mediator_functional_group : mediator_full_function | mediator_function_unknown_pos;
+mediator_functional_group : mediator_functional_group_clear | mediator_tetranor mediator_functional_group_clear;
+mediator_tetranor : 'tetranor-';
+mediator_functional_group_clear: mediator_full_function | mediator_function_unknown_pos;
 mediator_function_unknown_pos : mediator_functions;
 mediator_functions : mediator_mono_functions | mediator_di_functions;
 mediator_mono_functions: 'H' | 'Oxo';
@@ -165,7 +167,9 @@ mediator_di_pos: mediator_position ',' mediator_position | mediator_position '_'
 mediator_full_function : mediator_mono_pos '-' mediator_mono_functions | mediator_di_pos '-' mediator_di_functions;
 mediator_position : number;
 
-unstructured_mediator : 'AA' | 'ALA' | 'alpha-LA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'LTB4' | 'LTC4' | 'LTD4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha' | 'PGI2' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'tetranor-12-HETE' | 'TXB1' | 'TXB2' | 'TXB3';
+trivial_mediator : 'AA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'TXB1' | 'TXB2' | 'TXB3' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'LTB4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha';
+
+unstructured_mediator : 'alpha-LA' | 'LTC4' | 'LTD4' | 'PGI2' | 'tetranor-12-HETE';
 
 
 
