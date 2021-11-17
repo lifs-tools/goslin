@@ -7,6 +7,9 @@ Goslin defines multiple grammers compatible with ANTLRv4 for different sources o
 
 [Overview of Goslin and Tutorials](docs/README.adoc)
 
+
+> Goslin 2.0 is currently under development and will support the [updated lipid shorthand nomenclature with new structural levels](https://pubmed.ncbi.nlm.nih.gov/33037133/).
+
 ## Citing Goslin
 If you use Goslin or any of the specific implementations in your work, we kindly ask you to cite:
 
