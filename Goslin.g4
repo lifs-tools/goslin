@@ -150,8 +150,22 @@ hg_stes : 'ChE' | 'CE';
 
 /* mediator lipids (1 class) */
 mediatorc : mediator | mediator heavy_hg;
-mediator : '10-HDoHE' | '11-HDoHE' | '11-HETE' | '11,12-DHET' | '11(12)-EET'| '12-HEPE' | '12-HETE' | '12-HHTrE' | '12-OxoETE' | '12(13)-EpOME' | '13-HODE' | '13-HOTrE' | '14,15-DHET' | '14(15)-EET' | '14(15)-EpETE' | '15-HEPE' | '15-HETE' | '15d-PGJ2' | '16-HDoHE' | '16-HETE' | '18-HEPE' | '5-HEPE' | '5-HETE' | '5-HpETE' | '5-OxoETE' | '5,12-DiHETE' | '5,6-DiHETE' | '5,6,15-LXA4' | '5(6)-EET' | '8-HDoHE' | '8-HETE' | '8,9-DHET' | '8(9)-EET' | '9-HEPE' | '9-HETE' | '9-HODE' | '9-HOTrE' | '9(10)-EpOME' | 'AA' | 'alpha-LA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'LTB4' | 'LTC4' | 'LTD4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha' | 'PGI2' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'tetranor-12-HETE' | 'TXB1' | 'TXB2' | 'TXB3';
+mediator : unstructured_mediator | mediator_functional_group mediator_fa mediator_suffix | mediator_functional_group mediator_fa;
+mediator_fa : mediator_carbon mediator_db;
+mediator_carbon : 'H' | 'O' | 'E' | 'Do';
+mediator_db : 'M' | 'D' | 'Tr' | 'T' | 'P' | 'H';
+mediator_suffix: 'E';
+mediator_functional_group : mediator_full_function | mediator_function_unknown_pos;
+mediator_function_unknown_pos : mediator_functions;
+mediator_functions : mediator_mono_functions | mediator_di_functions;
+mediator_mono_functions: 'H' | 'Oxo';
+mediator_di_functions: 'E' | 'Ep' | 'DH' | 'DiH';
+mediator_mono_pos: mediator_position;
+mediator_di_pos: mediator_position ',' mediator_position | mediator_position '_' mediator_position | mediator_position '(' mediator_position ')';
+mediator_full_function : mediator_mono_pos '-' mediator_mono_functions | mediator_di_pos '-' mediator_di_functions;
+mediator_position : number;
 
+unstructured_mediator : 'AA' | 'ALA' | 'alpha-LA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'LTB4' | 'LTC4' | 'LTD4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha' | 'PGI2' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'tetranor-12-HETE' | 'TXB1' | 'TXB2' | 'TXB3';
 
 
 
