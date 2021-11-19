@@ -36,11 +36,12 @@ lipid_pure : gl | pl | sl | sterol | med; /* glycero lipids, phospho lipids, sph
 
 
 /* adduct information */
-adduct_info : adduct_sep | adduct_separator adduct_sep;
-adduct_sep : '[M' adduct ']' charge_sign | '[M' adduct ']' charge charge_sign;
-adduct : adduct_set;
-adduct_set : adduct_element | adduct_element adduct_set;
-adduct_element : element | element number | number element | plus_minus element | plus_minus element number | plus_minus number element;
+adduct_info : '[M' adduct ']' charge charge_sign | adduct_separator '[M' adduct ']' charge charge_sign;
+adduct : '+H' | '+2H' | '+NH4' | '-H' | '-2H' | '+HCOO' | '+CH3COO' | charge_sign arbitrary_adduct;
+arbitrary_adduct : adduct4 | adduct4 adduct4;
+adduct4 : adduct2 | adduct2 adduct2;
+adduct2 : character | character character;
+
 
 
 /* mediators */
@@ -167,9 +168,9 @@ hg_pip : hg_pip_pure_m | hg_pip_pure_d | hg_pip_pure_t | hg_pip_pure_m ROB hg_pi
 hg_pip_pure_m : 'PIP';
 hg_pip_pure_d : 'PIP2';
 hg_pip_pure_t : 'PIP3';
-hg_pip_m : '3' APOSTROPH | '4' APOSTROPH | '5' APOSTROPH;
-hg_pip_d : '3' APOSTROPH COMMA '4' APOSTROPH | '4' APOSTROPH COMMA '5' APOSTROPH | '3' APOSTROPH COMMA '5' APOSTROPH;
-hg_pip_t : '3' APOSTROPH COMMA '4' APOSTROPH COMMA '5' APOSTROPH;
+hg_pip_m : '3' apostroph | '4' apostroph | '5' apostroph;
+hg_pip_d : '3' apostroph ',4' apostroph | '4' apostroph ',5' apostroph | '3' apostroph ',5' apostroph;
+hg_pip_t : '3' apostroph ',4' apostroph ',5' apostroph;
 hg_pim : 'PIM' hg_pim_number;
 hg_pim_number : number;
 hg_lpim : 'LPIM' hg_lpim_number;
@@ -178,34 +179,31 @@ pl_hg_fa : med;
 pl_hg_alk : fatty_acyl_chain;
 
 
-carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'SHex' | 'S' ROB '3' APOSTROPH RCB 'Hex' | 'NAc' | 'Nac' | 'SGal' | 'S' ROB '3' APOSTROPH RCB 'Gal' | 'HexA' | 'OGlcNAc' | 'OGlc';
+carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'SHex' | 'S(3' apostroph ')Hex' | 'NAc' | 'Nac' | 'SGal' | 'S(3' apostroph ')Gal' | 'HexA' | 'OGlcNAc' | 'OGlc';
 
 
 sl : sl_species | sl_subspecies;
-sl_species : sl_hg_double headgroup_separator lcb | acer_species headgroup_separator lcb;
+sl_species : sl_hg_double headgroup_separator lcb;
 sl_subspecies : sl_hg_single headgroup_separator lcb | sl_hg_single sl_hydroxyl headgroup_separator lcb | sl_double;
 sl_double : sl_hg_double headgroup_separator lcb sorted_fa_separator fatty_acyl_chain | sl_hg_double sl_hydroxyl headgroup_separator lcb sorted_fa_separator fatty_acyl_chain;
 sl_hydroxyl : ROB sl_hydroxyl_number RCB;
 sl_hydroxyl_number : number;
 sl_hg_single : 'SPB' | 'SPBP' | 'LIPC' | 'LSM';
-sl_hg_double : acer_hg | sl_hg_double_name | carbohydrate_structural sl_hg_double  | carbohydrate_isomeric sl_hg_double;
+sl_hg_double : sl_hg_double_name | carbohydrate_structural sl_hg_double  | carbohydrate_isomeric sl_hg_double;
 carbohydrate_structural : carbohydrate;
 carbohydrate_isomeric : carbohydrate carbohydrate_separator;
-sl_hg_double_name : 'SM' | 'Cer' | 'CerP' | acer_hg | 'HexCer' | 'GlcCer' | 'GalCer' | 'Hex2Cer' | 'LacCer' | 'SHexCer' | 'IPC' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | 'Hex3Cer' | 'S' ROB '3' APOSTROPH RCB 'HexCer' | 'S' ROB '3' APOSTROPH RCB 'GalCer';
-acer_hg : acer_hg_pure ROB med RCB;
-acer_hg_pure : 'ACer';
-acer_species : 'ACer(FA)';
-/*
+sl_hg_double_name : 'SM' | 'Cer' | 'CerP' | acer_hg | 'HexCer' | 'GlcCer' | 'GalCer' | 'Hex2Cer' | 'LacCer' | 'SHexCer' | 'IPC' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | 'Hex3Cer' | 'S(3' apostroph ')HexCer' | 'S(3' apostroph ')GalCer';
 acer_hg : acer_hg_pure | acer_med '-' acer_hg_pure;
+acer_hg_pure : 'ACer';
 acer_med : med;
-*/
 
 
 
 /* sterol lipids */
 sterol : st | st_ester;
-st : st_hg headgroup_separator fatty_acyl_chain;
-st_ester : st_hg_ester headgroup_separator fatty_acyl_chain sorted_fa_separator fatty_acyl_chain;
+st : st_hg headgroup_separator sterol_definition;
+st_ester : st_hg_ester headgroup_separator sterol_definition sorted_fa_separator fatty_acyl_chain;
+sterol_definition : fatty_acyl_chain;
 st_hg : 'ST' | 'BA' | 'FC' | 'CE' | 'SG' | 'ASG';
 st_hg_ester : 'SE';
 
@@ -225,7 +223,7 @@ RCB: ')';
 SOB: '[';
 SCB: ']';
 
-APOSTROPH : '\'' | '′';
+apostroph : '\'' | '′';
 sorted_fa_separator : SLASH;
 adduct_separator : SPACE;
 unsorted_fa_separator : UNDERSCORE;
@@ -244,7 +242,6 @@ round_close_bracket : RCB;
 number :  digit | digit number;
 digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 
-element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As';
+character : 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z' | 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z' |'0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 charge : '1' | '2' | '3' | '4';
-charge_sign : plus_minus;
-plus_minus : '-' | '+';
+charge_sign : '-' | '+';
