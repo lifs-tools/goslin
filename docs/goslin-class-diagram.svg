@@ -1,0 +1,4420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   contentScriptType="application/ecmascript"
+   contentStyleType="text/css"
+   height="2561.605"
+   preserveAspectRatio="none"
+   version="1.1"
+   viewBox="0 0 2304.5161 2561.605"
+   width="2304.5161"
+   zoomAndPan="magnify"
+   id="svg1277"
+   sodipodi:docname="goslin-class-diagram.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
+  <metadata
+     id="metadata1281">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3440"
+     inkscape:window-height="1376"
+     id="namedview1279"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.37534791"
+     inkscape:cx="1213.5649"
+     inkscape:cy="1198.0733"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1277" />
+  <defs
+     id="defs11">
+    <filter
+       height="3"
+       id="f10r09f1srl4h"
+       width="3"
+       x="-1"
+       y="-1">
+      <feGaussianBlur
+         result="blurOut"
+         stdDeviation="2.0"
+         id="feGaussianBlur2" />
+      <feColorMatrix
+         in="blurOut"
+         result="blurOut2"
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"
+         id="feColorMatrix4" />
+      <feOffset
+         dx="4.0"
+         dy="4.0"
+         in="blurOut2"
+         result="blurOut3"
+         id="feOffset6" />
+      <feBlend
+         in="SourceGraphic"
+         in2="blurOut3"
+         mode="normal"
+         id="feBlend8" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter3481">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood3471" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite3473" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="2"
+         result="blur"
+         id="feGaussianBlur3475" />
+      <feOffset
+         dx="5"
+         dy="5"
+         result="offset"
+         id="feOffset3477" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite3479" />
+    </filter>
+  </defs>
+  <line
+     id="line15"
+     y2="17.938519"
+     y1="17.938519"
+     x2="249.01619"
+     x1="24.016193"
+     style="stroke:#000000;stroke-width:1.5" />
+  <text
+     style="font-weight:bold;font-size:14px;font-family:sans-serif;fill:#000000"
+     id="text17"
+     y="20.9951"
+     x="20"
+     textLength="212"
+     lengthAdjust="spacing"
+     font-weight="bold"
+     font-size="14"
+     transform="translate(8.0161934,-10.358381)">org.lifstools.jgoslin.domain</text>
+  <rect
+     y="1217.6416"
+     x="1383.5162"
+     width="357"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.Adduct"
+     height="150.4375"
+     codeLine="10" />
+  <circle
+     r="11"
+     id="ellipse47"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="1233.6416"
+     cx="1535.7662" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path49"
+     d="m 1538.735,1239.2822 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text51"
+     y="1248.1543"
+     x="1548.25"
+     textLength="44"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">Adduct</text>
+  <line
+     id="line53"
+     y2="1249.6416"
+     y1="1249.6416"
+     x2="1739.5162"
+     x1="1384.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse55"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1260.6416"
+     cx="1394.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000"
+     id="text57"
+     y="1274.2104"
+     x="1395.5"
+     textLength="137"
+     text-decoration="underline"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">ADDUCTS : java.util.Map</text>
+  <circle
+     r="3"
+     id="ellipse59"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1273.4463"
+     cx="1394.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000"
+     id="text61"
+     y="1287.0151"
+     x="1395.5"
+     textLength="189"
+     text-decoration="underline"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">ADDUCT_CHARGES : java.util.Map</text>
+  <circle
+     r="3"
+     id="ellipse63"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1286.251"
+     cx="1394.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text65"
+     y="1299.8198"
+     x="1395.5"
+     textLength="118"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">adductString : String</text>
+  <circle
+     r="3"
+     id="ellipse67"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1299.0557"
+     cx="1394.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text69"
+     y="1312.6245"
+     x="1395.5"
+     textLength="65"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">charge : int</text>
+  <circle
+     r="3"
+     id="ellipse71"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1311.8604"
+     cx="1394.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text73"
+     y="1325.4292"
+     x="1395.5"
+     textLength="90"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">chargeSign : int</text>
+  <circle
+     r="3"
+     id="ellipse75"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1324.665"
+     cx="1394.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text77"
+     y="1338.2339"
+     x="1395.5"
+     textLength="117"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">sumFormula : String</text>
+  <line
+     id="line79"
+     y2="1334.4697"
+     y1="1334.4697"
+     x2="1739.5162"
+     x1="1384.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse81"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1345.4697"
+     cx="1394.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text83"
+     y="1359.0386"
+     x="1395.5"
+     textLength="331"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+  <circle
+     r="3"
+     id="ellipse85"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1358.2744"
+     cx="1394.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text87"
+     y="1371.8433"
+     x="1395.5"
+     textLength="136"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getLipidString () : String</text>
+  <rect
+     y="1761.6416"
+     x="1255.0162"
+     width="732"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.Cycle"
+     height="176.04691"
+     codeLine="32" />
+  <circle
+     r="11"
+     id="ellipse120"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="1777.6416"
+     cx="1600.7662" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path122"
+     d="m 1603.735,1783.2822 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text124"
+     y="1792.1543"
+     x="1613.25"
+     textLength="32"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">Cycle</text>
+  <line
+     id="line126"
+     y2="1793.6416"
+     y1="1793.6416"
+     x2="1986.0162"
+     x1="1256.0162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse128"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1804.6416"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text130"
+     y="1818.2104"
+     x="1267"
+     textLength="54"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">cycle : int</text>
+  <circle
+     r="3"
+     id="ellipse132"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1817.4463"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text134"
+     y="1831.0151"
+     x="1267"
+     textLength="47"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">end : int</text>
+  <circle
+     r="3"
+     id="ellipse136"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1830.251"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text138"
+     y="1843.8198"
+     x="1267"
+     textLength="53"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">start : int</text>
+  <line
+     id="line140"
+     y2="1840.0557"
+     y1="1840.0557"
+     x2="1986.0162"
+     x1="1256.0162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse142"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1851.0557"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text144"
+     y="1864.6245"
+     x="1267"
+     textLength="205"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">addPosition ( paramint1 : int ) : void</text>
+  <circle
+     r="3"
+     id="ellipse146"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1863.8604"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text148"
+     y="1877.4292"
+     x="1267"
+     textLength="149"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">computeElements () : void</text>
+  <circle
+     r="3"
+     id="ellipse150"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1876.665"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text152"
+     y="1890.2339"
+     x="1267"
+     textLength="301"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">copy () : org.lifstools.jgoslin.domain.FunctionalGroup</text>
+  <circle
+     r="3"
+     id="ellipse154"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1889.4697"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text156"
+     y="1903.0386"
+     x="1267"
+     textLength="139"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getNDoubleBonds () : int</text>
+  <circle
+     r="3"
+     id="ellipse158"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1902.2744"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text160"
+     y="1915.8433"
+     x="1267"
+     textLength="706"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">rearrangeFunctionalGroups ( paramFunctionalGroup1 : org.lifstools.jgoslin.domain.FunctionalGroup , paramint2 : int ) : void</text>
+  <circle
+     r="3"
+     id="ellipse162"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1915.0791"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text164"
+     y="1928.6479"
+     x="1267"
+     textLength="216"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">shiftPositions ( paramint1 : int ) : void</text>
+  <circle
+     r="3"
+     id="ellipse166"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1927.8838"
+     cx="1266.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text168"
+     y="1941.4526"
+     x="1267"
+     textLength="436"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  <rect
+     y="2331.6416"
+     x="264.5162"
+     width="567"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.ElementTable"
+     height="150.4375"
+     codeLine="80" />
+  <circle
+     r="11"
+     id="ellipse276"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="2347.6416"
+     cx="501.2662" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path278"
+     d="m 504.23499,2353.2822 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text280"
+     y="2362.1543"
+     x="513.75"
+     textLength="85"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">ElementTable</text>
+  <line
+     id="line282"
+     y2="2363.6416"
+     y1="2363.6416"
+     x2="830.51617"
+     x1="265.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <line
+     id="line284"
+     y2="2371.6416"
+     y1="2371.6416"
+     x2="830.51617"
+     x1="265.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse286"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2382.6416"
+     cx="275.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text288"
+     y="2396.2104"
+     x="276.5"
+     textLength="445"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">add ( paramElementTable1 : org.lifstools.jgoslin.domain.ElementTable ) : void</text>
+  <circle
+     r="3"
+     id="ellipse290"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2395.4463"
+     cx="275.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text292"
+     y="2409.0151"
+     x="276.5"
+     textLength="541"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">add ( paramElementTable1 : org.lifstools.jgoslin.domain.ElementTable , paramint2 : int ) : void</text>
+  <circle
+     r="3"
+     id="ellipse294"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2408.251"
+     cx="275.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text296"
+     y="2421.8198"
+     x="276.5"
+     textLength="286"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">copy () : org.lifstools.jgoslin.domain.ElementTable</text>
+  <circle
+     r="3"
+     id="ellipse298"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2421.0557"
+     cx="275.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text300"
+     y="2434.6245"
+     x="276.5"
+     textLength="251"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getChargedMass ( paramint1 : int ) : Double</text>
+  <circle
+     r="3"
+     id="ellipse302"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2433.8604"
+     cx="275.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text304"
+     y="2447.4292"
+     x="276.5"
+     textLength="111"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getMass () : Double</text>
+  <circle
+     r="3"
+     id="ellipse306"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2446.665"
+     cx="275.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text308"
+     y="2460.2339"
+     x="276.5"
+     textLength="426"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getMass ( paramElement1 : org.lifstools.jgoslin.domain.Element ) : Double</text>
+  <circle
+     r="3"
+     id="ellipse310"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2459.4697"
+     cx="275.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text312"
+     y="2473.0386"
+     x="276.5"
+     textLength="148"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getSumFormula () : String</text>
+  <circle
+     r="3"
+     id="ellipse314"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2472.2744"
+     cx="275.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000"
+     id="text316"
+     y="2485.8433"
+     x="276.5"
+     textLength="519"
+     text-decoration="underline"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">of ( paramMap$Entry;1 : [Ljava.util.Map$Entry; ) : org.lifstools.jgoslin.domain.ElementTable</text>
+  <g
+     id="g2879"
+     transform="translate(-1843.5993,130.95518)">
+    <rect
+       codeLine="57"
+       height="291.28909"
+       id="org.lifstools.jgoslin.domain.Element"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="83"
+       x="1891.5"
+       y="41" />
+    <circle
+       cx="1906.5"
+       cy="57"
+       style="fill:#eb937f;stroke:#a80036;stroke-width:1"
+       id="ellipse205"
+       r="11" />
+    <path
+       d="m 1910.6094,63 h -7.7188 V 50.6094 h 7.7188 v 2.1562 h -5.2656 v 2.6719 h 4.7656 v 2.1563 h -4.7656 v 3.25 h 5.2656 z"
+       id="path207"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="51"
+       x="1920.5"
+       y="61.154301"
+       id="text209"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">Element</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="1892.5"
+       x2="1973.5"
+       y1="73"
+       y2="73"
+       id="line211" />
+    <circle
+       cx="1902.5"
+       cy="84"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse213"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="14"
+       x="1911.5"
+       y="87.210403"
+       id="text215"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">As</text>
+    <circle
+       cx="1902.5"
+       cy="96.804703"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse217"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="13"
+       x="1911.5"
+       y="100.0151"
+       id="text219"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">Br</text>
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="17"
+       x="1911.5"
+       y="112.8198"
+       id="text221"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">+C</text>
+    <circle
+       cx="1902.5"
+       cy="122.4141"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse223"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="22"
+       x="1911.5"
+       y="125.6245"
+       id="text225"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">C13</text>
+    <circle
+       cx="1902.5"
+       cy="135.2188"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse227"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="11"
+       x="1911.5"
+       y="138.4292"
+       id="text229"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">Cl</text>
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="15"
+       x="1911.5"
+       y="151.2339"
+       id="text231"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">+F</text>
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="17"
+       x="1911.5"
+       y="164.0386"
+       id="text233"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">+H</text>
+    <circle
+       cx="1902.5"
+       cy="173.6328"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse235"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="15"
+       x="1911.5"
+       y="176.84331"
+       id="text237"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">H2</text>
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="12"
+       x="1911.5"
+       y="189.6479"
+       id="text239"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">+I</text>
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="17"
+       x="1911.5"
+       y="202.45261"
+       id="text241"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">+N</text>
+    <circle
+       cx="1902.5"
+       cy="212.04691"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse243"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="22"
+       x="1911.5"
+       y="215.25729"
+       id="text245"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">N15</text>
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="18"
+       x="1911.5"
+       y="228.062"
+       id="text247"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">+O</text>
+    <circle
+       cx="1902.5"
+       cy="237.6563"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse249"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="23"
+       x="1911.5"
+       y="240.8667"
+       id="text251"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">O17</text>
+    <circle
+       cx="1902.5"
+       cy="250.46091"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse253"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="23"
+       x="1911.5"
+       y="253.6714"
+       id="text255"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">O18</text>
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="16"
+       x="1911.5"
+       y="266.4761"
+       id="text257"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">+P</text>
+    <circle
+       cx="1902.5"
+       cy="276.07031"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse259"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="21"
+       x="1911.5"
+       y="279.28079"
+       id="text261"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">P32</text>
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="17"
+       x="1911.5"
+       y="292.08539"
+       id="text263"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">+S</text>
+    <circle
+       cx="1902.5"
+       cy="301.67969"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse265"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="22"
+       x="1911.5"
+       y="304.89011"
+       id="text267"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">S33</text>
+    <circle
+       cx="1902.5"
+       cy="314.48441"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse269"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="22"
+       x="1911.5"
+       y="317.69479"
+       id="text271"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">S34</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="1892.5"
+       x2="1973.5"
+       y1="324.28909"
+       y2="324.28909"
+       id="line273" />
+    <rect
+       codeLine="92"
+       height="112.0234"
+       id="org.lifstools.jgoslin.domain.Elements"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="231"
+       x="2009.5"
+       y="130.5" />
+    <circle
+       cx="2091.75"
+       cy="146.5"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse319"
+       r="11" />
+    <path
+       d="m 2094.7188,152.1406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path321"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="58"
+       x="2112.25"
+       y="150.6543"
+       id="text323"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">Elements</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="2010.5"
+       x2="2239.5"
+       y1="162.5"
+       y2="162.5"
+       id="line325" />
+    <circle
+       cx="2020.5"
+       cy="173.5"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse327"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="182"
+       x="2029.5"
+       y="176.7104"
+       id="text329"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">ELECTRON_REST_MASS : double</text>
+    <circle
+       cx="2020.5"
+       cy="186.3047"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse331"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="187"
+       x="2029.5"
+       y="189.51511"
+       id="text333"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">ELEMENT_MASSES : java.util.Map</text>
+    <circle
+       cx="2020.5"
+       cy="199.10941"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse335"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="205"
+       x="2029.5"
+       y="202.31979"
+       id="text337"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">ELEMENT_ORDER : java.util.ArrayList</text>
+    <circle
+       cx="2020.5"
+       cy="211.91409"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse339"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="202"
+       x="2029.5"
+       y="215.1245"
+       id="text341"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">ELEMENT_POSITIONS : java.util.Map</text>
+    <circle
+       cx="2020.5"
+       cy="224.7188"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse343"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="202"
+       x="2029.5"
+       y="227.9292"
+       id="text345"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">ELEMENT_SHORTCUT : java.util.Map</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="2010.5"
+       x2="2239.5"
+       y1="234.52341"
+       y2="234.52341"
+       id="line347" />
+  </g>
+  <rect
+     y="1768.1416"
+     x="394.0162"
+     width="632"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.FattyAcid"
+     height="163.2422"
+     codeLine="101" />
+  <circle
+     r="11"
+     id="ellipse350"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="1784.1416"
+     cx="677.26617" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path352"
+     d="m 680.23499,1789.7822 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text354"
+     y="1798.6543"
+     x="689.75"
+     textLength="57"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">FattyAcid</text>
+  <line
+     id="line356"
+     y2="1800.1416"
+     y1="1800.1416"
+     x2="1025.0162"
+     x1="395.0162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse358"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1811.1416"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text360"
+     y="1824.7104"
+     x="406"
+     textLength="92"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">numCarbon : int</text>
+  <line
+     id="line362"
+     y2="1820.9463"
+     y1="1820.9463"
+     x2="1025.0162"
+     x1="395.0162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse364"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1831.9463"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text366"
+     y="1845.5151"
+     x="406"
+     textLength="149"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">computeElements () : void</text>
+  <circle
+     r="3"
+     id="ellipse368"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1844.751"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text370"
+     y="1858.3198"
+     x="406"
+     textLength="301"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">copy () : org.lifstools.jgoslin.domain.FunctionalGroup</text>
+  <circle
+     r="3"
+     id="ellipse372"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1857.5557"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text374"
+     y="1871.1245"
+     x="406"
+     textLength="423"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getFunctionalGroupElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+  <circle
+     r="3"
+     id="ellipse376"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1870.3604"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text378"
+     y="1883.9292"
+     x="406"
+     textLength="139"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getNDoubleBonds () : int</text>
+  <circle
+     r="3"
+     id="ellipse380"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1883.165"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text382"
+     y="1896.7339"
+     x="406"
+     textLength="521"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getPrefix ( paramLipidFaBondType1 : org.lifstools.jgoslin.domain.LipidFaBondType ) : String</text>
+  <circle
+     r="3"
+     id="ellipse384"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1895.9697"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text386"
+     y="1909.5386"
+     x="406"
+     textLength="606"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">lipidFaBondTypePrefix ( paramLipidFaBondType1 : org.lifstools.jgoslin.domain.LipidFaBondType ) : boolean</text>
+  <circle
+     r="3"
+     id="ellipse388"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1908.7744"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text390"
+     y="1922.3433"
+     x="406"
+     textLength="505"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">setType ( paramLipidFaBondType1 : org.lifstools.jgoslin.domain.LipidFaBondType ) : void</text>
+  <circle
+     r="3"
+     id="ellipse392"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1921.5791"
+     cx="405.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text394"
+     y="1935.1479"
+     x="406"
+     textLength="436"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  <rect
+     y="1527.6416"
+     x="1541.0162"
+     width="462"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.HeadgroupDecorator"
+     height="73.609398"
+     codeLine="156" />
+  <circle
+     r="11"
+     id="ellipse550"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="1543.6416"
+     cx="1701.2662" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path552"
+     d="m 1704.235,1549.2822 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text554"
+     y="1558.1543"
+     x="1713.75"
+     textLength="133"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">HeadgroupDecorator</text>
+  <line
+     id="line556"
+     y2="1559.6416"
+     y1="1559.6416"
+     x2="2002.0162"
+     x1="1542.0162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <line
+     id="line558"
+     y2="1567.6416"
+     y1="1567.6416"
+     x2="2002.0162"
+     x1="1542.0162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse560"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1578.6416"
+     cx="1552.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text562"
+     y="1592.2104"
+     x="1553"
+     textLength="301"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">copy () : org.lifstools.jgoslin.domain.FunctionalGroup</text>
+  <circle
+     r="3"
+     id="ellipse564"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1591.4463"
+     cx="1552.0162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text566"
+     y="1605.0151"
+     x="1553"
+     textLength="436"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  <rect
+     y="913.6416"
+     x="1314.5162"
+     width="495"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.LipidAdduct"
+     height="227.26559"
+     codeLine="168" />
+  <circle
+     r="11"
+     id="ellipse588"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="929.6416"
+     cx="1521.7662" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path590"
+     d="m 1524.735,935.28222 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text592"
+     y="944.1543"
+     x="1534.25"
+     textLength="72"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">LipidAdduct</text>
+  <line
+     id="line594"
+     y2="945.6416"
+     y1="945.6416"
+     x2="1808.5162"
+     x1="1315.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <line
+     id="line596"
+     y2="953.6416"
+     y1="953.6416"
+     x2="1808.5162"
+     x1="1315.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse598"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="964.6416"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text600"
+     y="978.21039"
+     x="1326.5"
+     textLength="141"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getClassName () : String</text>
+  <circle
+     r="3"
+     id="ellipse602"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="977.44629"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text604"
+     y="991.01508"
+     x="1326.5"
+     textLength="331"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+  <circle
+     r="3"
+     id="ellipse606"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="990.25098"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text608"
+     y="1003.8198"
+     x="1326.5"
+     textLength="160"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getExtendedClass () : String</text>
+  <circle
+     r="3"
+     id="ellipse610"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1003.0557"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text612"
+     y="1016.6245"
+     x="1326.5"
+     textLength="311"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel</text>
+  <circle
+     r="3"
+     id="ellipse614"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1015.8604"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text616"
+     y="1029.4292"
+     x="1326.5"
+     textLength="136"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getLipidString () : String</text>
+  <circle
+     r="3"
+     id="ellipse618"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1028.665"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text620"
+     y="1042.2339"
+     x="1326.5"
+     textLength="469"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  <circle
+     r="3"
+     id="ellipse622"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1041.4697"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text624"
+     y="1055.0386"
+     x="1326.5"
+     textLength="110"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getMass () : double</text>
+  <circle
+     r="3"
+     id="ellipse626"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1054.2744"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text628"
+     y="1067.8433"
+     x="1326.5"
+     textLength="148"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getSumFormula () : String</text>
+  <circle
+     r="3"
+     id="ellipse630"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1067.0791"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text632"
+     y="1080.6479"
+     x="1326.5"
+     textLength="142"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">isCardioLipin () : boolean</text>
+  <circle
+     r="3"
+     id="ellipse634"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1079.8838"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text636"
+     y="1093.4526"
+     x="1326.5"
+     textLength="159"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">isContainsEster () : boolean</text>
+  <circle
+     r="3"
+     id="ellipse638"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1092.6885"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text640"
+     y="1106.2573"
+     x="1326.5"
+     textLength="163"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">isContainsSugar () : boolean</text>
+  <circle
+     r="3"
+     id="ellipse642"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1105.4932"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text644"
+     y="1119.062"
+     x="1326.5"
+     textLength="105"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">isLyso () : boolean</text>
+  <circle
+     r="3"
+     id="ellipse646"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1118.2979"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text648"
+     y="1131.8667"
+     x="1326.5"
+     textLength="148"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">isSpException () : boolean</text>
+  <circle
+     r="3"
+     id="ellipse650"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1131.1025"
+     cx="1325.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text652"
+     y="1144.6714"
+     x="1326.5"
+     textLength="103"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">toString () : String</text>
+  <rect
+     y="1495.6416"
+     x="570.51617"
+     width="181"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.LipidClassMeta"
+     height="137.6328"
+     codeLine="199" />
+  <circle
+     r="11"
+     id="ellipse702"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="1511.6416"
+     cx="611.1662" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path704"
+     d="m 614.13499,1517.2822 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text706"
+     y="1526.1543"
+     x="622.84998"
+     textLength="92"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">LipidClassMeta</text>
+  <line
+     id="line708"
+     y2="1527.6416"
+     y1="1527.6416"
+     x2="750.51617"
+     x1="571.51617"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse710"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1538.6416"
+     cx="581.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text712"
+     y="1552.2104"
+     x="582.5"
+     textLength="109"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">description : String</text>
+  <circle
+     r="3"
+     id="ellipse714"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1551.4463"
+     cx="581.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text716"
+     y="1565.0151"
+     x="582.5"
+     textLength="134"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">lipidClassName : String</text>
+  <circle
+     r="3"
+     id="ellipse718"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1564.251"
+     cx="581.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text720"
+     y="1577.8198"
+     x="582.5"
+     textLength="89"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">maxNumFa : int</text>
+  <circle
+     r="3"
+     id="ellipse722"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1577.0557"
+     cx="581.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text724"
+     y="1590.6245"
+     x="582.5"
+     textLength="113"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">possibleNumFa : int</text>
+  <circle
+     r="3"
+     id="ellipse726"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1589.8604"
+     cx="581.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text728"
+     y="1603.4292"
+     x="582.5"
+     textLength="155"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">specialCases : java.util.Set</text>
+  <circle
+     r="3"
+     id="ellipse730"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1602.665"
+     cx="581.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text732"
+     y="1616.2339"
+     x="582.5"
+     textLength="138"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">synonyms : java.util.List</text>
+  <line
+     id="line734"
+     y2="1612.4697"
+     y1="1612.4697"
+     x2="750.51617"
+     x1="571.51617"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse736"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1623.4697"
+     cx="581.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text738"
+     y="1637.0386"
+     x="582.5"
+     textLength="141"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getClassName () : String</text>
+  <g
+     id="g3082"
+     transform="translate(-35.564618,39.641619)">
+    <rect
+       codeLine="216"
+       height="86.414101"
+       id="org.lifstools.jgoslin.domain.LipidCompleteStructure"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="495"
+       x="783.08081"
+       y="135.02258" />
+    <circle
+       cx="953.33081"
+       cy="151.02258"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse760"
+       r="11" />
+    <path
+       d="m 956.29961,156.66318 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path762"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       transform="translate(-447.41919,-8.4774163)"
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="146"
+       x="1421.25"
+       y="163.6543"
+       id="text764"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">LipidCompleteStructure</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="784.08081"
+       x2="1277.0808"
+       y1="167.02258"
+       y2="167.02258"
+       id="line766" />
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="784.08081"
+       x2="1277.0808"
+       y1="175.02258"
+       y2="175.02258"
+       id="line768" />
+    <circle
+       cx="794.08081"
+       cy="186.02258"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse770"
+       r="3" />
+    <text
+       transform="translate(-447.41919,-8.4774163)"
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="311"
+       x="1250.5"
+       y="197.7104"
+       id="text772"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel</text>
+    <circle
+       cx="794.08081"
+       cy="198.82729"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse774"
+       r="3" />
+    <text
+       transform="translate(-447.41919,-8.4774163)"
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="136"
+       x="1250.5"
+       y="210.51511"
+       id="text776"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString () : String</text>
+    <circle
+       cx="794.08081"
+       cy="211.63199"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse778"
+       r="3" />
+    <text
+       transform="translate(-447.41919,-8.4774163)"
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="469"
+       x="1250.5"
+       y="223.31979"
+       id="text780"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  </g>
+  <rect
+     y="2053.1416"
+     x="434.5162"
+     width="141"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.LipidFaBondType"
+     height="163.2422"
+     codeLine="227" />
+  <circle
+     r="11"
+     id="ellipse794"
+     style="fill:#eb937f;stroke:#a80036;stroke-width:1"
+     cy="2069.1416"
+     cx="451.7662" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path796"
+     d="m 455.87559,2075.1416 h -7.7188 v -12.3906 h 7.7188 v 2.1562 h -5.2656 v 2.6719 h 4.7656 v 2.1563 h -4.7656 v 3.25 h 5.2656 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text798"
+     y="2083.6543"
+     x="458.25"
+     textLength="104"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">LipidFaBondType</text>
+  <line
+     id="line800"
+     y2="2085.1416"
+     y1="2085.1416"
+     x2="574.51617"
+     x1="435.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse802"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2096.1416"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text804"
+     y="2109.7104"
+     x="446.5"
+     textLength="34"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">AMINE</text>
+  <circle
+     r="3"
+     id="ellipse806"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2108.9463"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text808"
+     y="2122.5151"
+     x="446.5"
+     textLength="36"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">ESTER</text>
+  <circle
+     r="3"
+     id="ellipse810"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2121.751"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text812"
+     y="2135.3198"
+     x="446.5"
+     textLength="107"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">ETHER_PLASMANYL</text>
+  <circle
+     r="3"
+     id="ellipse814"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2134.5557"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text816"
+     y="2148.1245"
+     x="446.5"
+     textLength="107"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">ETHER_PLASMENYL</text>
+  <circle
+     r="3"
+     id="ellipse818"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2147.3604"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text820"
+     y="2160.9292"
+     x="446.5"
+     textLength="115"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">ETHER_UNSPECIFIED</text>
+  <circle
+     r="3"
+     id="ellipse822"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2160.165"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text824"
+     y="2173.7339"
+     x="446.5"
+     textLength="91"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">LCB_EXCEPTION</text>
+  <circle
+     r="3"
+     id="ellipse826"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2172.9697"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text828"
+     y="2186.5386"
+     x="446.5"
+     textLength="79"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">LCB_REGULAR</text>
+  <circle
+     r="3"
+     id="ellipse830"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2185.7744"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text832"
+     y="2199.3433"
+     x="446.5"
+     textLength="36"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">NO_FA</text>
+  <circle
+     r="3"
+     id="ellipse834"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2198.5791"
+     cx="445.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text836"
+     y="2212.1479"
+     x="446.5"
+     textLength="82"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">UNDEFINED_FA</text>
+  <line
+     id="line838"
+     y2="2208.3838"
+     y1="2208.3838"
+     x2="574.51617"
+     x1="435.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <g
+     id="g3068"
+     transform="translate(-32.493817,-46.358381)">
+    <rect
+       codeLine="240"
+       height="86.414101"
+       id="org.lifstools.jgoslin.domain.LipidFullStructure"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="495"
+       x="780.01001"
+       y="417.98001" />
+    <circle
+       cx="969.26001"
+       cy="433.98001"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse841"
+       r="11" />
+    <path
+       d="m 972.2288,439.6206 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path843"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       transform="translate(-204.49,-20.02)"
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="108"
+       x="1194.25"
+       y="458.1543"
+       id="text845"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">LipidFullStructure</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="781.01001"
+       x2="1274.01"
+       y1="449.98001"
+       y2="449.98001"
+       id="line847" />
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="781.01001"
+       x2="1274.01"
+       y1="457.98001"
+       y2="457.98001"
+       id="line849" />
+    <circle
+       cx="791.01001"
+       cy="468.98001"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse851"
+       r="3" />
+    <text
+       transform="translate(-204.49,-20.02)"
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="311"
+       x="1004.5"
+       y="492.21039"
+       id="text853"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel</text>
+    <circle
+       cx="791.01001"
+       cy="481.7847"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse855"
+       r="3" />
+    <text
+       transform="translate(-204.49,-20.02)"
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="136"
+       x="1004.5"
+       y="505.01511"
+       id="text857"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString () : String</text>
+    <circle
+       cx="791.01001"
+       cy="494.58939"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse859"
+       r="3" />
+    <text
+       transform="translate(-204.49,-20.02)"
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="469"
+       x="1004.5"
+       y="517.81982"
+       id="text861"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  </g>
+  <rect
+     y="1761.6416"
+     x="1060.5162"
+     width="159"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.LipidLevel"
+     height="176.04691"
+     codeLine="247" />
+  <circle
+     r="11"
+     id="ellipse864"
+     style="fill:#eb937f;stroke:#a80036;stroke-width:1"
+     cy="1777.6416"
+     cx="1106.2662" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path866"
+     d="m 1110.3756,1783.6416 h -7.7188 v -12.3906 h 7.7188 v 2.1562 h -5.2656 v 2.6719 h 4.7656 v 2.1563 h -4.7656 v 3.25 h 5.2656 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text868"
+     y="1792.1543"
+     x="1118.75"
+     textLength="59"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">LipidLevel</text>
+  <line
+     id="line870"
+     y2="1793.6416"
+     y1="1793.6416"
+     x2="1218.5162"
+     x1="1061.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse872"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1804.6416"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text874"
+     y="1818.2104"
+     x="1072.5"
+     textLength="61"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">CATEGORY</text>
+  <circle
+     r="3"
+     id="ellipse876"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1817.4463"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text878"
+     y="1831.0151"
+     x="1072.5"
+     textLength="37"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">CLASS</text>
+  <circle
+     r="3"
+     id="ellipse880"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1830.251"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text882"
+     y="1843.8198"
+     x="1072.5"
+     textLength="133"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">COMPLETE_STRUCTURE</text>
+  <circle
+     r="3"
+     id="ellipse884"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1843.0557"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text886"
+     y="1856.6245"
+     x="1072.5"
+     textLength="99"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">FULL_STRUCTURE</text>
+  <circle
+     r="3"
+     id="ellipse888"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1855.8604"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text890"
+     y="1869.4292"
+     x="1072.5"
+     textLength="121"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">MOLECULAR_SPECIES</text>
+  <circle
+     r="3"
+     id="ellipse892"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1868.665"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text894"
+     y="1882.2339"
+     x="1072.5"
+     textLength="56"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">NO_LEVEL</text>
+  <circle
+     r="3"
+     id="ellipse896"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1881.4697"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text898"
+     y="1895.0386"
+     x="1072.5"
+     textLength="76"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">SN_POSITION</text>
+  <circle
+     r="3"
+     id="ellipse900"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1894.2744"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text902"
+     y="1907.8433"
+     x="1072.5"
+     textLength="48"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">SPECIES</text>
+  <circle
+     r="3"
+     id="ellipse904"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1907.0791"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text906"
+     y="1920.6479"
+     x="1072.5"
+     textLength="120"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">STRUCTURE_DEFINED</text>
+  <circle
+     r="3"
+     id="ellipse908"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1919.8838"
+     cx="1071.5162" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text910"
+     y="1933.4526"
+     x="1072.5"
+     textLength="102"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">UNDEFINED_LEVEL</text>
+  <line
+     id="line912"
+     y2="1929.6885"
+     y1="1929.6885"
+     x2="1218.5162"
+     x1="1061.5162"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <g
+     id="g3142"
+     transform="translate(8.0161934,-10.358381)">
+    <rect
+       codeLine="261"
+       height="124.8281"
+       id="org.lifstools.jgoslin.domain.LipidMolecularSpecies"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="569"
+       x="702.5"
+       y="975" />
+    <circle
+       cx="914.25"
+       cy="991"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse915"
+       r="11" />
+    <path
+       d="m 917.2188,996.6406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path917"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="137"
+       x="934.75"
+       y="995.1543"
+       id="text919"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">LipidMolecularSpecies</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="703.5"
+       x2="1270.5"
+       y1="1007"
+       y2="1007"
+       id="line921" />
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="703.5"
+       x2="1270.5"
+       y1="1015"
+       y2="1015"
+       id="line923" />
+    <circle
+       cx="713.5"
+       cy="1026"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse925"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="210"
+       x="722.5"
+       y="1029.2104"
+       id="text927"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">buildLipidSubspeciesName () : String</text>
+    <circle
+       cx="713.5"
+       cy="1038.8047"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse929"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="543"
+       x="722.5"
+       y="1042.0151"
+       id="text931"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">buildLipidSubspeciesName ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+    <circle
+       cx="713.5"
+       cy="1051.6094"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse933"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="331"
+       x="722.5"
+       y="1054.8198"
+       id="text935"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+    <circle
+       cx="713.5"
+       cy="1064.4141"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse937"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="311"
+       x="722.5"
+       y="1067.6245"
+       id="text939"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel</text>
+    <circle
+       cx="713.5"
+       cy="1077.2188"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse941"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="136"
+       x="722.5"
+       y="1080.4292"
+       id="text943"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString () : String</text>
+    <circle
+       cx="713.5"
+       cy="1090.0234"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse945"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="469"
+       x="722.5"
+       y="1093.2339"
+       id="text947"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  </g>
+  <g
+     id="g3108"
+     transform="translate(-83.983807,-10.358381)">
+    <rect
+       codeLine="275"
+       height="86.414101"
+       id="org.lifstools.jgoslin.domain.LipidSnPosition"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="495"
+       x="831.5"
+       y="777" />
+    <circle
+       cx="1027.75"
+       cy="793"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse961"
+       r="11" />
+    <path
+       d="m 1030.7188,798.6406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path963"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="94"
+       x="1048.25"
+       y="797.1543"
+       id="text965"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">LipidSnPosition</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="832.5"
+       x2="1325.5"
+       y1="809"
+       y2="809"
+       id="line967" />
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="832.5"
+       x2="1325.5"
+       y1="817"
+       y2="817"
+       id="line969" />
+    <circle
+       cx="842.5"
+       cy="828"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse971"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="311"
+       x="851.5"
+       y="831.21039"
+       id="text973"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel</text>
+    <circle
+       cx="842.5"
+       cy="840.80469"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse975"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="136"
+       x="851.5"
+       y="844.01508"
+       id="text977"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString () : String</text>
+    <circle
+       cx="842.5"
+       cy="853.60938"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse979"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="469"
+       x="851.5"
+       y="856.81982"
+       id="text981"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  </g>
+  <rect
+     y="1476.6416"
+     x="786.51617"
+     width="417"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.LipidSpeciesInfo"
+     height="176.04691"
+     codeLine="293" />
+  <circle
+     r="11"
+     id="ellipse1023"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="1492.6416"
+     cx="940.76617" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path1025"
+     d="m 943.73499,1498.2822 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text1027"
+     y="1507.1543"
+     x="953.25"
+     textLength="100"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(8.0161934,-10.358381)">LipidSpeciesInfo</text>
+  <line
+     id="line1029"
+     y2="1508.6416"
+     y1="1508.6416"
+     x2="1202.5162"
+     x1="787.51617"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse1031"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1519.6416"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000"
+     id="text1033"
+     y="1533.2104"
+     x="798.5"
+     textLength="194"
+     text-decoration="underline"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">ETHER_PREFIX : [Ljava.lang.String;</text>
+  <circle
+     r="3"
+     id="ellipse1035"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1532.4463"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1037"
+     y="1546.0151"
+     x="798.5"
+     textLength="81"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">lipidClass : int</text>
+  <circle
+     r="3"
+     id="ellipse1039"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1545.251"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1041"
+     y="1558.8198"
+     x="798.5"
+     textLength="88"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">numEthers : int</text>
+  <circle
+     r="3"
+     id="ellipse1043"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1558.0557"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1045"
+     y="1571.6245"
+     x="798.5"
+     textLength="116"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">numSpecifiedFa : int</text>
+  <circle
+     r="3"
+     id="ellipse1047"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="1570.8604"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1049"
+     y="1584.4292"
+     x="798.5"
+     textLength="64"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">totalFa : int</text>
+  <line
+     id="line1051"
+     y2="1580.665"
+     y1="1580.665"
+     x2="1202.5162"
+     x1="787.51617"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse1053"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1591.665"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1055"
+     y="1605.2339"
+     x="798.5"
+     textLength="391"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">add ( paramFattyAcid1 : org.lifstools.jgoslin.domain.FattyAcid ) : void</text>
+  <circle
+     r="3"
+     id="ellipse1057"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1604.4697"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1059"
+     y="1618.0386"
+     x="798.5"
+     textLength="301"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">copy () : org.lifstools.jgoslin.domain.LipidSpeciesInfo</text>
+  <circle
+     r="3"
+     id="ellipse1061"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1617.2744"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1063"
+     y="1630.8433"
+     x="798.5"
+     textLength="301"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">copy () : org.lifstools.jgoslin.domain.FunctionalGroup</text>
+  <circle
+     r="3"
+     id="ellipse1065"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1630.0791"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1067"
+     y="1643.6479"
+     x="798.5"
+     textLength="331"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">getElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+  <circle
+     r="3"
+     id="ellipse1069"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="1642.8838"
+     cx="797.51617" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text1071"
+     y="1656.4526"
+     x="798.5"
+     textLength="103"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(8.0161934,-10.358381)">toString () : String</text>
+  <g
+     id="g3122"
+     transform="translate(-220.98381,-60.868388)">
+    <rect
+       codeLine="307"
+       height="86.414101"
+       id="org.lifstools.jgoslin.domain.LipidStructureDefined"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="495"
+       x="968.5"
+       y="630" />
+    <circle
+       cx="1144.25"
+       cy="646"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse1074"
+       r="11" />
+    <path
+       d="m 1147.2188,651.6406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path1076"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="135"
+       x="1164.75"
+       y="650.1543"
+       id="text1078"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">LipidStructureDefined</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="969.5"
+       x2="1462.5"
+       y1="662"
+       y2="662"
+       id="line1080" />
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="969.5"
+       x2="1462.5"
+       y1="670"
+       y2="670"
+       id="line1082" />
+    <circle
+       cx="979.5"
+       cy="681"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse1084"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="311"
+       x="988.5"
+       y="684.21039"
+       id="text1086"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel</text>
+    <circle
+       cx="979.5"
+       cy="693.80469"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse1088"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="136"
+       x="988.5"
+       y="697.01508"
+       id="text1090"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString () : String</text>
+    <circle
+       cx="979.5"
+       cy="706.60938"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse1092"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="469"
+       x="988.5"
+       y="709.81982"
+       id="text1094"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  </g>
+  <rect
+     y="2048.032"
+     x="687.59271"
+     width="462"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.AcylAlkylGroup"
+     height="99.218803"
+     codeLine="2" />
+  <circle
+     r="11"
+     id="ellipse20"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="2064.032"
+     cx="869.84271" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path22"
+     d="m 872.81157,2069.6728 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6407 -1.3125,-1.6562 -1.3125,-4.7812 0,-3.125 1.3125,-4.7813 1.3282,-1.6562 3.8282,-1.6562 0.7031,0 1.3437,0.1562 0.6563,0.1563 1.2188,0.4532 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0781 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text24"
+     y="1830.6543"
+     x="2253.75"
+     textLength="89"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(-1363.4073,237.53218)">AcylAlkylGroup</text>
+  <line
+     id="line26"
+     y2="2080.032"
+     y1="2080.032"
+     x2="1148.5928"
+     x1="688.59271"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse28"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2091.032"
+     cx="698.59271" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text30"
+     y="1856.7104"
+     x="2071"
+     textLength="82"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(-1363.4073,237.53218)">alkyl : boolean</text>
+  <circle
+     r="3"
+     id="ellipse32"
+     style="fill:none;stroke:#038048;stroke-width:1"
+     cy="2103.8367"
+     cx="698.59271" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text34"
+     y="1869.5151"
+     x="2071"
+     textLength="133"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(-1363.4073,237.53218)">nitrogenBond : boolean</text>
+  <line
+     id="line36"
+     y2="2113.6414"
+     y1="2113.6414"
+     x2="1148.5928"
+     x1="688.59271"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse38"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2124.6414"
+     cx="698.59271" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text40"
+     y="1890.3198"
+     x="2071"
+     textLength="301"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(-1363.4073,237.53218)">copy () : org.lifstools.jgoslin.domain.FunctionalGroup</text>
+  <circle
+     r="3"
+     id="ellipse42"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2137.446"
+     cx="698.59271" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text44"
+     y="1903.1245"
+     x="2071"
+     textLength="436"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(-1363.4073,237.53218)">toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  <rect
+     y="2044.5469"
+     x="1744.0737"
+     width="462"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.CarbonChain"
+     height="73.609398"
+     codeLine="22" />
+  <circle
+     r="11"
+     id="ellipse90"
+     style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+     cy="2060.5469"
+     cx="1930.8237" />
+  <path
+     style="fill:#000000"
+     inkscape:connector-curvature="0"
+     id="path92"
+     d="m 1933.7925,2066.1876 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6407 -1.3125,-1.6562 -1.3125,-4.7812 0,-3.125 1.3125,-4.7813 1.3282,-1.6562 3.8282,-1.6562 0.7031,0 1.3437,0.1562 0.6563,0.1563 1.2188,0.4532 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0781 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z" />
+  <text
+     style="font-size:12px;font-family:sans-serif;fill:#000000"
+     id="text94"
+     y="1843.1543"
+     x="2755.25"
+     textLength="80"
+     lengthAdjust="spacing"
+     font-size="12"
+     transform="translate(-803.92634,221.54701)">CarbonChain</text>
+  <line
+     id="line96"
+     y2="2076.5469"
+     y1="2076.5469"
+     x2="2205.0735"
+     x1="1745.0737"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <line
+     id="line98"
+     y2="2084.5469"
+     y1="2084.5469"
+     x2="2205.0735"
+     x1="1745.0737"
+     style="stroke:#a80036;stroke-width:1.5" />
+  <circle
+     r="3"
+     id="ellipse100"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2095.5469"
+     cx="1755.0737" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text102"
+     y="1877.2104"
+     x="2568"
+     textLength="301"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(-803.92634,221.54701)">copy () : org.lifstools.jgoslin.domain.FunctionalGroup</text>
+  <circle
+     r="3"
+     id="ellipse104"
+     style="fill:#84be84;stroke:#038048;stroke-width:1"
+     cy="2108.3516"
+     cx="1755.0737" />
+  <text
+     style="font-size:11px;font-family:sans-serif;fill:#000000"
+     id="text106"
+     y="1890.0151"
+     x="2568"
+     textLength="436"
+     lengthAdjust="spacing"
+     font-size="11"
+     transform="translate(-803.92634,221.54701)">toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  <g
+     id="g2910"
+     transform="translate(-1367.4073,237.53218)">
+    <path
+       codeLine="334"
+       d="m 2216.74,1909.65 c 6.8492,59.1782 215.7701,82.7512 365.2305,78.1262"
+       id="org.lifstools.jgoslin.domain.AcylAlkylGroup-to-org.lifstools.jgoslin.domain.FunctionalGroup"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <polygon
+       points="2089.12,2018.16 2069,2024.8 2080.58,2007.06 "
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       id="polygon1159"
+       transform="rotate(-141.43686,2329.5266,1912.9474)" />
+  </g>
+  <path
+     sodipodi:nodetypes="cc"
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.CarbonChain-to-org.lifstools.jgoslin.domain.FunctionalGroup"
+     d="m 1813.9888,2117.3553 c -31.7095,36.6154 -60.1625,27.6402 -89.5411,31.622"
+     codeLine="335" />
+  <polygon
+     id="polygon1162"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     points="2162.25,2059.66 2166.44,2073.01 2145.26,2072.33 "
+     transform="rotate(16.780031,1660.8964,617.13341)" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:0.9475047"
+     id="org.lifstools.jgoslin.domain.Cycle-to-org.lifstools.jgoslin.domain.FunctionalGroup"
+     d="m 1713.1244,1937.8585 c -14.9718,25.1269 -31.2131,52.3804 -47.2628,79.3174"
+     codeLine="337" />
+  <polygon
+     id="polygon1168"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     points="1787.22,2024.8 1767.85,2016.2 1777.44,2006 "
+     transform="rotate(77.414807,1714.9722,1947.0072)" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.FattyAcid-to-org.lifstools.jgoslin.domain.LipidFaBondType"
+     d="m 651.54619,1931.3616 c -26.5,36.58 -57.84,79.85 -84.73,116.96"
+     codeLine="338" />
+  <polygon
+     id="polygon1171"
+     style="fill:#a80036;stroke:#a80036;stroke-width:1"
+     points="558.4764,2059.1259 557.5742,2053.5414 555.55,2063.18 564.0609,2058.2237 "
+     transform="translate(8.0161934,-10.358381)" />
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1173"
+     y="1991.0669"
+     x="612"
+     textLength="103"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">lipidFaBondType</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:0.52995247"
+     id="org.lifstools.jgoslin.domain.FattyAcid-to-org.lifstools.jgoslin.domain.FunctionalGroup"
+     d="m 1016.5253,1931.0394 c 2.7427,2.0072 5.4639,3.9779 8.1451,5.903 64.9515,46.5943 139.0424,95.2506 193.2538,130.0207"
+     codeLine="339" />
+  <polygon
+     id="polygon1176"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     points="1664.53,2083.72 1682.59,2094.79 1661.57,2097.41 "
+     transform="rotate(24.14547,1497.7141,1040.1619)" />
+  <g
+     id="g2918"
+     transform="translate(8.0161934,-10.358381)">
+    <path
+       codeLine="341"
+       d="m 1682.86,2191.42 c -235.12,46.2 -600.07,117.92 -854.08,167.83"
+       id="org.lifstools.jgoslin.domain.FunctionalGroup-to-org.lifstools.jgoslin.domain.ElementTable"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="823.55,2360.28 833.1499,2362.4804 828.4573,2359.3214 831.6162,2354.6288 "
+       style="fill:#a80036;stroke:#a80036;stroke-width:1"
+       id="polygon1184" />
+  </g>
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1186"
+     y="2308.0669"
+     x="1145"
+     textLength="60"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">elements</text>
+  <g
+     id="g2984"
+     transform="translate(-445.6409,14.776693)">
+    <rect
+       codeLine="50"
+       height="86.414101"
+       id="org.lifstools.jgoslin.domain.DoubleBonds"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="310"
+       x="1994"
+       y="2374" />
+    <circle
+       cx="2103.25"
+       cy="2390"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse182"
+       r="11" />
+    <path
+       d="m 2106.2188,2395.6406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path184"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="83"
+       x="2123.75"
+       y="2394.1543"
+       id="text186"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">DoubleBonds</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="1995"
+       x2="2303"
+       y1="2406"
+       y2="2406"
+       id="line188" />
+    <polygon
+       points="2009,2416 2005,2420 2001,2416 2005,2412 "
+       style="fill:none;stroke:#b38d22;stroke-width:1"
+       id="polygon190" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="202"
+       x="2014"
+       y="2420.2104"
+       id="text192"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">doubleBondPositions : java.util.Map</text>
+    <circle
+       cx="2005"
+       cy="2429.8047"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse194"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="126"
+       x="2014"
+       y="2433.0151"
+       id="text196"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">numDoubleBonds : int</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="1995"
+       x2="2303"
+       y1="2439.6094"
+       y2="2439.6094"
+       id="line198" />
+    <circle
+       cx="2005"
+       cy="2450.6094"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse200"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="284"
+       x="2014"
+       y="2453.8198"
+       id="text202"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">copy () : org.lifstools.jgoslin.domain.DoubleBonds</text>
+    <rect
+       codeLine="114"
+       height="240.0703"
+       id="org.lifstools.jgoslin.domain.FunctionalGroup"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="462"
+       x="1683"
+       y="2025" />
+    <circle
+       cx="1858.25"
+       cy="2041"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse397"
+       r="11" />
+    <path
+       d="m 1861.2188,2046.6406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path399"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="103"
+       x="1878.75"
+       y="2045.1543"
+       id="text401"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">FunctionalGroup</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="1684"
+       x2="2144"
+       y1="2057"
+       y2="2057"
+       id="line403" />
+    <circle
+       cx="1694"
+       cy="2068"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse405"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="95"
+       x="1703"
+       y="2071.2104"
+       id="text407"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">atomic : boolean</text>
+    <circle
+       cx="1694"
+       cy="2080.8047"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse409"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="57"
+       x="1703"
+       y="2084.0151"
+       id="text411"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">count : int</text>
+    <circle
+       cx="1694"
+       cy="2093.6094"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse413"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="180"
+       x="1703"
+       y="2096.8198"
+       id="text415"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">functionalGroups : java.util.Map</text>
+    <circle
+       cx="1694"
+       cy="2106.4141"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse417"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="78"
+       x="1703"
+       y="2109.6245"
+       id="text419"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">name : String</text>
+    <circle
+       cx="1694"
+       cy="2119.2188"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse421"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="71"
+       x="1703"
+       y="2122.4292"
+       id="text423"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">position : int</text>
+    <circle
+       cx="1694"
+       cy="2132.0234"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse425"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="106"
+       x="1703"
+       y="2135.2339"
+       id="text427"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">ringStereo : String</text>
+    <circle
+       cx="1694"
+       cy="2144.8281"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse429"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="139"
+       x="1703"
+       y="2148.0386"
+       id="text431"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">stereochemistry : String</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="1684"
+       x2="2144"
+       y1="2154.6328"
+       y2="2154.6328"
+       id="line433" />
+    <circle
+       cx="1694"
+       cy="2165.6328"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse435"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="205"
+       x="1703"
+       y="2168.8433"
+       id="text437"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">addPosition ( paramint1 : int ) : void</text>
+    <circle
+       cx="1694"
+       cy="2178.4375"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse439"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="411"
+       x="1703"
+       y="2181.6479"
+       id="text441"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">computeAndCopyElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+    <circle
+       cx="1694"
+       cy="2191.2422"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse443"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="149"
+       x="1703"
+       y="2194.4526"
+       id="text445"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">computeElements () : void</text>
+    <circle
+       cx="1694"
+       cy="2204.0469"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse447"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="301"
+       x="1703"
+       y="2207.2573"
+       id="text449"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">copy () : org.lifstools.jgoslin.domain.FunctionalGroup</text>
+    <circle
+       cx="1694"
+       cy="2216.8516"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse451"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="423"
+       x="1703"
+       y="2220.062"
+       id="text453"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getFunctionalGroupElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+    <circle
+       cx="1694"
+       cy="2229.6562"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse455"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="139"
+       x="1703"
+       y="2232.8667"
+       id="text457"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getNDoubleBonds () : int</text>
+    <circle
+       cx="1694"
+       cy="2242.4609"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse459"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="216"
+       x="1703"
+       y="2245.6714"
+       id="text461"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">shiftPositions ( paramint1 : int ) : void</text>
+    <circle
+       cx="1694"
+       cy="2255.2656"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse463"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="436"
+       x="1703"
+       y="2258.4761"
+       id="text465"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+    <rect
+       codeLine="162"
+       height="73.609398"
+       id="org.lifstools.jgoslin.domain.KnownFunctionalGroups"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="451"
+       x="1507.5"
+       y="2380" />
+    <circle
+       cx="1653.75"
+       cy="2396"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse569"
+       r="11" />
+    <path
+       d="m 1656.7188,2401.6406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path571"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="150"
+       x="1674.25"
+       y="2400.1543"
+       id="text573"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">KnownFunctionalGroups</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="1508.5"
+       x2="1957.5"
+       y1="2412"
+       y2="2412"
+       id="line575" />
+    <circle
+       cx="1518.5"
+       cy="2423"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse577"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="132"
+       x="1527.5"
+       y="2426.2104"
+       id="text579"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">UNDEFINED_CLASS : int</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="1508.5"
+       x2="1957.5"
+       y1="2432.8047"
+       y2="2432.8047"
+       id="line581" />
+    <circle
+       cx="1518.5"
+       cy="2443.8047"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse583"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="425"
+       x="1527.5"
+       y="2447.0151"
+       id="text585"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">get ( paramString1 : String ) : org.lifstools.jgoslin.domain.FunctionalGroup</text>
+    <path
+       codeLine="340"
+       d="m 2017.76,2265.21 c 32.36,37.18 66.13,75.98 91.31,104.91"
+       id="org.lifstools.jgoslin.domain.FunctionalGroup-to-org.lifstools.jgoslin.domain.DoubleBonds"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="2109.5343,2364.5403 2109.1337,2370.183 2103.4911,2369.7824 2112.41,2373.96 "
+       style="fill:#a80036;stroke:#a80036;stroke-width:1"
+       id="polygon1179" />
+    <text
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="83"
+       x="2053"
+       y="2308.0669"
+       id="text1181"
+       style="font-size:13px;font-family:sans-serif;fill:#000000">doubleBonds</text>
+    <path
+       codeLine="342"
+       d="m 1834.08,2265.21 c -26.53,39.59 -54.3,81.01 -74,110.4"
+       id="org.lifstools.jgoslin.domain.FunctionalGroup-to-org.lifstools.jgoslin.domain.KnownFunctionalGroups"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="1765.563,2374.6101 1760.0134,2375.7063 1758.9172,2370.1567 1757.23,2379.86 "
+       style="fill:#a80036;stroke:#a80036;stroke-width:1"
+       id="polygon1189" />
+    <text
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="151"
+       x="1813"
+       y="2308.0669"
+       id="text1191"
+       style="font-size:13px;font-family:sans-serif;fill:#000000">knownFunctionalGroups</text>
+  </g>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.HeadgroupDecorator-to-org.lifstools.jgoslin.domain.LipidLevel"
+     d="m 1630.9362,1601.7116 c -111.55,32.14 -268.64,85.62 -392.92,159.93 -4.71,2.82 -9.4,5.87 -14.04,9.1"
+     codeLine="344" />
+  <polygon
+     id="polygon1199"
+     style="fill:#a80036;stroke:#a80036;stroke-width:1"
+     points="1215.7993,1781.2187 1216.7497,1775.6423 1211.72,1784.11 1221.3757,1782.1691 "
+     transform="translate(8.0161934,-10.358381)" />
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1201"
+     y="1738.0669"
+     x="1312"
+     textLength="114"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">lowestVisibleLevel</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.HeadgroupDecorator-to-org.lifstools.jgoslin.domain.FunctionalGroup"
+     d="m 1841.5662,1601.6516 c 55.74,33.17 131.8639,71.1552 165.3339,143.0352 17.115,36.76 48.9717,166.605 15.1246,202.0749 -39.3585,41.2457 -264.4906,34.4554 -307.4956,79.0178"
+     codeLine="345"
+     sodipodi:nodetypes="ccsc" />
+  <polygon
+     id="polygon1204"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     points="1992.39,2009.05 1978.44,2024.99 1979.4,2003.83 "
+     transform="rotate(29.228336,1810.5448,1497.2218)" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidAdduct-to-org.lifstools.jgoslin.domain.Adduct"
+     d="m 1562.0162,1140.6516 c 0,24.19 0,49.26 0,71.86"
+     codeLine="346" />
+  <polygon
+     id="polygon1207"
+     style="fill:#a80036;stroke:#a80036;stroke-width:1"
+     points="1554,1222.96 1550,1218.96 1554,1227.96 1558,1218.96 "
+     transform="translate(8.0161934,-10.358381)" />
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1209"
+     y="1194.0669"
+     x="1555"
+     textLength="44"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">adduct</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidAdduct-to-org.lifstools.jgoslin.domain.LipidSpecies"
+     d="m 1319.9162,1140.6516 c -58.88,27.36 -120.18,55.85 -173.47,80.62"
+     codeLine="347" />
+  <g
+     id="g3165"
+     transform="translate(8.0161934,-10.358381)">
+    <rect
+       codeLine="282"
+       height="137.6328"
+       id="org.lifstools.jgoslin.domain.LipidSpecies"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="495"
+       x="739.5"
+       y="1234" />
+    <circle
+       cx="944.25"
+       cy="1250"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse984"
+       r="11" />
+    <path
+       d="m 947.2188,1255.6406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path986"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="77"
+       x="964.75"
+       y="1254.1543"
+       id="text988"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">LipidSpecies</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="740.5"
+       x2="1233.5"
+       y1="1266"
+       y2="1266"
+       id="line990" />
+    <polygon
+       points="750.5,1280 746.5,1276 750.5,1272 754.5,1276 "
+       style="fill:none;stroke:#b38d22;stroke-width:1"
+       id="polygon992" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="123"
+       x="759.5"
+       y="1280.2104"
+       id="text994"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">fa : java.util.HashMap</text>
+    <polygon
+       points="750.5,1292.8047 746.5,1288.8047 750.5,1284.8047 754.5,1288.8047 "
+       style="fill:none;stroke:#b38d22;stroke-width:1"
+       id="polygon996" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="141"
+       x="759.5"
+       y="1293.0151"
+       id="text998"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">faList : java.util.ArrayList</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="740.5"
+       x2="1233.5"
+       y1="1299.6094"
+       y2="1299.6094"
+       id="line1000" />
+    <circle
+       cx="750.5"
+       cy="1310.6094"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse1002"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="331"
+       x="759.5"
+       y="1313.8198"
+       id="text1004"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+    <circle
+       cx="750.5"
+       cy="1323.4141"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse1006"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="160"
+       x="759.5"
+       y="1326.6245"
+       id="text1008"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getExtendedClass () : String</text>
+    <circle
+       cx="750.5"
+       cy="1336.2188"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse1010"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="311"
+       x="759.5"
+       y="1339.4292"
+       id="text1012"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel</text>
+    <circle
+       cx="750.5"
+       cy="1349.0234"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse1014"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="136"
+       x="759.5"
+       y="1352.2339"
+       id="text1016"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString () : String</text>
+    <circle
+       cx="750.5"
+       cy="1361.8281"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse1018"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="469"
+       x="759.5"
+       y="1365.0386"
+       id="text1020"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+    <polygon
+       points="1138.156,1231.7565 1140.1021,1226.445 1133.62,1233.86 1143.4676,1233.7026 "
+       style="fill:#a80036;stroke:#a80036;stroke-width:1"
+       id="polygon1212" />
+  </g>
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1214"
+     y="1194.0669"
+     x="1237"
+     textLength="25"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">lipid</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidClassMeta-to-org.lifstools.jgoslin.domain.ElementTable"
+     d="m 613.92619,1633.7016 c -114.46518,92.3968 -280.45848,4.2675 -372.91,127.94 -120.02,194 91.57,442.2 219.74,566.19"
+     codeLine="348"
+     sodipodi:nodetypes="ccc" />
+  <polygon
+     id="polygon1217"
+     style="fill:#a80036;stroke:#a80036;stroke-width:1"
+     points="452.9008,2338.3593 447.2449,2338.4622 456.5,2341.83 452.7979,2332.7034 "
+     transform="translate(8.0161934,-10.358381)" />
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1219"
+     y="1991.0669"
+     x="212"
+     textLength="60"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">elements</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidClassMeta-to-org.lifstools.jgoslin.domain.LipidCategory"
+     d="m 569.11234,1570.131 -403.95261,0.3939"
+     codeLine="349"
+     sodipodi:nodetypes="cc" />
+  <g
+     id="g3267"
+     transform="translate(9.9000637,-229.3583)">
+    <rect
+       codeLine="186"
+       height="163.2422"
+       id="org.lifstools.jgoslin.domain.LipidCategory"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="116"
+       x="32"
+       y="1778.5" />
+    <circle
+       cx="47"
+       cy="1794.5"
+       style="fill:#eb937f;stroke:#a80036;stroke-width:1"
+       id="ellipse655"
+       r="11" />
+    <path
+       d="m 51.1094,1800.5 h -7.7188 v -12.3906 h 7.7188 v 2.1562 h -5.2656 v 2.6719 h 4.7656 v 2.1563 h -4.7656 v 3.25 h 5.2656 z"
+       id="path657"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="84"
+       x="61"
+       y="1798.6543"
+       id="text659"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">LipidCategory</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="33"
+       x2="147"
+       y1="1810.5"
+       y2="1810.5"
+       id="line661" />
+    <circle
+       cx="43"
+       cy="1821.5"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse663"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="13"
+       x="52"
+       y="1824.7104"
+       id="text665"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">FA</text>
+    <circle
+       cx="43"
+       cy="1834.3047"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse667"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="15"
+       x="52"
+       y="1837.5151"
+       id="text669"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">GL</text>
+    <circle
+       cx="43"
+       cy="1847.1094"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse671"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="16"
+       x="52"
+       y="1850.3198"
+       id="text673"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">GP</text>
+    <circle
+       cx="43"
+       cy="1859.9141"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse675"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="84"
+       x="52"
+       y="1863.1245"
+       id="text677"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">NO_CATEGORY</text>
+    <circle
+       cx="43"
+       cy="1872.7188"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse679"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="14"
+       x="52"
+       y="1875.9292"
+       id="text681"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">PK</text>
+    <circle
+       cx="43"
+       cy="1885.5234"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse683"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="14"
+       x="52"
+       y="1888.7339"
+       id="text685"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">SL</text>
+    <circle
+       cx="43"
+       cy="1898.3281"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse687"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="15"
+       x="52"
+       y="1901.5386"
+       id="text689"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">SP</text>
+    <circle
+       cx="43"
+       cy="1911.1328"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse691"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="15"
+       x="52"
+       y="1914.3433"
+       id="text693"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">ST</text>
+    <circle
+       cx="43"
+       cy="1923.9375"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse695"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="63"
+       x="52"
+       y="1927.1479"
+       id="text697"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">UNDEFINED</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="33"
+       x2="147"
+       y1="1933.7422"
+       y2="1933.7422"
+       id="line699" />
+    <path
+       codeLine="343"
+       d="m 83.78,1695.04 c -7.53,9.39 -14.22,19.37 -19.78,29.96 -7.79,14.83 -9.29,31.69 -7.39,48.32"
+       id="org.lifstools.jgoslin.domain.Headgroup-to-org.lifstools.jgoslin.domain.LipidCategory"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="56.6389,1773.5252 52.1382,1770.0983 57.31,1778.48 60.0658,1769.0246 "
+       style="fill:#a80036;stroke:#a80036;stroke-width:1"
+       id="polygon1194" />
+    <text
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="83"
+       x="65"
+       y="1738.0669"
+       id="text1196"
+       style="font-size:13px;font-family:sans-serif;fill:#000000">lipidCategory</text>
+    <polygon
+       points="135.6887,1774.3193 134.8311,1768.7279 132.73,1778.35 141.2801,1773.4618 "
+       style="fill:#a80036;stroke:#a80036;stroke-width:1"
+       id="polygon1222"
+       transform="rotate(51.921262,119.02885,1807.1365)" />
+  </g>
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1224"
+     y="1738.0669"
+     x="190"
+     textLength="83"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(130.56916,-151.56071)">lipidCategory</text>
+  <g
+     id="g2894"
+     transform="translate(-671.35351,341.40804)">
+    <rect
+       codeLine="210"
+       height="73.609398"
+       id="org.lifstools.jgoslin.domain.LipidClasses"
+       style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+       width="347"
+       x="720.5"
+       y="149.5" />
+    <circle
+       cx="851.75"
+       cy="165.5"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse741"
+       r="11" />
+    <path
+       d="m 854.7188,171.1406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path743"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="76"
+       x="872.25"
+       y="169.6543"
+       id="text745"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">LipidClasses</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="721.5"
+       x2="1066.5"
+       y1="181.5"
+       y2="181.5"
+       id="line747" />
+    <circle
+       cx="731.5"
+       cy="192.5"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse749"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="132"
+       x="740.5"
+       y="195.7104"
+       id="text751"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">UNDEFINED_CLASS : int</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="721.5"
+       x2="1066.5"
+       y1="202.3047"
+       y2="202.3047"
+       id="line753" />
+    <circle
+       cx="731.5"
+       cy="213.3047"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse755"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="321"
+       x="740.5"
+       y="216.51511"
+       id="text757"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">getInstance () : org.lifstools.jgoslin.domain.LipidClasses</text>
+    <path
+       codeLine="350"
+       d="m 1067.75,158.04 c 21.01,5.14 34.75,14.62 34.75,28.46 0,12.65 -11.48,21.66 -29.5,27.04"
+       id="org.lifstools.jgoslin.domain.LipidClasses-to-org.lifstools.jgoslin.domain.LipidClasses"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="1067.75,214.96 1077.4804,216.4827 1072.5781,213.6601 1075.4006,208.7578 "
+       style="fill:#a80036;stroke:#a80036;stroke-width:1"
+       id="polygon1227" />
+    <text
+       font-size="13"
+       lengthAdjust="spacing"
+       textLength="98"
+       x="1108.5"
+       y="191.06689"
+       id="text1229"
+       style="font-size:13px;font-family:sans-serif;fill:#000000">LIPID_CLASSES</text>
+  </g>
+  <g
+     id="g3169"
+     transform="translate(8.0161934,-10.358381)">
+    <path
+       codeLine="353"
+       d="m 987,1100.28 c 0,33.75 0,76.14 0,113.34"
+       id="org.lifstools.jgoslin.domain.LipidMolecularSpecies-to-org.lifstools.jgoslin.domain.LipidSpecies"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="980,1213.66 994,1213.66 987,1233.66 "
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       id="polygon1238" />
+  </g>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidSpecies-to-org.lifstools.jgoslin.domain.Headgroup"
+     d="m 746.52169,1237.3562 -204.13552,-0.088"
+     codeLine="356"
+     sodipodi:nodetypes="cc" />
+  <rect
+     y="1224.6416"
+     x="40.516193"
+     width="495"
+     style="fill:#fefece;stroke:#a80036;stroke-width:1.5;filter:url(#f10r09f1srl4h)"
+     id="org.lifstools.jgoslin.domain.Headgroup"
+     height="240.0703"
+     codeLine="137" />
+  <g
+     id="g2785"
+     transform="translate(8.0161934,-230.35838)">
+    <circle
+       cx="240.75"
+       cy="1471"
+       style="fill:#add1b2;stroke:#a80036;stroke-width:1"
+       id="ellipse479"
+       r="11" />
+    <path
+       d="m 243.7188,1476.6406 q -0.5782,0.2969 -1.2188,0.4375 -0.6406,0.1563 -1.3437,0.1563 -2.5,0 -3.8282,-1.6406 -1.3125,-1.6563 -1.3125,-4.7813 0,-3.125 1.3125,-4.7812 1.3282,-1.6563 3.8282,-1.6563 0.7031,0 1.3437,0.1563 0.6563,0.1562 1.2188,0.4531 v 2.7187 q -0.625,-0.5781 -1.2188,-0.8437 -0.5937,-0.2813 -1.2187,-0.2813 -1.3438,0 -2.0313,1.0782 -0.6875,1.0625 -0.6875,3.1562 0,2.0938 0.6875,3.1719 0.6875,1.0625 2.0313,1.0625 0.625,0 1.2187,-0.2656 0.5938,-0.2813 1.2188,-0.8594 z"
+       id="path481"
+       inkscape:connector-curvature="0"
+       style="fill:#000000" />
+    <text
+       font-size="12"
+       lengthAdjust="spacing"
+       textLength="70"
+       x="261.25"
+       y="1475.1543"
+       id="text483"
+       style="font-size:12px;font-family:sans-serif;fill:#000000">Headgroup</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="33.5"
+       x2="526.5"
+       y1="1487"
+       y2="1487"
+       id="line485" />
+    <circle
+       cx="43.5"
+       cy="1498"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse487"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="168"
+       x="52.5"
+       y="1501.2104"
+       id="text489"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">CategoryString : java.util.Map</text>
+    <circle
+       cx="43.5"
+       cy="1510.8047"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse491"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="178"
+       x="52.5"
+       y="1514.0151"
+       id="text493"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">ClassString : java.util.HashMap</text>
+    <circle
+       cx="43.5"
+       cy="1523.6094"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse495"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="197"
+       x="52.5"
+       y="1526.8198"
+       id="text497"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">StringCategory : java.util.HashMap</text>
+    <circle
+       cx="43.5"
+       cy="1536.4141"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse499"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="178"
+       x="52.5"
+       y="1539.6245"
+       id="text501"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">StringClass : java.util.HashMap</text>
+    <circle
+       cx="43.5"
+       cy="1549.2188"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse503"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="172"
+       x="52.5"
+       y="1552.4292"
+       id="text505"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">decorators : java.util.ArrayList</text>
+    <circle
+       cx="43.5"
+       cy="1562.0234"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse507"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="231"
+       x="52.5"
+       y="1565.2339"
+       id="text509"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">exceptionHeadgroups : java.util.HashSet</text>
+    <circle
+       cx="43.5"
+       cy="1574.8281"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse511"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="107"
+       x="52.5"
+       y="1578.0386"
+       id="text513"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">headgroup : String</text>
+    <circle
+       cx="43.5"
+       cy="1587.6328"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse515"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="81"
+       x="52.5"
+       y="1590.8433"
+       id="text517"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">lipidClass : int</text>
+    <circle
+       cx="43.5"
+       cy="1600.4375"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse519"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="125"
+       x="52.5"
+       y="1603.6479"
+       id="text521"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">spException : boolean</text>
+    <circle
+       cx="43.5"
+       cy="1613.2422"
+       style="fill:none;stroke:#038048;stroke-width:1"
+       id="ellipse523"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="140"
+       x="52.5"
+       y="1616.4526"
+       id="text525"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">useHeadgroup : boolean</text>
+    <line
+       style="stroke:#a80036;stroke-width:1.5"
+       x1="33.5"
+       x2="526.5"
+       y1="1623.0469"
+       y2="1623.0469"
+       id="line527" />
+    <circle
+       cx="43.5"
+       cy="1634.0469"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse529"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="461"
+       x="52.5"
+       y="1637.2573"
+       id="text531"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">getCategory ( paramString1 : String ) : org.lifstools.jgoslin.domain.LipidCategory</text>
+    <circle
+       cx="43.5"
+       cy="1646.8516"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse533"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       text-decoration="underline"
+       textLength="220"
+       x="52.5"
+       y="1650.062"
+       id="text535"
+       style="font-size:11px;font-family:sans-serif;text-decoration: underline;text-decoration-line: underline;fill:#000000">getClass ( paramString1 : String ) : int</text>
+    <circle
+       cx="43.5"
+       cy="1659.6562"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse537"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="141"
+       x="52.5"
+       y="1662.8667"
+       id="text539"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getClassName () : String</text>
+    <circle
+       cx="43.5"
+       cy="1672.4609"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse541"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="331"
+       x="52.5"
+       y="1675.6714"
+       id="text543"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getElements () : org.lifstools.jgoslin.domain.ElementTable</text>
+    <circle
+       cx="43.5"
+       cy="1685.2656"
+       style="fill:#84be84;stroke:#038048;stroke-width:1"
+       id="ellipse545"
+       r="3" />
+    <text
+       font-size="11"
+       lengthAdjust="spacing"
+       textLength="469"
+       x="52.5"
+       y="1688.4761"
+       id="text547"
+       style="font-size:11px;font-family:sans-serif;fill:#000000">getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String</text>
+  </g>
+  <polygon
+     id="polygon1247"
+     style="fill:#a80036;stroke:#a80036;stroke-width:1"
+     points="534.462,1454.8854 527.61,1461.96 537.4528,1462.3053 532.2474,1460.0908 "
+     transform="rotate(21.514536,1123.731,1375.3623)" />
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1249"
+     y="1421.0669"
+     x="666"
+     textLength="71"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(-54.151527,-170.95832)">headGroup</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidSpecies-to-org.lifstools.jgoslin.domain.LipidSpeciesInfo"
+     d="m 995.01619,1361.7716 c 0,33.21 0,73.63 0,109.56"
+     codeLine="357" />
+  <polygon
+     id="polygon1252"
+     style="fill:#a80036;stroke:#a80036;stroke-width:1"
+     points="987,1481.96 983,1477.96 987,1486.96 991,1477.96 "
+     transform="translate(8.0161934,-10.358381)" />
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1254"
+     y="1421.0669"
+     x="988"
+     textLength="23"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">info</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidSpeciesInfo-to-org.lifstools.jgoslin.domain.LipidFaBondType"
+     d="m 846.07619,1652.7516 c -25.12,12.15 -51.39,23.37 -77.06,31.89 -104.19,34.6 -416.68,-6.46 -488,77 -50.82,59.47 -32.32,104.77 0,176 30.43,67.05 96.38,120.19 148.89,154.12"
+     codeLine="358" />
+  <polygon
+     id="polygon1257"
+     style="fill:#a80036;stroke:#a80036;stroke-width:1"
+     points="422.0699,2102.2427 416.5441,2103.4529 426.28,2104.94 420.8597,2096.7168 "
+     transform="translate(8.0161934,-10.358381)" />
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1259"
+     y="1864.5669"
+     x="274"
+     textLength="94"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">extendedClass</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidSpeciesInfo-to-org.lifstools.jgoslin.domain.LipidLevel"
+     d="m 1039.7062,1652.8616 c 16.88,32.95 36.14,70.53 53.23,103.89"
+     codeLine="359" />
+  <polygon
+     id="polygon1262"
+     style="fill:#a80036;stroke:#a80036;stroke-width:1"
+     points="1084.9284,1767.1309 1079.5439,1765.3969 1087.21,1771.58 1086.6624,1761.7464 "
+     transform="translate(8.0161934,-10.358381)" />
+  <text
+     style="font-size:13px;font-family:sans-serif;fill:#000000"
+     id="text1264"
+     y="1738.0669"
+     x="1069"
+     textLength="29"
+     lengthAdjust="spacing"
+     font-size="13"
+     transform="translate(8.0161934,-10.358381)">level</text>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     id="org.lifstools.jgoslin.domain.LipidSpeciesInfo-to-org.lifstools.jgoslin.domain.FattyAcid"
+     d="m 907.18619,1652.8616 c -32.2,31.97 -68.79,68.3 -101.63,100.91"
+     codeLine="360" />
+  <polygon
+     id="polygon1267"
+     style="fill:none;stroke:#a80036;stroke-width:1"
+     points="802.36,1769.21 783.23,1778.34 792.49,1759.28 "
+     transform="translate(8.0161934,-10.358381)" />
+  <g
+     id="g3181"
+     transform="translate(8.0161934,-32.358381)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#a80036;stroke-width:0.88539356"
+       id="path3171"
+       d="m 987,886.77031 c 0,26.45736 0,59.6878 0,88.84969"
+       codeLine="353" />
+    <polygon
+       transform="translate(0,-238)"
+       id="polygon3173"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       points="994,1213.66 987,1233.66 980,1213.66 " />
+  </g>
+  <g
+     transform="translate(8.0161934,-230.35838)"
+     id="g3187">
+    <path
+       codeLine="353"
+       d="m 987,886.77031 c 0,26.45736 0,59.6878 0,88.84969"
+       id="path3183"
+       style="fill:none;stroke:#a80036;stroke-width:0.88539356"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="980,1213.66 994,1213.66 987,1233.66 "
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       id="polygon3185"
+       transform="translate(0,-238)" />
+  </g>
+  <g
+     id="g3193"
+     transform="translate(8.0161934,-428.35838)">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#a80036;stroke-width:0.88539356"
+       id="path3189"
+       d="m 987,886.77031 c 0,26.45736 0,59.6878 0,88.84969"
+       codeLine="353" />
+    <polygon
+       transform="translate(0,-238)"
+       id="polygon3191"
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       points="987,1233.66 980,1213.66 994,1213.66 " />
+  </g>
+  <g
+     transform="translate(8.0161934,-626.35838)"
+     id="g3199">
+    <path
+       codeLine="353"
+       d="m 987,886.77031 c 0,26.45736 0,59.6878 0,88.84969"
+       id="path3195"
+       style="fill:none;stroke:#a80036;stroke-width:0.88539356"
+       inkscape:connector-curvature="0" />
+    <polygon
+       points="980,1213.66 994,1213.66 987,1233.66 "
+       style="fill:none;stroke:#a80036;stroke-width:1"
+       id="polygon3197"
+       transform="translate(0,-238)" />
+  </g>
+  <rect
+     style="opacity:1;fill:#fdfdcd;fill-opacity:1;stroke:#a70034;stroke-width:1.51181102;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter3481)"
+     id="rect3269"
+     width="486.39603"
+     height="375.43442"
+     x="48.639603"
+     y="607.7348" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3271"
+     style="font-weight:bold;font-size:40px;line-height:1.25;font-family:Raleway;-inkscape-font-specification:'Raleway Bold';letter-spacing:0px;word-spacing:0px"
+     transform="translate(-0.80961161,-42.384176)"><flowRegion
+       id="flowRegion3273"><rect
+         id="rect3275"
+         width="475.67725"
+         height="337.2128"
+         x="73.47094"
+         y="645.25873" /></flowRegion><flowPara
+       id="flowPara3277"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:Raleway;-inkscape-font-specification:'Raleway, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start">See lipid-list.csv for an overview  of supported lipid classes.</flowPara></flowRoot></svg>
