@@ -959,7 +959,7 @@ Goslin Object Model
 
 [[fig-goslinObjectModel]]
 .The object model shared by the different implementations.
-image:uml-class-diagram.png[Goslin object model.]
+image:goslin-class-diagram.png[Goslin 2.0 object model.]
 
 All goslin implementations are implementing the goslin object model as
 illustrated in Figure <<fig-goslin-object-model>>. The classes
@@ -978,8 +978,6 @@ the class `LipidSpecies` is storing all its associated fatty acyl chains
 which are defined within the class `FattyAcid`. For storing the
 cummulated information on species level for the carbon length, double
 bonds, etc, the class `LipidSpeciesInfo` is utilized.
-
-image::{gitplant}/goslin-class-diagram.puml[Goslin 2.0 Object Model]
 
 [[supportedLipidClasses]]
 Supported Lipid Classes
