@@ -9,7 +9,7 @@
 :figure-caption: Figure
 :pdf-page-size: A4
 
-:gitplant: https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/DBuret/journal/master/
+:gitplant: http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/DBuret/journal/master/
 
 //GitHub specific settings
 ifdef::env-github[]
