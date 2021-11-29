@@ -9,6 +9,8 @@
 :figure-caption: Figure
 :pdf-page-size: A4
 
+:gitplant: https://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/DBuret/journal/master/
+
 //GitHub specific settings
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -976,6 +978,8 @@ the class `LipidSpecies` is storing all its associated fatty acyl chains
 which are defined within the class `FattyAcid`. For storing the
 cummulated information on species level for the carbon length, double
 bonds, etc, the class `LipidSpeciesInfo` is utilized.
+
+image::{gitplant}/goslin-class-diagram.puml[Goslin 2.0 Object Model]
 
 [[supportedLipidClasses]]
 Supported Lipid Classes
