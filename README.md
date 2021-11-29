@@ -16,6 +16,7 @@ If you use Goslin or any of the specific implementations in your work, we kindly
 [D. Kopczynski _et al._, **Goslin - A Grammar of Succinct Lipid Nomenclature**, Analytical Chemistry, June 26th, 2020.](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690) [doi:10.1021/acs.analchem.0c01690](https://doi.org/10.1021/acs.analchem.0c01690)
 
 ## References
+* [D. Kopczynski et al., Biorxiv, Nov xth, 2021 (Preprint)](#)
 * [D. Kopczynski et al., Analytical Chemistry, June 26th, 2020](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690)
 * [D. Kopczynski et al., Biorxiv, April 20th, 2020 (Preprint)](https://doi.org/10.1101/2020.04.17.046656)
 
@@ -23,6 +24,7 @@ If you use Goslin or any of the specific implementations in your work, we kindly
 
 - [This project](http://github.com/lifs-tools/goslin)
 - [C++ implementation](https://github.com/lifs-tools/cppgoslin)
+- [C# implementation](https://github.com/lifs-tools/csgoslin)
 - [Java implementation](https://github.com/lifs-tools/jgoslin)
 - [Python implementation](https://github.com/lifs-tools/pygoslin)
 - [R implementation](https://github.com/lifs-tools/rgoslin)

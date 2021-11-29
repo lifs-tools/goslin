@@ -796,7 +796,7 @@ Prerequisites
 This project is based on Java 17. To use it, you need a jre installed on
 your system. If you want to use the library in your own Java projects,
 you need a jdk installed on your system. Please consult
-[https://adoptopenjdk.net/installation.html] for installation options and
+[https://go.java/] for installation options and
 instructions for your operating system.
 
 Installation instructions
