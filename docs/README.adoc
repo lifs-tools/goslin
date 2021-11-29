@@ -9,7 +9,7 @@
 :figure-caption: Figure
 :pdf-page-size: A4
 
-:gitplant: http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/lifs-tools/goslin/master/docs/
+:gitplant: http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/lifs-tools/goslin/master/docs
 
 //GitHub specific settings
 ifdef::env-github[]
