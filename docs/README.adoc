@@ -9,6 +9,8 @@
 :figure-caption: Figure
 :pdf-page-size: A4
 
+:gitplant: http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/lifs-tools/goslin/master/docs
+
 //GitHub specific settings
 ifdef::env-github[]
 :tip-caption: :bulb:
@@ -601,19 +603,13 @@ This project is a parser, validator and normalizer implementation for
 shorthand lipid nomenclatures, using the Grammar of Succinct Lipid
 Nomenclatures project for the R language ([https://www.r-project.org/]).
 
-Goslin defines multiple grammars compatible with ANTLRv4 for different
-sources of shorthand lipid nomenclature. This allows to generate parsers
-based on the defined grammars, which provide immediate feedback whether
-a processed lipid shorthand notation string is compliant with a
-particular grammar, or not.
+Goslin defines multiple grammars for different sources of shorthand lipid nomenclature. This allows to generate parsers based on the defined grammars, which provide immediate feedback whether a processed lipid shorthand notation string is compliant with a particular grammar, or not.
 
-rgoslin uses the goslin grammars and the cppgoslin parser to support the
-following general tasks:
+Here, rgoslin 2.0 uses the Goslin grammars and the cppgoslin parser to support the following general tasks:
 
-1.  Facilitate the parsing of shorthand lipid names dialects.
-2.  Provide a structural representation of the shorthand lipid after
-parsing.
-3.  Use the structural representation to generate normalized names.
+1. Facilitate the parsing of shorthand lipid names dialects.
+2. Provide a structural representation of the shorthand lipid after parsing.
+3. Use the structural representation to generate normalized names, following the latest shorthand nomenclature.
 
 rgoslin is an open-source package available via
 github footnote:[https://github.com/lifs-tools/rgoslin].
@@ -651,11 +647,11 @@ of the package with all required dependencies into your local R
 installation.
 
 If you want to use a proper release version, referenced by a Git tag
-(here: v1.0.0) install the package as follows:
+(here: v2.0.0) install the package as follows:
 
 [source,r]
 ----
-install_github("lifs-tools/rgoslin", ref="v1.0.0")
+install_github("lifs-tools/rgoslin", ref="v2.0.0")
 ----
 
 If you have cloned the code locally, use devtools as follows. Make sure
@@ -706,6 +702,15 @@ need to load the library.
 library(rgoslin)
 ----
 
+If you want to check, which grammars are supported, use the following command:
+[source,r]
+----
+listAvailableGrammars()
+----
+
+Currently, the following grammars are available: LipidMaps, SwissLipids,
+Goslin, Shorthand2020, FattyAcids, HMDB.
+
 To check, whether a given lipid name can be parsed by any of the parsers
 supplied by cppgoslin, you can use the `isValidLipidName` method. It
 will return `TRUE` if the given name can be parsed by any of the
@@ -716,13 +721,12 @@ available parsers and `FALSE` if the name was not parseable.
 isValidLipidName("PC 32:1")
 ----
 
-Using `parseLipidName` with a lipid name returns a named vector of
-properties of the parsed lipid name.
+Using `parseLipidName` with a lipid name returns a data frame of
+properties of the parsed lipid name as columns.
 
 [source,r]
 ----
-pc32vector <- parseLipidName("PC 32:1")
-pc32df <- as.data.frame(t(pc32vector))
+df <- parseLipidName("PC 32:1")
 ----
 
 If you want to set the grammar to parse against manually, this is also
@@ -731,12 +735,8 @@ possible:
 [source,r]
 ----
 originalName <- "TG(16:1(5E)/18:0/20:2(3Z,6Z))"
-tagVec <- rgoslin::parseLipidNameWithGrammar(originalName, "LipidMaps")
-tagDf <- as.data.frame(t(tagVec))
+tagDf <- rgoslin::parseLipidNameWithGrammar(originalName, "LipidMaps")
 ----
-
-Currently, the following grammars are available: LipidMaps, SwissLipids,
-Goslin, GoslinFragments, HMDB.
 
 If you want to parse multiple lipid names, use the `parseLipidNames`
 method with a vector of lipid names. This returns a data frame of
@@ -744,7 +744,7 @@ properties of the parsed lipid names with one row per lipid.
 
 [source,r]
 ----
-multipleLipidNames <- parseLipidNames(c("PC 32:1","LPC 34:1","TG(18:1_18:0_16:1)"))
+multipleLipidNamesDf <- parseLipidNames(c("PC 32:1","LPC 34:1","TG(18:1_18:0_16:1)"))
 ----
 
 Finally, if you want to parse multiple lipid names and want to use one
@@ -755,6 +755,16 @@ particular grammar:
 originalNames <- c("PC 32:1","LPC 34:1","TAG 18:1_18:0_16:1")
 multipleLipidNamesWithGrammar <- parseLipidNamesWithGrammar(originalNames, "Goslin")
 ----
+
+The Goslin parser also support reading of lipid shorthand names with adducts:
+
+[source,r]
+----
+originalNames <- c("PC 32:1[M+H]1+", "PC 32:1 [M+H]+","PC 32:1")
+lipidNamesWithAdduct <- parseLipidNamesWithGrammar(originalNames, "Goslin")
+----
+
+This will populate the columns "Adduct" and "AdductCharge" with the respective values. Please note that we recommend to use the adduct and its charge in full IUPAC recommended nomenclature.
 
 Java Implementation
 -------------------
@@ -783,10 +793,10 @@ github footnote:[https://github.com/lifs-tools/jgoslin].
 Prerequisites
 ~~~~~~~~~~~~~
 
-This project is based on Java 11. To use it, you need a jre installed on
+This project is based on Java 17. To use it, you need a jre installed on
 your system. If you want to use the library in your own Java projects,
 you need a jdk installed on your system. Please consult
-[https://adoptopenjdk.net/installation.html] for installation options and
+[https://go.java/] for installation options and
 instructions for your operating system.
 
 Installation instructions
@@ -812,7 +822,7 @@ Testing jgoslin
 ~~~~~~~~~~~~~~~
 
 Here, jgoslin comes with a comprehensive collection of unit (JUnit 5),
-integration (JUnit 5) and acceptance (Cucumber) tests. You can run all
+integration (JUnit 5) tests. You can run all
 of them as follows:
 
 ....
@@ -828,7 +838,7 @@ from the command line or from a file with one lipid name per line.
 After building the project as mentioned above with `./mvnw install`, the
 `cli/target` folder will contain the `jgoslin-cli-<VERSION>-bin.zip`
 file. Alternatively, you can download the latest cli zip file from
-Bintray: https://bintray.com/lifs/maven/jgoslin-cli[Search for latest
+our repository: https://lifstools.jfrog.io/ui/artifactSearchResults?name=jgoslin-cli&type=artifacts[Search for latest
 jgoslin-cli-<VERSION>-bin.zip artefact] and click to download.
 
 In order to run the validator, unzip that file, change into the unzipped
@@ -847,48 +857,38 @@ parsers, run
 java -jar jgoslin-cli-<VERSION>.jar -n "Cer(d18:1/20:2)"
 ....
 
-The output will tell you what is done and will echo a table of the
+The output will tell you what is done and will echo a tab-separated table of the
 results to the terminal:
 
 [source,bash]
 ----
-Parsing lipid identifier: Cer(d18:1/20:2)
-Parsing lipid identifier: Cer(d18:1/20:2)
-Parsing lipid maps identifier: Cer(d18:1/20:2)
-Parsing swiss lipids identifier: Cer(d18:1/20:2)
-Parsing HMDB lipids identifier: Cer(d18:1/20:2)
 Echoing output to stdout.
-Normalized Name Original Name   Grammar Message Lipid Maps Category Lipid Maps Main Class   Functional Class Abbr   Functional Class Synonyms   Level   Total #C    Total #OH   Total #DB   LCB SN Position LCB #C  LCB #OH LCB #DB LCB Bond Type   FA1 SN Position FA1 #C  FA1 #OH FA1 #DB FA1 Bond Type
-Cer(d18:1/20:2) GOSLIN  no viable alternative at input 'Cer('                                                                       
-Cer(d18:1/20:2) GOSLIN_FRAGMENTS    no viable alternative at input 'Cer('                                                                   
-Cer 18:1;2/20:2 Cer(d18:1/20:2) LIPIDMAPS       Sphingolipid [SP]   N-acyl-4-hydroxysphinganines (phytoceramides) [SP0203]  [Cer]   [Cer, Ceramide] STRUCTURAL_SUBSPECIES   38  2   3   1   18  2   1   ESTER   2   20  0   2   ESTER
-Cer 18:1;2/20:2 Cer(d18:1/20:2) SWISSLIPIDS     Sphingolipid [SP]   N-acyl-4-hydroxysphinganines (phytoceramides) [SP0203]  [Cer]   [Cer, Ceramide] STRUCTURAL_SUBSPECIES   38  2   3   1   18  2   1   ESTER   2   20  0   2   ESTER
-Cer 18:1;2/20:2 Cer(d18:1/20:2) HMDB        Sphingolipid [SP]   N-acyl-4-hydroxysphinganines (phytoceramides) [SP0203]  [Cer]   [Cer, Ceramide] STRUCTURAL_SUBSPECIES   38  2   3   1   1821    ESTER   2   20  0   2   ESTER
+Normalized Name	Original Name	Grammar	Message	Adduct	Sum Formula	Mass	Lipid Maps Category	Lipid Maps Main Class	Functional Class Abbr	Functional Class Synonyms	Level	Total #C	Total #DB	Total #OH	LCB SN Position	LCB #C	LCB #DB	LCB Bond Type	LCB DB Positions	FA1 SN Position	FA1 #C	FA1 #DB	FA1 Bond Type	FA1 DB Positions
+Cer 18:1;O2/20:2	Cer(d18:1/20:2)	LIPIDMAPS			C38H71NO3	589.5434	Sphingolipids [SP]	Ceramides [SP02]	[SP02]	[Cer, Ceramide]	SN_POSITION	38	3	2	0	18	1	LCB_EXCEPTION		2	20	2	ESTER	
 ----
 
 To parse multiple lipid names from a file via the commmand line, run
 
 ....
-java -jar jgoslin-cli-<VERSION>.jar -f lipidNames.txt
+java -jar jgoslin-cli-<VERSION>.jar -f examples/lipidnames.txt
 ....
 
 To use a specific grammar, instead of trying all, run
 
 ....
-java -jar jgoslin-cli-<VERSION>.jar -f lipidNames.txt -g GOSLIN
+java -jar jgoslin-cli-<VERSION>.jar -f examples/lipidnames.txt -g GOSLIN
 ....
 
 To write output to the tab-separated output file ’goslin-out.tsv’
 instead of to the terminal, run
 
 ....
-java -jar jgoslin-cli-<VERSION>.jar -f lipidNames.txt -g GOSLIN -o
+java -jar jgoslin-cli-<VERSION>.jar -f examples/lipidnames.txt -g GOSLIN -o
 ....
 
 If you want to use all available grammars, simply omit the `-g GOSLIN`
-argument. Please note that you will then receive N times M lines in the
-output file, where N is the number of lipid names and M the number of
-grammars.
+argument. Please note that will increase the runtime significantly since all
+available parsers will be run against each name until the first one returns successfully.
 
 Using jgoslin
 ~~~~~~~~~~~~~
@@ -901,34 +901,38 @@ different parsers:
 
 [source,java]
 ----
-import de.isas.lipidomics.domain.*; // contains Domain objects like LipidAdduct, LipidSpecies ...
-import de.isas.lipidomics.palinom.*; // contains the parser implementations
+import org.lifstools.jgoslin.domain.*; // contains Domain objects like LipidAdduct, LipidSpecies ...
+import org.lifstools.jgoslin.parser.*; // contains the parser implementations
 ...
 
 String ref = "Cer(d18:1/20:2)";
 try {
-    // use the SwissLipids parser
-    SwissLipidsVisitorParser slParser = new SwissLipidsVisitorParser();
-    LipidAdduct sllipid = slParser.parse(ref);
-    System.out.println(sllipid.getLipidString()); // to print the lipid name to the console
-} catch (ParsingException pe) {
-// catch this for any syntactical issues with the name during parsing with a particular parser
-    pe.printStackTrace();
-} catch (ParseTreeVisitorException ptve) {
-// catch this for any structural issues with the name during parsing with a particular parser
-    ptve.printStackTrace();
-}   
+	// use the SwissLipids parser
+	SwissLipidsParser slParser = SwissLipidsParser.newInstance();
+	// multiple eventhandlers can be used with one parser, e.g. in parallel processing
+	SwissLipidsParserEventHandler slHandler = slParser.newEventHandler();
+	LipidAdduct sllipid = slParser.parse(ref, slHandler);
+	System.out.println(sllipid.getLipidString()); // to print the lipid name at its native level to the console
+} catch (LipidException ptve) {
+// catch this for any parsing or semantic issues with a lipid
+	ptve.printStackTrace();
+}
 
 //alternatively, use the other parsers. Don't forget to place try catch blocks around the following lines, as for the SwissLipids parser example
-    // use the LipidMAPS parser
-    LipidMapsVisitorParser lmParser = new LipidMapsVisitorParser();
-    LipidAdduct lmlipid = lmParser.parse(ref);
-    // use the shorthand notation parser GOSLIN
-    GoslinVisitorParser goslinParser = new GoslinVisitorParser();
-    LipidAdduct golipid = goslinParser.parse(ref);
-    // use the shorthand notation parser with support for fragments GOSLIN_FRAGMENTS
-    GoslinFragmentsVisitorParser goslinFragmentsParser = new GoslinFragmentsVisitorParser();
-    LipidAdduct gflipid = goslinFragmentsParser.parse(ref);
+// use the LipidMAPS parser
+LipidMapsParser lmParser = LipidMapsParser.newInstance();
+LipidMapsParserEventHandler lmHandler = lmParser.newEventHandler();
+LipidAdduct lmlipid = lmParser.parse(ref, lmHandler);
+// use the shorthand notation parser GOSLIN
+GoslinParser goslinParser = GoslinParser.newInstance();
+GoslinParserEventHandler goslinHandler = goslinParser.newEventHandler();
+LipidAdduct golipid = goslinParser.parse(ref, goslinHandler);
+// use the updated shorthand notation of 2020
+ShorthandParser shorthandParser = ShorthandParser.newInstance();
+ShorthandParserEventHandler shorthandHandler = shorthandParser.newEventHandler();
+// calling parse with the optional argument false suppresses any exceptions, if errors are encountered, the returned LipidAdduct will be null
+LipidAdduct shlipid = shorthandParser.parse(ref, shorthandHandler, false);
+
 ----
 
 To retrieve a parsed lipid name on a higher hierarchy of lipid level,
@@ -936,17 +940,21 @@ simply define the level when requesting the lipid name:
 
 [source,java]
 ----
-    System.out.println(sllipid.getLipidString(LipidLevel.CATEGORY));
-    System.out.println(sllipid.getLipidString(LipidLevel.CLASS));
-    System.out.println(sllipid.getLipidString(LipidLevel.SPECIES));
-    System.out.println(sllipid.getLipidString(LipidLevel.MOLECULAR_SUBSPECIES));
-    System.out.println(sllipid.getLipidString(LipidLevel.STRUCTURAL_SUBSPECIES));
-    System.out.println(sllipid.getLipidString(LipidLevel.ISOMERIC_SUBSPECIES)); // will throw a ConstraintViolationException since this lipid is only on structural subspecies level
+System.out.println(sllipid.getLipidString(LipidLevel.CATEGORY));
+System.out.println(sllipid.getLipidString(LipidLevel.CLASS));
+System.out.println(sllipid.getLipidString(LipidLevel.SPECIES));
+System.out.println(sllipid.getLipidString(LipidLevel.MOLECULAR_SPECIES));
+System.out.println(sllipid.getLipidString(LipidLevel.SN_POSITION));
+System.out.println(sllipid.getLipidString(LipidLevel.STRUCTURE_DEFINED));
+System.out.println(sllipid.getLipidString(LipidLevel.FULL_STRUCTURE));
+System.out.println(sllipid.getLipidString(LipidLevel.COMPLETE_STRUCTURE));
 ----
 
 This functionality allows easy computation of aggregate statistics of
 lipids on lipid class, category or arbitrary levels. Requesting a lipid
-name on a lower level than the provided will raise an exception.
+name on a lower level than the provided will raise a `org.lifstools.jgoslin.domain.ConstraintViolationException`.
+
+For more examples how the API works, please consult the tests, especially in the parsers module.
 
 For an overview of the domain model used by jgoslin, please see
  <<goslinObjectModel>>.
@@ -957,12 +965,12 @@ Goslin Object Model
 
 [[fig-goslinObjectModel]]
 .The object model shared by the different implementations.
-image:uml-class-diagram.png[Goslin object model.]
+image:goslin-class-diagram.png[Goslin 2.0 object model.]
 
 All goslin implementations are implementing the goslin object model as
 illustrated in Figure <<fig-goslin-object-model>>. The classes
-`LipidCategory`, `LipidLevel`, `LipidClass`, and `LipidFaBondType` are
-predefined enumerations. Here, `LipidClass` is being generated
+`LipidCategory`, `LipidLevel`, `Element`, and `LipidFaBondType` are
+predefined enumerations. Here, `LipidClass` is being populated
 automatically from a list containing lipid information (name,
 description, category, abbreviation, synonyms) for all implementations,
 see https://github.com/lifs-tools/goslin/blob/master/lipid-list.csv[lipid-list.csv] for details.
@@ -975,7 +983,10 @@ hierarchical fashion as defined by Liebisch et al.. A dictionary with
 the class `LipidSpecies` is storing all its associated fatty acyl chains
 which are defined within the class `FattyAcid`. For storing the
 cummulated information on species level for the carbon length, double
-bonds, etc, the class `LipidSpeciesInfo` is utilized.
+bonds, etc, the class `LipidSpeciesInfo` is utilized. A `FattyAcid` can contain
+multiple `FunctionalGroup` objects that can be of type `CarbonChain`, `Cycle`, or `AcylAlkylGroup`.
+Known functional groups can be retrieved from `KnownFunctionalGroups`, which is being populated
+automatically from a list of known functional groups.
 
 [[supportedLipidClasses]]
 Supported Lipid Classes

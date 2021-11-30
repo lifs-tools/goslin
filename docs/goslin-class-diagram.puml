@@ -1,0 +1,366 @@
+@startuml
+
+class org.lifstools.jgoslin.domain.AcylAlkylGroup {
+	{field} +alkyl : boolean
+	{field} +nitrogenBond : boolean
+	{method} +copy () : org.lifstools.jgoslin.domain.FunctionalGroup
+	{method} +toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.Adduct {
+	{field} {static} +ADDUCTS : java.util.Map
+	{field} {static} +ADDUCT_CHARGES : java.util.Map
+	{field} +adductString : String
+	{field} +charge : int
+	{field} +chargeSign : int
+	{field} +sumFormula : String
+	{method} +getElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +getLipidString () : String
+}
+
+
+class org.lifstools.jgoslin.domain.CarbonChain {
+	{method} +copy () : org.lifstools.jgoslin.domain.FunctionalGroup
+	{method} +toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.ConstraintViolationException {
+}
+
+
+class org.lifstools.jgoslin.domain.Cycle {
+	{field} +cycle : int
+	{field} +end : int
+	{field} +start : int
+	{method} +addPosition ( paramint1 : int ) : void
+	{method} +computeElements () : void
+	{method} +copy () : org.lifstools.jgoslin.domain.FunctionalGroup
+	{method} +getNDoubleBonds () : int
+	{method} +rearrangeFunctionalGroups ( paramFunctionalGroup1 : org.lifstools.jgoslin.domain.FunctionalGroup , paramint2 : int ) : void
+	{method} +shiftPositions ( paramint1 : int ) : void
+	{method} +toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.Dictionary {
+}
+
+
+class org.lifstools.jgoslin.domain.DoubleBonds {
+	{field} #doubleBondPositions : java.util.Map
+	{field} +numDoubleBonds : int
+	{method} +copy () : org.lifstools.jgoslin.domain.DoubleBonds
+}
+
+
+enum org.lifstools.jgoslin.domain.Element {
+	{field} +As
+	{field} +Br
+	{field} +C
+	{field} +C13
+	{field} +Cl
+	{field} +F
+	{field} +H
+	{field} +H2
+	{field} +I
+	{field} +N
+	{field} +N15
+	{field} +O
+	{field} +O17
+	{field} +O18
+	{field} +P
+	{field} +P32
+	{field} +S
+	{field} +S33
+	{field} +S34
+}
+
+
+class org.lifstools.jgoslin.domain.ElementTable {
+	{method} +add ( paramElementTable1 : org.lifstools.jgoslin.domain.ElementTable ) : void
+	{method} +add ( paramElementTable1 : org.lifstools.jgoslin.domain.ElementTable , paramint2 : int ) : void
+	{method} +copy () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +getChargedMass ( paramint1 : int ) : Double
+	{method} +getMass () : Double
+	{method} +getMass ( paramElement1 : org.lifstools.jgoslin.domain.Element ) : Double
+	{method} +getSumFormula () : String
+	{method}  {static} +of ( paramMap$Entry;1 : [Ljava.util.Map$Entry; ) : org.lifstools.jgoslin.domain.ElementTable
+}
+
+
+class org.lifstools.jgoslin.domain.Elements {
+	{field} {static} +ELECTRON_REST_MASS : double
+	{field} {static} +ELEMENT_MASSES : java.util.Map
+	{field} {static} +ELEMENT_ORDER : java.util.ArrayList
+	{field} {static} +ELEMENT_POSITIONS : java.util.Map
+	{field} {static} +ELEMENT_SHORTCUT : java.util.Map
+}
+
+
+class org.lifstools.jgoslin.domain.FattyAcid {
+	{field} +numCarbon : int
+	{method} +computeElements () : void
+	{method} +copy () : org.lifstools.jgoslin.domain.FunctionalGroup
+	{method} +getFunctionalGroupElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +getNDoubleBonds () : int
+	{method} +getPrefix ( paramLipidFaBondType1 : org.lifstools.jgoslin.domain.LipidFaBondType ) : String
+	{method} +lipidFaBondTypePrefix ( paramLipidFaBondType1 : org.lifstools.jgoslin.domain.LipidFaBondType ) : boolean
+	{method} +setType ( paramLipidFaBondType1 : org.lifstools.jgoslin.domain.LipidFaBondType ) : void
+	{method} +toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.FunctionalGroup {
+	{field} +atomic : boolean
+	{field} +count : int
+	{field} +functionalGroups : java.util.Map
+	{field} +name : String
+	{field} +position : int
+	{field} +ringStereo : String
+	{field} +stereochemistry : String
+	{method} +addPosition ( paramint1 : int ) : void
+	{method} +computeAndCopyElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +computeElements () : void
+	{method} +copy () : org.lifstools.jgoslin.domain.FunctionalGroup
+	{method} +getFunctionalGroupElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +getNDoubleBonds () : int
+	{method} +shiftPositions ( paramint1 : int ) : void
+	{method} +toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.GenericList {
+}
+
+
+class org.lifstools.jgoslin.domain.Headgroup {
+	{field} {static} +CategoryString : java.util.Map
+	{field} {static} +ClassString : java.util.HashMap
+	{field} {static} +StringCategory : java.util.HashMap
+	{field} {static} +StringClass : java.util.HashMap
+	{field} +decorators : java.util.ArrayList
+	{field} {static} +exceptionHeadgroups : java.util.HashSet
+	{field} +headgroup : String
+	{field} +lipidClass : int
+	{field} +spException : boolean
+	{field} +useHeadgroup : boolean
+	{method}  {static} +getCategory ( paramString1 : String ) : org.lifstools.jgoslin.domain.LipidCategory
+	{method}  {static} +getClass ( paramString1 : String ) : int
+	{method} +getClassName () : String
+	{method} +getElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.HeadgroupDecorator {
+	{method} +copy () : org.lifstools.jgoslin.domain.FunctionalGroup
+	{method} +toString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.KnownFunctionalGroups {
+	{field} {static} +UNDEFINED_CLASS : int
+	{method} +get ( paramString1 : String ) : org.lifstools.jgoslin.domain.FunctionalGroup
+}
+
+
+class org.lifstools.jgoslin.domain.LipidAdduct {
+	{method} +getClassName () : String
+	{method} +getElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +getExtendedClass () : String
+	{method} +getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel
+	{method} +getLipidString () : String
+	{method} +getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+	{method} +getMass () : double
+	{method} +getSumFormula () : String
+	{method} +isCardioLipin () : boolean
+	{method} +isContainsEster () : boolean
+	{method} +isContainsSugar () : boolean
+	{method} +isLyso () : boolean
+	{method} +isSpException () : boolean
+	{method} +toString () : String
+}
+
+
+enum org.lifstools.jgoslin.domain.LipidCategory {
+	{field} +FA
+	{field} +GL
+	{field} +GP
+	{field} +NO_CATEGORY
+	{field} +PK
+	{field} +SL
+	{field} +SP
+	{field} +ST
+	{field} +UNDEFINED
+}
+
+
+class org.lifstools.jgoslin.domain.LipidClassMeta {
+	{field} +description : String
+	{field} +lipidClassName : String
+	{field} +maxNumFa : int
+	{field} +possibleNumFa : int
+	{field} +specialCases : java.util.Set
+	{field} +synonyms : java.util.List
+	{method} +getClassName () : String
+}
+
+
+class org.lifstools.jgoslin.domain.LipidClasses {
+	{field} {static} +UNDEFINED_CLASS : int
+	{method}  {static} +getInstance () : org.lifstools.jgoslin.domain.LipidClasses
+}
+
+
+class org.lifstools.jgoslin.domain.LipidCompleteStructure {
+	{method} +getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel
+	{method} +getLipidString () : String
+	{method} +getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.LipidException {
+}
+
+
+enum org.lifstools.jgoslin.domain.LipidFaBondType {
+	{field} +AMINE
+	{field} +ESTER
+	{field} +ETHER_PLASMANYL
+	{field} +ETHER_PLASMENYL
+	{field} +ETHER_UNSPECIFIED
+	{field} +LCB_EXCEPTION
+	{field} +LCB_REGULAR
+	{field} +NO_FA
+	{field} +UNDEFINED_FA
+}
+
+
+class org.lifstools.jgoslin.domain.LipidFullStructure {
+	{method} +getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel
+	{method} +getLipidString () : String
+	{method} +getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+enum org.lifstools.jgoslin.domain.LipidLevel {
+	{field} +CATEGORY
+	{field} +CLASS
+	{field} +COMPLETE_STRUCTURE
+	{field} +FULL_STRUCTURE
+	{field} +MOLECULAR_SPECIES
+	{field} +NO_LEVEL
+	{field} +SN_POSITION
+	{field} +SPECIES
+	{field} +STRUCTURE_DEFINED
+	{field} +UNDEFINED_LEVEL
+}
+
+
+class org.lifstools.jgoslin.domain.LipidMolecularSpecies {
+	{method} +buildLipidSubspeciesName () : String
+	{method} +buildLipidSubspeciesName ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+	{method} +getElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel
+	{method} +getLipidString () : String
+	{method} +getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.LipidParsingException {
+}
+
+
+class org.lifstools.jgoslin.domain.LipidSnPosition {
+	{method} +getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel
+	{method} +getLipidString () : String
+	{method} +getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.LipidSpecies {
+	{field} #fa : java.util.HashMap
+	{field} #faList : java.util.ArrayList
+	{method} +getElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +getExtendedClass () : String
+	{method} +getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel
+	{method} +getLipidString () : String
+	{method} +getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.LipidSpeciesInfo {
+	{field} {static} +ETHER_PREFIX : [Ljava.lang.String;
+	{field} +lipidClass : int
+	{field} +numEthers : int
+	{field} +numSpecifiedFa : int
+	{field} +totalFa : int
+	{method} +add ( paramFattyAcid1 : org.lifstools.jgoslin.domain.FattyAcid ) : void
+	{method} +copy () : org.lifstools.jgoslin.domain.LipidSpeciesInfo
+	{method} +copy () : org.lifstools.jgoslin.domain.FunctionalGroup
+	{method} +getElements () : org.lifstools.jgoslin.domain.ElementTable
+	{method} +toString () : String
+}
+
+
+class org.lifstools.jgoslin.domain.LipidStructureDefined {
+	{method} +getLipidLevel () : org.lifstools.jgoslin.domain.LipidLevel
+	{method} +getLipidString () : String
+	{method} +getLipidString ( paramLipidLevel1 : org.lifstools.jgoslin.domain.LipidLevel ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.StringFunctions {
+	{field} {static} +DEFAULT_QUOTE : char
+	{field} {static} +DEFAULT_SPLIT : char
+	{method}  {static} +getResourceAsString ( paramString1 : String ) : String
+	{method}  {static} +getResourceAsString ( paramResource1 : org.springframework.core.io.Resource ) : String
+	{method}  {static} +getResourceAsStringList ( paramString1 : String ) : java.util.List
+	{method}  {static} +getResourceAsStringList ( paramResource1 : org.springframework.core.io.Resource ) : java.util.List
+	{method}  {static} +splitString ( paramString1 : String ) : java.util.ArrayList
+	{method}  {static} +splitString ( paramString1 : String , paramchar2 : char , paramchar3 : char ) : java.util.ArrayList
+	{method}  {static} +splitString ( paramString1 : String , paramchar2 : char , paramchar3 : char , paramboolean4 : boolean ) : java.util.ArrayList
+	{method}  {static} +strip ( paramString1 : String , paramchar2 : char ) : String
+}
+
+
+class org.lifstools.jgoslin.domain.UnsupportedLipidException {
+}
+
+
+
+
+org.lifstools.jgoslin.domain.AcylAlkylGroup --|>  org.lifstools.jgoslin.domain.FunctionalGroup
+org.lifstools.jgoslin.domain.CarbonChain --|>  org.lifstools.jgoslin.domain.FunctionalGroup
+org.lifstools.jgoslin.domain.ConstraintViolationException --|>  org.lifstools.jgoslin.domain.LipidException
+org.lifstools.jgoslin.domain.Cycle --|>  org.lifstools.jgoslin.domain.FunctionalGroup
+org.lifstools.jgoslin.domain.FattyAcid -->  org.lifstools.jgoslin.domain.LipidFaBondType : lipidFaBondType
+org.lifstools.jgoslin.domain.FattyAcid --|>  org.lifstools.jgoslin.domain.FunctionalGroup
+org.lifstools.jgoslin.domain.FunctionalGroup -->  org.lifstools.jgoslin.domain.DoubleBonds : doubleBonds
+org.lifstools.jgoslin.domain.FunctionalGroup -->  org.lifstools.jgoslin.domain.ElementTable : elements
+org.lifstools.jgoslin.domain.FunctionalGroup -->  org.lifstools.jgoslin.domain.KnownFunctionalGroups : knownFunctionalGroups
+org.lifstools.jgoslin.domain.Headgroup -->  org.lifstools.jgoslin.domain.LipidCategory : lipidCategory
+org.lifstools.jgoslin.domain.HeadgroupDecorator -->  org.lifstools.jgoslin.domain.LipidLevel : lowestVisibleLevel
+org.lifstools.jgoslin.domain.HeadgroupDecorator --|>  org.lifstools.jgoslin.domain.FunctionalGroup
+org.lifstools.jgoslin.domain.LipidAdduct -->  org.lifstools.jgoslin.domain.Adduct : adduct
+org.lifstools.jgoslin.domain.LipidAdduct -->  org.lifstools.jgoslin.domain.LipidSpecies : lipid
+org.lifstools.jgoslin.domain.LipidClassMeta -->  org.lifstools.jgoslin.domain.ElementTable : elements
+org.lifstools.jgoslin.domain.LipidClassMeta -->  org.lifstools.jgoslin.domain.LipidCategory : lipidCategory
+org.lifstools.jgoslin.domain.LipidClasses -->  org.lifstools.jgoslin.domain.LipidClasses : LIPID_CLASSES
+org.lifstools.jgoslin.domain.LipidCompleteStructure --|>  org.lifstools.jgoslin.domain.LipidFullStructure
+org.lifstools.jgoslin.domain.LipidFullStructure --|>  org.lifstools.jgoslin.domain.LipidStructureDefined
+org.lifstools.jgoslin.domain.LipidMolecularSpecies --|>  org.lifstools.jgoslin.domain.LipidSpecies
+org.lifstools.jgoslin.domain.LipidParsingException --|>  org.lifstools.jgoslin.domain.LipidException
+org.lifstools.jgoslin.domain.LipidSnPosition --|>  org.lifstools.jgoslin.domain.LipidMolecularSpecies
+org.lifstools.jgoslin.domain.LipidSpecies -->  org.lifstools.jgoslin.domain.Headgroup : headGroup
+org.lifstools.jgoslin.domain.LipidSpecies -->  org.lifstools.jgoslin.domain.LipidSpeciesInfo : info
+org.lifstools.jgoslin.domain.LipidSpeciesInfo -->  org.lifstools.jgoslin.domain.LipidFaBondType : extendedClass
+org.lifstools.jgoslin.domain.LipidSpeciesInfo -->  org.lifstools.jgoslin.domain.LipidLevel : level
+org.lifstools.jgoslin.domain.LipidSpeciesInfo --|>  org.lifstools.jgoslin.domain.FattyAcid
+org.lifstools.jgoslin.domain.LipidStructureDefined --|>  org.lifstools.jgoslin.domain.LipidSnPosition
+org.lifstools.jgoslin.domain.UnsupportedLipidException --|>  org.lifstools.jgoslin.domain.LipidException
+
+
+@enduml
