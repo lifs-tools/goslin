@@ -169,7 +169,7 @@ mediator_position : number;
 
 trivial_mediator : 'AA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'TXB1' | 'TXB2' | 'TXB3' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'LTB4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha';
 
-unstructured_mediator : 'alpha-LA' | 'LTC4' | 'LTD4' | 'PGI2' | 'tetranor-12-HETE';
+unstructured_mediator : 'alpha-LA' | 'LTC4' | 'LTD4' | 'PGI2';
 
 
 
