@@ -908,7 +908,7 @@ import org.lifstools.jgoslin.parser.*; // contains the parser implementations
 String ref = "Cer(d18:1/20:2)";
 try {
 	// use the SwissLipids parser
-	SwissLipidsParser slParser = SwissLipidsParser.newInstance();
+	SwissLipidsParser slParser = new SwissLipidsParser();
 	// multiple eventhandlers can be used with one parser, e.g. in parallel processing
 	SwissLipidsParserEventHandler slHandler = slParser.newEventHandler();
 	LipidAdduct sllipid = slParser.parse(ref, slHandler);
@@ -920,15 +920,15 @@ try {
 
 //alternatively, use the other parsers. Don't forget to place try catch blocks around the following lines, as for the SwissLipids parser example
 // use the LipidMAPS parser
-LipidMapsParser lmParser = LipidMapsParser.newInstance();
+LipidMapsParser lmParser = new LipidMapsParser();
 LipidMapsParserEventHandler lmHandler = lmParser.newEventHandler();
 LipidAdduct lmlipid = lmParser.parse(ref, lmHandler);
 // use the shorthand notation parser GOSLIN
-GoslinParser goslinParser = GoslinParser.newInstance();
+GoslinParser goslinParser = new GoslinParser();
 GoslinParserEventHandler goslinHandler = goslinParser.newEventHandler();
 LipidAdduct golipid = goslinParser.parse(ref, goslinHandler);
 // use the updated shorthand notation of 2020
-ShorthandParser shorthandParser = ShorthandParser.newInstance();
+ShorthandParser shorthandParser = new ShorthandParser();
 ShorthandParserEventHandler shorthandHandler = shorthandParser.newEventHandler();
 // calling parse with the optional argument false suppresses any exceptions, if errors are encountered, the returned LipidAdduct will be null
 LipidAdduct shlipid = shorthandParser.parse(ref, shorthandHandler, false);
