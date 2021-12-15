@@ -27,8 +27,7 @@ Dominik Kopczynski; Nils Hoffmann; Bing Peng; Robert Ahrends
 This document gives an overview for users and developers who want to use the Goslin Webapplication, REST API, or any of the implementations in C++, R, Python or Java.
 
 == Lipid Shorthand Nomenclature Grammars
-Goslin uses ANTLRv4 compatible context-free EBNF grammars. ANTLRv4 is then used for jgoslin to generate the LL(*) parsers compatible with those grammars. The other implementations use a 
-generic recursive decent parser (see https://en.wikipedia.org/wiki/Context-free_language, https://en.wikipedia.org/wiki/LL_parser, https://www.antlr.org/about.html).
+Goslin uses ANTLRv4 compatible context-free EBNF grammars. A generic recursive decent parser is used by the different Goslin implementations (see https://en.wikipedia.org/wiki/Context-free_language, https://en.wikipedia.org/wiki/LL_parser, https://www.antlr.org/about.html).
 
 The grammars (*.g4 files) are available from our Goslin GitHub repository at https://github.com/lifs-tools/goslin. 
 
@@ -38,17 +37,19 @@ The grammars model lipids as hierarchically structured bits of information.
 We do not model the lipid category or main class explicitly, but rather keep them in a global lookup table data structure, derived from the `lipid-list.csv` file in the Goslin GitHub repository. 
 This allows us to keep the grammars clutter-free and makes them easier to read. 
 
-The structural classification of lipids follows the shorthand notation as proposed by Liebisch et al. and is compatible to that of SwissLipids. The following example shows the hierarchical representation of PE(16:1(6Z)/16:0). Please note that a level deeper in the hierarchy includes the information of the previous levels:
+The structural classification of lipids follows the shorthand notation recently updated by Liebisch et al. and is compatible to that of LIPID MAPS. The following example shows the hierarchical representation of PE 16:1(6Z)/16:0;5OH[R],8OH;3oxo:
 
-.Structural hierarchy representation of PE(16:1(6Z)/16:0). LM: LIPID MAPS, SL: SwissLipids, HG: Head Group, FA: Fatty Acyl
+.Structural hierarchy representation of PE(16:1(6Z)/16:0;5OH,8OH;3oxo). LM: LIPID MAPS, HG: Head Group, FA: Fatty Acyl
 |===
 | **Level** | **Name** | **Description** 
-| Category (LM) | Glycerophospholipids | Lipid category
-| Class (LM) | Glycerophosphoethanolamine | Lipid class
-| Species (SL, LM Subclass) | Phosphatidylethanolamine (32:1), PE(32:1) | HG, FA summary
-| Molecular Subspecies (SL) | PE(16:0_16:1) | HG, two FAs, SN positions undetermined, number of double bonds per FA
-| Structural Subspecies (SL) | PE(16:1/16:0) | HG, SN positions determined: sn1 for FA1, sn2 for FA2
-| Isomeric Subspecies (SL, LM) | PE(16:1(6Z)/16:0) | HG, double bond position and stereo configuration (6Z) on FA1
+| Category (LM Category) | Glycerophospholipids (GP) | Lipid category
+| Class (LM Class) | Glycerophosphoethanolamine (PE) GP02 | Lipid class
+| Species (LM Subclass) | Phosphatidylethanolamine (32:1), PE 32:2;O3 | HG, FA summary, two double bond equivalents, three oxidations
+| Molecular species | PE 16:1_16:1;O3 | HG, two FAs, SN positions undetermined, two double bond equivalents, three oxidations
+| sn-Position | PE 16:1/16:1;O3 | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2, two double bond equivalents, three oxidations
+| Structure defined | PE 16:1(6)/16:1;(OH)2;oxo | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2, three oxidations and unspecified stereo configuration (6) on FA1
+| Full structure | PE 16:1(6Z)/16:1;5OH,8OH;3oxo | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2, positions for oxidations and stereo configuration (6Z) on FA1
+| Complete structure | PE 16:1(6Z)/16:0;5OH[R],8OH;3oxo | HG, SN positions, here: for FA1 at sn1 and FA2 at sn2, positions for oxidations and stereo configuration ([R]) and double bond position and stereo configuration (6Z) on FA1
 |===
 
 Please see <<goslinObjectModel>> for an overview of the Goslin domain model which is used to represent the structural hierarchy within the different implementations.
@@ -60,194 +61,9 @@ Interactive Usage
 ~~~~~~~~~~~~~~~~~
 
 The interactive goslin web application is available
-at https://apps.lifs.isas.de/goslin. It provides two forms to i) upload
-a file containing one lipid name per line (see Figure <<fig-goslin-webapp-form-01>>), or ii)
-upload a list of lipid names, defined by the user in an interactive form
-(see Figure <<fig-goslin-webapp-form-02>>). The
-latter form also allows pasting lists of lipid names directly from the
-clipboard with `CTRL+V`. Both forms provide feedback for issues
-concerning every processed lipid, such as invalid names or typos (see Figure [[fig-goslin-webapp-rest-02a]]), to
-allow the user to cross-check their data before proceeding.
+at https://apps.lifs-tools.org/goslin. 
 
-[[fig-goslin-webapp-form-01]]
-.Goslin web application submission form for text files with one lipid name per row.
-image:goslin-webapp-form-01.png[SubmissionForm1]
-
-[[fig-goslin-webapp-form-02]]
-.Goslin web application submission form for user-defined lipid names.
-image:goslin-webapp-form-02.png[SubmissionForm2]
-
-[[fig-goslin-webapp-form-02a]]
-.Goslin web application submission form for user-defined lipid names provides feedback for unknown or unsupported names and parts thereof.
-image:goslin-webapp-form-02a.png[SubmissionForm3]
-
-[[fig-goslin-webapp-form-03]]
-.Parsing results are displayed as ’cards’ for every lipid name. Clicking on a card opens it and shows details of the according lipid.
-image:goslin-webapp-result-03.png[ResultForm]
-
-After successful validation, the validated lipids are returned in
-overview cards (see Figure <<fig-goslin-webapp-form-03>>),
-detailing their LipidMAPS classification, cross-links to SwissLipids
-and/or LipidMAPS or HMDB. Additionally, the cards show summary
-information about the number of carbon atoms, double bonds,
-hydroxylations and detailed information, such as double bond position,
-long-chain-base status, and the bond type of the fatty acyl to the head
-group for each fatty acyl, if available (see Figure <<fig-goslin-webapp-rest-04>>) .
-
-[[fig-goslin-webapp-rest-04]]
-.Each result card displays summary and detail information about a lipid. Depending on the lipid level, this can include information about each individual fatty acyl. Cross-links to SwissLipids and LipidMAPS are shown where a normalized lipid name could be matched unambiguously against the normalized names of SwissLipids and / or LipidMAPS lipids.
-image:goslin-webapp-result-detail-04.png[ResultDetail]
-
-The source code for the web application and instructions to build it as
-a Docker container are available at
-https://github.com/lifs-tools/goslin-webapp under the terms of the open
-source Apache license version 2.
-
-Programmatic access via the REST API
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-An interactive documentation for the rest api of the goslin web
-application is available at
-https://apps.lifs.isas.de/goslin/swagger-ui.html (see Figure <<fig-goslin-webapp-rest-05>>). To
-illustrate its usage, we will briefly show a small example how a user
-can access the rest api with a standard http client.
-
-[[fig-goslin-webapp-rest-05]]
-.The goslin web application provides an interactive documentation for its rest api to simplify programmatic access.
-image:goslin-webapp-rest-05.png[RESTForm]
-
-The Structure for the request consists of a json object \{} enclosing
-two lists, with the names `lipidNames` and `grammars`. Acceptable values
-for `grammars` are: `LIPIDMAPS`, `GOSLIN`, `GOSLIN_FRAGMENTS`,
-`SWISSLIPIDS`, and `HMDB`. A complete list is available from the
-interactive rest api documentation’s `Models` section under
-`ValidationRequest`. Both fields in the `ValidationRequest` accept
-comma-separated entries, enclosed in double quotes:
-
-....
-  {
-      "lipidNames": [
-        "Cer(d18:1/16:1(6Z))"
-      ],
-      "grammars": [
-        "LIPIDMAPS"
-      ]
-  }
-  
-....
-
-Sending the http POST request with `curl` as an http client looks as
-follows:
-
-....
-  curl -X POST "https://apps.lifs.isas.de/goslin/rest/validate" -H  "accept: */*" -H  "Content-Type: application/json" -d "{  \"lipidNames\": [    \"Cer(d18:1/16:1(6Z))\"  ],  \"grammars\": [    \"LIPIDMAPS\"  ]}"
-  
-....
-
-The rest api will return the following result for the request, with a
-http response code of 200 (OK). This result returns a map of properties
-for each lipid name that was parsed. If at least one name is not
-parseable, the rest api will return a response code of 400 (Client
-error), together with the same results reponse object. In that case, the
-`failedToParse` field in the response will contain the number of lipid
-names that could not be parsed. For those results where no grammar was
-applicable, the `grammar` field will contain the string
-`NOT_PARSEABLE`.¸In other cases, that field will contain the last
-grammar used to parse the lipid name and the `messages` field will
-contain a list of validation messages that help to narrow down the
-offending bits in the lipid name.
-
-[source,json]
-----
-{
-  "results": [
-    {
-      "lipidName": "Cer(d18:1/16:1(6Z))",
-      "grammar": "LIPIDMAPS",
-      "messages": [],
-      "lipidAdduct": {
-        "lipid": {
-          "lipidCategory": "SP",
-          "lipidClass": "CER",
-          "headGroup": "Cer",
-          "info": {
-            "type": "STRUCTURAL",
-            "name": "Cer",
-            "position": -1,
-            "lipidFaBondType": "ESTER",
-            "lcb": false,
-            "modifications": [],
-            "doubleBondPositions": {},
-            "level": "STRUCTURAL_SUBSPECIES",
-            "ncarbon": 34,
-            "nhydroxy": 2,
-            "ndoubleBonds": 2
-          },
-----
-
-The response part also reports the normalized name (`goslinName`), as
-well as classification information using the LipidMAPS category and
-class associated to the parsed lipid.
-
-[source,json]
-----
-      },
-      "goslinName": "Cer 18:1;2/16:1(6Z)",
-      "lipidMapsCategory": "SP",
-      "lipidMapsClass": "SP0203",
-----
-
-The response also reports information on the fatty acyls detected in the
-lipid name. In this case, a lcb (in the ceramide) has been detected. The
-name given here as an example was classified on structural subspecies
-level, since the lcb contains one double bond, but without positional
-E/Z information. The fatty acyl FA1 at the sn2 position does report E/Z
-information for its double bond, thus FA1 is an isomeric fatty acyl.
-Overall, the lipid can thus be classified as a structural subspecies.
-
-[source,json]
-----
-      "fattyAcids": {
-        "LCB": {
-          "type": "STRUCTURAL",
-          "name": "LCB",
-          "position": 1,
-          "lipidFaBondType": "ESTER",
-          "lcb": true,
-          "modifications": [],
-          "doubleBondPositions": {},
-          "ncarbon": 18,
-          "nhydroxy": 2,
-          "ndoubleBonds": 1
-        },
-        "FA1": {
-          "type": "ISOMERIC",
-          "name": "FA1",
-          "position": 2,
-          "lipidFaBondType": "ESTER",
-          "lcb": false,
-          "modifications": [],
-          "doubleBondPositions": {
-            "6": "Z"
-          },
-          "ncarbon": 16,
-          "nhydroxy": 0,
-          "ndoubleBonds": 1
-        }
-      }
-----
-
-Finally, the response reports the total number lipid names received, the
-total number parsed and the total number of parsing failures.
-
-[source,json]
-----
-  ],
-  "totalReceived": 1,
-  "totalParsed": 1,
-  "failedToParse": 0
-}
-----
+Please check the documentation that is available with the web application on details for usage https://apps.lifs-tools.org/goslin/documentation#user-content-sec:webserviceusers[here].
 
 C++ Implementation
 ------------------
@@ -908,7 +724,7 @@ import org.lifstools.jgoslin.parser.*; // contains the parser implementations
 String ref = "Cer(d18:1/20:2)";
 try {
 	// use the SwissLipids parser
-	SwissLipidsParser slParser = SwissLipidsParser.newInstance();
+	SwissLipidsParser slParser = new SwissLipidsParser();
 	// multiple eventhandlers can be used with one parser, e.g. in parallel processing
 	SwissLipidsParserEventHandler slHandler = slParser.newEventHandler();
 	LipidAdduct sllipid = slParser.parse(ref, slHandler);
@@ -920,15 +736,15 @@ try {
 
 //alternatively, use the other parsers. Don't forget to place try catch blocks around the following lines, as for the SwissLipids parser example
 // use the LipidMAPS parser
-LipidMapsParser lmParser = LipidMapsParser.newInstance();
+LipidMapsParser lmParser = new LipidMapsParser();
 LipidMapsParserEventHandler lmHandler = lmParser.newEventHandler();
 LipidAdduct lmlipid = lmParser.parse(ref, lmHandler);
 // use the shorthand notation parser GOSLIN
-GoslinParser goslinParser = GoslinParser.newInstance();
+GoslinParser goslinParser = new GoslinParser();
 GoslinParserEventHandler goslinHandler = goslinParser.newEventHandler();
 LipidAdduct golipid = goslinParser.parse(ref, goslinHandler);
 // use the updated shorthand notation of 2020
-ShorthandParser shorthandParser = ShorthandParser.newInstance();
+ShorthandParser shorthandParser = new ShorthandParser();
 ShorthandParserEventHandler shorthandHandler = shorthandParser.newEventHandler();
 // calling parse with the optional argument false suppresses any exceptions, if errors are encountered, the returned LipidAdduct will be null
 LipidAdduct shlipid = shorthandParser.parse(ref, shorthandHandler, false);
