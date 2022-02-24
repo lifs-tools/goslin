@@ -166,7 +166,7 @@ pl_hg_double : 'CDP-DAG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' |
 pl_hg_species : hg_PE_PS ROB hg_PE_PS_type RCB;
 hg_PE_PS : 'PE-N' | 'PS-N';
 hg_PE_PS_type : 'Alk' | 'FA'; 
-pl_hg_quadro : 'BMP' | 'CL' | 'LCL';
+pl_hg_quadro : 'BMP' | 'CL' | 'LCL' | 'DLCL';
 hg_pip : hg_pip_pure_m | hg_pip_pure_d | hg_pip_pure_t | hg_pip_pure_m ROB hg_pip_m RCB | hg_pip_pure_d ROB hg_pip_d RCB | hg_pip_pure_t ROB hg_pip_t RCB;
 hg_pip_pure_m : 'PIP';
 hg_pip_pure_d : 'PIP2';
