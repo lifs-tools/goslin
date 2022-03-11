@@ -108,7 +108,7 @@ hg_cpa: 'CPA';
 hg_dpl: hg_lbpa | 'CDP-DG' | 'DMPE' | 'MMPE' | 'PA' | 'PC' | 'PE' | 'PEt' | 'PG' | 'PI' | 'PIP' | 'PIP2' | 'PIP3' | 'PS' | 'PIM1' | 'PIM2' | 'PIM3' | 'PIM4' | 'PIM5' | 'PIM6' | 'Glc-DG' | 'PGP' | 'PE-NMe2' | 'AC2SGL' | 'DAT' | 'PE-NMe' | 'PT' | 'Glc-GP' | 'PPA' | 'PnC' | 'PnE' | '6-Ac-Glc-GP' | 'GPA' | 'GPCho' | 'GPEtn' | 'GPGro' | 'GPIns' | 'GPSer' | 'GPC' | 'GPE' | 'GPG' | 'GPI' | 'GPS' | 'PlsA' | 'PlsCho' | 'PlsEtn' | 'PlsGro' | 'PlsIns' | 'PlsSer';
 hg_lbpa : 'LBPA';
 hg_lplc: hg_lpl | hg_lpl headgroup_separator;
-hg_lpl: 'LysoPC' | 'LPC' | 'LysoPE' | 'LPE' | 'LPI' | 'LPG' | 'LPS' | 'LPIM1' | 'LPIM2' | 'LPIM3' | 'LPIM4' | 'LPIM5' | 'LPIM6' | 'LPA';
+hg_lpl: 'lysoPC' | 'LysoPC' | 'LPC' | 'lysoPE' | 'LysoPE' | 'LPE' | 'lysoPI' | 'LysoPI' | 'LPI' | 'lysoPG' | 'LysoPG' | 'LPG' | 'lysoPS' | 'LysoPS' | 'LPS' | 'LPIM1' | 'LPIM2' | 'LPIM3' | 'LPIM4' | 'LPIM5' | 'LPIM6' | 'lysoPA' | 'LysoPA' | 'LPA';
 hg_fourplc: hg_fourpl | hg_fourpl headgroup_separator;
 hg_fourpl: 'PAT16' | 'PAT18';
 pip_position: square_open_bracket pip_pos square_close_bracket;
