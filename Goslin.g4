@@ -66,10 +66,10 @@ hg_sgl_full : hg_sgl | hg_sgl heavy_hg;
 hg_tgl_full : hg_tgl | hg_tgl heavy_hg;
 
 hg_sqml : 'SQMG';
-hg_mgl : 'MAG';
-hg_dgl : 'DAG';
+hg_mgl : 'MAG' | 'MG';
+hg_dgl : 'DAG' | 'DG';
 hg_sgl : 'MGDG' | 'DGDG' | 'SQDG';
-hg_tgl : 'TAG';
+hg_tgl : 'TAG' | 'TG';
 
 
 
