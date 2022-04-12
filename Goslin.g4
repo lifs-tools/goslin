@@ -140,7 +140,7 @@ hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'GB4' | 'GD3' | 'GB3' | 'GM1' | 'GM3' | 'GM4' 
 sterol : stc | ste | stes;
 stc : st | st heavy_hg;
 st : 'Ch' | 'Cholesterol' | 'ST 27:1;1' | 'ST 27:2;1' | 'ST 28:3;1' | 'ST 30:2;1' | 'ST 29:2;1' | 'ST 28:2;1' | 'Desmosterol' | 'Stigmasterol' | 'Ergosterol' | 'Lanosterol' | 'Ergostadienol' | 'Campesterol' | 'Sitosterol' | 'Chol';
-ste : hg_stc sorted_fa_separator fa;
+ste : hg_stc sorted_fa_separator fa | hg_stc unsorted_fa_separator fa;
 stes : hg_stcs headgroup_separator fa;
 hg_stc : hg_ste | hg_ste heavy_hg;
 hg_ste : 'SE 27:1' | 'SE 27:2' | 'SE 28:3' | 'SE 30:2' | 'SE 29:2' | 'SE 28:2';
@@ -251,4 +251,3 @@ element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As';
 charge : '1' | '2' | '3' | '4';
 charge_sign : plus_minus;
 plus_minus : '-' | '+';
-
