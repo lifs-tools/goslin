@@ -120,15 +120,18 @@ plasmalogen : 'O' | 'o' | 'P' | 'p';
 
 
 /* sphingolipid rules (21) */
-sl : lsl | dsl;
+sl : lsl | dsl | so_lsl;
 lsl : hg_lslc headgroup_separator lcb;
+so_lsl : hg_so_lslc headgroup_separator fa;
 dsl : hg_dslc headgroup_separator sl_species | hg_dslc headgroup_separator sl_subspecies;
 
 sl_species : lcb;
 sl_subspecies : lcb sorted_fa_separator fa;
 
 hg_lslc : hg_lsl | hg_lsl heavy_hg;
-hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM' | 'LIPC' | 'So' | 'Sa' | 'SPH' | 'Sph' | 'LCB' | 'S1P' | 'SPH-P' | 'SIP' | 'Sa1P';
+hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM' | 'LIPC' | 'SPH' | 'Sph' | 'LCB' | 'S1P' | 'SPH-P' | 'SIP' | 'Sa1P';
+hg_so_lslc : hg_so_lsl | hg_so_lsl heavy_hg;
+hg_so_lsl : 'So' | 'Sa';
 hg_dslc : hg_dsl | hg_dsl heavy_hg;
 hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'HexCer' | 'Hex2Cer' | 'Hex3Cer' | 'IPC' | 'MIP2C' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' | 'CerPE' | 'PE-Cer' |
  'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
@@ -152,7 +155,7 @@ stes : hg_stcs headgroup_separator fa;
 hg_stc : hg_ste | hg_ste heavy_hg;
 hg_ste : 'SE 27:1' | 'SE 27:2' | 'SE 28:3' | 'SE 30:2' | 'SE 29:2' | 'SE 28:2';
 hg_stcs : hg_stes | hg_stes heavy_hg;
-hg_stes : 'ChE' | 'CE' | 'ChoE';
+hg_stes : 'ChE' | 'CE' | 'ChoE' | 'CholE';
 
 
 /* mediator lipids (1 class) */
