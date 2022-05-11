@@ -129,9 +129,9 @@ sl_species : lcb;
 sl_subspecies : lcb sorted_fa_separator fa;
 
 hg_lslc : hg_lsl | hg_lsl heavy_hg;
-hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM' | 'LIPC' | 'SPH' | 'Sph' | 'LCB' | 'S1P' | 'SPH-P' | 'SIP' | 'Sa1P';
+hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM' | 'LIPC' | 'So' | 'Sa' | 'SPH' | 'Sph' | 'LCB' | 'S1P' | 'SPH-P' | 'SIP' | 'Sa1P';
 hg_so_lslc : hg_so_lsl | hg_so_lsl heavy_hg;
-hg_so_lsl : 'So' | 'Sa';
+hg_so_lsl : 'So' | 'Sa' | 'Sa1P' | 'S1P';
 hg_dslc : hg_dsl | hg_dsl heavy_hg;
 hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'HexCer' | 'Hex2Cer' | 'Hex3Cer' | 'IPC' | 'MIP2C' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' | 'CerPE' | 'PE-Cer' |
  'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
