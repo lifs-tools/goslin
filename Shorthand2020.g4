@@ -197,8 +197,8 @@ carbohydrate_structural : carbohydrate;
 carbohydrate_isomeric : carbohydrate carbohydrate_separator;
 sl_hg_double_name : 'SM' | 'Cer' | 'CerP' | acer_hg | 'HexCer' | 'GlcCer' | 'GalCer' | 'Hex2Cer' | 'LacCer' | 'SHexCer' | 'IPC' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | 'Hex3Cer' | 'S' ROB '3' APOSTROPH RCB 'HexCer' | 'S' ROB '3' APOSTROPH RCB 'GalCer';
 acer_hg : acer_hg_pure ROB med RCB;
+acer_species : acer_hg_pure | acer_hg_pure '(FA)';
 acer_hg_pure : 'ACer';
-acer_species : 'ACer(FA)';
 /*
 acer_hg : acer_hg_pure | acer_med '-' acer_hg_pure;
 acer_med : med;
