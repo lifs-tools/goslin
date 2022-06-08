@@ -193,10 +193,11 @@ mod_text: 'OH' | 'Ke' | 'OOH' | 'My' | 'Me' | 'Br' | 'CHO' | 'COOH' | 'Cp' | 'Ep
 ether : 'P-' | 'O-';
 stereo : 'R' | 'S';
 fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
+lcb_pure_fa : lcb_fa;
 lcb_fa: lcb_fa_unmod | lcb_fa_unmod lcb_fa_mod;
 lcb_fa_unmod: carbon carbon_db_separator db;
 lcb_fa_mod: round_open_bracket modification round_close_bracket;
-lcb: hydroxyl_lcb lcb_fa | lcb_fa;
+lcb: hydroxyl_lcb lcb_fa | lcb_pure_fa;
 carbon: number;
 db : db_count | db_count db_positions;
 db_count : number;
