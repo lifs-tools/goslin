@@ -57,9 +57,8 @@ med_hg_triple : 'WD';
 
 
 /* fatty acyl chain */
-lcb : fatty_acyl_chain;
-fatty_acyl_chain : fatty_acyl | fatty_acyl;
-fatty_acyl : fa_pure | ether fa_pure | fatty_acyl_linkage | fatty_alkyl_linkage;
+lcb : fa_pure | ether fa_pure | fatty_acyl_linkage | fatty_alkyl_linkage;
+fatty_acyl_chain : fa_pure | ether fa_pure | fatty_acyl_linkage | fatty_alkyl_linkage;
 fatty_alkyl_linkage : fatty_linkage_number fatty_acyl_linkage_sign ROB fatty_acyl_chain RCB | fatty_acyl_linkage_sign ROB fatty_acyl_chain RCB;
 fatty_acyl_linkage : fatty_linkage_number fatty_acyl_linkage_sign ROB med RCB | fatty_acyl_linkage_sign ROB med RCB;
 hydrocarbon_chain : hydrocarbon_number ROB fatty_acyl_chain RCB | ROB fatty_acyl_chain RCB;
@@ -69,7 +68,8 @@ hydrocarbon_number : number;
 fa_pure : fa_pure_structure | fa_pure_structure sn;
 sn : ROB 'sn-' sn_pos RCB;
 sn_pos : number;
-fa_pure_structure : carbon carbon_db_separator db  | carbon carbon_db_separator db db_funcgroup_separator func_group | carbon carbon_db_separator db stereo_fa | carbon carbon_db_separator db stereo_fa db_funcgroup_separator func_group;
+fa_pure_structure : fa_db_only | carbon carbon_db_separator db db_funcgroup_separator func_group | carbon carbon_db_separator db stereo_fa | carbon carbon_db_separator db stereo_fa db_funcgroup_separator func_group;
+fa_db_only : carbon carbon_db_separator db;
 ether : ether_num ether_type | ether_type;
 ether_num : 'm' | 'd' | 't' | 'e';
 ether_type: ether_types plasmalogen_separator | ether_types plasmalogen_separator;
