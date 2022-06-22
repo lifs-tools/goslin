@@ -171,7 +171,7 @@ mediator_functional_group_clear: mediator_full_function | mediator_function_unkn
 mediator_function_unknown_pos : mediator_functions;
 mediator_functions : mediator_mono_functions | mediator_di_functions;
 mediator_mono_functions: 'H' | 'Oxo';
-mediator_di_functions: 'E' | 'Ep' | 'DH' | 'DiH';
+mediator_di_functions: 'E' | 'Ep' | 'DH' | 'DiH' | 'diH';
 mediator_mono_pos: mediator_position;
 mediator_di_pos: mediator_position ',' mediator_position | mediator_position '_' mediator_position | mediator_position '(' mediator_position ')';
 mediator_full_function : mediator_mono_pos '-' mediator_mono_functions | mediator_di_pos '-' mediator_di_functions;
