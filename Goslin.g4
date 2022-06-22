@@ -170,7 +170,7 @@ mediator_tetranor : 'tetranor-';
 mediator_functional_group_clear: mediator_full_function | mediator_function_unknown_pos;
 mediator_function_unknown_pos : mediator_functions;
 mediator_functions : mediator_mono_functions | mediator_di_functions;
-mediator_mono_functions: 'H' | 'Oxo';
+mediator_mono_functions: 'H' | 'Oxo' | 'Hp';
 mediator_di_functions: 'E' | 'Ep' | 'DH' | 'DiH' | 'diH';
 mediator_mono_pos: mediator_position;
 mediator_di_pos: mediator_position ',' mediator_position | mediator_position '_' mediator_position | mediator_position '(' mediator_position ')';
