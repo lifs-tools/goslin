@@ -162,7 +162,7 @@ ch: 'Cholesterol';
 chec: che | che headgroup_separator | che_fa;
 che: fa headgroup_separator hg_che;
 che_fa: hg_che round_open_bracket fa round_close_bracket;
-hg_che: 'Cholesteryl ester' | 'Cholesterol ester' | 'CE';
+hg_che: 'Cholesteryl ester' | 'Cholesterol ester' | 'CE' | 'ChE';
 
 
 /* mediator lipids */
