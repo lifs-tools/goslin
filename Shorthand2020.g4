@@ -188,8 +188,9 @@ hg_lpim_number : number;
 pl_hg_fa : med;
 pl_hg_alk : fatty_acyl_chain;
 
-
-carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'SHex' | 'S' ROB '3' APOSTROPH RCB 'Hex' | 'NAc' | 'Nac' | 'SGal' | 'S' ROB '3' APOSTROPH RCB 'Gal' | 'HexA' | 'OGlcNAc' | 'OGlc';
+carbohydrate_group : carbohydrate | carbohydrate carbohydrate_number;
+carbohydrate_number : number;
+carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'SHex' | 'S' ROB '3' APOSTROPH RCB 'Hex' | 'SGal' | 'S' ROB '3' APOSTROPH RCB 'Gal' | 'HexA' | 'OGlcNAc' | 'OGlc';
 
 
 sl : sl_species | sl_subspecies;
@@ -199,13 +200,23 @@ sl_double : sl_hg_double headgroup_separator lcb sorted_fa_separator fatty_acyl_
 sl_hydroxyl : ROB sl_hydroxyl_number RCB;
 sl_hydroxyl_number : number;
 sl_hg_single : 'SPB' | 'SPBP' | 'LIPC' | 'LSM';
-sl_hg_double : acer_hg | sl_hg_double_name | carbohydrate_structural sl_hg_double  | carbohydrate_isomeric sl_hg_double;
-carbohydrate_structural : carbohydrate;
-carbohydrate_isomeric : carbohydrate carbohydrate_separator;
-sl_hg_double_name : 'SM' | 'Cer' | 'CerP' | acer_hg | 'HexCer' | 'GlcCer' | 'SL' | 'GalCer' | 'Hex2Cer' | 'LacCer' | 'SHexCer' | 'IPC' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | 'Hex3Cer' | 'S' ROB '3' APOSTROPH RCB 'HexCer' | 'S' ROB '3' APOSTROPH RCB 'GalCer';
+sl_hg_double : acer_hg | sl_hg_double_name | carbohydrate_structural sl_hg_glyco | carbohydrate_isomeric carbohydrate_separator sl_hg_glyco;
+carbohydrate_structural : carbohydrates;
+carbohydrates : carbohydrate_group | carbohydrate_group carbohydrates;
+carbohydrate_isomeric : carbohydrates_isomeric;
+sl_hg_glyco : 'Cer' | 'IPC';
+carbohydrates_isomeric : carbohydrate | carbohydrate carbohydrate_separator carbohydrates_isomeric;
+sl_hg_double_name : 'SM' | sl_hg_glyco | 'CerP' | acer_hg | 'SL' | 'LacCer' | 'SHexCer' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | glyco_sphingo_lipid | 'S' ROB '3' APOSTROPH RCB 'HexCer' | 'S' ROB '3' APOSTROPH RCB 'GalCer';
 acer_hg : acer_hg_pure ROB med RCB;
 acer_species : acer_hg_pure | acer_hg_pure '(FA)';
 acer_hg_pure : 'ACer';
+glyco_sphingo_lipid : 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
+ 'GB3' | 'Gb3' | 'GB4' | 'Gb4' |
+ 'GD1' | 'Gd1' | 'GD2' | 'Gd2' | 'GD3' | 'Gd3' |
+ 'GM1' | 'Gm1' | 'GM2' | 'Gm2' | 'GM3' | 'Gm3' | 'GM4' | 'Gm4' |
+ 'GP1' | 'Gp1' |
+ 'GQ1' | 'Gq1' |
+ 'GT1' | 'Gt1' | 'GT2' | 'Gt2' | 'GT3' | 'Gt3';
 /*
 acer_hg : acer_hg_pure | acer_med '-' acer_hg_pure;
 acer_med : med;
