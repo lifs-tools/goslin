@@ -128,7 +128,14 @@ dsl_subspecies: round_open_bracket lcb_fa_sorted round_close_bracket | lcb_fa_so
 
 hg_dslc: hg_dsl_global | hg_dsl_global headgroup_separator;
 hg_dsl_global : hg_dsl | special_cer | special_glyco;
-hg_dsl: 'Cer' | 'CerP' | 'EPC' | 'GB3' | 'GB4' | 'GD3' | 'GM3' | 'GM4' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | 'C1P' | '(3\'-sulfo)Galbeta-Cer' | omega_linoleoyloxy_Cer;
+hg_dsl: 'Cer' | 'CerP' | 'EPC' | glyco_sphingo_lipid | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | 'C1P' | '(3\'-sulfo)Galbeta-Cer' | omega_linoleoyloxy_Cer;
+glyco_sphingo_lipid : 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
+ 'GB3' | 'Gb3' | 'GB4' | 'Gb4' |
+ 'GD1' | 'Gd1' | 'GD2' | 'Gd2' | 'GD3' | 'Gd3' |
+ 'GM1' | 'Gm1' | 'GM2' | 'Gm2' | 'GM3' | 'Gm3' | 'GM4' | 'Gm4' |
+ 'GP1' | 'Gp1' |
+ 'GQ1' | 'Gq1' |
+ 'GT1' | 'Gt1' | 'GT2' | 'Gt2' | 'GT3' | 'Gt3';
 omega_linoleoyloxy_Cer : 'omega-linoleoyloxy-' special_cer_hg;
 special_cer : special_cer_prefix '-Cer';
 special_cer_hg : 'Cer';

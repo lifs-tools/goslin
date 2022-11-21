@@ -133,8 +133,8 @@ hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LSM' | 'LIPC' | 'So' | 'Sa' | 'SPH' | 'Sp
 hg_so_lslc : hg_so_lsl | hg_so_lsl heavy_hg;
 hg_so_lsl : 'So' | 'Sa' | 'Sa1P' | 'S1P';
 hg_dslc : hg_dsl | hg_dsl heavy_hg;
-hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'HexCer' | 'Hex2Cer' | 'Hex3Cer' | 'IPC' | 'MIP2C' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' | 'CerPE' | 'PE-Cer' |
- 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
+hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'HexCer' | 'Hex2Cer' | 'Hex3Cer' | 'IPC' | 'MIP2C' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' | 'CerPE' | 'PE-Cer' | glyco_sphingo_lipid;
+ glyco_sphingo_lipid : 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
  'GB3' | 'Gb3' | 'GB4' | 'Gb4' |
  'GD1' | 'Gd1' | 'GD2' | 'Gd2' | 'GD3' | 'Gd3' |
  'GM1' | 'Gm1' | 'GM2' | 'Gm2' | 'GM3' | 'Gm3' | 'GM4' | 'Gm4' |
