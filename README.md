@@ -13,7 +13,7 @@ Goslin defines multiple grammers compatible with ANTLRv4 for different sources o
 ## Citing Goslin
 If you use Goslin or any of the specific implementations in your work, we kindly ask you to cite:
 
-[D. Kopczynski _et al._, **](https://pubs.acs.org/doi/full/10.1021/acs.analchem.1c05430) [doi:10.1021/acs.analchem.1c05430](https://doi.org/10.1021/acs.analchem.1c05430)
+[D. Kopczynski _et al._, **Goslin 2.0 Implements the Recent Lipid Shorthand Nomenclature for MS-Derived Lipid Structures**, Analytical Chemistry, April 11th, 2022.](https://pubs.acs.org/doi/full/10.1021/acs.analchem.1c05430) [doi:10.1021/acs.analchem.1c05430](https://doi.org/10.1021/acs.analchem.1c05430)
 [D. Kopczynski _et al._, **Goslin - A Grammar of Succinct Lipid Nomenclature**, Analytical Chemistry, June 26th, 2020.](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690) [doi:10.1021/acs.analchem.0c01690](https://doi.org/10.1021/acs.analchem.0c01690)
 
 ## References
