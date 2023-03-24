@@ -8,17 +8,21 @@ Goslin defines multiple grammers compatible with ANTLRv4 for different sources o
 [Overview of Goslin and Tutorials](docs/README.adoc)
 
 
-> Goslin 2.0 is currently under development and will support the [updated lipid shorthand nomenclature with new structural levels](https://pubmed.ncbi.nlm.nih.gov/33037133/).
+> Goslin 2.0 supports the [updated lipid shorthand nomenclature with new structural levels](https://pubmed.ncbi.nlm.nih.gov/33037133/).
 
 ## Citing Goslin
-If you use Goslin or any of the specific implementations in your work, we kindly ask you to cite:
+If you use Goslin or any of the specific implementations in your work, we kindly ask you to cite the original publication:
 
-[D. Kopczynski _et al._, **Goslin - A Grammar of Succinct Lipid Nomenclature**, Analytical Chemistry, June 26th, 2020.](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690) [doi:10.1021/acs.analchem.0c01690](https://doi.org/10.1021/acs.analchem.0c01690)
+* [D. Kopczynski _et al._, **Goslin - A Grammar of Succinct Lipid Nomenclature**, Analytical Chemistry, June 26th, 2020.](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690) [doi:10.1021/acs.analchem.0c01690](https://doi.org/10.1021/acs.analchem.0c01690)
+
+If you are using any of the new features of Goslin 2.0, please cite the following, updated Goslin 2.0 publication:
+
+* [D. Kopczynski _et al._, **Goslin 2.0 Implements the Recent Lipid Shorthand Nomenclature for MS-Derived Lipid Structures**, Analytical Chemistry, April 11th, 2022.](https://pubs.acs.org/doi/full/10.1021/acs.analchem.1c05430) [doi:10.1021/acs.analchem.1c05430](https://doi.org/10.1021/acs.analchem.1c05430)
 
 ## References
-* [D. Kopczynski et al., Biorxiv, Nov xth, 2021 (Preprint)](#)
-* [D. Kopczynski et al., Analytical Chemistry, June 26th, 2020](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690)
-* [D. Kopczynski et al., Biorxiv, April 20th, 2020 (Preprint)](https://doi.org/10.1101/2020.04.17.046656)
+* [D. Kopczynski, N. Hoffmann *et al.*, Analytical Chemistry, April 11th, 2022](https://doi.org/10.1021/acs.analchem.1c05430)
+* [D. Kopczynski, N. Hoffmann *et al.*, Analytical Chemistry, June 26th, 2020](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690)
+* [D. Kopczynski, N. Hoffmann *et al.*, Biorxiv, April 20th, 2020 (Preprint)](https://doi.org/10.1101/2020.04.17.046656)
 
 ## Related Projects
 
