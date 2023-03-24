@@ -249,7 +249,7 @@
 "4R-methyl-7Z,11Z-heptadecadienoic acid",
 "Arachidonic acid","Arachidonic acid"
 "Oleic acid",
-"Arachidonic Acid (d8)","Arachidonic Acid"
+"Arachidonic Acid (d8)","Arachidonic Acid[M8H2]"
 "Vinyl acetic acid",
 "beta-ethyl acrylic acid",
 "beta-penteic acid",
@@ -407,8 +407,8 @@
 "Drosophilin C",
 "Norlinolenic acid",
 "EPA","EPA"
-"EPA (d5)","EPA"
-"DHA (d5)","DHA"
+"EPA (d5)","EPA[M5H2]"
+"DHA (d5)","DHA[M5H2]"
 "Oleic acid (d5)",
 "cis-parinaric acid",
 "(5Z,9E,14Z)-icosa-5,9,14-trienoic acid",
@@ -1405,10 +1405,10 @@
 "13S-HODE","13S-HODE"
 "9,10-DiHOME",
 "12,13-DiHOME",
-"9S-HODE-d4","9S-HODE"
+"9S-HODE-d4","9S-HODE[M4H2]"
 "12,13 diHOME-(d4)",
 "9,10-diHOME-(d4)",
-"13S-HODE-(d4)","13S-HODE"
+"13S-HODE-(d4)","13S-HODE[M4H2]"
 "(R)-10-hydroxystearic acid",
 "(9S,10S)-9,10-dihydroxyoctadecanoic acid",
 "17-hydroxy-linolenic acid",
@@ -1738,9 +1738,9 @@
 "PGE2","PGE2"
 "PGD2","PGD2"
 "PGA1",
-"PGF2alpha-d4","PGF2alpha"
-"PGD2-d4","PGD2"
-"PGE2-d4","PGE2"
+"PGF2alpha-d4","PGF2alpha[M4H2]"
+"PGD2-d4","PGD2[M4H2]"
+"PGE2-d4","PGE2[M4H2]"
 "PGG2",
 "PGH2",
 "2,3-dinor-11b-PGF2alpha",
@@ -1945,7 +1945,7 @@
 "LTA4",
 "12-oxo-LTB4",
 "20-hydroxy-LTE4",
-"LTB4-d4","LTB4"
+"LTB4-d4","LTB4[M4H2]"
 "14,15-LTC4",
 "14,15-LTD4",
 "14,15-LTE4",
@@ -1999,7 +1999,7 @@
 "TXB3","TXB3"
 "TXB1","TXB1"
 "11-dehydro-TXB3",
-"TXB2-d4","TXB2"
+"TXB2-d4","TXB2[M4H2]"
 "11-dehydro-TXB2-d4",
 "2,3-Dinor-TXB1",
 "11-dehydro-2,3-dinor-TXB2",
@@ -2039,7 +2039,7 @@
 "15S-HETE","15S-HETE"
 "5S-HETE","5S-HETE"
 "11S-HETE","11S-HETE"
-"5S-HETE-d8","5S-HETE"
+"5S-HETE-d8","5S-HETE[M8H2]"
 "8S-HETE","8S-HETE"
 "12S-HETE","12S-HETE"
 "12R-HETE","12R-HETE"
@@ -2079,10 +2079,10 @@
 "14,15-DiHETE","14,15-DiHETE"
 "17,18-DiHETE","17,18-DiHETE"
 "11,12-DiHETE","11,12-DiHETE"
-"15S-HETE-d8","15S-HETE"
-"12S-HETE-d8","12S-HETE"
-"20-HETE-d6","20-HETE"
-"5-Oxo-ETE-d7","5-Oxo-ETE"
+"15S-HETE-d8","15S-HETE[M8H2]"
+"12S-HETE-d8","12S-HETE[M8H2]"
+"20-HETE-d6","20-HETE[M6H2]"
+"5-Oxo-ETE-d7","5-Oxo-ETE[M7H2]"
 "5-HETE","5-HETE"
 "11-HETE","11-HETE"
 "8-HETE","8-HETE"
@@ -5749,19 +5749,19 @@
 "DG(22:5(7Z,10Z,13Z,16Z,19Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0)[iso2]","DG 22:5(7Z,10Z,13Z,16Z,19Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0"
 "DG(22:6(4Z,7Z,10Z,13Z,16Z,19Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0)","DG 22:6(4Z,7Z,10Z,13Z,16Z,19Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/0:0"
 "DG(16:0/18:1(11Z)/0:0)","DG 16:0/18:1(11Z)/0:0"
-"DG(20:5(5Z,8Z,11Z,14Z,17Z)/0:0/20:5(5Z,8Z,11Z,14Z,17Z)) (d5)","DG 20:5(5Z,8Z,11Z,14Z,17Z)/0:0/20:5(5Z,8Z,11Z,14Z,17Z)"
-"DG(14:0/0:0/14:0) (d5)","DG 14:0/0:0/14:0"
-"DG(15:0/0:0/15:0) (d5)","DG 15:0/0:0/15:0"
-"DG(16:0/0:0/16:0) (d5)","DG 16:0/0:0/16:0"
-"DG(17:0/0:0/17:0) (d5)","DG 17:0/0:0/17:0"
-"DG(19:0/0:0/19:0) (d5)","DG 19:0/0:0/19:0"
-"DG(20:0/0:0/20:0) (d5)","DG 20:0/0:0/20:0"
-"DG(20:2(11Z,14Z)/0:0/20:2(11Z,14Z)) (d5)","DG 20:2(11Z,14Z)/0:0/20:2(11Z,14Z)"
-"DG(20:4(5Z,8Z,11Z,14Z)/0:0/20:4(5Z,8Z,11Z,14Z)) (d5)","DG 20:4(5Z,8Z,11Z,14Z)/0:0/20:4(5Z,8Z,11Z,14Z)"
-"DG(16:1(9Z)/0:0/16:1(9Z)) (d5)","DG 16:1(9Z)/0:0/16:1(9Z)"
-"DG(18:0/0:0/18:0) (d5)","DG 18:0/0:0/18:0"
-"DG(18:1(9Z)/0:0/18:1(9Z)) (d5)","DG 18:1(9Z)/0:0/18:1(9Z)"
-"DG(18:2(9Z,12Z)/0:0/18:2(9Z,12Z)) (d5)","DG 18:2(9Z,12Z)/0:0/18:2(9Z,12Z)"
+"DG(20:5(5Z,8Z,11Z,14Z,17Z)/0:0/20:5(5Z,8Z,11Z,14Z,17Z)) (d5)","DG 20:5(5Z,8Z,11Z,14Z,17Z)/0:0/20:5(5Z,8Z,11Z,14Z,17Z)[M5H2]"
+"DG(14:0/0:0/14:0) (d5)","DG 14:0/0:0/14:0[M5H2]"
+"DG(15:0/0:0/15:0) (d5)","DG 15:0/0:0/15:0[M5H2]"
+"DG(16:0/0:0/16:0) (d5)","DG 16:0/0:0/16:0[M5H2]"
+"DG(17:0/0:0/17:0) (d5)","DG 17:0/0:0/17:0[M5H2]"
+"DG(19:0/0:0/19:0) (d5)","DG 19:0/0:0/19:0[M5H2]"
+"DG(20:0/0:0/20:0) (d5)","DG 20:0/0:0/20:0[M5H2]"
+"DG(20:2(11Z,14Z)/0:0/20:2(11Z,14Z)) (d5)","DG 20:2(11Z,14Z)/0:0/20:2(11Z,14Z)[M5H2]"
+"DG(20:4(5Z,8Z,11Z,14Z)/0:0/20:4(5Z,8Z,11Z,14Z)) (d5)","DG 20:4(5Z,8Z,11Z,14Z)/0:0/20:4(5Z,8Z,11Z,14Z)[M5H2]"
+"DG(16:1(9Z)/0:0/16:1(9Z)) (d5)","DG 16:1(9Z)/0:0/16:1(9Z)[M5H2]"
+"DG(18:0/0:0/18:0) (d5)","DG 18:0/0:0/18:0[M5H2]"
+"DG(18:1(9Z)/0:0/18:1(9Z)) (d5)","DG 18:1(9Z)/0:0/18:1(9Z)[M5H2]"
+"DG(18:2(9Z,12Z)/0:0/18:2(9Z,12Z)) (d5)","DG 18:2(9Z,12Z)/0:0/18:2(9Z,12Z)[M5H2]"
 "1,2-dimyristoyl-sn-glycerol",
 "DG(12:0/16:1(9Z)/0:0)[iso2]","DG 12:0/16:1(9Z)/0:0"
 "DG(12:0/12:0/0:0)[iso2]","DG 12:0/12:0/0:0"
@@ -6001,15 +6001,15 @@
 "TG(16:0/16:0/18:1(11E))","TG 16:0/16:0/18:1(11E)"
 "TG(16:0/16:0/18:1(9Z))","TG 16:0/16:0/18:1(9Z)"
 "TG(12:0/16:0/18:0)","TG 12:0/16:0/18:0"
-"TG(20:5(5Z,8Z,11Z,14Z,17Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/20:5(5Z,8Z,11Z,14Z,17Z)) (d5)","TG 20:5(5Z,8Z,11Z,14Z,17Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/20:5(5Z,8Z,11Z,14Z,17Z)"
-"TG(14:0/16:1(9Z)/14:0) (d5)","TG 14:0/16:1(9Z)/14:0"
-"TG(15:0/18:1(9Z)/15:0) (d5)","TG 15:0/18:1(9Z)/15:0"
-"TG(16:0/18:0/16:0) (d5)","TG 16:0/18:0/16:0"
-"TG(17:0/17:1(10Z)/17:0) (d5)","TG 17:0/17:1(10Z)/17:0"
-"TG(19:0/12:0/19:0) (d5)","TG 19:0/12:0/19:0"
-"TG(20:0/20:1(11Z)/20:0) (d5)","TG 20:0/20:1(11Z)/20:0"
-"TG(20:2(11Z,14Z)/18:3(6Z,9Z,12Z)/20:2(11Z,14Z)) (d5)","TG 20:2(11Z,14Z)/18:3(6Z,9Z,12Z)/20:2(11Z,14Z)"
-"TG(20:4(5Z,8Z,11Z,14Z)/18:2(9Z,12Z)/20:4(5Z,8Z,11Z,14Z)) (d5)","TG 20:4(5Z,8Z,11Z,14Z)/18:2(9Z,12Z)/20:4(5Z,8Z,11Z,14Z)"
+"TG(20:5(5Z,8Z,11Z,14Z,17Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/20:5(5Z,8Z,11Z,14Z,17Z)) (d5)","TG 20:5(5Z,8Z,11Z,14Z,17Z)/22:6(4Z,7Z,10Z,13Z,16Z,19Z)/20:5(5Z,8Z,11Z,14Z,17Z)[M5H2]"
+"TG(14:0/16:1(9Z)/14:0) (d5)","TG 14:0/16:1(9Z)/14:0[M5H2]"
+"TG(15:0/18:1(9Z)/15:0) (d5)","TG 15:0/18:1(9Z)/15:0[M5H2]"
+"TG(16:0/18:0/16:0) (d5)","TG 16:0/18:0/16:0[M5H2]"
+"TG(17:0/17:1(10Z)/17:0) (d5)","TG 17:0/17:1(10Z)/17:0[M5H2]"
+"TG(19:0/12:0/19:0) (d5)","TG 19:0/12:0/19:0[M5H2]"
+"TG(20:0/20:1(11Z)/20:0) (d5)","TG 20:0/20:1(11Z)/20:0[M5H2]"
+"TG(20:2(11Z,14Z)/18:3(6Z,9Z,12Z)/20:2(11Z,14Z)) (d5)","TG 20:2(11Z,14Z)/18:3(6Z,9Z,12Z)/20:2(11Z,14Z)[M5H2]"
+"TG(20:4(5Z,8Z,11Z,14Z)/18:2(9Z,12Z)/20:4(5Z,8Z,11Z,14Z)) (d5)","TG 20:4(5Z,8Z,11Z,14Z)/18:2(9Z,12Z)/20:4(5Z,8Z,11Z,14Z)[M5H2]"
 "TG(16:0/16:0/16:1(9Z))[iso3]","TG 16:0/16:0/16:1(9Z)"
 "TG(16:0/16:1(9Z)/16:1(9Z))[iso3]","TG 16:0/16:1(9Z)/16:1(9Z)"
 "TG(16:0/16:0/17:0)[iso3]","TG 16:0/16:0/17:0"
@@ -31355,7 +31355,7 @@
 "Lathosterol",
 "Desmosterol(d6)",
 "24-hydroxy-cholesterol(d6)",
-"Cholesterol(d7)",
+"Cholesterol(d7)","ST 27:1;O[M7H2]"
 "22-dehydrocholesterol",
 "Zymostenol",
 "Epi-cholestanol",
@@ -31574,7 +31574,7 @@
 "15:0 Cholesteryl ester","SE 27:1/15:0"
 "Cholesteryl nitrolinoleate",
 "Cholesteryl 11-hydroperoxy-eicosatetraenoate",
-"18:1 Cholesteryl ester (d5)","SE 27:1/18:1"
+"18:1 Cholesteryl ester (d5)","SE 27:1/18:1[M5H2]"
 "22:5 Cholesteryl ester","SE 27:1/22:5"
 "lanosteryl oleate",
 "lanosteryl palmitoleate",

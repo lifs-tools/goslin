@@ -34,13 +34,15 @@ lipid_mono: lipid_pure | lipid_pure isoform;
 lipid_pure: pure_fa | gl | pl | sl | pk | sterol | mediator;
 isoform: square_open_bracket isoform_inner square_close_bracket;
 isoform_inner : 'rac' | 'iso' | 'iso' number | 'R';
-isotope: SPACE round_open_bracket isotope_element number round_close_bracket | DASH round_open_bracket isotope_element number round_close_bracket | DASH isotope_element number;
-isotope_element: 'd';
+isotope: SPACE round_open_bracket isotope_pair round_close_bracket | round_open_bracket isotope_pair round_close_bracket | DASH round_open_bracket isotope_pair round_close_bracket | DASH isotope_pair | SPACE isotope_pair | isotope_pair;
+isotope_pair: isotope_element isotope_number;
+isotope_number: number;
+isotope_element: 'd' | 'D';
 
 
 /* adduct information */
 adduct_info : adduct_sep | adduct_separator adduct_sep;
-adduct_sep : '[M' adduct ']' charge_sign | '[M' adduct ']' charge charge_sign;
+adduct_sep : '[M' adduct ']' | '[M' adduct ']' charge_sign | '[M' adduct ']' charge charge_sign;
 adduct : adduct_set;
 adduct_set : adduct_element | adduct_element adduct_set;
 adduct_element : element | element number | number element | plus_minus element | plus_minus element number | plus_minus number element;
@@ -48,7 +50,7 @@ adduct_element : element | element number | number element | plus_minus element 
 
 
 /* pure fatty acid */
-pure_fa: hg_fa pure_fa_species | fa_no_hg;
+pure_fa: hg_fa pure_fa_species | hg_fa headgroup_separator pure_fa_species | fa_no_hg;
 fa_no_hg: fa;
 pure_fa_species: round_open_bracket fa round_close_bracket | fa | round_open_bracket fa2 round_close_bracket;
 hg_fa: 'FA' | 'WE' | 'CoA' | 'CAR' | 'FAHFA' | 'CoA';
@@ -128,7 +130,7 @@ dsl_subspecies: round_open_bracket lcb_fa_sorted round_close_bracket | lcb_fa_so
 
 hg_dslc: hg_dsl_global | hg_dsl_global headgroup_separator;
 hg_dsl_global : hg_dsl | special_cer | special_glyco;
-hg_dsl: 'Cer' | 'CerP' | 'EPC' | glyco_sphingo_lipid | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | 'C1P' | '(3\'-sulfo)Galbeta-Cer' | omega_linoleoyloxy_Cer;
+hg_dsl: 'Cer' | 'CerP' | 'EPC' | glyco_sphingo_lipid | 'CMH' | 'CMH-OH' | 'MHCer' | 'MHCER' | 'CDH' | 'DHCer' | 'DHCER' | 'Hex3Cer' | 'Hex2Cer' | 'HexCer' | 'IPC' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SulfoHexCer' | 'SM' | 'PE-Cer' | 'PI-Cer' | 'GlcCer' | 'FMC-5' | 'FMC-6' | 'LacCer' | 'GalCer' | 'C1P' | '(3\'-sulfo)Galbeta-Cer' | omega_linoleoyloxy_Cer;
 glyco_sphingo_lipid : 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
  'GB3' | 'Gb3' | 'GB4' | 'Gb4' |
  'GD1' | 'Gd1' | 'GD2' | 'Gd2' | 'GD3' | 'Gd3' |
@@ -165,7 +167,7 @@ pk_fa : round_open_bracket fa round_close_bracket;
 /* sterol lipids */
 sterol: chc | chec;
 chc: ch | ch headgroup_separator;
-ch: 'Cholesterol';
+ch: 'Cholesterol' | 'cholesterol';
 chec: che | che headgroup_separator | che_fa;
 che: fa headgroup_separator hg_che;
 che_fa: hg_che round_open_bracket fa round_close_bracket;
@@ -187,7 +189,7 @@ mediator_oxo: 'Oxo' | 'oxo';
 
 
 /* generic rules */
-fa: fa_unmod | fa_unmod fa_mod | fa_unmod fa_mod_separator fa_mod;
+fa: fa_unmod | fa_unmod fa_mod | fa_unmod fa_mod_separator fa_mod | fa_no_db;
 fa_unmod: round_open_bracket fa_pure ether_suffix round_close_bracket | round_open_bracket ether_prefix fa_pure round_close_bracket | round_open_bracket fa_pure round_close_bracket | ether_prefix fa_pure | fa_pure ether_suffix | fa_pure;
 fa_mod: round_open_bracket modification round_close_bracket;
 modification: modification ',' modification | single_mod;
@@ -200,8 +202,10 @@ mod_text: 'OH' | 'Ke' | 'OOH' | 'My' | 'Me' | 'Br' | 'CHO' | 'COOH' | 'Cp' | 'Ep
 ether_prefix : 'P-' | 'O-';
 ether_suffix : 'p' | 'e';
 stereo : 'R' | 'S';
-fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
+fa_no_db: carbon DASH single_mod;
+fa_pure: carbon carbon_db_separator db | carbon carbon_db_separator db db_hydroxyl_separator hydroxyl | additional_modifier carbon carbon_db_separator db | additional_modifier carbon carbon_db_separator db db_hydroxyl_separator hydroxyl;
 lcb_pure_fa : lcb_fa;
+additional_modifier : 'C' | 'h';
 lcb_fa: lcb_fa_unmod | lcb_fa_unmod lcb_fa_mod;
 lcb_fa_unmod: carbon carbon_db_separator db;
 lcb_fa_mod: round_open_bracket modification round_close_bracket;
