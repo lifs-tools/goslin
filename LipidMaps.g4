@@ -130,11 +130,12 @@ dsl_subspecies: round_open_bracket lcb_fa_sorted round_close_bracket | lcb_fa_so
 
 sphinga : sphinga_hg_pure | sphinga_hg headgroup_separator sphinga_bracket_lcb | sphinga_hg sphinga_bracket_lcb | sphinga_C_lcb sphinga_hg_pure | sphinga_C_lcb headgroup_separator sphinga_hg_pure;
 sphinga_hg_pure : sphinga_hg;
-sphinga_hg : sphinga_substr sphinga_suffix | sphinga_prefix sphinga_substr sphinga_suffix | sphinga_substr sphinga_suffix sphinga_phosphate | sphinga_prefix sphinga_substr sphinga_suffix sphinga_phosphate;
+sphinga_hg : sphinga_substr sphinga_suffix | sphinga_prefix sphinga_substr sphinga_suffix | sphinga_substr sphinga_suffix sphinga_phospho_top | sphinga_prefix sphinga_substr sphinga_suffix sphinga_phospho_top;
 sphinga_prefix : 'Phyto';
 sphinga_substr : 'Sphing' | 'sphing';
 sphinga_suffix : 'anine' | 'osine' | 'adienine';
-sphinga_phosphate : ' 1-phosphate' | '-1-phosphate';
+sphinga_phospho_top : DASH sphinga_phospho | SPACE sphinga_phospho;
+sphinga_phospho : '1-phosphate' | '1-phosphocholine';
 sphinga_C_lcb : 'C' sphinga_lcb_len;
 sphinga_lcb_len : number;
 sphinga_bracket_lcb : round_open_bracket lcb round_close_bracket | lcb;

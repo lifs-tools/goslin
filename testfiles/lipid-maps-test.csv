@@ -30445,17 +30445,17 @@
 "C17 Sphinganine","SPB 17:0;1OH,3OH"
 "C14 sphingosine","SPB 14:1;O2"
 "C16 Sphingosine","SPB 16:1;O2"
-"Sphingosine-1-phosphate",
+"Sphingosine-1-phosphate","SPBP 18:1;O2"
 "Sphinganine-phosphate",
 "Phytosphingosine 1-phosphate","SPBP 18:1;O3"
-"C19 Sphingosine-1-phosphate",
-"C16 Sphingosine-1-phosphate",
-"C16 Sphinganine-1-phosphate",
-"C17 Sphingosine-1-phosphate",
-"C17 Sphinganine-1-phosphate",
-"Sphingosine-1-phosphocholine",
-"Sphinganine-1-phosphocholine",
-"C17 sphingosine-1-phosphocholine",
+"C19 Sphingosine-1-phosphate","SPBP 19:1;O2"
+"C16 Sphingosine-1-phosphate","SPBP 16:1;O2"
+"C16 Sphinganine-1-phosphate","SPBP(1) 16:0;3OH"
+"C17 Sphingosine-1-phosphate","SPBP 17:1;O2"
+"C17 Sphinganine-1-phosphate","SPBP(1) 17:0;3OH"
+"Sphingosine-1-phosphocholine","LSM 18:1;O2"
+"Sphinganine-1-phosphocholine","LSM(1) 18:0;3OH"
+"C17 sphingosine-1-phosphocholine","LSM 17:1;O2"
 "N,N-dimethylsphingosine",
 "4E,14Z-Sphingadiene",
 "6-hydroxysphingosine",
