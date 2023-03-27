@@ -134,7 +134,7 @@ sphinga_hg : sphinga_substr sphinga_suffix | sphinga_prefix sphinga_substr sphin
 sphinga_prefix : 'Phyto';
 sphinga_substr : 'Sphing' | 'sphing';
 sphinga_suffix : 'anine' | 'osine' | 'adienine';
-sphinga_phosphate : ' 1-phosphate';
+sphinga_phosphate : ' 1-phosphate' | '-1-phosphate';
 sphinga_C_lcb : 'C' sphinga_lcb_len;
 sphinga_lcb_len : number;
 sphinga_bracket_lcb : round_open_bracket lcb round_close_bracket | lcb;
