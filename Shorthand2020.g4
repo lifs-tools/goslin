@@ -37,11 +37,15 @@ lipid_pure : gl | pl | sl | sterol | med; /* glycero lipids, phospho lipids, sph
 
 /* adduct information */
 adduct_info : adduct_sep | adduct_separator adduct_sep;
-adduct_sep : '[M' adduct ']' charge_sign | '[M' adduct ']' charge charge_sign;
+adduct_sep : SOB 'M' adduct SCB adduct_charge | SOB 'M' adduct_heavy adduct SCB adduct_charge | SOB 'M' adduct_heavy SCB;
+adduct_charge : charge_sign | charge charge_sign;
 adduct : adduct_set;
 adduct_set : adduct_element | adduct_element adduct_set;
 adduct_element : element | element number | number element | plus_minus element | plus_minus element number | plus_minus number element;
-
+adduct_heavy : adduct_heavy_component | adduct_heavy adduct_heavy;
+adduct_heavy_component : adduct_heavy_element adduct_heavy_number;
+adduct_heavy_element: '[2]H' | '[13]C' | '[15]N' | '[17]O' | '[18]O' | '[32]P' | '[33]S' | '[34]S';
+adduct_heavy_number : number;
 
 /* mediators */
 med : med_species | med_subspecies;
