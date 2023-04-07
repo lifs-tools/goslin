@@ -27,8 +27,14 @@ grammar Goslin;
 
 /* first rule is always start rule */
 lipid : lipid_eof EOF;
-lipid_eof : lipid_pure | lipid_pure adduct_info;
+lipid_eof : lipid_rule | lipid_rule adduct_info;
+lipid_rule: lipid_mono | lipid_mono isotope;
+lipid_mono: lipid_pure | lipid_pure isoform;
 lipid_pure : gl | pl | sl | sterol | mediatorc | saccharolipid;
+isotope: SPACE round_open_bracket isotope_pair round_close_bracket | round_open_bracket isotope_pair round_close_bracket | DASH round_open_bracket isotope_pair round_close_bracket | DASH isotope_pair | SPACE isotope_pair | isotope_pair;
+isotope_pair: isotope_element isotope_number;
+isotope_number: number;
+isotope_element: 'd' | 'D';
 
 
 /* adduct information */
@@ -172,10 +178,11 @@ mediator_function_unknown_pos : mediator_functions;
 mediator_functions : mediator_mono_functions | mediator_di_functions;
 mediator_mono_functions: 'H' | 'Oxo' | 'Hp';
 mediator_di_functions: 'E' | 'Ep' | 'DH' | 'DiH' | 'diH';
-mediator_mono_pos: mediator_position;
+mediator_mono_pos: mediator_position | mediator_position mediator_position_isotope;
 mediator_di_pos: mediator_position ',' mediator_position | mediator_position '_' mediator_position | mediator_position '(' mediator_position ')';
 mediator_full_function : mediator_mono_pos '-' mediator_mono_functions | mediator_di_pos '-' mediator_di_functions;
 mediator_position : number;
+mediator_position_isotope : 'S' | 'R';
 
 trivial_mediator : 'AA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'TXB1' | 'TXB2' | 'TXB3' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'LTB4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha';
 
@@ -223,15 +230,12 @@ number :  digit | digit number;
 digit : '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 
 
+heavy : '(+' adduct_heavy ')';
+adduct_heavy : adduct_heavy_component | adduct_heavy adduct_heavy;
+adduct_heavy_component : adduct_heavy_element adduct_heavy_number | adduct_heavy_element;
+adduct_heavy_element: '[2]H' | '[13]C' | '[15]N' | '[17]O' | '[18]O' | '[32]P' | '[33]S' | '[34]S';
+adduct_heavy_number : number;
 
-
-
-heavy : '(+' isotopes  ')';
-isotopes : isotopes isotopes | isotope;
-isotope : '[' isotope_number ']' isotope_element isotope_count | '[' isotope_number ']' isotope_element;
-isotope_number : number;
-isotope_element : element;
-isotope_count : number;
 
 /* separators */
 SPACE : ' ';

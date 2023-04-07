@@ -43,7 +43,7 @@ adduct : adduct_set;
 adduct_set : adduct_element | adduct_element adduct_set;
 adduct_element : element | element number | number element | plus_minus element | plus_minus element number | plus_minus number element;
 adduct_heavy : adduct_heavy_component | adduct_heavy adduct_heavy;
-adduct_heavy_component : adduct_heavy_element adduct_heavy_number;
+adduct_heavy_component : adduct_heavy_element adduct_heavy_number | adduct_heavy_element;
 adduct_heavy_element: '[2]H' | '[13]C' | '[15]N' | '[17]O' | '[18]O' | '[32]P' | '[33]S' | '[34]S';
 adduct_heavy_number : number;
 
