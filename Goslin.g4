@@ -28,8 +28,7 @@ grammar Goslin;
 /* first rule is always start rule */
 lipid : lipid_eof EOF;
 lipid_eof : lipid_rule | lipid_rule adduct_info;
-lipid_rule: lipid_mono | lipid_mono isotope;
-lipid_mono: lipid_pure | lipid_pure isoform;
+lipid_rule: lipid_pure | lipid_pure isotope;
 lipid_pure : gl | pl | sl | sterol | mediatorc | saccharolipid;
 isotope: SPACE round_open_bracket isotope_pair round_close_bracket | round_open_bracket isotope_pair round_close_bracket | DASH round_open_bracket isotope_pair round_close_bracket | DASH isotope_pair | SPACE isotope_pair | isotope_pair;
 isotope_pair: isotope_element isotope_number;
