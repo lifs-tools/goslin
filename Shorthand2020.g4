@@ -192,9 +192,10 @@ hg_lpim_number : number;
 pl_hg_fa : med;
 pl_hg_alk : fatty_acyl_chain;
 
-carbohydrate_group : carbohydrate | carbohydrate carbohydrate_number;
+carbohydrate_group : carbohydrate | carbohydrate carbohydrate_number | carbohydrate_sulfo;
 carbohydrate_number : number;
-carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'SHex' | 'S' ROB '3' APOSTROPH RCB 'Hex' | 'SGal' | 'S' ROB '3' APOSTROPH RCB 'Gal' | 'HexA' | 'OGlcNAc' | 'OGlc';
+carbohydrate : 'Hex' | 'Gal' | 'Glc' | 'Man' | 'Neu' | 'HexNAc' | 'GalNAc' | 'GlcNAc' | 'NeuAc' | 'NeuGc' | 'Kdn' | 'GlcA' | 'Xyl' | 'Fuc' | 'NeuAc2' | 'HexA' | 'OGlcNAc' | 'OGlc';
+carbohydrate_sulfo : 'SHex' | 'SHex2' | 'S' ROB '3' APOSTROPH RCB 'Hex' | 'SGal' | 'SGal2' | 'S' ROB '3' APOSTROPH RCB 'Gal2';
 
 
 sl : sl_species | sl_subspecies;
