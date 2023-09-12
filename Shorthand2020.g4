@@ -104,7 +104,7 @@ stereo_direction : 'R' | 'S';
 molecular_func_group : molecular_func_group_name | molecular_func_group_name func_group_count;
 func_group_ext_name : round_open_bracket func_group_name round_close_bracket | func_group_name;
 func_group_ext_count_name : round_open_bracket func_group_name round_close_bracket | molecular_func_group_name;
-func_group_name : 'Et' | 'Me' | 'Ac' | 'NO2' | 'My' | 'Ep' | 'OO' | 'dMe' | 'OMe' | 'oxy' | 'NH2' | 'OOH' | 'SH' | 'OH' | 'oxo' | 'CN' | 'Ph' | 'Su' | 'COOH' | 'G' | 'T' | 'COG' | 'COT' | carbohydrate | 'H' | 'Cys' | 'Phe' | 'SGlu' | 'SCys' | 'BOO' | 'MMAs' | 'SMe' | 'NH' | 'SCG' | special_elements;
+func_group_name : 'Et' | 'Me' | 'Ac' | 'NO2' | 'My' | 'Ep' | 'OO' | 'dMe' | 'OMe' | 'oxy' | 'NH2' | 'OOH' | 'SH' | 'OH' | 'oxo' | 'CN' | 'Ph' | 'Su' | 'COOH' | 'G' | 'T' | 'COG' | 'COT' | carbohydrate_sn | carbohydrate_iso | 'H' | 'Cys' | 'Phe' | 'SGlu' | 'SCys' | 'BOO' | 'MMAs' | 'SMe' | 'NH' | 'SCG' | special_elements;
 molecular_func_group_name : elements | special_elements;
 elements : 'O' | 'N' | 'P' | 'S' | 'As';
 special_elements: 'Br' | 'Cl' | 'F' | 'I';
