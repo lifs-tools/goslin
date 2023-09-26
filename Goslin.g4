@@ -164,26 +164,30 @@ hg_stes : 'ChE' | 'CE' | 'ChoE' | 'CholE';
 
 
 /* mediator lipids (1 class) */
-mediatorc : mediator | mediator heavy_hg;
-mediator : unstructured_mediator | trivial_mediator | mediator_functional_group mediator_fa mediator_suffix | mediator_functional_group mediator_fa;
+mediatorc : mediator_iso | mediator_iso heavy_hg;
+mediator_iso : mediator | med_iso mediator;
+mediator : unstructured_mediator | trivial_mediator | mediator_functional_group mediator_fa | mediator_functional_group mediator_fa mediator_suffix | mediator_functional_group trivial_mediator;
+med_iso : med_iso_positions med_iso_suffix | med_iso_positions med_iso_suffix '-' | med_iso_positions '-' med_iso_suffix | med_iso_positions '-' med_iso_suffix '-';
+med_iso_suffix : 'iso';
+med_iso_positions : number | number ',' med_iso_positions;
 mediator_fa : mediator_carbon mediator_db;
 mediator_carbon : 'H' | 'O' | 'E' | 'Do';
 mediator_db : 'M' | 'D' | 'Tr' | 'T' | 'P' | 'H';
 mediator_suffix: 'E';
-mediator_functional_group : mediator_functional_group_clear | mediator_tetranor mediator_functional_group_clear;
-mediator_tetranor : 'tetranor-';
+mediator_functional_group : mediator_functional_group_clear | mediator_functional_group_clear '-' | mediator_tetranor mediator_functional_group_clear | mediator_tetranor mediator_functional_group_clear '-';
+mediator_tetranor : 'tetranor-' | 'Tetranor-';
 mediator_functional_group_clear: mediator_full_function | mediator_function_unknown_pos;
 mediator_function_unknown_pos : mediator_functions;
 mediator_functions : mediator_mono_functions | mediator_di_functions;
-mediator_mono_functions: 'H' | 'Oxo' | 'Hp';
+mediator_mono_functions: 'H' | 'Oxo' | 'oxo' | 'OXO' | 'Hp' | 'NO2';
 mediator_di_functions: 'E' | 'Ep' | 'DH' | 'DiH' | 'diH';
-mediator_mono_pos: mediator_position | mediator_position mediator_position_isotope;
-mediator_di_pos: mediator_position ',' mediator_position | mediator_position '_' mediator_position | mediator_position '(' mediator_position ')';
-mediator_full_function : mediator_mono_pos '-' mediator_mono_functions | mediator_di_pos '-' mediator_di_functions;
+mediator_full_function : mediator_position_group '-' mediator_mono_functions | mediator_di_pos '-' mediator_di_functions;
+mediator_di_pos: mediator_position_group ',' mediator_position_group | mediator_position_group '_' mediator_position_group | mediator_position_group '(' mediator_position_group ')';
+mediator_position_group : mediator_position | mediator_position mediator_position_isotope | mediator_position '(' mediator_position_isotope ')';
 mediator_position : number;
 mediator_position_isotope : 'S' | 'R';
 
-trivial_mediator : 'AA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'TXB1' | 'TXB2' | 'TXB3' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'LTB4' | 'Maresin 1' | 'Palmitic acid' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha';
+trivial_mediator : 'AA' | 'LA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'Arachidonic acid' | 'TXB1' | 'TXB2' | 'TXB3' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'LTB4' | 'Mar1' | 'Maresin 1' | 'Palmitic acid' | 'PDX' | 'PGB2' | 'PGD2' | 'PGE2' | 'PGF2alpha' | 'PGF1alpha' | 'OA' | 'Oleic acid' | 'iPF2alpha-VI';
 
 unstructured_mediator : 'alpha-LA' | 'LTC4' | 'LTD4' | 'PGI2';
 
