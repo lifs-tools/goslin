@@ -180,7 +180,7 @@ LCDPDAG,GP,Lyso-CDP-diacylglycerol,2,1,Lyso,,,,,,,,,
 LCL,GP,Glycerophosphoglycerophosphoglycerols [GP12],4,3,Lyso;Cardio,C9H18O13P2,MLCL,,,,,,,
 LDMPE,GP,Lysodimethylphosphatidylethanolamine,2,1,Lyso,,,,,,,,,
 Lex-GM1,SP,Globoside,2,2,,C57H93N3O42,,,,,,,,
-LHexCer,SP,Hexosylsphingosine,2,1,Lyso,C6H11O5,HexSph,,,,,,,
+LHexCer,SP,Hexosylsphingosine,1,1,,C6H12O5,HexSph,,,,,,,
 Linoleic acid,FA,Unsaturated fatty acids [FA0103],0,0,,C18H32O2,,,,,,,,
 LIPC,SP,,1,1,,C6H11O8P,,,,,,,,
 LMMPE,GP,Lysomonomethylphosphatidylethanolamine,2,1,Lyso,C6H15NO6P,,,,,,,,
@@ -199,7 +199,7 @@ LPIM6,GP,Monoacylglycerophosphoinositolglycans [GP1504],2,1,Lyso,C45H77O41P,,,,,
 LPIMIP,GP,Lysophosphatidylinositol- mannosideinositolphosphate,2,1,Lyso,,,,,,,,,
 LPIN,GP,Lysophosphatidylinositol-glucosamine,2,1,Lyso,,,,,,,,,
 LPS,GP,Monoacylglycerophosphoserines [GP0305],2,1,Lyso,C6H12NO8P,LysoPS,lysoPS,,,,,,
-LSM,SP,Ceramides [SP02],1,1,Lyso,C5H14NO3P,SPC,LysoSM,,,,,,
+LSM,SP,Ceramides [SP02],1,1,,C5H14NO3P,SPC,LysoSM,,,,,,
 LTB4,FA,Leukotrienes [FA0302],0,0,,C20H32O4,,,,,,,,
 LTC4,FA,Eicosanoid derivatives,0,0,,C30H47N3O9S,,,,,,,,
 LTD4,FA,Leukotrienes [FA0302],0,0,,C25H40N2O6S,,,,,,,,
@@ -298,8 +298,8 @@ SO3-GalGb4Cer,SP,Glycosphingolipids,2,2,,C32H53NO28S,,,,,,,,
 SO3-Gb4Cer,SP,Glycosphingolipids,2,2,,C26H43NO23S,,,,,,,,
 SO3-GM1(NeuGc),SP,Globoside,2,2,,C37H59N2O32S,,,,,,,,
 SO3-iGb4Cer,SP,Glycosphingolipids,2,2,,C26H43NO23S,,,,,,,,
-SPB,SP,Sphingoid base homologs and variants [SP0104],1,1,Lyso;SP_Exception,H2,Sphingosine,So,Sphinganine,Sa,SPH,Sph,LCB,SPA
-SPBP,SP,Sphingoid base 1-phosphates [SP0105],1,1,Lyso,H3O3P,Sphingosine-1-phosphate,S1P,SPH-P,SIP,Sphinganine-1-phosphate,Sa1P,LCBP,SPA1P
+SPB,SP,Sphingoid base homologs and variants [SP0104],1,1,SP_Exception,H2,Sphingosine,So,Sphinganine,Sa,SPH,Sph,LCB,SPA
+SPBP,SP,Sphingoid base 1-phosphates [SP0105],1,1,,H3O3P,Sphingosine-1-phosphate,S1P,SPH-P,SIP,Sphinganine-1-phosphate,Sa1P,LCBP,SPA1P
 SQDG,GL,Glycosyldiacylglycerols [GL0501],2,2,Sugar,C9H16O10S,,,,,,,,
 SQMG,GL,Glycosylmonoacylglycerols [GL0401],2,1,Sugar,C9H16O10S,,,,,,,,
 ST 27:1;O,ST,Cholesterol and derivatives [ST0101],0,0,,C27H46O,CH,FC,Cholesterol,Ch,ST,ST 27:1;1,Chol,cholesterol

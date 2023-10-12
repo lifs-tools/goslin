@@ -203,7 +203,8 @@ carbohydrate_iso : 'Gal' | 'Glc' | 'GalNAc' | 'GlcNAc' | 'S' ROB '3' APOSTROPH R
 
 sl : sl_species | sl_subspecies;
 sl_species : sl_hg_double headgroup_separator lcb | acer_species headgroup_separator lcb;
-sl_subspecies : sl_hg_single headgroup_separator lcb | sl_hg_single headgroup_separator lcb '/0:0' | sl_hg_single sl_hydroxyl headgroup_separator lcb | sl_double;
+sl_subspecies : sl_single | sl_double;
+sl_single : sl_hg_single headgroup_separator lcb | sl_hg_single sl_hydroxyl headgroup_separator lcb | sl_hg_single headgroup_separator lcb '/0:0' | sl_hg_single sl_hydroxyl headgroup_separator lcb '/0:0';
 sl_double : sl_hg_double headgroup_separator lcb sorted_fa_separator fatty_acyl_chain | sl_hg_double sl_hydroxyl headgroup_separator lcb sorted_fa_separator fatty_acyl_chain;
 sl_hydroxyl : ROB sl_hydroxyl_number RCB;
 sl_hydroxyl_number : number;
