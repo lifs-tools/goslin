@@ -208,7 +208,7 @@ sl_single : sl_hg_single headgroup_separator lcb | sl_hg_single sl_hydroxyl head
 sl_double : sl_hg_double headgroup_separator lcb sorted_fa_separator fatty_acyl_chain | sl_hg_double sl_hydroxyl headgroup_separator lcb sorted_fa_separator fatty_acyl_chain;
 sl_hydroxyl : ROB sl_hydroxyl_number RCB;
 sl_hydroxyl_number : number;
-sl_hg_single : 'SPB' | 'SPBP' | 'LIPC' | 'LSM' | 'LHexCer';
+sl_hg_single : 'SPB' | 'SPBP' | 'LIPC' | 'LSM' | 'LHexCer' | 'LHex2Cer' | 'LHex3Cer';
 sl_hg_double : acer_hg | sl_hg_double_name | carbohydrates sl_hg_glyco;
 sl_hg_glyco : 'Cer' | 'IPC';
 sl_hg_double_name : 'SM' | sl_hg_glyco | 'CerP' | acer_hg | 'SL' | 'LacCer' | 'SHexCer' | 'PI-Cer' | 'EPC' | 'PE-Cer' | 'GIPC' | 'MIPC' | 'M(IP)2C' | glyco_sphingo_lipid | 'S' ROB '3' APOSTROPH RCB 'HexCer' | 'S' ROB '3' APOSTROPH RCB 'GalCer';
