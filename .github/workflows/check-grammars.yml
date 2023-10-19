@@ -31,7 +31,7 @@ jobs:
           distribution: 'adopt'
           cache: 'gradle'
       - name: Gradle Build Action
-        uses: gradle/gradle-build-action@v1.5.0
+        uses: gradle/gradle-build-action@v1.5.1
         with:
           gradle-version: '7.2'
           arguments: build --continue # continue build on task errors to get overview of all tasks
