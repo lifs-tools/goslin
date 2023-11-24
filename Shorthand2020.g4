@@ -160,8 +160,10 @@ gl_hg_tg_est : 'TG-EST' | 'TG EST' | 'TAG EST' | 'TAG-EST';
 
 
 
-pl : pl_species | pl_subspecies | pl_molecular_species;
+pl : pl_species | pl_subspecies | pl_molecular_species | pl_cpa;
 pl_species : pl_hg headgroup_separator fatty_acyl_chain;
+pl_cpa : pl_cpa_head headgroup_separator fatty_acyl_chain;
+pl_cpa_head : 'CPA' | 'cLPA' | 'CLPA';
 pl_subspecies : pl_single | pl_double | pl_quadro;
 pl_molecular_species : pl_hg_quadro headgroup_separator fa2_unsorted | pl_hg_quadro headgroup_separator fa3_unsorted;
 pl_single : pl_hg_single headgroup_separator fatty_acyl_chain;
@@ -169,7 +171,7 @@ pl_full : pl_hg_single headgroup_separator fatty_acyl_chain2;
 pl_double : pl_full | pl_hg_double_all headgroup_separator fatty_acyl_chain2;
 pl_quadro : pl_hg_quadro headgroup_separator fatty_acyl_chain4;
 pl_hg : pl_hg_double_all | pl_hg_quadro;
-pl_hg_single : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'CPA' | 'LCDPDAG' | 'LDMPE' | 'LMMPE' | 'LPIMIP' | 'LPIN' | 'PE-isoLG';
+pl_hg_single : 'LPA' | 'LPC' | 'LPE' | 'LPG' | 'LPI' | 'LPS' | hg_lpim | 'LCDPDAG' | 'LDMPE' | 'LMMPE' | 'LPIMIP' | 'LPIN' | 'PE-isoLG';
 pl_hg_double_all : pl_hg_double_fa | pl_hg_double | hg_pip;
 pl_hg_double_fa : pl_hg_double_fa_hg ROB pl_hg_fa RCB | pl_hg_double_fa_hg ROB pl_hg_alk RCB;
 pl_hg_double_fa_hg : 'PS-N' | 'PE-N';
