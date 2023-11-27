@@ -256,9 +256,9 @@ SOB: '[';
 SCB: ']';
 
 APOSTROPH : '\'' | '′';
-sorted_fa_separator : SLASH;
+sorted_fa_separator : SLASH | BACKSLASH | SPACE SLASH SPACE | SPACE BACKSLASH SPACE;
 adduct_separator : SPACE;
-unsorted_fa_separator : UNDERSCORE;
+unsorted_fa_separator : UNDERSCORE | SPACE UNDERSCORE SPACE;
 plasmalogen_separator : DASH;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;
