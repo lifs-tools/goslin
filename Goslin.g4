@@ -44,14 +44,14 @@ adduct_set : adduct_element | adduct_element adduct_set;
 adduct_element : element | element number | number element | plus_minus element | plus_minus element number | plus_minus number element;
 
 fa2 : fa2_unsorted | fa2_sorted;
-fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
-fa2_sorted: fa SLASH fa | fa BACKSLASH fa;
+fa2_unsorted: fa unsorted_fa_separator fa;
+fa2_sorted: fa sorted_fa_separator fa;
 fa3 : fa3_unsorted | fa3_sorted;
-fa3_unsorted: fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa;
-fa3_sorted: fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa;
+fa3_unsorted: fa unsorted_fa_separator fa unsorted_fa_separator fa;
+fa3_sorted: fa sorted_fa_separator fa sorted_fa_separator fa;
 fa4 : fa4_unsorted | fa4_sorted;
-fa4_unsorted: fa DASH fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa UNDERSCORE fa;
-fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLASH fa;
+fa4_unsorted: fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_separator fa;
+fa4_sorted: fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa;
 
 /* glycerolipid rules (7 classes) */
 gl : sqml | mgl | dgl | sgl | tgl;
@@ -253,9 +253,9 @@ ROB: '(';
 RCB: ')';
 FRAGMENT_SEPARATOR : ' - ';
 
-sorted_fa_separator : SLASH | BACKSLASH;
 adduct_separator : SPACE;
-unsorted_fa_separator : DASH | UNDERSCORE;
+sorted_fa_separator : SLASH | BACKSLASH | SPACE SLASH SPACE | SPACE BACKSLASH SPACE;
+unsorted_fa_separator : DASH | UNDERSCORE | SPACE DASH SPACE | SPACE UNDERSCORE SPACE;
 plasmalogen_separator : headgroup_separator | DASH | DASH SPACE;
 headgroup_separator : SPACE;
 carbon_db_separator : COLON;

@@ -57,15 +57,15 @@ hg_fa: 'FA' | 'WE' | 'CoA' | 'CAR' | 'FAHFA' | 'CoA';
 
 
 fa2 : fa2_unsorted | fa2_sorted;
-fa2_unsorted: fa DASH fa | fa UNDERSCORE fa;
-fa2_sorted: fa SLASH fa | fa BACKSLASH fa;
+fa2_unsorted: fa unsorted_fa_separator fa;
+fa2_sorted: fa sorted_fa_separator fa;
 fa3 : fa3_unsorted | fa3_sorted;
-fa3_unsorted: fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa;
-fa3_sorted: fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa;
+fa3_unsorted: fa unsorted_fa_separator fa unsorted_fa_separator fa;
+fa3_sorted: fa sorted_fa_separator fa sorted_fa_separator fa;
 fa4 : fa4_unsorted | fa4_sorted;
-fa4_unsorted: fa DASH fa DASH fa DASH fa | fa UNDERSCORE fa UNDERSCORE fa UNDERSCORE fa;
-fa4_sorted: fa SLASH fa SLASH fa SLASH fa | fa BACKSLASH fa BACKSLASH fa BACKSLASH fa;
-lcb_fa_sorted: lcb SLASH fa | lcb BACKSLASH fa;
+fa4_unsorted: fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_separator fa;
+fa4_sorted: fa sorted_fa_separator fa sorted_fa_separator fa sorted_fa_separator fa;
+lcb_fa_sorted: lcb sorted_fa_separator fa;
 species_fa : fa;
 
 /* glycerolipid rules */
@@ -251,7 +251,8 @@ RCB: ')';
 SOB: '[';
 SCB: ']';
 
-fa_separator: UNDERSCORE | SLASH | BACKSLASH | DASH;
+sorted_fa_separator : SLASH | BACKSLASH | SPACE SLASH SPACE | SPACE BACKSLASH SPACE;
+unsorted_fa_separator : DASH | UNDERSCORE | SPACE DASH SPACE | SPACE UNDERSCORE SPACE;
 adduct_separator : SPACE;
 headgroup_separator: SPACE;
 fa_mod_separator: SPACE;
