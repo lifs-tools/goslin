@@ -134,11 +134,11 @@ sl_species : lcb;
 sl_subspecies : lcb sorted_fa_separator fa;
 
 hg_lslc : hg_lsl | hg_lsl heavy_hg;
-hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LHex2Cer' | 'LHex3Cer' | 'LSM' | 'LIPC' | 'So' | 'Sa' | 'SPH' | 'Sph' | 'LCB' | 'S1P' | 'SPH-P' | 'SIP' | 'Sa1P' | 'SPA1P' | 'SPA';
+hg_lsl : 'LCB' | 'LCBP' | 'LHexCer' | 'LHex2Cer' | 'LHex3Cer' | 'LSM' | 'LIPC' | 'So' | 'Sa' | 'SPH' | 'Sph' | 'S1P' | 'SPH-P' | 'SIP' | 'Sa1P' | 'SPA1P' | 'SPA' | 'SPB' | 'SPBP';
 hg_so_lslc : hg_so_lsl | hg_so_lsl heavy_hg;
 hg_so_lsl : 'So' | 'Sa' | 'Sa1P' | 'S1P';
 hg_dslc : hg_dsl | hg_dsl heavy_hg;
-hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'HexCer' | 'Hex2Cer' | 'Hex3Cer' | 'IPC' | 'MIP2C' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' | 'CerPE' | 'PE-Cer' | glyco_sphingo_lipid;
+hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'HexCer' | 'Hex2Cer' | 'Hex3Cer' | 'IPC' | 'MIP2C' | 'M(IP)2C' | 'MIPC' | 'SHexCer' | 'SM' | 'FMC-5' | 'FMC-6' | 'CerPE' | 'PE-Cer' | 'PI-Cer' | glyco_sphingo_lipid;
  glyco_sphingo_lipid : 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
  'GB3' | 'Gb3' | 'GB4' | 'Gb4' |
  'GD1' | 'Gd1' | 'GD2' | 'Gd2' | 'GD3' | 'Gd3' |
