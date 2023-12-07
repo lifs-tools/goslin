@@ -116,12 +116,16 @@ functional_group : multi_functional_group | single_functional_group | epoxy | me
 pos_neg : '(+/-)-' | '(+)-' | '(-)-';
 
 double_bond_positions : double_bond_positions_pure DASH | ROB double_bond_positions_pure RCB DASH | double_bond_positions_pure | ROB double_bond_positions_pure RCB;
-double_bond_positions_pure : double_bond_positions_pure pos_separator double_bond_positions_pure | double_bond_position;
+double_bond_positions_pure : double_bond_positions_pure pos_separator double_bond_positions_pure | double_bond_position | double_bond_position_omega;
 double_bond_position : db_number | db_number cistrans_b | db_number PRIME | db_number PRIME cistrans_b | cistrans_b;
+double_bond_position_omega: db_number DASH omega_position | db_number SPACE omega_position;
 cistrans_b : cistrans | ROB cistrans RCB;
 cistrans : 'e' | 'z' | 'r' | 's' | 'a' | 'b' | 'c';
 db_number : number;
 fg_pos_summary : functional_positions DASH;
+omega_position : omega omega_pos | omega DASH omega_pos | omega SPACE omega_pos;
+omega : 'omega' | 'ω' | '';
+omega_pos : number;
 
 multi_functional_group : functional_positions DASH functional_length functional_group_type | functional_positions DASH functional_group_type;
 functional_length : notation_last_digit | notation_second_digit | notation_last_digit notation_second_digit;
