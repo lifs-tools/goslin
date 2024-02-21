@@ -49,7 +49,7 @@ Lipid name,Lipid category,Lipid description,Max num FA,Poss num FA,Special Cases
 9-HODE,FA,Other Octadecanoids [FA0200],0,0,,C18H32O3,,,,,,,,
 9-HOTrE,FA,Other Octadecanoids [FA0200],0,0,,C18H30O3,,,,,,,,
 9(10)-EpOME,FA,Other Octadecanoids [FA0200],0,0,,C18H32O3,,,,,,,,
-AA,FA,Unsaturated fatty acids [FA0103],0,0,,C20H32O2,Arachidonic acid,Arachidonic Acid,,,,,,
+AA,FA,Unsaturated fatty acids [FA0103],0,0,,C20H32O2,Arachidonic acid,Arachidonic Acid,ARA,,,,,
 Ac-O-9-GD1a,SP,Globoside,2,2,,C50H78N3O37,,,,,,,,
 Ac-O-9-GT1b,SP,Globoside,2,2,,C61H94N4O45,,,,,,,,
 Ac-O-9-GT3,SP,Globoside,2,2,,C47H71N3O35,,,,,,,,
