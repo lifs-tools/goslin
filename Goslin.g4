@@ -181,7 +181,7 @@ mediator_function_unknown_pos : mediator_functions;
 mediator_functions : mediator_mono_functions | mediator_di_functions | mediator_tri_functions;
 mediator_mono_functions: 'H' | 'Oxo' | 'oxo' | 'OXO' | 'keto' | 'Hp' | 'HP' | 'NO2' | 'K' | 'k' | 'hydroxy' | 'd' | 'deoxy' | 'beta';
 mediator_di_functions: 'E' | 'Ep' | 'EP' | 'DH' | 'DiH' | 'diH' | 'dihydro';
-mediator_tri_functions : 'triH' | 'trihydroxy';
+mediator_tri_functions : 'TriH' | 'triH' | 'trihydroxy';
 mediator_full_function : mediator_position_group '-' mediator_mono_functions | mediator_di_pos '-' mediator_di_functions | mediator_tri_pos '-' mediator_tri_functions | mediator_position_group mediator_mono_functions;
 mediator_db_function : mediator_double_bond_positions '-' mediator_mono_functions;
 mediator_double_bond_positions_full : '(' mediator_double_bond_positions ')';
@@ -189,11 +189,12 @@ mediator_double_bond_positions : mediator_double_bond_position | mediator_double
 mediator_double_bond_position : mediator_double_bond_pos mediator_double_bond_ct;
 mediator_double_bond_pos : number;
 mediator_double_bond_ct : cistrans;
-mediator_di_pos: mediator_position_group mediator_separator mediator_position_group | mediator_position_group '(' mediator_position_group ')' | '(' mediator_position_group mediator_separator mediator_position_group ')' | mediator_position_group ',' mediator_position_group;
+mediator_di_pos: mediator_position_group mediator_separator mediator_position_group | mediator_position_group '(' mediator_position_group ')' | '(' mediator_position_group mediator_separator mediator_position_group ')';
 mediator_tri_pos: mediator_position_group mediator_separator mediator_position_group mediator_separator mediator_position_group | '(' mediator_position_group mediator_separator mediator_position_group mediator_separator mediator_position_group ')';
 mediator_position_group : mediator_position | mediator_position mediator_position_isotope | mediator_position '(' mediator_position_isotope ')' |  '(' mediator_position mediator_position_isotope ')';
 mediator_position : number;
 mediator_position_isotope : 'S' | 'R';
+mediator_separator : ',' | '-' | '_';
 
 trivial_mediator : 'AA' | 'ARA' | 'LA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'Arachidonic acid' | 'TXB1' | 'TXB2' | 'TXB3' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'LTB4' | 'Mar1' | 'Maresin 1' | 'Palmitic acid' | 'PDX' | 'OA' | 'Oleic acid' | 'iPF2alpha-VI';
 
