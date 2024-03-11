@@ -122,8 +122,8 @@ hg_threepl: 'SLBPA' | 'PS-NAc' | 'NAPE';
 
 /* sphingolipid rules */
 sl: lsl | dsl;
-lsl: hg_lslc round_open_bracket lcb round_close_bracket | hg_lslc lcb | sphinga;
-dsl: hg_dslc dsl_species | hg_dslc dsl_subspecies;
+lsl: hg_lslc round_open_bracket lcb round_close_bracket | hg_lslc lcb | sphinga | hg_lsl_pure;
+dsl: hg_dslc dsl_species | hg_dslc dsl_subspecies | hg_dslc c_type;
 dsl_species: round_open_bracket lcb round_close_bracket | lcb;
 dsl_subspecies: round_open_bracket lcb_fa_sorted round_close_bracket | lcb_fa_sorted;
 
@@ -140,6 +140,7 @@ sphinga_C_lcb : 'C' sphinga_lcb_len;
 sphinga_lcb_len : number;
 sphinga_bracket_lcb : round_open_bracket lcb round_close_bracket | lcb;
 
+c_type : 'C' carbon | 'C' carbon carbon_db_separator db;
 
 
 hg_dslc: hg_dsl_global | hg_dsl_global headgroup_separator;
@@ -167,9 +168,8 @@ greek : 'alpha' | 'beta' | 'α' | 'β';
 
 
 hg_lslc: hg_lsl | hg_lsl headgroup_separator;
-hg_lsl: 'SPH' | 'Sph' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P' | 'LysoSM' | 'SIP';
-
-
+hg_lsl_pure : hg_lsl;
+hg_lsl: 'SPH' | 'Sph' | 'S1P' | 'HexSph' | 'SPC' | 'SPH-P' | 'LysoSM' | 'SIP' | 'GlcSph' | 'GalSph';
 
 /* polyketides */
 pk : pk_hg pk_fa;

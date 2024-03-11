@@ -182,7 +182,7 @@ mediator_functions : mediator_mono_functions | mediator_di_functions | mediator_
 mediator_mono_functions: 'H' | 'Oxo' | 'oxo' | 'OXO' | 'keto' | 'Hp' | 'HP' | 'NO2' | 'K' | 'k' | 'hydroxy' | 'd' | 'deoxy' | 'beta' | 'iso';
 mediator_di_functions: 'E' | 'Ep' | 'EP' | 'DH' | 'DiH' | 'diH' | 'dihydro' | 'dh';
 mediator_tri_functions : 'TriH' | 'triH' | 'trihydroxy';
-mediator_full_function : mediator_position_group mediator_func_group_separator mediator_mono_functions | mediator_di_pos mediator_func_group_separator mediator_di_functions | mediator_tri_pos mediator_func_group_separator mediator_tri_functions | mediator_position_group mediator_mono_functions;
+mediator_full_function : mediator_position_group mediator_func_group_separator mediator_mono_functions | mediator_di_pos mediator_func_group_separator mediator_di_functions | mediator_tri_pos mediator_func_group_separator mediator_tri_functions | mediator_position_group mediator_mono_functions | mediator_position_group mediator_mono_functions | mediator_di_pos mediator_di_functions | mediator_tri_pos mediator_tri_functions | mediator_position_group mediator_mono_functions;
 mediator_db_function : mediator_double_bond_positions mediator_func_group_separator mediator_mono_functions;
 mediator_double_bond_positions_full : '(' mediator_double_bond_positions ')';
 mediator_double_bond_positions : mediator_double_bond_position | mediator_double_bond_positions ',' mediator_double_bond_position;
