@@ -222,7 +222,7 @@ glyco_sphingo_lipid : 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
  'GM1' | 'Gm1' | 'GM2' | 'Gm2' | 'GM3' | 'Gm3' | 'GM4' | 'Gm4' |
  'GP1' | 'Gp1' |
  'GQ1' | 'Gq1' | 'GQ1b' | 'Gq1b' | 'GQ1-AC' | 'Gq1-AC' | 
- 'GT1' | 'Gt1' | 'GT1b' | 'Gt1b' | 'GT2' | 'Gt2' | 'GT3' | 'Gt3' | GT1b-AC' | 'Gt1b-AC' | 'GT3-AC' | 'Gt3-AC';
+ 'GT1' | 'Gt1' | 'GT1b' | 'Gt1b' | 'GT2' | 'Gt2' | 'GT3' | 'Gt3' | 'GT1b-AC' | 'Gt1b-AC' | 'GT3-AC' | 'Gt3-AC';
 /*
 acer_hg : acer_hg_pure | acer_med '-' acer_hg_pure;
 acer_med : med;
