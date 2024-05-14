@@ -166,7 +166,7 @@ hg_stes : 'ChE' | 'CE' | 'ChoE' | 'CholE';
 /* mediator lipids (1 class) */
 mediatorc : mediator_iso | mediator_iso heavy_hg;
 mediator_iso : mediator | med_iso mediator;
-mediator : unstructured_mediator | prostaglandin | trivial_mediator | mediator_functional_group mediator_fa | mediator_functional_group mediator_fa mediator_suffix | mediator_functional_group trivial_mediator | mediator_functional_group prostaglandin;
+mediator : unstructured_mediator | trivial_mediator | mediator_functional_group mediator_fa | mediator_functional_group mediator_fa mediator_suffix | mediator_functional_group trivial_mediator;
 med_iso : med_iso_positions med_iso_suffix | med_iso_positions med_iso_suffix mediator_func_group_separator | med_iso_positions mediator_func_group_separator med_iso_suffix | med_iso_positions mediator_func_group_separator med_iso_suffix mediator_func_group_separator;
 med_iso_suffix : 'iso';
 med_iso_positions : number | number ',' med_iso_positions;
@@ -197,7 +197,7 @@ mediator_position_isotope : 'S' | 'R';
 mediator_separator : ',' | '-' | '_';
 mediator_func_group_separator : ' ' | '-';
 
-trivial_mediator : 'AA' | 'ARA' | 'LA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'Arachidonic acid' | 'TXB1' | 'TXB2' | 'TXB3' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'Resolvin E1' | 'Resolvin E2' | 'LTB4' | 'Mar1' | 'Maresin 1' | 'Palmitic acid' | 'PDX' | 'OA' | 'Oleic acid' | 'iPF2alpha-VI' | 'PGEM' | 'PGE-M';
+trivial_mediator : 'AA' | 'ARA' | 'LA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid' | 'Arachidonic acid' | 'TXB1' | 'TXB2' | 'TXB3' | 'Resolvin D1' | 'Resolvin D2' | 'Resolvin D3' | 'Resolvin D5' | 'Resolvin E1' | 'Resolvin E2' | 'LTB4' | 'Mar1' | 'Maresin 1' | 'Palmitic acid' | 'PDX' | 'OA' | 'Oleic acid' | 'iPF2alpha-VI' | 'PGEM' | 'PGE-M' | prostaglandin;
 
 unstructured_mediator : 'alpha-LA' | 'LTC4' | 'LTD4' | 'PGI2';
 
