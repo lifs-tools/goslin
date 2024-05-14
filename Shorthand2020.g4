@@ -25,7 +25,6 @@
 /* This is a BNF / ANTLR4 grammar for lipid subspecies identifiers following
  * Liebisch et al. Volume 61, Issue 12, December 2020, Pages 1539-1555.
  */
-
 grammar Shorthand2020;
 
 
@@ -219,11 +218,11 @@ acer_species : acer_hg_pure | acer_hg_pure '(FA)';
 acer_hg_pure : 'ACer';
 glyco_sphingo_lipid : 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
  'GB3' | 'Gb3' | 'GB4' | 'Gb4' |
- 'GD1' | 'Gd1' | 'GD2' | 'Gd2' | 'GD3' | 'Gd3' |
+ 'GD0a' | 'Gd0a' | 'GD1' | 'Gd1' | 'GD2' | 'Gd2' | 'GD3' | 'Gd3' | 'GD1a' | 'Gd1a' | 'GD1b' | 'Gd1b' | 'GD1a-AC' | 'Gd1a-AC' |
  'GM1' | 'Gm1' | 'GM2' | 'Gm2' | 'GM3' | 'Gm3' | 'GM4' | 'Gm4' |
  'GP1' | 'Gp1' |
- 'GQ1' | 'Gq1' |
- 'GT1' | 'Gt1' | 'GT2' | 'Gt2' | 'GT3' | 'Gt3';
+ 'GQ1' | 'Gq1' | 'GQ1b' | 'Gq1b' | 'GQ1-AC' | 'Gq1-AC' | 
+ 'GT1' | 'Gt1' | 'GT1b' | 'Gt1b' | 'GT2' | 'Gt2' | 'GT3' | 'Gt3' | GT1b-AC' | 'Gt1b-AC' | 'GT3-AC' | 'Gt3-AC';
 /*
 acer_hg : acer_hg_pure | acer_med '-' acer_hg_pure;
 acer_med : med;
