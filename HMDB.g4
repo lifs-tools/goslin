@@ -45,7 +45,7 @@ adduct_element : element | element number | number element | plus_minus element 
 
 
 /* fatty acyl rules */
-fa : fa_core | furan_fa | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix;
+fa : fa_core | furan_fa | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix | fa_synonym;
 fa_core : carbon carbon_db_separator db | ether carbon carbon_db_separator db | methyl carbon carbon_db_separator db;
 
 furan_fa : furan_fa_mono | furan_fa_di;
@@ -53,6 +53,8 @@ furan_fa_mono : furan_first_number 'M' furan_second_number | 'MonoMe(' furan_fir
 furan_fa_di : furan_first_number 'D' furan_second_number | 'DiMe(' furan_first_number ',' furan_second_number ')';
 furan_first_number : number;
 furan_second_number : number;
+
+fa_synonym : 'Palmitic acid' | 'Linoleic acid' | 'AA' | 'ALA' | 'EPA' | 'DHA' | 'LTB4' | 'Resolvin D3' | 'Maresin 1' | 'Resolvin D2' | 'Resolvin D5' | 'Resolvin D1' | 'TXB1' | 'TXB2' | 'TXB3' | 'PGF2alpha' | 'PGD2' | 'PGE2' | 'PGB2' | 'PGJ2' | '15d-PGJ2';
 
 lcb : lcb_core | fa_lcb_prefix lcb_core | lcb_core fa_lcb_suffix | fa_lcb_prefix lcb_core fa_lcb_suffix;
 lcb_core : hydroxyl carbon carbon_db_separator db;
@@ -72,12 +74,18 @@ ether_link_pos : number '-';
 ether_type : 'o-' | 'O-' | 'P-';
 methyl : 'i-' | 'a-';
 hydroxyl : 'm' | 'd' | 't';
-fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
+fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB | fa_lcb_suffix_full;
+fa_lcb_suffix_full : fa_lcb_suffix_full_sep fa_lcb_suffix_number fa_lcb_suffix_types ROB fa_lcb_suffix_positions RCB | fa_lcb_suffix_full_sep fa_lcb_suffix_types ROB fa_lcb_suffix_position_core RCB;
+fa_lcb_suffix_full_sep : fa_lcb_suffix_separator | '+=';
 fa_lcb_suffix_core : fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_separator fa_lcb_suffix_type;
 fa_lcb_suffix_type : 'OH' | 'me';
+fa_lcb_suffix_types : 'OH' | 'me' | 'O';
 fa_lcb_suffix_number : number;
 fa_lcb_prefix : fa_lcb_prefix_type | fa_lcb_prefix_type fa_lcb_prefix_separator;
 fa_lcb_prefix_type : 'iso';
+fa_lcb_suffix_positions : fa_lcb_suffix_position_core COMMA fa_lcb_suffix_positions | fa_lcb_suffix_position_core;
+fa_lcb_suffix_position_core : fa_lcb_suffix_position | fa_lcb_suffix_position med_suffix;
+fa_lcb_suffix_position : number;
 
 /* different fatty acyl types */
 fa_species : fa;

@@ -31,6 +31,18 @@ Goslin uses ANTLRv4 compatible context-free EBNF grammars. A generic recursive d
 
 The grammars (*.g4 files) are available from our Goslin GitHub repository at https://github.com/lifs-tools/goslin. 
 
+Visualizations of the grammar rules as so-called `railroad diagrams` can be found in the `docs` folder of the repository: 
+
+ * xref:grammars/Goslin/Goslin.html[Goslin]
+ * link:grammars/GoslinFragments/GoslinFragments.html[Goslin Fragments]
+ * link:grammars/HMDB/HMDB.html[HMDB]
+ * link:grammars/LipidMaps/LipidMaps.html[LipidMaps]
+ * link:grammars/Shorthand2020/Shorthand2020.html[Shorthand2020]
+ * link:grammars/SumFormula/SumFormula.html[SumFormula]
+ * link:grammars/SwissLipids/SwissLipids.html[SwissLipids]
+
+All Goslin implementations will by default normalize the parsed lipid names to the latest shorthand nomenclature, following the Shorthand2020 grammar.
+
 == Hierarchical Representation of Lipids
 
 The grammars model lipids as hierarchically structured bits of information. 

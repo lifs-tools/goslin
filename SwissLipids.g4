@@ -28,9 +28,13 @@ grammar SwissLipids;
 
 
 /* first rule is always start rule */
-lipid : lipid_pure EOF | lipid_pure adduct_info EOF;
+lipid : lipid_pure EOF | lipid_pure adduct_info EOF | lipid_pure variants EOF;
 lipid_pure : fatty_acid | gl | pl | sl | st;
 
+variants : variant | variant variants;
+variant : adduct_separator abc | abc | adduct_separator npos | npos;
+abc : '(a)' | '(b)' | '(c)' | '(d)' | '(e)' | '(f)' | '(g)';
+npos : '(n' number ')' | '[sn' number ']' | '[' number '_sn' number ']';
 
 /* adduct information */
 adduct_info : adduct_sep | adduct_separator adduct_sep;
@@ -41,8 +45,9 @@ adduct_element : element | element number | number element | plus_minus element 
 
 
 /* fatty acyl rules */
-fa : fa_core | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix;
-fa_core : carbon carbon_db_separator db | ether carbon carbon_db_separator db;
+fa : fa_p | fa_p '.';
+fa_p : fa_core | fa_lcb_prefix fa_core | fa_core fa_lcb_suffix | fa_lcb_prefix fa_core fa_lcb_suffix;
+fa_core : carbon carbon_db_separator db | ether_type carbon carbon_db_separator db;
 
 lcb : lcb_core | fa_lcb_prefix lcb_core | lcb_core fa_lcb_suffix | fa_lcb_prefix lcb_core fa_lcb_suffix;
 lcb_core : hydroxyl carbon carbon_db_separator db;
@@ -55,7 +60,8 @@ db_position : db_single_position | db_position db_position_separator db_position
 db_single_position : db_position_number | db_position_number cistrans;
 db_position_number : number;
 cistrans : 'E' | 'Z';
-ether : 'O-' | 'P-';
+ether_type : ether '-' | ether '.';
+ether : 'O' | 'P';
 hydroxyl : 'm' | 'd' | 't';
 fa_lcb_suffix : fa_lcb_suffix_core | fa_lcb_suffix_separator fa_lcb_suffix_core | ROB fa_lcb_suffix_core RCB;
 fa_lcb_suffix_core : fa_lcb_suffix_number fa_lcb_suffix_type | fa_lcb_suffix_number fa_lcb_suffix_separator fa_lcb_suffix_type;
@@ -85,7 +91,7 @@ fa4_unsorted : fa unsorted_fa_separator fa unsorted_fa_separator fa unsorted_fa_
 
 /* fatty acid rules */
 fatty_acid : fa_hg fa_fa | fa_hg headgroup_separator fa_fa | mediator;
-fa_hg : 'FA' | 'fatty acid' | 'fatty alcohol' | 'NAE' | 'GP-NAE';
+fa_hg : 'FFA' | 'FA' | 'fatty acid' | 'fatty alcohol' | 'NAE' | 'GP-NAE';
 fa_fa : ROB fa RCB;
 
 
@@ -113,9 +119,10 @@ med_suffix : 'S' | 'R';
 /* glycerolipid rules */
 gl : gl_regular | gl_mono | gl_molecular;
 
-gl_regular : gl_hg gl_fa | gl_hg headgroup_separator gl_fa;
+gl_regular : gl_hg gl_fa | gl_hg headgroup_separator gl_fa | gl_hg_tg gl_half_sub_fa | gl_hg_tg headgroup_separator gl_half_sub_fa;
 gl_fa : ROB fa_species RCB | ROB fa3 RCB;
-gl_hg : 'MG' | 'DG' | 'TG' |  'MAG' | 'DAG' | 'TAG';
+gl_hg : 'MG' | 'DG' | gl_hg_tg |  'MAG' | 'DAG';
+gl_hg_tg : 'TG' | 'TAG';
 
 gl_molecular : gl_molecular_hg gl_molecular_fa | gl_molecular_hg headgroup_separator gl_molecular_fa;
 gl_molecular_fa : ROB fa2 RCB;
@@ -126,7 +133,7 @@ gl_mono : gl_mono_hg gl_mono_fa | gl_mono_hg headgroup_separator gl_mono_fa;
 gl_mono_fa : ROB fa_species RCB | ROB fa2 RCB;
 gl_mono_hg : 'MHDG' | 'DHDG' | 'MGDG' | 'DGDG';
 
-
+gl_half_sub_fa : fa_species 'FA' fa_species;
 
 
 
@@ -151,9 +158,9 @@ pl_four_hg : 'BMP' | 'LBPA' | 'Lysobisphosphatidate' | 'CL' | 'MLCL' | 'DLCL';
 
 
 /* sphingolipid rules */
-sl : sl_hg sl_lcb | sl_hg headgroup_separator sl_lcb;
+sl : sl_hg sl_lcb | sl_hg headgroup_separator sl_lcb | sl_hg lcb_18_1_fa;
 sl_hg : sl_hg_names | sl_hg_prefix sl_hg_names | sl_hg_names sl_hg_suffix | sl_hg_prefix sl_hg_names sl_hg_suffix;
-sl_hg_names : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CerP' | 'GD1a' | 'GM1b' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c' | 'IPC' | 'MIPC' | 'M(IP)2C' | 'Gb3Cer' | 'Gb4Cer' | 'Forssman'  | 'MSGG' | 'DSGG' | 'NOR1' | 'NORint' | 'NOR2' | 'Globo-H' | 'Globo-A' | 'SB1a' | 'SM1b' | 'SM1a' | 'Branched-Forssman' | 'Globo-B' | 'Para-Forssman' | 'Globo-Lex-9' | glyco_sphingo_lipid;
+sl_hg_names : 'HexCer' | 'Hex2Cer' | 'SM' | 'PE-Cer' | 'Cer' | 'CER' | 'DCER' | 'LCER' | 'HCER' | 'CerP' | 'GD1a' | 'GM1b' | 'GT1b' | 'GQ1b' | 'GT1a' | 'GQ1c' | 'GP1c' | 'GD1c' | 'GD1b' | 'GT1c' | 'IPC' | 'MIPC' | 'M(IP)2C' | 'Gb3Cer' | 'Gb4Cer' | 'Forssman'  | 'MSGG' | 'DSGG' | 'NOR1' | 'NORint' | 'NOR2' | 'Globo-H' | 'Globo-A' | 'SB1a' | 'SM1b' | 'SM1a' | 'Branched-Forssman' | 'Globo-B' | 'Para-Forssman' | 'Globo-Lex-9' | glyco_sphingo_lipid;
  glyco_sphingo_lipid : 'GA1' | 'Ga1' | 'GA2' | 'Ga2' |
  'GB3' | 'Gb3' | 'GB4' | 'Gb4' |
  'GD1' | 'Gd1' | 'GD2' | 'Gd2' | 'GD3' | 'Gd3' |
@@ -168,7 +175,7 @@ sl_hg_suffix : sl_hg_suffix sl_hg_suffix | sl_hg_suffix '/' | ROB sl_hg_suffix R
 sl_lcb : sl_lcb_species | sl_lcb_subspecies;
 sl_lcb_species : ROB lcb RCB;
 sl_lcb_subspecies : ROB lcb sorted_fa_separator fa RCB;
-
+lcb_18_1_fa : fa_fa;
 
 
 
@@ -196,14 +203,14 @@ UNDERSCORE : '_';
 SLASH : '/';
 BACKSLASH : '\\';
 COMMA: ',';
-ROB: '(';
-RCB: ')';
+ROB: '(' | '.';
+RCB: ')' | '.';
 
-unsorted_fa_separator : UNDERSCORE;
+unsorted_fa_separator : UNDERSCORE | '.';
 adduct_separator : SPACE;
-sorted_fa_separator : SLASH;
+sorted_fa_separator : SLASH | '.';
 headgroup_separator : SPACE;
-carbon_db_separator : COLON;
+carbon_db_separator : COLON | '.';
 db_position_separator : COMMA;
 med_position_separator : COMMA;
 fa_lcb_suffix_separator : DASH;

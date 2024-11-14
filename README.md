@@ -1,19 +1,20 @@
-# goslin
+# Goslin
 <img src="./goslin.svg" align="right">
 
 Goslin is the **G**rammar **o**n **s**uccinct **li**pid **n**omenclature.
 
 Goslin defines multiple grammers compatible with ANTLRv4 for different sources of shorthand lipid nomenclature. This allows to generate parsers based on the defined grammars, which provide immediate feedback whether a processed lipid shorthand notation string is compliant with a particular grammar, or not.
 
-[Overview of Goslin and Tutorials](docs/README.adoc)
-
+[Overview of Goslin and Tutorials](docs/)
 
 > Goslin 2.0 supports the [updated lipid shorthand nomenclature with new structural levels](https://pubmed.ncbi.nlm.nih.gov/33037133/).
+
+General information on Goslin is also available on the LIFS Tools [website](https://lifs-tools.org/goslin).
 
 ## Citing Goslin
 If you use Goslin or any of the specific implementations in your work, we kindly ask you to cite the original publication:
 
-* [D. Kopczynski _et al._, **Goslin - A Grammar of Succinct Lipid Nomenclature**, Analytical Chemistry, June 26th, 2020.](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690) [doi:10.1021/acs.analchem.0c01690](https://doi.org/10.1021/acs.analchem.0c01690)
+* [D. Kopczynski _et al._,https://lifs.isas.de/tools/goslin **Goslin - A Grammar of Succinct Lipid Nomenclature**, Analytical Chemistry, June 26th, 2020.](https://pubs.acs.org/doi/10.1021/acs.analchem.0c01690) [doi:10.1021/acs.analchem.0c01690](https://doi.org/10.1021/acs.analchem.0c01690)
 
 If you are using any of the new features of Goslin 2.0, please cite the following, updated Goslin 2.0 publication:
 
