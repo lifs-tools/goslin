@@ -28,13 +28,13 @@ grammar Systematic;
 /* first rule is always start rule, EOF = end of file */
 lipid : lipid_category EOF;
 
-lipid_category : FA | GL | GP | SL | ST;
+lipid_category : fas | gls | gps | sls | sts;
 
 /* fatty acids */
-FA : fa;
+fas : fa;
 
 /* glycero lipids */
-GL : gl | xdg | xmg;
+gls : gl | xdg | xmg;
 gl : generic_fa DASH gl_ending | generic_fa2 DASH gl_ending | generic_fa3 DASH gl_ending;
 gl_ending : 'glycerol' | sn_rac DASH 'glycerol';
 xdg : generic_fa2 DASH xdg_xmg_ending;
@@ -52,7 +52,7 @@ generic_pos : number;
 
 
 /* phospho glycero lipids */
-GP : gp | cl;
+gps : gp | cl;
 gp : generic_fa DASH gp_ending | generic_fa2 DASH gp_ending;
 
 /* PC, PE, PS */
@@ -65,13 +65,13 @@ gp_ending : 'sn-glycero-3-phosphocholine' | 'sn-glycero-3-phosphoethanolamine' |
 
 fa : fatty_acid | acetyl;
 acetyl : 'acetyl';
-fatty_acid: regular_fatty_acid | wax | CAR | ethanolamine | amine | acetic_acid;
+fatty_acid: regular_fatty_acid | wax | cars | ethanolamine | amine | acetic_acid;
 wax : wax_ester fatty_acid_type | wax_ester regular_fatty_acid;
 wax_ester : fatty_acid SPACE | ROB fatty_acid RCB SPACE | methyl SPACE | methyl DASH;
 methyl : 'methyl';
-CAR : car_positions DASH CAR_fa '-4-(' CAR_spec ')butanoate';
-CAR_fa : SOB regular_fatty_acid SCB | COB regular_fatty_acid CCB;
-CAR_spec : 'trimethylammonio' | 'trimethylazaniumyl';
+cars : car_positions DASH car_fa '-4-(' car_spec ')butanoate';
+car_fa : SOB regular_fatty_acid SCB | COB regular_fatty_acid CCB;
+car_spec : 'trimethylammonio' | 'trimethylazaniumyl';
 
 car_positions : functional_position | ROB car_position RCB DASH functional_position;
 ethanolamine : amine_prefix ROB fatty_acid RCB DASH 'ethanolamine';
@@ -122,8 +122,8 @@ prosta : 'prosta' | 'prost' | 'prostan';
 
 acid_type_regular: acid_single_type | acid_single_type cyclo_position;
 acid_type_double: db_num acid_type_regular;
-acid_single_type: 'noic acid' | 'nic acid' | 'nal' | dioic | 'noyloxy' | 'noyl' | ol | dial | 'noate' | 'nate' | CoA | yl | 'ne' | 'nyloxy';
-CoA : 'noyl' coa | 'yl' coa | 'nyl' coa;
+acid_single_type: 'noic acid' | 'nic acid' | 'nal' | dioic | 'noyloxy' | 'noyl' | ol | dial | 'noate' | 'nate' | coas | yl | 'ne' | 'nyloxy';
+coas : 'noyl' coa | 'yl' coa | 'nyl' coa;
 furan : 'furan' DASH furan_pos DASH 'yl';
 furan_pos : number;
 coa : 'coa' | '-coa';
