@@ -33,7 +33,7 @@ molecule_rule: molecule_group;
 molecule_group: element_group | single_element | molecule_group molecule_group;
 element_group: element count;
 single_element: element;
-element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As';
+element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As' | 'B';
 count: number | '-' number;
 number : digit | digit number;
 digit:  '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
