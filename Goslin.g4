@@ -173,13 +173,13 @@ med_iso_positions : number | number ',' med_iso_positions;
 mediator_fa : mediator_carbon mediator_db;
 mediator_carbon : 'H' | 'O' | 'E' | 'Do' | 'D';
 mediator_db : 'M' | 'D' | 'Tr' | 'tr' | 'T' | 'P' | 'H';
-mediator_suffix: 'E';
+mediator_suffix: 'E' | 'A';
 mediator_functional_group : mediator_functional_group mediator_functional_group | mediator_functional_group mediator_func_group_separator mediator_functional_group | mediator_double_bond_positions_full mediator_func_group_separator | mediator_functional_group_clear | mediator_functional_group_clear mediator_func_group_separator | mediator_tetranor mediator_functional_group_clear | mediator_tetranor mediator_functional_group_clear mediator_func_group_separator;
 mediator_tetranor : 'tetranor-' | 'Tetranor-';
 mediator_functional_group_clear: mediator_full_function | mediator_function_unknown_pos | mediator_db_function;
 mediator_function_unknown_pos : mediator_functions;
 mediator_functions : mediator_mono_functions | mediator_di_functions | mediator_tri_functions;
-mediator_mono_functions: 'H' | 'Oxo' | 'oxo' | 'OXO' | 'keto' | 'Hp' | 'HP' | 'NO2' | 'K' | 'k' | 'hydroxy' | 'd' | 'deoxy' | 'beta' | 'iso';
+mediator_mono_functions: 'H' | 'Oxo' | 'oxo' | 'OXO' | 'keto' | 'Hp' | 'HP' | 'NO2' | 'K' | 'k' | 'hydroxy' | 'd' | 'deoxy' | 'beta' | 'iso' | alpha_beta;
 mediator_di_functions: 'E' | 'Ep' | 'EP' | 'DH' | 'DiH' | 'diH' | 'dihydro' | 'dh';
 mediator_tri_functions : 'TriH' | 'triH' | 'trihydroxy';
 mediator_full_function : mediator_position_group mediator_func_group_separator mediator_mono_functions | mediator_di_pos mediator_func_group_separator mediator_di_functions | mediator_tri_pos mediator_func_group_separator mediator_tri_functions | mediator_position_group mediator_mono_functions | mediator_position_group mediator_mono_functions | mediator_di_pos mediator_di_functions | mediator_tri_pos mediator_tri_functions | mediator_position_group mediator_mono_functions;
@@ -201,10 +201,12 @@ trivial_mediator : 'AA' | 'ARA' | 'LA' | 'ALA' | 'DHA' | 'EPA' | 'Linoleic acid'
 
 unstructured_mediator : 'alpha-LA' | 'LTC4' | 'LTD4' | 'PGI2';
 
-prostaglandin : 'PG' prostaglandin_type prostaglandin_number | 'PG' prostaglandin_type prostaglandin_number prostaglandin_alpha;
-prostaglandin_type : 'B' | 'D' | 'E' | 'F' | 'J' | 'K';
+prostaglandin : prostaglandin_prefix prostaglandin_type prostaglandin_number | prostaglandin_prefix prostaglandin_type prostaglandin_number prostaglandin_alpha;
+prostaglandin_prefix : 'PG' | 'Prostaglandin' prostaglandin_sep;
+prostaglandin_sep : DASH | SPACE | UNDERSCORE;
+prostaglandin_type : 'A' | 'B' | 'D' | 'E' | 'F' | 'H' | 'J' | 'K';
 prostaglandin_number : '1' | '2' | '3';
-prostaglandin_alpha: 'alpha' | ' alpha' | '-alpha' | 'a';
+prostaglandin_alpha: 'alpha' | ' alpha' | '-alpha' | 'a' | greek;
 
 
 /* saccharolipids rules (3 classes) */
@@ -278,7 +280,9 @@ db_position_separator : COMMA;
 round_open_bracket : ROB;
 round_close_bracket : RCB;
 
+greek : 'Α' | 'α' | 'Β' | 'β' | 'Γ' | 'γ' | 'Δ' | 'δ' | 'Ε' | 'ε' | 'Ζ' | 'ζ' | 'Η' | 'η' | 'Θ' | 'θ' | 'Ι' | 'ι' | 'Κ' | 'κ' | 'Λ' | 'λ' | 'Μ' | 'μ' | 'Ν' | 'ν' | 'Ξ' | 'ξ' | 'Ο' | 'ο' | 'Π' | 'π' | 'Ρ' | 'ρ' | 'Σ' | 'σ' | 'ς' | 'Τ' | 'τ' | 'Υ' | 'υ' | 'Φ' | 'φ' | 'Χ' | 'χ' | 'Ψ' | 'ψ' | 'Ω' | 'ω';
 element: 'C' | 'H' | 'N' | 'O' | 'P' | 'S' | 'Br' | 'I' | 'F' | 'Cl' | 'As';
 charge : '1' | '2' | '3' | '4';
 charge_sign : plus_minus;
 plus_minus : '-' | '+';
+alpha_beta : 'Α' | 'α' | 'Β' | 'β';

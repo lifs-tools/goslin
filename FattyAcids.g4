@@ -26,8 +26,18 @@ grammar FattyAcids;
 
 
 /* first rule is always start rule, EOF = end of file */
-lipid : fatty_acid EOF;
+lipid : fatty_acid_heavy EOF;
 
+fatty_acid_heavy: fatty_acid_n | fatty_acid_n heavy;
+heavy : heavy_s | ' ' heavy_s | heavy_s ' ' | ' ' heavy_s ' ';
+heavy_s: heavy_numbers_m heavy_d | heavy_d;
+heavy_numbers_m: heavy_numbers | '-' heavy_numbers;
+heavy_numbers: heavy_number | heavy_number ',' heavy_numbers;
+heavy_number: number;
+heavy_d: '-d' deuterium_number;
+deuterium_number: number;
+
+fatty_acid_n: fatty_acid | 'n-' fatty_acid;
 fatty_acid: regular_fatty_acid | wax | car | ethanolamine | amine | acetic_acid;
 fatty_acid_recursion: regular_fatty_acid;
 wax : wax_ester regular_fatty_acid;
@@ -85,9 +95,11 @@ prosta : 'prosta' | 'prost' | 'prostan';
 tetrahydrofuran : 'tetrahydro';
 furan : 'furan';
 
-acid_type_regular: acid_single_type | acid_single_type cyclo_position;
+acid_type_regular: acid_heavy_single_type | acid_single_type | acid_single_type cyclo_position;
 acid_type_double: db_num acid_type_regular;
-acid_single_type: 'noic acid' | 'nic acid' | 'nal' | dioic | 'noyloxy' | 'noyl' | ol | dial | 'noate' | 'nate' | coa | yl | 'ne' | 'yloxy';
+acid_single_type: 'noic acid' | 'noic acid' | 'nic acid' | 'nic acid' | 'nal' | dioic | 'noyloxy' | 'noyl' | ol | dial | 'noate' | 'nate' | coa | yl | 'ne' | 'yloxy';
+acid_heavy_single_type: nic heavy ' acid';
+nic: 'noic' | 'nic';
 coa : 'noyl' coa_ending | 'yl' coa_ending | 'nyl' coa_ending;
 coa_ending : 'coa' | '-coa';
 yl : 'yl' | 'nyl' | 'n' DASH yl_ending DASH 'yl' | DASH yl_ending DASH 'yl';
@@ -136,9 +148,10 @@ methylene : 'methylene';
 /* acetoxy : 'acetoxy'; */
 
 functional_position : functional_position_pure | ROB functional_position_pure RCB;
-functional_position_pure : functional_pos | functional_pos PRIME | functional_pos func_stereo | functional_pos PRIME func_stereo | func_stereo;
+functional_position_pure : functional_pos | functional_pos PRIME | functional_pos func_stereo_b | functional_pos PRIME func_stereo_b | func_stereo_b;
 functional_pos : number;
-func_stereo : cistrans_b;
+func_stereo_b : func_stereo | ROB func_stereo RCB;
+func_stereo : cistrans;
 reduction : functional_position DASH 'nor' | functional_positions DASH functional_length 'nor';
 homo : 'homo';
 
