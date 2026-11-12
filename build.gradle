@@ -16,6 +16,7 @@ ext {
     "GoslinFragments.g4",
     "Goslin.g4",
     "HMDB.g4",
+    "LDA.g4",
     "LipidMaps.g4",
     "Shorthand2020.g4",
     "SumFormula.g4",

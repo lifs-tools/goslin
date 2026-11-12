@@ -1,0 +1,8 @@
+Cer d18:1/16:0
+Cer d18:1/a16:0
+Cer x18:1/n16:0
+Cer d18:1-n16:0
+SM d18:1/n16:0/n18:0
+PC 16:0/18:1
+SphBase
+Cer1P
