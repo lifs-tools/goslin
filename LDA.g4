@@ -27,8 +27,10 @@
  * (Hartler et al., Anal. Chem. 2020, doi:10.1021/acs.analchem.0c03016).
  *
  * Sphingolipids only:
- *   long chain base  <m|d|t|q><carbon>:<db>   m, d, t, q = 1, 2, 3, 4 hydroxy groups
- *   N-acyl chain     <n|h><carbon>:<db>       n = not hydroxylated, h = one hydroxy group
+ *   long chain base  <m|d|t|q|p|h><carbon>:<db>   m, d, t, q, p, h = 1 to 6 hydroxy groups
+ *   N-acyl chain     <n|h|i|k><carbon>:<db>       n, h, i, k = 0 to 3 hydroxy groups
+ * These are the default encodings of LDA (lcbHydroxylationEncoding.txt and
+ * faHydroxylationEncoding.txt in https://github.com/ThallingerLab/LDA2).
  *   Cer d18:1/n16:0, Cer t18:0/h24:0, SM d18:1_n24:0, Cer1P d18:1/n16:0,
  *   SphBase d18:1, S1P d18:1, LSM d18:1, Cer d34:1 (species level)
  *
@@ -56,14 +58,14 @@ sl_sorted : lcb sorted_fa_separator fa;
 sl_unsorted : lcb unsorted_fa_separator fa;
 
 hg_lsl : 'SphBase' | 'S1P' | 'LSM';
-hg_dsl : 'Cer' | 'Cer1P' | 'SM' | 'HexCer';
+hg_dsl : 'Cer' | 'Cer1P' | 'SM' | 'HexCer' | 'LacCer';
 
 
 /* chains */
 lcb : lcb_hydroxyl carbon carbon_db_separator db;
-lcb_hydroxyl : 'm' | 'd' | 't' | 'q';
+lcb_hydroxyl : 'm' | 'd' | 't' | 'q' | 'p' | 'h';
 fa : fa_hydroxyl carbon carbon_db_separator db;
-fa_hydroxyl : 'n' | 'h';
+fa_hydroxyl : 'n' | 'h' | 'i' | 'k';
 
 carbon : number;
 db : db_count;

@@ -6,3 +6,5 @@ SM d18:1/n16:0/n18:0
 PC 16:0/18:1
 SphBase
 Cer1P
+Cer d18:1/j16:0
+Cer r18:1/n16:0
