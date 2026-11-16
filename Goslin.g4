@@ -152,15 +152,18 @@ hg_dsl : 'Cer' | 'CerP' | 'EPC' | 'HexCer' | 'Hex2Cer' | 'Hex3Cer' | 'IPC' | 'MI
 
 
 /* sterol lipids (2 classes) */
-sterol : stc | ste | stes;
+sterol : stc | ste | stes | stet;
 stc : st | st heavy_hg;
-st : 'Ch' | 'Cholesterol' | 'ST 27:1;1' | 'ST 27:2;1' | 'ST 28:3;1' | 'ST 30:2;1' | 'ST 29:2;1' | 'ST 28:2;1' | 'Desmosterol' | 'Stigmasterol' | 'Ergosterol' | 'Lanosterol' | 'Ergostadienol' | 'Campesterol' | 'Sitosterol' | 'Chol';
+st : 'Ch' | 'Cholesterol' | 'ST 27:1;1' | 'ST 27:2;1' | 'ST 28:3;1' | 'ST 30:2;1' | 'ST 29:2;1' | 'ST 28:2;1' | 'Desmosterol' | 'Stigmasterol' | 'Ergosterol' | 'Lanosterol' | 'Ergostadienol' | 'Campesterol' | 'Sitosterol' | 'Chol' | 'Cholestatrienol' | 'Ergostatetraenol' | 'Cholesterol-Hex' | 'Campesterol-Hex' | 'Ergostadienol-Hex' | 'Sitosterol-Hex' | 'Stigmasterol-Hex';
 ste : hg_stc sorted_fa_separator fa | hg_stc unsorted_fa_separator fa;
 stes : hg_stcs headgroup_separator fa;
 hg_stc : hg_ste | hg_ste heavy_hg;
 hg_ste : 'SE 27:1' | 'SE 27:2' | 'SE 28:3' | 'SE 30:2' | 'SE 29:2' | 'SE 28:2';
 hg_stcs : hg_stes | hg_stes heavy_hg;
 hg_stes : 'ChE' | 'CE' | 'ChoE' | 'CholE';
+/* a sterol's trivial name and a fatty acyl: its ester, e.g. 'Sitosterol 18:2' = SE 29:1/18:2 */
+stet : hg_stet headgroup_separator fa;
+hg_stet : 'Cholesterol' | 'Desmosterol' | 'Cholestatrienol' | 'Campesterol' | 'Ergostadienol' | 'Ergosterol' | 'Ergostatetraenol' | 'Sitosterol' | 'Stigmasterol' | 'Lanosterol';
 
 
 /* mediator lipids (1 class) */
