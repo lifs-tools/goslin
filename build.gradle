@@ -25,22 +25,22 @@ ext {
     ]
 }
 
-grammars.each {
-    def grammar = [it]
-    println "Checking '$it' with Antlr"
-    def taskName = "antlr-${it}"
-    def outputDir = "${project.buildDir}/generated-src/antlr/${it}" as File
-    def sourceDirectorySet = getObjects().sourceDirectorySet(it,it)
-    sourceDirectorySet.srcDir(".")
-    sourceDirectorySet.include(it)
-    outputDir.mkdirs()
-    tasks.create(name: taskName, type: AntlrTask) {
-        source = sourceDirectorySet
-        outputDirectory = outputDir
+// one task per grammar, run by `check` (and so by `build`): ANTLR fails the task on a grammar error
+grammars.each { grammar ->
+    if (!file(grammar).isFile()) {
+        throw new GradleException("Grammar '${grammar}' is listed in build.gradle but does not exist")
+    }
+    def grammarSource = objects.sourceDirectorySet(grammar, grammar)
+    grammarSource.srcDir(".")
+    grammarSource.include(grammar)
+    def checkGrammar = tasks.register("antlr-${grammar}", AntlrTask) {
+        group = 'verification'
+        description = "Checks ${grammar} with ANTLR."
+        source = grammarSource
+        outputDirectory = layout.buildDirectory.dir("generated-src/antlr/${grammar}").get().asFile
         maxHeapSize = '1G'
         arguments = []
+        doFirst { logger.lifecycle("Checking '${grammar}' with ANTLR") }
     }
-    tasks.named('compileJava') { dependsOn(taskName) }
+    tasks.named('check') { dependsOn(checkGrammar) }
 }
-
-
