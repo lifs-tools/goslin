@@ -4,11 +4,11 @@ name: Check Grammars
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
+  # Triggers the workflow on push events for the master branch and on every pull request
   push:
     branches: [ master ]
+  # every pull request, also those stacked on another branch
   pull_request:
-    branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,7 +36,9 @@ jobs:
           gradle-version: '7.2'
           arguments: build --continue # continue build on task errors to get overview of all tasks
       # Includes the AsciiDoctor GitHub Pages Action to convert adoc files to html and publish to gh-pages branch
+      # publish only on a push to master or a manual run, never from a pull request
       - name: asciidoctor-ghpages
+        if: github.event_name != 'pull_request'
         uses: manoelcampos/asciidoctor-ghpages-action@v2
         with:
           pdf_build: false
