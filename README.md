@@ -35,6 +35,18 @@ If you are using any of the new features of Goslin 2.0, please cite the followin
 - [R implementation](https://github.com/lifs-tools/rgoslin)
 - [Webapplication and REST API](https://github.com/lifs-tools/goslin-webapp)
 
+## Checking the grammars
+
+The grammars are checked with [ANTLR](https://www.antlr.org/) through the Gradle wrapper in this repository. You need a JDK 17 or newer; Gradle itself is downloaded by the wrapper.
+
+```shell
+./gradlew build
+```
+
+On Windows, use `gradlew.bat build`. Each grammar listed in `build.gradle` gets its own task (`antlr-<grammar>.g4`); the build fails if a grammar has an error, or if a listed grammar file is missing. Add `--continue` to see the errors of all grammars, not only of the first one. When you add a new grammar, also add it to the list in `build.gradle`.
+
+The same check runs on GitHub Actions for every push to `master` and every pull request.
+
 ## Test data
 
 1. testfiles/lipidmaps-names-Feb-10-2020.tsv - generated from [LipidMAPS LMSDB](https://www.lipidmaps.org/) export on Feb. 10th, 2020. Filtered all entries without an abbreviation.
