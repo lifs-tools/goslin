@@ -98,7 +98,7 @@ The same check runs on GitHub Actions for every push to `master` and every pull 
 
 ### Railroad diagrams
 
-The railroad diagrams are generated from the grammars by [ebnf-convert](https://github.com/GuntherRademacher/ebnf-convert), which converts a grammar to W3C EBNF, and [RR](https://github.com/GuntherRademacher/rr), which draws a diagram for each rule, with its EBNF and the rules that reference it. The diagrams keep the rules and alternatives as written in the grammar.
+The railroad diagrams are generated from the grammars by [ebnf-convert](https://github.com/GuntherRademacher/ebnf-convert), which converts a grammar to W3C EBNF, and [RR](https://github.com/GuntherRademacher/rr), which draws a diagram for each rule, with its EBNF and the rules that reference it. The diagrams keep the rules and alternatives as written in the grammar. The pages are styled like the [implementation and user guide](https://lifs-tools.github.io/goslin/docs/README.html), with the stylesheet [`docs/railroad-diagrams.css`](https://github.com/lifs-tools/goslin/blob/master/docs/railroad-diagrams.css).
 
 ```shell
 ./gradlew railroadDiagrams

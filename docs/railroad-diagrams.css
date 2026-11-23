@@ -1,0 +1,80 @@
+/* Style of the generated railroad diagram pages (docs/grammars/<Grammar>/<Grammar>.html),
+   following the default Asciidoctor style of the implementation and user guide (docs/README.adoc).
+   build.gradle inlines this file into each page. */
+html { font-size: 100%; }
+body {
+  margin: 0;
+  background: #fff;
+  color: rgba(0, 0, 0, .8);
+  font-family: "Noto Serif", "DejaVu Serif", serif;
+  font-size: 1.0625em;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: #2156a5; text-decoration: underline; }
+a:hover, a:focus { color: #1d4b8f; }
+#header, #content, #footer-text {
+  max-width: 62.5em;
+  margin: 0 auto;
+  padding: 0 .9375em;
+}
+h1, h2 {
+  font-family: "Open Sans", "DejaVu Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #ba3925;
+  line-height: 1.2;
+}
+#header h1 {
+  font-size: 2.75em;
+  color: rgba(0, 0, 0, .85);
+  margin: 2.25rem 0 .5rem;
+}
+#header .details {
+  border-bottom: 1px solid #dddddf;
+  padding-bottom: .75em;
+  margin-bottom: 1.25em;
+  color: rgba(0, 0, 0, .6);
+  font-size: .9375em;
+}
+h2 {
+  font-size: 1.6875em;
+  margin: 1.5em 0 .5em;
+  padding-top: .5em;
+  border-top: 1px solid #e7e7e9;
+}
+h2 a, h2 a:hover { color: inherit; text-decoration: none; }
+/* the header already ends with a line */
+#content > h2:first-of-type { border-top: 0; padding-top: 0; margin-top: .5em; }
+#content > br { display: none; }
+/* the diagrams are image maps, so they keep their size; wide diagrams scroll with the page */
+#content img { max-width: none; }
+div.ebnf {
+  background: #f7f7f8;
+  border-radius: 4px;
+  padding: 1em;
+  margin: .75em 0;
+  overflow-x: auto;
+}
+div.ebnf code {
+  font-family: "Droid Sans Mono", "DejaVu Sans Mono", monospace;
+  font-size: .8125em;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, .9);
+}
+.ebnf div { padding-left: 13ch; text-indent: -13ch; }
+.ebnf a { text-decoration: none; }
+.ebnf a:hover { text-decoration: underline; }
+p { margin: .5em 0; }
+ul { margin: .25em 0 1em; padding-left: 1.5em; }
+hr { border: 0; border-top: 1px solid #dddddf; margin: 2em 0 1em; }
+table.signature { width: 100%; font-size: .8125em; }
+.signature, a.signature { color: rgba(0, 0, 0, .6); }
+#footer {
+  margin-top: 2em;
+  padding: 1.25em 0;
+  background: rgba(0, 0, 0, .8);
+}
+#footer-text { color: hsla(0, 0%, 100%, .8); line-height: 1.44; }
+#footer-text a { color: hsla(0, 0%, 100%, .9); }
