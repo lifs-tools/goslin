@@ -55,7 +55,7 @@ configurations {
 dependencies {
     // ebnf-convert converts the grammars to W3C EBNF, rr draws the diagrams, see https://www.bottlecaps.de
     ebnfConvert "de.bottlecaps.ebnf-convert:ebnf-convert-webapp:0.74@war"
-    railroadGenerator "de.bottlecaps.rr:rr-webapp:2.6@war"
+    railroadGenerator "de.bottlecaps.rr:rr-webapp:2.7@war"
 }
 
 // all grammars, including those that ANTLR does not check yet
