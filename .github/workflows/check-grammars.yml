@@ -23,7 +23,17 @@ jobs:
       - name: Check grammars
         # --continue reports every grammar with errors, not only the first
         run: ./gradlew build --continue
-      # converts the AsciiDoc files to HTML and publishes them to the gh-pages branch;
+      - name: Generate railroad diagrams
+        # docs/grammars/<Grammar>/<Grammar>.html, published to GitHub Pages by the next step
+        run: ./gradlew railroadDiagrams --continue
+      - name: Upload railroad diagrams
+        uses: actions/upload-artifact@v7
+        with:
+          name: railroad-diagrams
+          path: docs/grammars/
+          if-no-files-found: error
+      # converts the AsciiDoc files to HTML and publishes them to the gh-pages branch,
+      # together with all other HTML files, including the generated railroad diagrams;
       # only on a push to master or a manual run, never from a pull request
       - name: asciidoctor-ghpages
         if: github.event_name != 'pull_request'

@@ -43,3 +43,58 @@ grammars.each { grammar ->
     }
     tasks.named('check') { dependsOn(checkGrammar) }
 }
+
+// railroad diagrams: one HTML page per grammar in docs/grammars/<Grammar>/<Grammar>.html,
+// published to GitHub Pages by the workflow; the pages are not committed (see .gitignore)
+configurations {
+    // separate configurations, as both tools ship the same launcher class
+    ebnfConvert { canBeConsumed = false; transitive = false }
+    railroadGenerator { canBeConsumed = false; transitive = false }
+}
+
+dependencies {
+    // ebnf-convert converts the grammars to W3C EBNF, rr draws the diagrams, see https://www.bottlecaps.de
+    ebnfConvert "de.bottlecaps.ebnf-convert:ebnf-convert-webapp:0.73@war"
+    railroadGenerator "de.bottlecaps.rr:rr-webapp:2.6@war"
+}
+
+// all grammars, including those that ANTLR does not check yet
+ext.railroadGrammars = grammars + ["Systematic.g4"]
+
+def railroadDiagrams = tasks.register("railroadDiagrams") {
+    group = "documentation"
+    description = "Generates the railroad diagrams of all grammars in docs/grammars."
+}
+
+railroadGrammars.each { grammar ->
+    def grammarName = grammar - ".g4"
+    def grammarFile = file(grammar)
+    def ebnfFile = layout.buildDirectory.file("railroad/${grammarName}.ebnf")
+    def htmlFile = layout.projectDirectory.file("docs/grammars/${grammarName}/${grammarName}.html")
+
+    // the diagrams keep the grammar's rules and alternatives as written: no inlining,
+    // factoring or recursion removal, neither in the conversion nor in the diagrams
+    def toEbnf = tasks.register("ebnf-${grammar}", JavaExec) {
+        description = "Converts ${grammar} to W3C EBNF."
+        classpath = configurations.ebnfConvert
+        mainClass = "de.bottlecaps.fatjar.Loader"
+        args "-noinline", "-r", "none", "-f", "none", grammarFile.absolutePath
+        inputs.file(grammarFile)
+        outputs.file(ebnfFile)
+        def ebnf = new ByteArrayOutputStream()
+        standardOutput = ebnf
+        doLast { ebnfFile.get().asFile.bytes = ebnf.toByteArray() }
+    }
+    def draw = tasks.register("railroad-${grammar}", JavaExec) {
+        description = "Draws the railroad diagrams of ${grammar}."
+        dependsOn toEbnf
+        classpath = configurations.railroadGenerator
+        mainClass = "de.bottlecaps.fatjar.Loader"
+        args "-html", "-noinline", "-nofactoring", "-keeprecursion",
+            "-out:${htmlFile.asFile.absolutePath}", ebnfFile.get().asFile.absolutePath
+        inputs.file(ebnfFile)
+        outputs.file(htmlFile)
+        doFirst { htmlFile.asFile.parentFile.mkdirs() }
+    }
+    railroadDiagrams.configure { dependsOn draw }
+}

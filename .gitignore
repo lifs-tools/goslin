@@ -1,3 +1,4 @@
 .antlr/
 .gradle/
 build/
+docs/grammars/
