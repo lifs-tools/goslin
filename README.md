@@ -37,13 +37,15 @@ If you are using any of the new features of Goslin 2.0, please cite the followin
 
 ## Checking the grammars
 
-The grammars are checked with [ANTLR](https://www.antlr.org/) through the Gradle wrapper in this repository. You need a JDK 17 or newer; Gradle itself is downloaded by the wrapper.
+The grammars are checked with [ANTLR](https://www.antlr.org/) 4.13.2 through the Gradle wrapper in this repository. You need a JDK 17 or newer; Gradle itself is downloaded by the wrapper.
 
 ```shell
 ./gradlew build
 ```
 
-On Windows, use `gradlew.bat build`. Each grammar listed in `build.gradle` gets its own task (`antlr-<grammar>.g4`); the build fails if a grammar has an error, or if a listed grammar file is missing. Add `--continue` to see the errors of all grammars, not only of the first one. When you add a new grammar, also add it to the list in `build.gradle`.
+On Windows, use `gradlew.bat build`. Each grammar listed in `build.gradle` gets its own task, for example `./gradlew antlr-Shorthand2020.g4` checks only that grammar. The build fails if a grammar has an error, or if a listed grammar file is missing. Add `--continue` to see the errors of all grammars, not only of the first one. When you add a new grammar, also add it to the list in `build.gradle`. `Systematic.g4` is not in the list yet, as it does not compile with ANTLR 4 ([#42](https://github.com/lifs-tools/goslin/issues/42)).
+
+This only checks that ANTLR accepts the grammars. The implementations read the grammars with their own parsers, so a grammar change should also be tested with at least one implementation's test suite.
 
 The same check runs on GitHub Actions for every push to `master` and every pull request.
 
