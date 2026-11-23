@@ -36,7 +36,7 @@ All implementations normalise a parsed name to the shorthand nomenclature of Lie
 | [`HMDB.g4`](https://github.com/lifs-tools/goslin/blob/master/HMDB.g4) | HMDB lipid names | [view](https://lifs-tools.github.io/goslin/docs/grammars/HMDB/HMDB.html) |
 | [`FattyAcids.g4`](https://github.com/lifs-tools/goslin/blob/master/FattyAcids.g4) | systematic fatty acid names, for example `hexadecanoic acid` (`FA 16:0`) | [view](https://lifs-tools.github.io/goslin/docs/grammars/FattyAcids/FattyAcids.html) |
 | [`SumFormula.g4`](https://github.com/lifs-tools/goslin/blob/master/SumFormula.g4) | molecular sum formulas, for example `C42H82NO8P` | [view](https://lifs-tools.github.io/goslin/docs/grammars/SumFormula/SumFormula.html) |
-| [`Systematic.g4`](https://github.com/lifs-tools/goslin/blob/master/Systematic.g4) | systematic lipid names; experimental, not yet ANTLR 4 compatible ([#42](https://github.com/lifs-tools/goslin/issues/42)) | – |
+| [`Systematic.g4`](https://github.com/lifs-tools/goslin/blob/master/Systematic.g4) | systematic lipid names; experimental, not yet ANTLR 4 compatible ([#42](https://github.com/lifs-tools/goslin/issues/42)) | [view](https://lifs-tools.github.io/goslin/docs/grammars/Systematic/Systematic.html) |
 
 | Data file | Contents |
 |---|---|
@@ -75,7 +75,7 @@ To change a grammar or a data table:
 3. Add test rows to the matching file in [`testfiles/`](https://github.com/lifs-tools/goslin/tree/master/testfiles).
 4. Check the grammars with `./gradlew build` (see below).
 5. Run at least one implementation's test suite against your branch, for example by pulling it into the pygoslin subtree.
-6. Regenerate the railroad diagram of each grammar you changed (see below).
+6. Optionally, look at the railroad diagrams of your grammar (see below).
 7. Open a pull request.
 
 ### Checking the grammars
@@ -98,7 +98,13 @@ The same check runs on GitHub Actions for every push to `master` and every pull 
 
 ### Railroad diagrams
 
-The railroad diagrams in [`docs/grammars/`](https://github.com/lifs-tools/goslin/tree/master/docs/grammars) are HTML exports from the [ANTLR extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=mike-lischke.vscode-antlr4): open the grammar, run "ANTLR: Show Railroad Diagram for All Rules", save the diagram as HTML from its view and replace `docs/grammars/<Grammar>/<Grammar>.html`. The current diagrams date from November 2024; grammars changed since then are newer than their diagrams.
+The railroad diagrams are generated from the grammars by [ebnf-convert](https://github.com/GuntherRademacher/ebnf-convert), which converts a grammar to W3C EBNF, and [RR](https://github.com/GuntherRademacher/rr), which draws a diagram for each rule, with its EBNF and the rules that reference it. The diagrams keep the rules and alternatives as written in the grammar.
+
+```shell
+./gradlew railroadDiagrams
+```
+
+This writes one page per grammar to `docs/grammars/<Grammar>/<Grammar>.html`; for a single grammar, run for example `./gradlew railroad-Shorthand2020.g4`. The pages are not committed. The workflow generates them for every pull request, where they can be downloaded as the `railroad-diagrams` artifact of the run, publishes them to [GitHub Pages](https://lifs-tools.github.io/goslin/docs/README.html) on every push to `master`, and attaches them as a zip to each published [release](https://github.com/lifs-tools/goslin/releases).
 
 ## Versions and releases
 
