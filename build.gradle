@@ -66,6 +66,12 @@ def railroadDiagrams = tasks.register("railroadDiagrams") {
     description = "Generates the railroad diagrams of all grammars in docs/grammars."
 }
 
+// the pages follow the style of the implementation and user guide (Asciidoctor default style)
+def railroadCss = file("docs/railroad-diagrams.css")
+def railroadFonts = "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"
+// base color of the diagram boxes: a light tint of the guide's link color #2156a5
+def railroadColor = "#DCE6F4"
+
 railroadGrammars.each { grammar ->
     def grammarName = grammar - ".g4"
     def grammarFile = file(grammar)
@@ -90,11 +96,47 @@ railroadGrammars.each { grammar ->
         dependsOn toEbnf
         classpath = configurations.railroadGenerator
         mainClass = "de.bottlecaps.fatjar.Loader"
-        args "-html", "-noinline", "-nofactoring", "-keeprecursion",
+        args "-html", "-noinline", "-nofactoring", "-keeprecursion", "-color:${railroadColor}",
             "-out:${htmlFile.asFile.absolutePath}", ebnfFile.get().asFile.absolutePath
         inputs.file(ebnfFile)
+        inputs.file(railroadCss)
         outputs.file(htmlFile)
         doFirst { htmlFile.asFile.parentFile.mkdirs() }
+        // restyle the page like the guide: stylesheet, rule names as section headings,
+        // a header with links to the guide and the grammar, and a footer with the tool versions
+        doLast {
+            def page = htmlFile.asFile
+            def html = page.getText("UTF-8")
+            def rrVersion = (html =~ /Railroad Diagram Generator ([0-9.]+)/).with { it.find() ? it.group(1) : "?" }
+            def convertVersion = (ebnfFile.get().asFile.readLines("UTF-8")[0] =~ / v([0-9.]+) /).with { it.find() ? it.group(1) : "?" }
+            def source = "https://github.com/lifs-tools/goslin/blob/master/${grammar}"
+            def head = """<title>${grammarName} grammar: railroad diagrams</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="${railroadFonts}">
+      <style>
+${railroadCss.getText("UTF-8")}      </style>"""
+            def header = """
+      <div id="header">
+         <h1>${grammarName} grammar</h1>
+         <div class="details">Railroad diagrams of the rules in <a href="${source}">${grammar}</a>.
+            Back to the <a href="../../README.html">Goslin implementation and user guide</a>.</div>
+      </div>
+      <div id="content">"""
+            def footer = """      </div>
+      <div id="footer">
+         <div id="footer-text">Generated from <a href="${source}">${grammar}</a> with
+            <a href="https://github.com/GuntherRademacher/ebnf-convert">ebnf-convert</a> ${convertVersion} and
+            <a href="https://github.com/GuntherRademacher/rr">RR</a> ${rrVersion}.</div>
+      </div>
+"""
+            def quote = { String text -> java.util.regex.Matcher.quoteReplacement(text) }
+            html = html.replaceFirst(/(?s)<style type="text\/css">.*?<\/style>/, quote(head))
+            html = html.replaceAll(/<p style="font-size: 14px; font-weight:bold"><a name="([^"]+)">[^<]*<\/a><\/p>/,
+                '<h2 id="$1"><a href="#$1">$1</a></h2>')
+            html = html.replaceFirst(/<body>/, quote("<body>" + header))
+            html = html.replaceFirst(/<\/body>/, quote(footer + "   </body>"))
+            page.write(html, "UTF-8")
+        }
     }
     railroadDiagrams.configure { dependsOn draw }
 }
