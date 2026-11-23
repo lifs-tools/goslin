@@ -1,10 +1,12 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you use Goslin or one of its implementations, please cite the publications below."
+title: "Goslin: A Grammar of Succinct Lipid Nomenclature"
+abstract: "ANTLR 4 grammars for lipid shorthand names, with shared tables of lipid classes and functional groups and the test files of the Goslin implementations."
 authors:
   - family-names: Kopczynski
     given-names: Dominik
     orcid: https://orcid.org/0000-0001-5885-4568
-  - family-names: Hoffmann 
+  - family-names: Hoffmann
     given-names: Nils
     orcid: https://orcid.org/0000-0002-6540-6875
   - family-names: Peng
@@ -12,12 +14,76 @@ authors:
     orcid: https://orcid.org/0000-0001-5006-7041
   - family-names: Ahrends
     given-names: Robert
-    orcid: http://orcid.org/0000-0003-0232-3375
-title: "Goslin is the Grammar on succinct lipid nomenclature."
-version: 1.1.2
-date-released: 2020-06-26
+    orcid: https://orcid.org/0000-0003-0232-3375
+version: 2.2.4
+date-released: 2026-07-30
+license: MIT
+repository-code: "https://github.com/lifs-tools/goslin"
+url: "https://lifs-tools.org/tools/goslin"
+keywords:
+  - lipidomics
+  - lipid nomenclature
+  - shorthand notation
+  - grammar
+  - ANTLR
 identifiers:
-  - description: "Main Publication: Goslin: A Grammar of Succinct Lipid Nomenclature"
+  - description: "Zenodo archive of the GitHub releases (concept DOI, all versions)"
+    type: doi
+    value: "10.5281/zenodo.3824376"
+  - description: "Goslin: A Grammar of Succinct Lipid Nomenclature"
     type: doi
     value: "10.1021/acs.analchem.0c01690"
-license: MIT
+  - description: "Goslin 2.0 Implements the Recent Lipid Shorthand Nomenclature for MS-Derived Lipid Structures"
+    type: doi
+    value: "10.1021/acs.analchem.1c05430"
+preferred-citation:
+  type: article
+  title: "Goslin: A Grammar of Succinct Lipid Nomenclature"
+  authors:
+    - family-names: Kopczynski
+      given-names: Dominik
+      orcid: https://orcid.org/0000-0001-5885-4568
+    - family-names: Hoffmann
+      given-names: Nils
+      orcid: https://orcid.org/0000-0002-6540-6875
+    - family-names: Peng
+      given-names: Bing
+      orcid: https://orcid.org/0000-0001-5006-7041
+    - family-names: Ahrends
+      given-names: Robert
+      orcid: https://orcid.org/0000-0003-0232-3375
+  journal: "Analytical Chemistry"
+  volume: 92
+  issue: 16
+  start: 10957
+  end: 10960
+  year: 2020
+  doi: "10.1021/acs.analchem.0c01690"
+references:
+  - type: article
+    title: "Goslin 2.0 Implements the Recent Lipid Shorthand Nomenclature for MS-Derived Lipid Structures"
+    authors:
+      - family-names: Kopczynski
+        given-names: Dominik
+        orcid: https://orcid.org/0000-0001-5885-4568
+      - family-names: Hoffmann
+        given-names: Nils
+        orcid: https://orcid.org/0000-0002-6540-6875
+      - family-names: Peng
+        given-names: Bing
+        orcid: https://orcid.org/0000-0001-5006-7041
+      - family-names: Liebisch
+        given-names: Gerhard
+        orcid: https://orcid.org/0000-0003-4886-0811
+      - family-names: Spener
+        given-names: Friedrich
+      - family-names: Ahrends
+        given-names: Robert
+        orcid: https://orcid.org/0000-0003-0232-3375
+    journal: "Analytical Chemistry"
+    volume: 94
+    issue: 16
+    start: 6097
+    end: 6101
+    year: 2022
+    doi: "10.1021/acs.analchem.1c05430"

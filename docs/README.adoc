@@ -429,7 +429,7 @@ R Implementation
 
 This project is a parser, validator and normalizer implementation for
 shorthand lipid nomenclatures, using the Grammar of Succinct Lipid
-Nomenclatures project for the R language ([https://www.r-project.org/]).
+Nomenclature (Goslin) for the https://www.r-project.org/[R language].
 
 Goslin defines multiple grammars for different sources of shorthand lipid nomenclature. This allows to generate parsers based on the defined grammars, which provide immediate feedback whether a processed lipid shorthand notation string is compliant with a particular grammar, or not.
 
