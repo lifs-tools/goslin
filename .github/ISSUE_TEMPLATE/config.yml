@@ -1,8 +1,0 @@
-blank_issues_enabled: true
-contact_links:
-  - name: Questions and ideas
-    url: https://github.com/lifs-tools/goslin/discussions
-    about: Ask a question or discuss an idea in GitHub Discussions.
-  - name: Problems with an implementation
-    url: https://github.com/lifs-tools?q=goslin
-    about: Problems with the API, installation or performance of pygoslin, jgoslin, cppgoslin, csgoslin, rgoslin or the web application belong in that repository.
